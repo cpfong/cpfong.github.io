@@ -1,0 +1,14 @@
+vi test.c
+  esc	command mode
+  i	insert mode
+  a	append mode
+  hjkl	cursor movement (under command mode)
+  
+:wq	write then quit
+:wq!	force write quit
+:q!	quit WITHOUT save
+
+  yy	yank one line
+  p	paste
+  x	delete one char
+ 5x	delete five chars

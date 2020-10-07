@@ -1,0 +1,5 @@
+git init
+git add .
+git commit -m 'init my personal web 2020.10.07'
+git remote add web ssh://git@github.com/cpfong/cpfong.github.io.git
+git push -u web master 
