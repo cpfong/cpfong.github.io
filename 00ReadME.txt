@@ -1,5 +1,5 @@
 Q:why me?
-A: for dir http://cpfong.github.iso
+A: for dir http://cpfong.github.io
 
 2020.10.05 copy all file from /usr/local/www/apache24/data 
 
