@@ -1,0 +1,17 @@
+Q: What is Callback?
+A: 
+callback in Node.js is an asynchronous equivalent for a function
+
+It is a special type of function passed as an argument to another function
+
+Callbacks help us make asynchronous calls
+
+If one of the instructions in a program is expected to perform a lengthy process,
+the main thread of execution gets blocked. The subsequent instructions can be executed only 
+after the current I/O is complete. This is where callbacks come in to the picture.
+
+setTimeout(function () { 
+   console.log('This prints after 1000 ms'); 
+}, 1000);
+
+console.log("Hello World");

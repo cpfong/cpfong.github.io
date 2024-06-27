@@ -1,0 +1,63 @@
+#Finding the executable
+*	can be used at any place, at prompt $ * can expand all files out
+
+#Quoting with the Shell
+$	dollor sign is a meta-character and tells the shell the next word is a variable
+"	Quoted characters do not have a special meaning, double quote expand 
+'	single quote keep not expand it
+
+check out the following command
+rm -i file1 file2	# one command 3 parameters, shell treate -i file1 file2 EQually
+			# however commnad treate -i differently and commnad take - as an option
+			# because it start as a hyphen and the other two as filename
+
+space			# Normally, a space delineates arguments. To include a space in a filename, you must quote it.
+\			# escape.You quote a string, escape a meta-character. " and esc: all special characters are treated as regular characters.
+
+you want to remove a file with a space in this fileName,
+there are different ways to do it
+
+$ touch 'file with a space'
+$ rm 'file with a space' # or 
+$ rm  file' with a space'
+
+In other words, when reading a shell script, you must remember the current quoting state.
+The quote toggles the state.
+
+command substuding
+--
+`		#old way
+$()		#new way
+
+single or double quotation mark
+--
+The quotation marks in the shell are NOT used to define a string. 
+There are used to disable or enable interpretation of meta-characters.
+
+# these 5 are the same
+echo abcd
+echo 'abcd'
+echo ab'c'd
+echo a"b"cd
+echo 'a'"b"'c'"d"
+
+assign
+--
+Multiple assignments can be placed on one line:
+A=1 B=2 C=3 D=4
+
+a= x #FAIL,since a is assigned as space
+
+a=one; echo $a	#a=one --> a='one', so result is one
+a=two echo $a	#expands meta (ie $) before executing the built-in commands, so a=two echo one --> one
+a=three echo $a >$a
+
+Using curly braces with variables
+# also check https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18
+# for 2.6.2 Parameter Expansion
+--
+$d=				#init it to empty
+$d=$(expr ${d:-0} + 1)		# :- undefined then set to
+unset d; d=$(expr ${d:-0} + 1)	#as one line
+
+
