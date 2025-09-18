@@ -1,6 +1,2 @@
 @echo off
-
-set "acc=cpatstust"
-
-mkdir c:\Users\%acc%
-copy w:\qemu\run\freebsdRunning.img c:\Users\%acc%\qemu
+copy d:\qemu\freebsdRunning.img c:\Users\STUST\Desktop\
