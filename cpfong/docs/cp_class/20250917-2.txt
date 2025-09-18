@@ -1,0 +1,41 @@
+date
+who
+echo
+echo one   two three         four   five
+mkdir 0917b
+cd 0917b
+echo xx > file1
+ls
+ls > foo
+cat foo
+ls -la >>foo
+wc foo
+wc -l foo
+cp foo foo2
+ls
+mv foo2 foo3
+rm -fr foo2 foo3
+cd
+pwd
+cd 0917b
+pwd
+cd ..
+pwd
+tree ~
+cd
+cp ~/0917b/file1 ~/0917b/file2
+ls ~/0917b/
+
+echo john >  ~/0917b/names
+echo mary >> ~/0917b/names
+
+echo 187 > ~/0917b/h
+echo 160 >>~/0917b/h
+
+paste ~/0917b/names ~/0917b/h > ~/0917b/tog
+cat ~/0917b/tog
+
+who > users
+wc -l < users
+who | wc -l
+
