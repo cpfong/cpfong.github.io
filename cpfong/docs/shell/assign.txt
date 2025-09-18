@@ -1,0 +1,36 @@
+variable=value # variable, followed immediately by equals, then followed immediately by the value. spaces are not permitted on either side of the equals sign
+variable= value # variable now assign with space and value is a seprate argument
+variable =value # space = value are 3 arguments of command variable
+
+First, spaces are not permitted on either side of the equals sign. 
+Keep that in mind, especially if you're in the good programming habit of inserting spaces around operators. 
+In the shell language, you can't put those spaces in.
+
+Second, unlike most other programming languages, the shell has no concept whatsoever of data types. 
+Whenever you assign a value to a shell variable, no matter what it is, 
+the shell simply interprets that value as a string of characters. 
+
+So when you assigned 1 to the variable count previously, the shell 
+simply stored the character 1 inside the variable count, making no observation 
+whatsoever that an integer value was being stored in the variable.
+
+at shell prompt
+--
+$ count=1 #Assign character 1 to count 
+$ my_bin=/users/steve/bin #Assign /users/steve/bin to my_bin
+
+$ cmd=sort
+$ $cmd < ~/tmp/trash/data 	#same AS sort < ~/tmp/trash/data since $cmd will interpret as sort then treat as command
+
+$ command=wc
+$ option=-l
+$ file=names
+$ $command $option $file
+
+$ echo $not_assign_yet		#note: no error message, even though $not_assign_yet is null
+$ echo $new_var			#null
+$ new_var=1			#assign
+$ new_var=''			#back to null again
+
+$ x=*				# content of x is * note: shell does NOT perform filename substitution when assigning values to variables.
+$ echo $x			# expand * into files note: shell DID the filename substitution when executing the echo command

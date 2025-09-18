@@ -1,0 +1,5 @@
+@echo off
+
+set "acc=cpatstust"
+c:
+copy \Users\%acc%\qemu\freebsdRunning.img w:\qemu\run

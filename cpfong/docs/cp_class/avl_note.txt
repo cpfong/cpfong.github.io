@@ -1,0 +1,11 @@
+   a 
+ b      RR (left too much); clockwise
+c
+
+A
+ B	LL (right too much); unclockwise
+  C
+
+  a      a    
+B	c       c		two steps needed, 1st swap B c
+  c   B       B    a 

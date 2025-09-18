@@ -1,0 +1,21 @@
+#https://auth0.com
+Regular Web App
+via OpenID Connect Debugger https://oidcdebugger.com/
+setting / Allowed Callback URLs --> https://oidcdebugger.com/
+save
+paste this into Browser
+https://dev-wsg2tdh0ht87qq5f.us.auth0.com/authorize?response_type=code&client_id=lmPVQuerwyA8ExWJ6cQQyqz5MwFEj6RG&redirect_uri=https%3A%2F%2Foidcdebugger.com%2Fdebug&scope=openid%20profile%20email&state=abc123xyz&nonce=xyz123abc
+guide you to login page #use gmail ID ie continue with google
+OIDC Debugger output: Success! show up
+
+you may further do this and get no error
+curl -X POST "https://YOUR_TENANT_DOMAIN/oauth/token" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=authorization_code" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET" \
+  -d "code=PASTE_CODE_FROM_DEBUGGER" \
+  -d "redirect_uri=https://oidcdebugger.com/debug"
+
+{"access_token":"eyJhbGciJBMjU2R0NNIiwiaXNzIjoiaHR0cHM6Ly9kZXYtd3NnMnRkaDBodDg3cXE1Zi51cy5hdXRoMC5jb20vIn0..3O3rRDCqWEtKTxBH.wnmkBSv1FlgcdXllUXGGCVSflfd9q9MiVQc1LiT-Pp
+

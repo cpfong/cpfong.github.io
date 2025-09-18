@@ -1,0 +1,7 @@
+myf () {		#my function
+var="hello world"
+eval "$1=\${var}"	
+#eval "$1=${var}"	#FAIL on without \
+}
+
+myf test

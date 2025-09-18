@@ -1,0 +1,36 @@
+function createFormFromSheet() {
+ 
+  var sid='1-RXvNFvvhzAp9ZJd13sdxq__v3xAiHIM8X91PAHk'
+  var sname='Sheet1'
+  var fname='formCreateBymyNewFormCreaterProj'
+  var typem='Multiple Choice'
+  var types='Short Answer'
+
+  var sheet = SpreadsheetApp.openById(sid).getSheetByName(sname);
+  
+  // Get the data range (excluding headers)
+  var dataRange = sheet.getRange(2, 1, sheet.getLastRow() - 1, sheet.getLastColumn());
+  var data = dataRange.getValues();
+  
+  // Create a new Google Form
+  var form = FormApp.create(fname);
+  
+  // Loop through the data and create form items
+  data.forEach(function(row) {
+    var question = row[0];  // Assuming the first column has the question text
+    var itemType = row[1];  // Assuming the second column specifies the type of question (e.g., 'Multiple Choice', 'Short Answer')
+    
+    if (itemType === typem) {
+      var choices = row.slice(2).filter(String);  // Get non-empty choice values
+      form.addMultipleChoiceItem()
+          .setTitle(question)
+          .setChoiceValues(choices);
+    } else if (itemType === types) {
+      form.addTextItem()
+          .setTitle(question);
+    }
+    // Add more item types as needed
+  });
+  
+  Logger.log('Form created: ' + form.getEditUrl());
+}

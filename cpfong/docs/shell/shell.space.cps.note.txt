@@ -1,0 +1,16 @@
+shell removes spaces, tabs, and newlines (that is, whitespace characters) from the command line and then cuts it up into arguments
+$ echo one           two      three   four #one two three four
+
+#!/usr/bin/env sh
+
+v=$(seq 1 3)	#perfectly ok
+v= $(seq 1 3)	#assign v with space, then 1 2 3 since 1 is NOT a command, it will return 1 not found
+v =$(seq 1 3)	#v is a command and =$(seq 1 3 ) are 4 postional parameters
+
+foo(){
+echo $1
+echo $2
+echo $3
+}
+
+foo =z + 2	#=z + 2 

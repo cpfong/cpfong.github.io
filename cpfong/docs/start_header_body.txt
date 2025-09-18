@@ -1,0 +1,8 @@
+start (one line)
+header
+EMPTY LINE
+body
+
+#note: -o /dev/null must at the end. canNOT put in front
+# -D - :dump header into STDIN
+@NCup-> curl -i -D - -s https://httpbin.org -o /dev/null

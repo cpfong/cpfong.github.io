@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+ <pre>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    padding: 12px;
+    border: 1px solid #ccc;
+  }
+</style>
+
+
+Q:什麼是 Alpha Channel？
+A:
+Alpha Channel 就是圖像的「透明度資訊」。
+它決定了每個像素「不透明多少」，範圍從：
+    0 = 完全透明
+    255 = 完全不透明
+
+就像 RGB 三原色分別控制紅綠藍的顏色，Alpha 是控制「看不看得見」。
+🤔 為什麼你需要加 Alpha Channel？
+
+如果你沒有加 Alpha Channel，那個圖層就只有「顏色」，沒有透明的能力。
+這會導致你刪掉東西時，變成背景色（通常是白色或黑色），而不是變成透明。
+
+🔍 你想「把白色變透明」，GIMP 就必須知道「透明」是可以存在的，這就是加 Alpha Channel 的原因。
+📦 簡單比喻：
+沒有 Alpha Channel	有 Alpha Channel
+畫布只能塗顏色，沒有橡皮擦	畫布可以塗顏色，也能擦掉看到下層
+刪除變白底	刪除變透明
+
+
+
+
+ </pre>
+</body>
+
+</html>

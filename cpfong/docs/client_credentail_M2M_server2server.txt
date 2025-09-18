@@ -1,0 +1,7 @@
+#https://auth0.com
+create APP
+Machine to Machine
+selec offered API # will have domain name 
+read:client_grants and read:users
+Guide will show up AUTOMATICALLY #using curl
+paste to FreeBSD and run # definitly ok, since this was offered by system

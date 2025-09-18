@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+use Graph;
+
+sub has_path_dfs {
+    my ($g, $src, $dst, $visited) = @_;
+    return 1 if $src eq $dst;
+    return 0 if $visited->{$src}++;
+    for my $v ($g->successors($src)) {
+        return 1 if has_path_dfs($g, $v, $dst, $visited);
+    }
+    return 0;
+}
+
+my $g = Graph->new(directed => 1);
+
+# Define flight routes
+$g->add_edge('Taipei', 'Tokyo');
+$g->add_edge('Taipei', 'Bangkok');
+$g->add_edge('Tokyo', 'Seoul');
+$g->add_edge('Seoul', 'Beijing');
+$g->add_edge('Bangkok', 'Singapore');
+$g->add_edge('Singapore', 'Jakarta');
+$g->add_edge('Beijing', 'Taipei');  # creates a cycle
+
+# Test 1: Taipei 2 Jakarta
+my ($from, $to) = ('Taipei', 'Jakarta');
+print has_path_dfs($g, $from, $to, {})
+    ? "v There is a flight route from $from to $to.\n"
+    : "x No flight route from $from to $to.\n";
+
+# Test 2: Jakarta 2 Taipei
+($from, $to) = ('Jakarta', 'Taipei');
+print has_path_dfs($g, $from, $to, {})
+    ? "v There is a flight route from $from to $to.\n"
+    : "x No flight route from $from to $to.\n";
+
+###
+cd
+find . -type d -name 0602 -exec sh -c '[ -f "$1/hw2.txt" ] && echo "Found in: $1" && cat "$1/hw2.txt"' _ {} \;

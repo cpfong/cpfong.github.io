@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Google Login Demo</title>
+    <!-- load Google Sign-In SDK -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+
+  <body>
+    <h2>Login with Google</h2>
+    
+    <!-- Google Sign-In button
+      data-client_id is used by Google GSI JS SDK. so this var is FIXed name 
+    -->
+    <div id="g_id_onload"
+         data-client_id="490269367291-ib9f11hchvvhuoq23i8sr1kam7d1pu4n.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+
+    <div class="g_id_signin" data-type="standard"></div>
+    <pre id="out" style="white-space: pre-wrap"></pre> 
+
+   <script>
+    // let GSI find me, mount to window (global)
+    window.handleCredentialResponse = async function (res) {
+      const out = document.getElementById('out');
+/*
+      //debug
+      out.textContent = 'Got FULL ID Token:\n' + res.credential;
+      return;
+*/
+      // show ID Token at hand (cut it out for remove confdential info), but this will NOT show unless return right away
+      out.textContent = 'Got ID Token (truncated): ' + res.credential.slice(0, 15) + '...';
+
+      // to same domain /verify (from HAProxy into Node.js 10.0.0.8)
+      const r = await fetch('/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id_token: res.credential })
+      });
+
+      // get plain text firest;  if convert to JSON is possilbe, then convert to avoid non-JSON cause slient
+      const txt = await r.text();
+      try {
+        const data = JSON.parse(txt);
+        out.textContent = JSON.stringify(data, null, 2);
+      } catch {
+        out.textContent = 'HTTP ' + r.status + '\n' + txt.slice(0, 400);
+      }
+    };
+  </script>
+ </body>
+</html>

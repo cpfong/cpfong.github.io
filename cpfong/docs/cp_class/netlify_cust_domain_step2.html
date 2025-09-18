@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+ <pre>
+
+✅ 步驟 1️⃣：進入 Netlify 的 Domain Settings
+在你的 Netlify 網站後台，左側選單找到 「Domain settings」 或直接在主畫面點「Set up a custom domain」。
+點選 「Add custom domain」。
+
+
+✅ 步驟 2️⃣：輸入你的自訂網域
+你有兩種選擇：
+買新網域（Netlify 會帶你去購買流程）
+使用你已擁有的網域（這是最常見的）
+👉 輸入你的現有網域名稱，例如：
+www.mycustomdomain.com
+或：
+mypage.ifong.org
+
+
+✅ 步驟 3️⃣：驗證與設定 DNS
+Netlify 會提示你新增 DNS 紀錄來驗證及綁定。
+通常會要求你做這些：
+A 記錄（IP 位置）：
+指向 Netlify 的伺服器，例如：
+75.2.60.5
+CNAME 記錄：
+例如：
+www → yoursite.netlify.app
+👉 Netlify 會在畫面上清楚列出要加的 DNS 記錄。
+
+
+✅ 步驟 4️⃣：在你的 DNS 控制台操作
+1️⃣ 如果你的網域是在 GoDaddy、Namecheap、Gandi、Cloudflare...
+登入到該服務 → 找到 DNS 設定。
+2️⃣ 根據 Netlify 給的資訊，新增：
+A 記錄
+CNAME 記錄（通常是 www）
+✅ 存檔後等約 5–30 分鐘，DNS 會生效。
+✅ 步驟 5️⃣：檢查與 SSL 憑證
+Netlify 綁定成功後，會自動申請免費的 Let's Encrypt SSL 憑證。
+網域狀態會顯示「Verified」，並且啟用 HTTPS。
+
+
+🚀 總結：
+1️⃣ Netlify： Add custom domain
+2️⃣ 輸入： 你的網域名稱
+3️⃣ DNS： 照 Netlify 指示去設定 DNS
+4️⃣ 等待生效： 一般數十分鐘內搞定
+5️⃣ 確認： 網站用你的自訂網域能開啟
+ </pre>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+ <pre>
+🔧 步驟 1：建立 repo
+
+1️⃣ 登入 GitHub（foo 帳號）。
+2️⃣ 點右上角「+」➔ New repository。
+3️⃣ Repository name 填寫：
+
+foo.github.io
+
+⚠️ 必須是這個格式（帳號名 + .github.io），GitHub 才會識別為你的「個人網站」。
+
+4️⃣ 勾選：
+
+    Public
+
+    可以勾選 Add a README file（方便初始化）
+
+🖊 步驟 2：放入你的網頁內容
+
+你有幾種方式：
+
+    直接用 GitHub 網頁編輯器：上傳一個 index.html。
+
+    用 Git 工具上傳：
+
+git clone https://github.com/foo/foo.github.io.git
+cd foo.github.io
+echo "<h1>Hello, World!</h1>" > index.html
+git add index.html
+git commit -m "Add homepage"
+git push
+
+🚀 步驟 3：啟用 GitHub Pages
+
+只要 repo 名稱是 foo.github.io，GitHub Pages 會自動啟用，不需要特別設定。
+
+檢查方式：
+1️⃣ 進入 foo.github.io 這個 repo。
+2️⃣ 點 Settings > Pages。
+3️⃣ 確認 Source 是否是 main branch / 根目錄 (/)。
+
+你應該會看到一段提示：
+
+    Your site is live at https://foo.github.io/
+
+🖥 步驟 4：檢查你的網頁
+
+打開瀏覽器，訪問：
+
+https://foo.github.io
+
+應該會看到你的網頁內容（例如剛才那個 Hello, World!）。
+🔄 後續：更新內容
+
+    每次 push 到 main 分支，網站就會自動更新。
+
+    如果要自訂 domain，可以在 Settings > Pages 裡面設定 CNAME。
+
+💡 補充提示：
+
+    想要用 Jekyll、Hugo 等靜態網站生成器？直接把生成好的檔案放到這個 repo 裡。
+
+    可以在 repo 裡加 .nojekyll 檔案（空白即可），避免 GitHub 自動跑 Jekyll 處理。
+
+✅ 總結：
+步驟	說明
+1️⃣ 建 repo	名稱必須是 foo.github.io
+2️⃣ 上傳內容	放 index.html
+3️⃣ 確認 Pages	檢查 GitHub Pages 是否啟動
+4️⃣ 測試	訪問 https://foo.github.io 網站
+
+
+
+
+ </pre>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+@echo off
+powershell -Command "Set-WinUserLanguageList -LanguageList en-US -Force"
+pause

@@ -1,0 +1,3 @@
+generate 10 numbers between 1 to 100
+use array to save these 10 numbers
+then use pointer to init this array into 0

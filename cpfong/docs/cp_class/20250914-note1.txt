@@ -1,0 +1,19 @@
+W2 QEMU/FreeBSD
+
+what is virtualization?
+download FreeBSD ISO
+install QEMU
+
+add user
+sudo
+NAT goto internet
+
+sysrc -x ifconfig_em0
+sysrc ifconfig_vtnet0=DHCP
+
+service netif restart vtnet0
+service routing restart
+
+host (windows) connect to VM
+--
+ssh -p 2222 root@127.0.0.1

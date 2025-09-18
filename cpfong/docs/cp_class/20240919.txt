@@ -1,0 +1,9 @@
+add vim and tree
+
+vi memo
+
+cp ..
+
+1st quiz next week
+
+p39 ex1 ex2

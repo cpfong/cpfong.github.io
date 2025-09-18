@@ -1,0 +1,35 @@
+cp /tmp/putty.msi .
+scp -P 8080 cpfong@www.ifong.org:~/putty.msi .
+
+tmux list-sessions
+tmux list-windows
+
+cat ~/bin/tmuxattach.sh
+tmuxa<TAB>
+create a new window at tmux Ctrl-A + c 
+exit to exit this window
+change window label (name) tmux Ctrl-A ,
+cat ~/.ssh/config
+ssh testfoo
+to become root: sudo su
+switch between windows tmux Ctrl-A number
+
+# vi /etc/rc.conf       #take effect after reboot
+hostname your-new-name  #right away
+hostname                #ask my host name
+
+copy file from Teacher to AWS
+scp fileName.txt testfoo:
+
+install a package
+pkg search node | grep -E '^node'
+pkg install -y node22
+find out ALL packages on system  pkg info
+
+telnet 127.0.0.1 6403 test 6403 port open or not
+Ctrl+] to break
+telnet> quit
+
+
+node ./04createServer.js
+

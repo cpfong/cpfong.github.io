@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HTML Heredoc Viewer</title>
+<style>
+:root { --pad: 16px; }
+html, body { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "PingFang TC", "Noto Sans", "Microsoft JhengHei", system-ui, sans-serif; }
+/* 只顯示輸出區 */
+#out {
+white-space: pre-wrap; /* 保留換行與縮排 */
+word-break: break-word; /* 長字詞可換行 */
+padding: var(--pad);
+min-height: 100vh; /* 讓背景填滿視窗 */
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<!--
+用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
+你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
+我們會以原樣(textContent)取出並顯示在 #out。
+-->
+
+<pre id="out"></pre>
+
+<script type="text/plain" id="heredoc">
+
+在 POSIX /bin/sh 裡沒有真正的陣列，set -- 搭配 "$@" 就是把「位置參數」當成陣列替身使用的正統做法。
+下面是最常用的「陣列操作」小抄（全部可直接貼跑）。
+
+基本觀念
+set -- a b c ＝ 把「陣列」設成 ["a","b","c"]
+"$@" ＝ 把整個陣列原封不動地傳出去（每個元素各自是 1 個 argv）
+$# ＝ 長度；$1 … $N ＝ 第 i 個；shift ＝ pop 前端
+
+常用操作範例
+--
+1) 建立、長度、遍歷
+set -- "alpha" "beta with space" "gamma"
+echo "len=$#"
+for x do printf '[%s]\n' "$x"; done
+
+2) 追加（append）與前插（prepend）
+set -- "a" "b"
+set -- "$@" "c"          # ["a","b","c"]
+set -- "x" "$@"          # ["x","a","b","c"]
+
+3) 插入到指定位置（index）
+# 插到第 2 個位置之後
+i=2; before=; after="$@"
+while [ "$i" -gt 0 ] && [ "$#" -gt 0 ]; do
+  before="$before $1"; shift; i=$((i-1))
+done
+set -- $before "NEW" "$@"   # $@ 這裡是原本 after 剩下的
+
+4) 移除符合條件的元素（filter）
+# 刪掉所有等於 "bad" 的元素
+new=; for x do [ "$x" = "bad" ] || new="$new$(printf ' %s' "$x")"; done
+# 小技巧：用「重新設定」重建陣列（避免 eval）
+# shellcheck disable=SC2086
+set -- $new
+
+5) pop / shift / 取最後一個
+set -- "a" "b" "c"
+first=$1; shift                 # pop front -> first="a", $@=["b","c"]
+# 取最後一個（不破壞原來的順序）
+last=; for x do last=$x; done   # last="c"
+
+6) 拷貝與還原（在函式外層不想被污染）
+# 方式 A：在「子殼層」裡操作，不影響外面
+( set -- "a" "b"; set -- "$@" "c"; printf 'inside: %s\n' "$#" )
+printf 'outside len still: %s\n' "$#"
+
+# 方式 B：寫在函式裡（函式有自己的 $1…$#，回傳時會自動還原）
+f() { set -- "x" "y"; echo "in f: $#"; }
+f 1 2
+echo "after f: $#"
+
+7) 「把參數陣列」拿去執行（核心用法）
+# 組 argv
+set -- curl -sS -G "https://httpbin.org/get"
+set -- "$@" --data-urlencode "q=hello world"
+set -- "$@" --data-urlencode "page=3"
+
+# 預覽（單引號安全）
+quote_sh() { while [ "$#" -gt 0 ]; do printf "'%s'" "$(printf %s "$1" | sed "s/'/'\\\\''/g")"; shift; [ "$#" -gt 0 ] && printf " "; done; printf "\n"; }
+quote_sh "$@"
+# 執行（每個元素是 1 個 argv，無二次解析）
+"$@"
+
+8) map：對每個元素加上前綴/旗標
+# 把 ["A","B C"] 轉成 ["-H","A","-H","B C"]
+set -- "A" "B C"
+out=; for x do out="$out$(printf ' %s %s' "-H" "$x")"; done
+# shellcheck disable=SC2086
+set -- $out
+
+9) 讀檔成陣列（保留空白、避免分詞）
+set --  # 清空
+while IFS= read -r line; do
+  set -- "$@" "$line"
+done < list.txt
+
+10) 與 set -x/遮蔽搭配（除錯不洩密）
+run_redacted() { ( set -x; "$@" ) 2>&1 | sed -E 's/(Bearer )[[:graph:]]+/\1***REDACTED***/' >&2; }
+# 用法
+set -- curl -H "Authorization: Bearer $TOKEN" https://example.com
+run_redacted "$@"
+
+注意事項（像使用陣列時一樣重要）
+這會覆蓋腳本的原始參數；在子殼層 ( … ) 或函式內使用最安全。
+元素可為空字串、可含換行；只要你在 set -- "$@" "$val" 時有加雙引號就能保住。
+無法存放 NUL（這是 Unix argv 的限制）；超長總長度仍受系統 ARG_MAX 影響（執行外部程式時）。
+一句話總結：set -- = 把位置參數當「陣列」；"$@" = 把這個陣列原樣交出去。
+在 /bin/sh 裡做條件追加、迴圈建構、預覽與安全執行，這就是最好用、最不踩雷的套路。
+
+</script>
+
+--heredoc
+
+<script>
+(function () {
+const src = document.getElementById('heredoc');
+if (!src) return;
+let txt = src.textContent || '';
+// 若第一個字元是換行（常見於縮排時），去掉一個，其他全部保留
+if (txt.startsWith('\n')) txt = txt.slice(1);
+document.getElementById('out').textContent = txt;
+// 保持乾淨：渲染後移除原始節點（可選）
+src.remove();
+})();
+</script>
+</body>
+</html>
+
+

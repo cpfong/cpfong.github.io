@@ -1,0 +1,10 @@
+final proj
+--
+due week16 (end of december)
+
+1 take text book page 222 rolo final version as example
+2 save you file into ~/final-project
+3 exactly same as p222 -> D
+4 modify p222 -> C
+5 your own idea -> B
+6 creative -> A 

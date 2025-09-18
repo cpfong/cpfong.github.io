@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+f1='file1.txt'
+f2='file2.txt'
+
+for i in 1 2; do
+ f=$(eval echo \$f$i)
+ echo $f
+done

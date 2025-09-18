@@ -1,0 +1,302 @@
+package AVLTree;
+use strict;
+use warnings;
+
+# Node structure
+sub new_node {
+    my ($val) = @_;
+    return {
+        val   => $val,
+        left  => undef,
+        right => undef,
+        height => 1
+    };
+}
+
+# Utility: height of a node
+sub height {
+    my ($node) = @_;
+    return $node ? $node->{height} : 0;
+}
+
+# Utility: update height
+sub update_height {
+    my ($node) = @_;
+    $node->{height} = 1 + max(height($node->{left}), height($node->{right}));
+}
+
+# Utility: balance factor
+sub balance_factor {
+    my ($node) = @_;
+    return height($node->{left}) - height($node->{right});
+}
+
+# Rotation helpers
+sub rotate_right {
+    my ($y) = @_;
+    my $x = $y->{left};
+    my $T2 = $x->{right};
+
+    $x->{right} = $y;
+    $y->{left} = $T2;
+
+    update_height($y);
+    update_height($x);
+
+    return $x;
+}
+
+sub rotate_left {
+    my ($x) = @_;
+    my $y = $x->{right};
+    my $T2 = $y->{left};
+
+    $y->{left} = $x;
+    $x->{right} = $T2;
+
+    update_height($x);
+    update_height($y);
+
+    return $y;
+}
+
+# Max helper
+sub max { $_[0] > $_[1] ? $_[0] : $_[1] }
+
+# Insert function (recursive)
+sub insert {
+    my ($node, $val) = @_;
+    return new_node($val) unless $node;
+
+    if ($val < $node->{val}) {
+        $node->{left} = insert($node->{left}, $val);
+    } elsif ($val > $node->{val}) {
+        $node->{right} = insert($node->{right}, $val);
+    } else {
+        return $node;  # Duplicate, do nothing
+    }
+
+    update_height($node);
+    my $balance = balance_factor($node);
+
+    # Balance cases
+    if ($balance > 1 && $val < $node->{left}{val}) {
+        return rotate_right($node);    # LL case
+    }
+
+    if ($balance < -1 && $val > $node->{right}{val}) {
+        return rotate_left($node);     # RR case
+    }
+
+    if ($balance > 1 && $val > $node->{left}{val}) {
+        $node->{left} = rotate_left($node->{left}); # LR
+        return rotate_right($node);
+    }
+
+    if ($balance < -1 && $val < $node->{right}{val}) {
+        $node->{right} = rotate_right($node->{right}); # RL
+        return rotate_left($node);
+    }
+
+    return $node;
+}
+
+# In-order traversal
+sub inorder {
+    my ($node) = @_;
+    return unless $node;
+    inorder($node->{left});
+    print $node->{val} . " ";
+    inorder($node->{right});
+}
+
+1;
+
+
+
+###### test_avl.pl
+use strict;
+use warnings;
+use lib '.';
+use AVLTree;
+
+my $root;
+$root = AVLTree::insert($root, $_) for (30, 20, 10, 25, 40, 50, 22);
+
+print "In-order traversal of balanced AVL tree:\n";
+AVLTree::inorder($root);
+print "\n";
+
+#####
+package RedBlackTree;
+use strict;
+use warnings;
+use constant {
+    RED   => 0,
+    BLACK => 1,
+};
+
+sub new {
+    my $class = shift;
+    my $self = {
+        root => undef,
+    };
+    bless $self, $class;
+    return $self;
+}
+
+sub insert {
+    my ($self, $key) = @_;
+    $self->{root} = _insert($self->{root}, $key);
+    $self->{root}->{color} = BLACK;
+}
+
+sub _insert {
+    my ($node, $key) = @_;
+    return _new_node($key, RED) unless $node;
+
+    if ($key < $node->{key}) {
+        $node->{left} = _insert($node->{left}, $key);
+    } elsif ($key > $node->{key}) {
+        $node->{right} = _insert($node->{right}, $key);
+    }
+
+    # Fix-up any right-leaning links
+    $node = _rotate_left($node)  if _is_red($node->{right}) && !_is_red($node->{left});
+    $node = _rotate_right($node) if _is_red($node->{left})  && _is_red($node->{left}->{left});
+    _flip_colors($node)          if _is_red($node->{left})  && _is_red($node->{right});
+
+    return $node;
+}
+
+sub inorder {
+    my ($self) = @_;
+    _inorder($self->{root});
+}
+
+sub _inorder {
+    my ($node) = @_;
+    return unless $node;
+    _inorder($node->{left});
+    print $node->{key}, " ";
+    _inorder($node->{right});
+}
+
+# --- Utility functions ---
+sub _new_node {
+    my ($key, $color) = @_;
+    return {
+        key   => $key,
+        color => $color,
+        left  => undef,
+        right => undef,
+    };
+}
+
+sub _is_red {
+    my ($node) = @_;
+    return 0 unless $node;
+    return $node->{color} == RED;
+}
+
+sub _rotate_left {
+    my ($h) = @_;
+    my $x = $h->{right};
+    $h->{right} = $x->{left};
+    $x->{left} = $h;
+    $x->{color} = $h->{color};
+    $h->{color} = RED;
+    return $x;
+}
+
+sub _rotate_right {
+    my ($h) = @_;
+    my $x = $h->{left};
+    $h->{left} = $x->{right};
+    $x->{right} = $h;
+    $x->{color} = $h->{color};
+    $h->{color} = RED;
+    return $x;
+}
+
+sub _flip_colors {
+    my ($h) = @_;
+    $h->{color} = RED;
+    $h->{left}->{color} = BLACK if $h->{left};
+    $h->{right}->{color} = BLACK if $h->{right};
+}
+
+1;
+
+#####
+#!/usr/bin/perl
+use strict;
+use warnings;
+use lib '.';
+use RedBlackTree;
+
+my $tree = RedBlackTree->new();
+my @values = (10, 20, 30, 15, 5, 1);
+
+print "Inserting values: @values\n";
+$tree->insert($_) for @values;
+
+print "In-order traversal: ";
+$tree->inorder();
+print "\n";
+
+
+###
+30 40 10 50 60 5 7 80 9
+
+In-order traversal of balanced AVL tree:
+5 7 9 10 30 40 50 60 80
+
+------------
+  30
+10 40
+------------
+   30
+ 10   40
+        50
+------------
+   30
+ 10   40
+        50
+         60
+------------
+   30
+ 10  50
+    40 60
+------------
+   30
+ 10  50
+5   40 60
+------------
+   30
+ 10  50
+5   40 60
+ 7
+------------
+    30
+  10 50
+ 7  40 60
+5
+------------
+    30
+ 7    50
+5 10 40 60
+------------
+------------
+    30
+ 7    50
+5 10 40 60
+          80
+------------
+    30
+  7    50
+5  10 40 60
+  9        80
+
+5 7 9 10 30 40 50 60 80
+

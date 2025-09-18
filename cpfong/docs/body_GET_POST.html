@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    padding: 12px;
+    border: 1px solid #ccc;
+  }
+</style>
+ <pre>
+
+
+1. GET requests are meant for retrieval
+By convention, GET requests should not have a body.
+According to the HTTP/1.1 spec, servers can accept a body in a GET request, but most ignore it entirely.
+The correct way to pass parameters with GET is via the query string:
+
+2. Why -d with GET is problematic
+-d in curl automatically changes the method to POST (unless you explicitly force -X GET).
+Even if you force it with -X GET, many web servers, frameworks, and APIs will simply drop the body and only look at query parameters.
+Some APIs might treat a GET body as an error (returning 400 Bad Request).
+
+3. The safe alternative
+If you want to send data with GET, use query parameters:
+curl -G -d "name=john" -d "age=20" https://example.com
+
+An HTTP request generally looks like this:
+[Request line]      GET /path?query=value HTTP/1.1
+[Headers]           Host: example.com
+                    Content-Type: application/json
+[Empty line]
+[Body]              {"name": "John"}
+
+Request line → method (GET, POST, etc.), path, and HTTP version.
+Headers → metadata about the request (e.g., content type, authentication).
+Body → the actual data you send to the server (optional).
+
+ </pre>
+
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cps Site Grid — Pure HTML + CSS</title>
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --fg: #e6e8eb;
+      --muted: #9aa4b2;
+      --card: #141821;
+      --card-hover: #1c2330;
+      --border: #263041;
+      --tile-size: 120px;   /* 調整每格尺寸 */
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f7fafc; --fg:#0b1220; --muted:#5a6473; --card:#ffffff; --card-hover:#f1f5f9; --border:#d6dee8; }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background: var(--bg); color: var(--fg);
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+    /* 標題區（可刪） */
+    .header { margin: 0 0 16px; }
+    .header h1 { margin: 0 0 6px; font-size: 22px; }
+    .header p { margin: 0; color: var(--muted); }
+
+    /* 網格佈局 */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr));
+      gap: 14px;
+      align-items: stretch;
+    }
+    /* 卡片 */
+    .tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 0 rgba(0,0,0,.12);
+      min-height: calc(var(--tile-size) + 36px);
+      padding: 10px;
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .tile:hover, .tile:focus-visible {
+      background: var(--card-hover);
+      transform: translateY(-2px);
+      outline: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,.24);
+    }
+    .ico {
+      width: calc(var(--tile-size) - 24px);
+      height: calc(var(--tile-size) - 24px);
+      display: grid; place-items: center;
+    }
+    .label {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      width: 100%;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>my Favorite Site Icon Grid</h1>
+<!--      <p>純 HTML + CSS；把每個 <code>.ico</code> 裡的 SVG 換成你的圖示即可。</p> -->
+    </div>
+
+    <div class="grid">
+
+<!--
+      <a class="tile" href="https://www.ifong.cc" aria-label="home">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="100%" height="100%">
+            <path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="label">home</div>
+      </a>
+-->
+
+      <a class="tile" href="https://www.ifong.cc" aria-label="home">
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" 
+            stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="12.5" y="16" width="3.5" height="18" rx="1.8"/>
+            <circle cx="14.25" cy="12" r="2.25" fill="currentColor" stroke="none"/>
+            <rect x="20" y="12" width="4" height="24" rx="1.8"/>
+            <path d="M24 12h12"/>
+            <path d="M24 22h9"/>
+          </svg>
+        </div>
+        <div class="label">home</div>
+      </a>
+
+      <a class="tile" href="./cp_class/stust.html" aria-label="stust">
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+            <rect x="6" y="14" width="20" height="20" rx="4" fill="currentColor" transform="rotate(45 16 24)"/>
+            <path d="M9 22c2-3 6-6 10-7c3-.7 6.5-.4 9.5 1.1c-3.6.1-6.3 1.6-8.6 3.5c-2.2 1.8-3.8 4.1-5 6.7c-2.6-1.8-4.5-3.4-6-4.3z" fill="#FFFFFF"/>
+            <path d="M38 10a14 14 0 1 1-9.9 24.1l3.6-3.6A9.4 9.4 0 1 0 38 14.6l3.6-3.6A14 14 0 0 1 38 10z" fill="currentColor"/>
+            <path d="M34.4 16.2A9.6 9.6 0 0 1 40 24c0 2.2-.7 4.3-1.9 5.9c-3.3 
+              1.6-6.7 1.7-9.8.7l4-4c.6-.6.9-1.4.9-2.2c0-.8-.3-1.6-.9-2.2l-2.9-2.9c1.4-.8 2.8-1.3 4.9-1.1z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="label">stust</div>
+      </a>
+
+      <a class="tile" href="./cp_class/afats.html" aria-label="afats">
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" 
+            stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <g transform="rotate(-15 32 32)">
+            <path d="M32 8 L36 20 L52 26 L36 32 L32 52 L28 32 L12 26 L28 20 Z"/>
+            <path d="M32 12 L34 18 L32 19 L30 18 Z"/>
+            <path d="M28 36 L20 44"/>
+            <path d="M36 36 L44 44"/>
+            <line x1="28" y1="54" x2="28" y2="62"/>
+            <line x1="32" y1="56" x2="32" y2="64"/>
+            <line x1="36" y1="54" x2="36" y2="62"/>
+            </g>
+          </svg>
+        </div>
+        <div class="label">afats</div>
+      </a>
+
+      <a class="tile" href="./cp_class/pingtung.html" aria-label="pingtung">
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+          <g transform="translate(12.0,12.0) scale(1.75) translate(-12.0,-12.0)">
+          <!-- Qilin base -->
+          <path fill="currentColor" d="
+                M7.1 8.7
+                C7.9 7.8, 9.5 7.1, 11.0 7.4
+                C12.5 7.7, 13.5 8.3, 14.4 9.1
+                C15.1 9.7, 16.4 10.0, 17.9 9.7
+                C18.9 9.5, 19.8 9.5, 20.5 9.9
+                C20.0 10.6, 19.8 11.3, 19.9 12.1
+                C19.1 11.7, 18.4 11.1, 18.3 10.3
+                C18.0 11.5, 17.1 12.3, 16.1 12.9
+                C15.5 13.3, 15.2 14.0, 15.1 14.6
+                L15.0 16.2 L13.4 16.2 L13.6 15.0
+                C12.4 15.7, 11.1 16.1, 9.7 16.1
+                L8.5 17.2 L7.0 17.2 L7.5 15.6
+                C6.7 15.0, 6.1 14.1, 6.1 13.2
+                C6.1 12.2, 6.7 11.3, 7.4 10.7
+                C7.9 10.3, 8.2 9.8, 8.3 9.2
+                Z
+              "/>
+              <!-- Eye -->
+                  <circle cx="10.9" cy="10.0" r="0.7" fill="currentColor"/>
+              <!-- Head strokes -->
+              <g fill="none" stroke="#000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12.5 6.8 C13.8 6.0, 15.3 5.5, 17.0 5.6"/>
+              <path d="M11.6 7.6 L12.5 6.0"/>
+              <path d="M7.3 8.7 L8.3 9.6"/>
+              </g>
+              <!-- Detached flames farther away (~20% more) and longer/thicker -->
+              <g fill="currentColor" stroke="none">
+              <!-- Large flame -->
+              <path d="M3.4 9.2
+               C4.9 8.6, 6.6 8.8, 7.6 9.5
+               C6.3 11.2, 4.6 12.1, 2.8 12.3
+               C2.5 11.3, 2.7 10.1, 3.4 9.2 Z"/>
+              <!-- Medium flame -->
+              <path d="M2.6 10.4
+               C3.5 10.1, 4.5 10.2, 5.3 10.6
+               C4.6 11.3, 3.8 11.8, 3.0 12.0
+               C2.8 11.6, 2.7 11.0, 2.6 10.4 Z"/>
+              <!-- Small spark -->
+              <circle cx="2.1" cy="10.0" r="0.55"/>
+               </g>
+               </g>
+              </svg>
+        </div>
+        <div class="label">linLou</div>
+      </a>
+
+      <a class="tile" href="../../../kindle.html" aria-label="kindle">
+        <div class="ico" aria-hidden="true">
+           <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="currentColor">
+              <path d="M480-160q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 
+                 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740v506q51-33 107-49.5T700-300q36 0 78.5 
+                 7t81.5 29v-505q9.89 3.75 19.44 7.87Q889-757 898-752q10 6 16 15.68 6 9.67 6 20.32v482q0 23-19.5 
+                 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm60-167v-353l260-260v387L540-327Zm-120 
+                 63v-439q-34-19-79-28t-81-9q-47 0-87.5 10T100-704.47V-264q35-17 75.5-26.5t85-9.5q44.5 0 84.5 
+                 9.5t75 26.5Zm0 0v-439 439Z"
+              />
+            </svg>
+        </div>
+        <div class="label">kindle</div>
+      </a>
+
+      <a class="tile" href="./shell/index.html" aria-label="shell">
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" fill="currentColor">
+            <text x="20" y="65" font-size="40" font-family="monospace">$</text>
+            <text x="70" y="65" font-size="40" font-family="monospace">#!</text>
+            <text x="150" y="65" font-size="40" font-family="monospace">&gt;</text>
+            <text x="210" y="65" font-size="40" font-family="monospace">|</text>
+            <text x="20" y="120" font-size="34" font-family="monospace">echo "Hello"</text>
+          </svg>
+        </div>
+        <div class="label">shell</div>
+      </a>
+
+      <a class="tile" href="./gimp/index.html" aria-label="gimp">
+        <div class="ico" aria-hidden="true">
+         <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" 
+         fill="currentColor"><path d="M215-117q-33.83 0-66.92-11.5Q115-140 90-166q35-12 50-35t15-62q0-43.75 
+         30.68-74.38Q216.35-368 260.18-368q43.82 0 74.32 30.62Q365-306.75 365-263q0 64-43.5 105T215-117Zm0-60q35 0 
+         62.5-25t27.5-61q0-20-12.5-32.5T260-308q-20 0-32.5 12.5T215-263q0 39-8.5 57.5T175-183q6 1 20 3.5t20 
+         2.5Zm230-177-90-95 376-376q14-14 31-14.5t32 14.5l29 29q15 15 14.5 32.5T823-732L445-354Zm-185 91Z"/></svg>
+        </div>
+        <div class="label">gimp</div>
+      </a>
+
+      <a class="tile" href="./lineme/index.html" aria-label="lineme"> 
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+		<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+		<!-- Speech bubble outline -->
+		<rect x="7" y="10" width="34" height="22" rx="8"/>
+		<path d="M21 32 L17 38 L27 32"/>
+		</g>
+           <!-- Four vertical bars (LINE stylized) -->
+           <rect x="14" y="16" width="3.2" height="12" rx="1.2" fill="currentColor"/>
+           <rect x="19.8" y="16" width="3.2" height="12" rx="1.2" fill="currentColor"/>
+           <rect x="25.6" y="16" width="3.2" height="12" rx="1.2" fill="currentColor"/>
+           <rect x="31.4" y="16" width="3.2" height="12" rx="1.2" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="label">lineme</div>
+      </a>
+
+      <a class="tile" href="./curl/index.html" aria-label="curl"> 
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="currentColor">
+            <path d="M570-160v-60h120q21 0 35.5-14.38Q740-248.75 740-270v-100q0-37 
+            22.5-66t57.5-40v-8q-35-10-57.5-39.5T740-590v-100q0-21.25-14.37-35.63Q711.25-740 690-740H570v-60h120q46
+            0 78 32.08 32 32.09 32 77.92v100q0 21.25 14.38 35.62Q828.75-540 850-540h30v120h-30q-21.25 0-35.62 14.37Q800-391.25 
+            800-370v100q0 45.83-32.08 77.92Q735.83-160 690-160H570Zm-300 0q-46 0-78-32.08-32-32.09-32-77.92v-100q0-21.25-14.37-35.63Q131.25-420 
+            110-420H80v-120h30q21.25 0 35.63-14.38Q160-568.75 160-590v-100q0-45.83 32.08-77.92Q224.17-800 270-800h120v60H270q-21 
+            0-35.5 14.37Q220-711.25 220-690v100q0 37-22.5 66.5T140-484v8q35 11 57.5 40t22.5 66v100q0 21.25 14.38 
+            35.62Q248.75-220 270-220h120v60H270Z"/></svg>
+        </div>
+        <div class="label">curl</div>
+      </a>
+
+      <a class="tile" href="./koofr.html" aria-label="koofr">
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+           <path d="M6 16a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v6H6z" fill="currentColor" opacity=".6"/>
+           <path d="M6 22h36v12a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V22z" fill="currentColor"/>
+           <rect x="18" y="8" width="12" height="6" rx="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="label">koofr</div>
+      </a>
+
+      <a class="tile" href="https://fonts.google.com/icons" aria-label="gooicons">
+        <div class="ico" aria-hidden="true">
+           <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="currentColor">
+              <path d="M186-80q-54 0-80-22t-26-66q0-58 49-74t116-16h21v-56q0-30-1.5-52t-6.5-36q-5-14-11.5-21t-16.5-7q-9 0-16.5 3t-12.5 
+              8q-4 5-5 10.5t1 11.5q6 11 14 21.5t8 24.5q0 25-17.5 42.5T159-291q-25 0-42.5-17.5T99-351q0-27 12-44t32.5-27q20.5-10 
+              47.5-14t58-4q85 0 118 30.5T400-302v147q0 19 4.5 28t15.5 9q12 0 19.5-18t9.5-56h11q-3 62-23.5 87T368-80q-43 0-67.5-13.5T269-134q-10 29-29.5 
+              41.5T186-80Zm373 0q-20 0-32.5-16.5T522-132l102-269q7-17 22-28t34-11q19 0 34 11t22 28l102 269q8 19-4.5 35.5T801-80q-12 
+              0-22-7t-15-19l-20-58H616l-20 58q-4 11-14 18.5T559-80Zm-324-29q13 0 22-20.5t9-49.5v-67q-26 0-38 15.5T216-180v11q0 36 4 48t15 
+              12Zm407-125h77l-39-114-38 114Zm-37-285q-48 0-76.5-33.5T500-643q0-104 65.5-170T735-879q44 0 69 9t25 24q0 6-2 12t-7 11q-5 7-12.5 
+              10t-15.5 1q-14-4-32-7t-33-3q-71 0-114 48t-43 127q0 22 8 46t36 24q11 0 21.5-5t18.5-14q17-18 31.5-60T712-758q2-13 
+              10.5-18.5T746-782q18 0 27.5 9.5T779-749q-12 43-17.5 75t-5.5 58q0 20 5.5 29t16.5 9q11 0 21.5-8t29.5-30q2-3 15-7 8 0 12 6t4 
+              17q0 28-32 54t-67 26q-26 0-44.5-14T691-574q-15 26-37 40.5T605-519Zm-485-1v-220q0-58 41-99t99-41q58 0 99 41t41 
+              99v220h-80v-80H200v80h-80Zm80-160h120v-60q0-25-17.5-42.5T260-800q-25 0-42.5 17.5T200-740v60Z"/></svg>
+        </div>
+        <div class="label">gooicons</div>
+      </a>
+
+      <a class="tile" href="./nodeJS.html" aria-label="nodeJS">
+        <div class="ico" aria-hidden="true">
+         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 272">
+         <!-- Hexagon background -->
+         <path fill="#FFFFFF" d="M128 .5L256 68.5v136l-128 68-128-68v-136z"/>
+         <!-- JS letters -->
+         <path fill="#000000" d="M142 191c0 19-11 28-28 28-15 0-24-7-29-16l15-9c3 5 6 9 13 9 6 0 10-2 
+            10-11v-60h19v59zm44 28c-17 0-28-8-33-18l15-9c4 7 9 12 19 12 8 0 13-4 13-9 0-6-5-8-15-12l-5-2c-14-6-23-13-23-28 
+            0-14 11-24 27-24 12 0 21 4 27 15l-14 9c-3-6-7-8-13-8-6 0-10 4-10 8 0 6 4 8 14 12l5 2c17 7 26 14 26 30 0 17-13 27-31 27z"/>
+         </svg>
+        </div>
+        <div class="label">nodeJS</div>
+      </a>
+
+      <a class="tile" href="./leather.html" aria-label="leather"> 
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" 
+            stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="18" y="4" width="12" height="10" rx="2"/>
+              <rect x="22" y="14" width="4" height="18" rx="1"/>
+              <rect x="14" y="32" width="20" height="7" rx="2"/>
+            <g fill="currentColor" stroke="none">
+              <path d="M17 39l2 2l2-2l-2-2z"/>
+              <path d="M22 39l2 2l2-2l-2-2z"/>
+              <path d="M27 39l2 2l2-2l-2-2z"/>
+              <path d="M32 39l2 2l2-2l-2-2z"/>
+            </g>
+          </svg>
+        </div>
+        <div class="label">leather</div>
+      </a>
+
+      <a class="tile" href="../../google_services_text.html" aria-label="google">
+        <div class="ico" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+          <path fill="currentColor" d="M24 9.5c3.5 0 6.3 1.1 8.3 3.2l6.2-6.2C34.9 3.4 29.9 1 24 1 14.7 1 6.6 6.9 3.2 15l7.5 5.8C12.7 14.2 17.9 9.5 24 9.5z"/>
+          <path fill="currentColor" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.5 5.6-5.3 7.3l8.1 6.2C43.9 39.1 46.5 32.4 46.5 24.5z"/>
+          <path fill="currentColor" d="M10.7 28.8c-0.6-1.7-0.9-3.5-0.9-5.3s0.3-3.6 0.9-5.3l-7.5-5.8C1.1 16 0 19.9 0 23.5s1.1 7.5 3.2 10.8l7.5-5.5z"/>
+          <path fill="currentColor" d="M24 47c6.5 0 12-2.1 16-5.7l-8.1-6.2c-2.2 1.5-5 2.4-7.9 2.4-6.1 0-11.3-4.7-12.9-10.8l-7.5 5.8C6.6 41.1 14.7 47 24 47z"/>
+          </svg>
+        </div>
+        <div class="label">google</div>
+      </a>
+
+      <a class="tile" href="../../taiwanmicro/index.html" aria-label="koofr">
+        <div class="ico" aria-hidden="true">
+           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="TMicro 48px icon">
+             <title>TMicro — 48×48</title>
+             <!-- Transparent background -->
+             <g fill="currentColor">
+             <!-- Centered text. textLength forces width to fit; lengthAdjust keeps proportions reasonable -->
+             <text x="24" y="24" dominant-baseline="middle" text-anchor="middle"
+             font-family="Inter, Arial, Helvetica, sans-serif" font-size="18"
+             lengthAdjust="spacingAndGlyphs" textLength="44">TMicro</text>
+             </g>
+           </svg>
+        </div>
+        <div class="label">Tai Micro</div>
+      </a>
+
+      <a class="tile" href="https://www.ifong.cc/cpfong/docs/dns.html" aria-label="koofr">
+        <div class="ico" aria-hidden="true">
+         <!-- DNS / Server Icon · Inverted Black & White · 48px -->
+         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+           viewBox="0 0 48 48" fill="none">
+         <rect x="6" y="6" width="36" height="10" rx="2" fill="black" stroke="white" stroke-width="2"/>
+         <rect x="10" y="10" width="4" height="4" fill="white"/>
+         <rect x="6" y="20" width="36" height="10" rx="2" fill="black" stroke="white" stroke-width="2"/>
+         <rect x="10" y="24" width="4" height="4" fill="white"/>
+         <line x1="24" y1="30" x2="24" y2="36" stroke="white" stroke-width="2"/>
+         <rect x="20" y="36" width="8" height="6" rx="1" fill="black" stroke="white" stroke-width="2"/>
+         <line x1="10" y1="42" x2="38" y2="42" stroke="white" stroke-width="2"/>
+         </svg>
+        </div>
+        <div class="label">DNS</div>
+      </a>
+
+<!-- template, always at the end
+      <a class="tile" href="https://www.ifong.cc/cpfong/docs/koofr.html" aria-label="koofr">
+        <div class="ico" aria-hidden="true">
+          <svg>
+          </svg>
+        </div>
+        <div class="label">koofr</div>
+      </a>
+-->
+
+    </div>
+  </div>
+</body>
+</html>

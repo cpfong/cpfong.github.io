@@ -1,0 +1,6 @@
+The $# Variable
+ the special shell variable $# gets set to the number of arguments that were typed on the command line
+
+The $* Variable
+ The special variable $* references all the arguments passed to the program.
+

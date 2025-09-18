@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+ <pre>
+method 1 : 先設定格式
+因為 Google Sheets 的 「自動格式推斷」可能會誤判，導致：
+資料類型	常見錯誤	原因說明
+手機號碼	0912345678 → 變成 9.12E+08（科學記號）	認成大數字，自動轉換格式
+郵遞區號	01234 → 顯示為 1234	開頭 0 被捨棄，因系統視為整數
+學號/員工編號	A001 → 自動轉為文字無問題，但若不小心少輸入 ' 就出錯	混合文字與數字，需手動保護格式
+
+method 2 : input as Text # 'xxxxx
+
+ </pre>
+</body>
+
+</html>

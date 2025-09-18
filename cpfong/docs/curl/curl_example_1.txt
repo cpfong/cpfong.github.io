@@ -1,0 +1,2 @@
+curl --head https://httpbin.org
+curl -o /dev/null -s -w "%{http_code}\n" https://httpbin.org #-s silence

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HTML Heredoc Viewer</title>
+<style>
+:root { --pad: 16px; }
+html, body { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "PingFang TC", "Noto Sans", "Microsoft JhengHei", system-ui, sans-serif; }
+/* 只顯示輸出區 */
+#out {
+white-space: pre-wrap; /* 保留換行與縮排 */
+word-break: break-word; /* 長字詞可換行 */
+padding: var(--pad);
+min-height: 100vh; /* 讓背景填滿視窗 */
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<!--
+用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
+你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
+我們會以原樣(textContent)取出並顯示在 #out。
+-->
+
+<pre id="out"></pre>
+
+<script type="text/plain" id="heredoc">
+
+以下用「白話＋範例」把你貼的 2.7.4 規範重點講清楚。開門見山：here-document（簡稱 heredoc）就是把接下來幾行文字，當作「檔案」餵到某個檔案描述元（預設是標準輸入）給指令讀。
+1) 基本語法與資料流
+[n] <<word
+… 這些行是 here-document 的內容 …
+word
+<< 或 <<- 是輸入重導向。把「中間這堆行」變成一個暫時的輸入串流。
+n 可選：指定要餵給哪個輸入檔案描述元（fd）。省略時就是 0（stdin）。
+這個串流不保證可 seek（規範說不確定是一般檔、特殊檔或 pipe），所以程式別指望能 lseek()。
+
+2) 何時開始、何時結束
+<<word 後下一行開始算 here-doc 內容，一直到只有分隔詞 + 換行那一行為止。
+「只有分隔詞」= 不能有任何空白（空格或 Tab）夾在中間或旁邊。
+結束後，如果同一行還有下一個 <</<<-，那就是下一份 here-doc。
+
+3) 分隔詞（delimiter）與引號決定「要不要展開」
+規範把 word 是否「含引號」當成開關：
+分隔詞寫法	分隔詞實際文字	here-doc 內容是否展開
+<<EOF（無引號）	EOF	會展開（參數、命令替換、算術）
+<<'EOF'（任何部份有引號）	quote removal 後得到 EOF	不展開（原樣輸出）
+<<"EOF"、<<E"OF" 等	quote removal 後仍是 EOF	不展開
+小結：分隔詞一旦「有引號」→ 內容不展開；完全沒引號 → 內容要展開。
+
+4) 當需要展開時，反斜線的規則像「雙引號內」
+當 word 無引號（= 內容會展開）時：
+允許 參數展開（$var）、命令替換（`cmd`、$(cmd)）、算術展開（$((…))）。
+反斜線 \ 的語義等同「雙引號內」：只在 \ 後接 $, `, ", \，或緊接換行時有特殊意義；其他情況 \ 當普通字元。
+規範特別說：雙引號字元 " 本身在 here-doc 不算特別（除非它出現在 $( )、 、${ } 之內）。——意思是：別把整段當成「已在雙引號裡」。
+
+5) <<- 版本：允許縮排，但只吃掉「前導 Tab
+cat <<-EOF
+	這行前面是 Tab（不是空格），會被去除
+	包含結尾那行的 Tab 也能去除
+EOF
+<<- 會剝除每一行「最前面的 Tab」，包含結束分隔詞那一行。
+只處理 Tab，不處理空格；想縮排請用真的 Tab。
+
+6) 同一行多個 here-doc 的供給與讀取順序
+如果一行上有多個 <</<<-，應用程式要先提供第一個的內容，shell 也會先讀第一個。順序一一對應，不會打亂。
+
+7) 互動模式下的提示字串（PS2）
+當 from 終端機且 shell 互動時，shell 在讀每一行 here-doc 前會把 $PS2 的內容（經過規範定義的處理）寫到標準錯誤當提示。
+
+
+
+實戰對照
+A. 展開 vs 不展開
+# 會展開
+cat <<EOF
+User: $USER
+Today: $(date +%F)
+EOF
+# 不展開（因為分隔詞有引號）
+cat <<'EOF'
+User: $USER
+Today: $(date +%F)
+EOF
+
+B. 指定其他輸入 fd（n<<word）
+把資料送到 fd 3，然後從 fd 3 讀：
+# 將 here-doc 綁在 fd 3
+3<<'DATA' awk -v FS=, '{print $1}' <&3
+a,1
+b,2
+DATA
+
+C. <<- 與縮排（ Tab）
+cat <<-EOF
+	這些前導 Tab 會被拿掉
+	（若用空格就不會）
+EOF
+
+D. 同行多份 here-doc，先供先讀
+paste -d '|' /dev/fd/3 /dev/fd/4 3<<A 4<<B
+left1
+left2
+A
+right1
+right2
+B
+# shell 會先讀 3<<A 的內容，再讀 4<<B
+常見地雷（對照規範文字）
+結束分隔詞必須獨立一行且無空白：EOF⏎ 才算； EOF、EOF 、EOF\t 都不會匹配。
+以為能 seek：不可攜；把 here-doc 當成 pipe 看待最安全。
+把空格當 Tab：<<- 只吃 Tab，不吃空格。
+以為引號包分隔詞「只影響分隔詞」：其實它還會關掉整段展開。
+在可展開 here-doc 內誤用反斜線：記得「像雙引號內」的規則；\x 多半就是兩個字元 \ 與 x。
+
+一句話總結
+<</<<- 把「下一批行」當輸入重導向給指令。
+分隔詞有任何引號 → 不展開；完全無引號 → 會展開，且 \ 的行為如同雙引號內。
+<<- 允許用 Tab 做漂亮的縮排。
+多個 here-doc 同行時，先出現的先被提供、也先被讀。
+互動時，shell 用 PS2 在 STDERR 作行行提示。
+</script>
+
+<script>
+(function () {
+const src = document.getElementById('heredoc');
+if (!src) return;
+let txt = src.textContent || '';
+// 若第一個字元是換行（常見於縮排時），去掉一個，其他全部保留
+if (txt.startsWith('\n')) txt = txt.slice(1);
+document.getElementById('out').textContent = txt;
+// 保持乾淨：渲染後移除原始節點（可選）
+src.remove();
+})();
+</script>
+</body>
+</html>
+
+

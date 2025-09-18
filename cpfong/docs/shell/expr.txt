@@ -1,0 +1,20 @@
+expr: evaluate expression
+
+$ which expr		#/bin/expr
+$ expr 5 + 2		#note: MUST have spaces
+$ expr 39 % 2		#1
+$ expr 10 + 20 / 2	#20
+
+Multiplication, division, and modulus have higher precedence than addition and subtraction. 
+Thus, in the preceding example the division was performed before the addition.
+
+expr must see each operator and operand as a separate argument; 
+the preceding example sends the whole expression in as a single argument.
+
+$ expr 17 * 6		#expr: syntax error. Since * have another meaning ie expand file names
+$ expr 17 \* 6		#102
+
+$ date +%W		#week number of year ie 00..53
+
+Note that like the shell's built-in integer arithmetic, expr only evaluates integer arithmetic expressions. 
+You can use awk or bc if you need to do floating point calculations

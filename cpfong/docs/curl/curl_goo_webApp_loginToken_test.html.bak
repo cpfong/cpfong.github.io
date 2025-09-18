@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Google Login Demo</title>
+    <!-- 載入 Google Sign-In SDK -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <h2>Login with Google</h2>
+    
+    <!-- Google Sign-In 按鈕, data-client_id is used by Google GSI JS SDK. so this var is FIXed name -->
+    <div id="g_id_onload"
+         data-client_id="490269367291-ib9f11hchvvhuoq23i8sr1kam7d1pu4n.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+    <pre id="out" style="white-space: pre-wrap"></pre> 
+  <script>
+    // 讓 GSI 找得到：掛到 window（全域）
+    window.handleCredentialResponse = async function (res) {
+      const out = document.getElementById('out');
+
+      // 顯示已拿到的 ID Token（截斷）
+      out.textContent = 'Got ID Token (truncated): ' +
+        res.credential.slice(0, 15) + '...';
+
+      // 丟到同網域 /verify（由 HAProxy 轉到 Node）
+      const r = await fetch('/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id_token: res.credential })
+      });
+
+      // 先拿純文字，若能轉 JSON 再轉，避免非 JSON 造成整段沉默
+      const txt = await r.text();
+      try {
+        const data = JSON.parse(txt);
+        out.textContent = JSON.stringify(data, null, 2);
+      } catch {
+        out.textContent = 'HTTP ' + r.status + '\n' + txt.slice(0, 400);
+      }
+    };
+   }
+  </script>
+
+  </body>
+</html>

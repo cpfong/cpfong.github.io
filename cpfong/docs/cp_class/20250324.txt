@@ -1,0 +1,192 @@
+#!/usr/bin/env perl
+#
+# obj: OO link list
+#
+use strict;
+use warnings;
+
+package Node; # Define a Node class
+sub new { # perl OO constructor
+    my ($class, $value) = @_;
+    return bless { value => $value, next => undef }, $class; # bless will return a reference into an object of a given class.
+}
+
+package LinkedList; # Define a LinkedList class
+sub new {
+    return bless { head => undef }, shift;
+}
+
+# Insert at the end
+sub append {
+    my ($self, $value) = @_;
+    my $new_node = Node->new($value);
+
+    if (!$self->{head}) {
+        $self->{head} = $new_node;
+    } else {
+        my $current = $self->{head};
+        while ($current->{next}) {
+            $current = $current->{next};
+        }
+        $current->{next} = $new_node;
+    }
+} #end append
+
+# Print the linked list
+sub show_list {
+    my $self = shift;
+    my $current = $self->{head};
+    while ($current) {
+        print $current->{value}, " -> ";
+        $current = $current->{next};
+    }
+    print "NULL\n";
+} #end show_list
+
+# Delete a node by value
+sub delete {
+    my ($self, $value) = @_;
+    return unless $self->{head};
+
+    # Special case: deleting head node
+    if ($self->{head}->{value} == $value) {
+        $self->{head} = $self->{head}->{next};
+        return;
+    }
+
+    my $current = $self->{head};
+    while ($current->{next} && $current->{next}->{value} != $value) {
+        $current = $current->{next};
+    }
+
+    if ($current->{next}) {
+        $current->{next} = $current->{next}->{next};
+    }
+} #end delete
+
+# Main Execution
+package main; #move namespace back to main
+my $list = LinkedList->new();
+
+$list->append(10);
+$list->append(20);
+$list->append(30);
+
+print "Initial List:\n";
+$list->show_list();
+
+# Delete a node
+$list->delete(20);
+print "After Deleting 20:\n";
+$list->show_list();
+
+###### name spaces 
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
+package Dog; # Define the Dog package
+sub speak { print "Woof! Woof!\n"; }
+
+package Cat; # Define the Cat package
+sub speak { print "Meow! Meow!\n"; }
+
+# Switch back to the main package
+package main;
+
+Dog::speak();
+Cat::speak();
+
+#######
+#!/usr/bin/env perl
+
+my @arr; # value: referce to a node and node have two values: data, next link addr
+
+foreach ('a' .. 'm'){
+ my $t=[$_, undef]; # [] an anonymous array reference.
+ push @arr, $t;
+}
+
+my $head=['headOnly_value_foo_do_not_care', undef];
+
+foreach my $index (0 .. @arr-1){
+ if ($index == 0) {
+  $head->[1] = $arr[0];
+  next;
+ }
+ $arr[$index-1]->[1] = $arr[$index];
+}
+
+my $cur=$head;
+
+# traverse
+while ($cur->[1]){
+ print "$cur->[0] ";
+ $cur = $cur->[1];
+}
+print $cur->[0], "\n"; #last one value since traverse ended when last ref hit
+
+
+###### bi direction link list
+#!/usr/bin/env perl
+
+my @arr=(); #init
+
+foreach ('a' .. 'g') {
+ my $t=[undef, $_, undef];
+ push @arr, $t;
+}
+
+#      a                        0
+#    b   c                   1     2
+#   d e f g                 3 4   5 6
+#
+
+my $cur=1;
+
+for (0..2){
+ $arr[$_]->[0]=$arr[$cur++];
+ $arr[$_]->[2]=$arr[$cur++];
+}
+
+my $target=2;
+
+print "index 2 which is $arr[$target]->[1] his left  is $arr[$target]->[0]->[1] \n";
+print "index 2 which is $arr[$target]->[1] his right is $arr[$target]->[2]->[1] \n";
+
+
+#####
+#!/usr/bin/env perl
+
+my $c=  ['c', undef];
+my $b = ['b', undef];
+my $a = ['a', undef];
+
+$a->[1] = $b;
+$b->[1] = $c;
+
+my $cur = $a; #current
+
+#traverse
+while ($cur->[1]){
+ print "$cur->[0] ";
+ $cur = $cur->[1];
+}
+print $cur->[0], "\n";
+
+my $t;
+my $h=['h', $t];
+$cur=$h;
+
+foreach (1..10){
+ $t = [$_, undef];
+ $cur->[1]=$t;
+ $cur=$t;
+}
+
+$cur = $h;
+while ($cur->[1]){
+ print "$cur->[0] ";
+ $cur = $cur->[1];
+}
+print $cur->[0], "\n";

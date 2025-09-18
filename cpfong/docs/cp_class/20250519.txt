@@ -1,0 +1,117 @@
+#!/usr/bin/env perl
+
+#obj: using max heap
+
+my %tree;
+my $NODES=$ARGV[0]; #total nodes
+my $cur_last_node=$NODES;
+
+sub BTree {
+ my %hv;
+
+ foreach my $node (1..$NODES){
+  my $r;
+  $r=int(rand(10));
+#  $r=int(rand(100));
+
+ $tree{$node}{val}  = $r;
+ $tree{$node}{left} = $node*2;
+ $tree{$node}{right}= $node*2+1;
+
+ }#end foreach
+}#end sub
+
+#from root (node 1) to node n/2
+#for each nodeN:
+# 1 compare its left and right find the bigger one
+# 2 compare node N with the bigger one to see whether need swap
+# note: if swap happen, then up level need to reheap
+
+sub heapify {
+    my ($node) = @_;
+    my ($left, $right) = ($node*2, $node*2+1);
+    my $largest = $node;
+
+    # Compare the current node with its left child, if it exists
+    if (exists $tree{$left} && $tree{$left}{val} > $tree{$largest}{val}) {
+        $largest = $left;
+    }
+
+    # Compare the current largest with the right child, if it exists
+    if (exists $tree{$right} && $tree{$right}{val} > $tree{$largest}{val}) {
+        $largest = $right;
+    }
+
+    # If the largest is not the current node, swap and continue heapifying
+    if ($largest != $node) {
+        # Swap the values
+        ( $tree{$node}{val}, $tree{$largest}{val} ) =( $tree{$largest}{val}, $tree{$node}{val} );
+
+        # Recursively heapify the affected subtree
+        heapify($largest);
+    }
+} #end heapify
+
+
+sub buildHeap {
+ my @a = (1 .. int($NODES/2));
+
+ foreach my $t (reverse @a) {
+  heapify($t);
+ }
+} #end buildHeap
+
+my @res=();
+sub removeRootThenReheap{
+ push @res, $tree{1}{val};
+
+ return if (!defined($tree{2}{val}) && !defined($tree{3}{val}));
+ $tree{1}{val}=$tree{$cur_last_node}{val}; $tree{$cur_last_node}{val}=undef; $cur_last_nade--;
+
+ heapify(1);
+}
+
+# main start
+BTree;
+
+#debug
+print "original data: \n";
+foreach (1..$NODES) { print "$tree{$_}{val} "; } print "\n";
+
+buildHeap;
+
+#debug
+print "after 1st heap: \n";
+foreach (1..$NODES){ print "$tree{$_}{val} "; } print "\n";
+
+#### array to implement max heap
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
+my @heap;
+
+sub insert {
+    my ($val) = @_;
+    push @heap, $val;
+    my $i = $#heap;
+
+    while ($i > 0) {
+        my $parent = int(($i - 1) / 2);
+        last if $heap[$parent] >= $heap[$i];
+        @heap[$i, $parent] = @heap[$parent, $i];
+        $i = $parent;
+    }
+}
+
+sub print_heap {
+    print "Heap: @heap\n";
+}
+
+# Sample inserts
+insert(30);
+insert(20);
+insert(50);
+insert(10);
+insert(40);
+print_heap();  # Output should be a valid max-heap

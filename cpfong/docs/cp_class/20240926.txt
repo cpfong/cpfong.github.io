@@ -1,0 +1,23 @@
+w3 
+--
+chap3
+what is the shell?
+init getty login sh
+beg
+i/o redirection
+
+chap04
+--
+regex
+ . match any chars
+ ^ anchor #beggining
+ $ anchor #ending
+ 1,$s/xxx/yyy/gc	#global replace confirm
+
+cut
+paste
+sed
+tr
+grep
+sort
+uniq

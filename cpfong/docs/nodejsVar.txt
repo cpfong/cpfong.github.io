@@ -1,0 +1,7 @@
+In Node.js (and JavaScript in general), var is used to declare a variable. It's not used to specify 
+the type of the variable, because JavaScript is a dynamically-typed language. 
+
+In addition to var, JavaScript also has let and const for declaring variables. 
+let is similar to var, but it has block scope. const is used to declare variables that cannot be reassigned.
+
+

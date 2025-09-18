@@ -1,0 +1,12 @@
+An Introduction to the C shell
+William Joy
+
+cp a b		#1.1 command [argument_1] [argument_2] ... [argument_n]
+ls -l		#1.2 flag arguments ie start with - more like sub arg while the above is a real arg
+date >foo.txt	#1.3 metacharacter > means redirection
+		#It is important to know that the date com- mand was unaware that its output was going to a file rather than to the terminal. 
+		#The shell performed this redirection before the command began executing.
+seq 1 10 >data	#1.5 note: sort read from STDIN, seq default behaviour is out to STDOUT and sort read from STDIN
+sort <data	#
+ls | sort	#pipeline
+ls /etc/motd.template #1.6$A first / is root, etc is dir, modt.template is filename 

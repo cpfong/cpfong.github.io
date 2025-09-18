@@ -1,0 +1,23 @@
+at AWS
+--
+foo@afats:~ % ssh-keygen
+ENTER all the ways
+
+foo@afats:~ % ls ~/.ssh/	# dir have already created
+
+cd ~/.ssh
+foo@afats:~/.ssh % vi authorized_keys
+
+at www.ifong.org
+--
+@ssh_STUST-> cat .ssh/id_rsa.pub
+use Tmux copy and paste to authorized_keys
+
+example
+--
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCz3VhXHntjYvMBIrdoJQJXePGk7p+9wIMKhkP0XvGxL/PrA6Y5daIiCuxY9Zd02z6cGmp2QD9MYzWfQ5WtQ//ibWZ+FIFM1dc6jllmBP6EEaw1LZuRqvJEpZ+QeiQ83hRWuNTPLCEVCA2AqASRP9G8f2CgAl1KWDEhP6XEXVb9/F8gGJvtoQxaQc1RUloHNMrFRAiDQQdjJLdPrhmacOS2ftk0JYUVEhivh9Jn8gd+n4MXe1rycuQC41/zZHABw4kzBAXmNgEfJ937zUgHbDBYJuEXcB0HBUQC1JtDYNl7/7G9lhE/cVsQS6jzckFKAlMs3OL2tf4cn3oYIJxL5rvWgenN9JSgCOEMWkYm7Z3sxX0gbTl1ImVvaMk4KzRf8QljNNBiRgH2iwG0gQ
+
+test
+--
+goto www.ifong.org
+ssh xxxx  # no need password

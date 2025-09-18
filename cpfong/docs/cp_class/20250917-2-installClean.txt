@@ -1,0 +1,5 @@
+@echo off
+
+set "acc=cpatstust"
+
+"c:\program files\qemu\qemu-system-x86_64" -m 2G -drive file="c:\users\%acc%\qemu\freebsdRunning.img",format=raw -net nic -net user,hostfwd=tcp::2222-:22

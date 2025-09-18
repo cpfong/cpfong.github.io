@@ -1,0 +1,8 @@
+@echo off
+
+
+rem FULL feature, but in stust/desktop cloud FAIL whpx
+rem "c:\program files\qemu\qemu-system-x86_64.exe" -accel whpx -cpu max -m 2G -smp 2 -drive file=freebsdRunning.img,if=virtio,format=raw -device virtio-net-pci,netdev=n0 -netdev user,id=n0,hostfwd=tcp::2222-:22 -display sdl
+
+rem this is ok #without whpx
+"c:\program files\qemu\qemu-system-x86_64.exe" -cpu max -m 2G -smp 2 -drive file=freebsdRunning.img,if=virtio,format=raw -device virtio-net-pci,netdev=n0 -netdev user,id=n0,hostfwd=tcp::2222-:22 -display sdl

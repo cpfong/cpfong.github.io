@@ -1,0 +1,15 @@
+ssh-keygen
+
+~/.ssh/config
+ Host yourName
+ HostName uranus.ifong.biz
+ User cpfong
+ IdentityFile /home/cpfong/.ssh/uranus-sep2024.pem
+ Port 8080 
+
+vi /etc/rc.conf
+hostname="YourNewName"
+service hostname restart
+
+http://freedns.afraid.org
+ afats.us.to --> your VM ip

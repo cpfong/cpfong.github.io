@@ -1,0 +1,10 @@
+two ways in the shell to perform command substitution: 
+ A by enclosing a shell command with back quotes 
+ B with the $(...) construct.
+
+$ echo There are $(who | wc -l) users logged in
+$ echo "You have $(ls | wc -l) fi1es in your directory" #You have       13 fi1es in your directory
+$ echo "You have$(ls | wc -l | tr -s ' ') fi1es in your directory" #You have 13 fi1es in your directory
+
+$ lines=$(cat 3-lines.txt) #To store the contents of a file into a variable, you can use cat
+$ echo "$lines"

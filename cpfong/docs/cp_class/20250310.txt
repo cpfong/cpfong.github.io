@@ -1,0 +1,110 @@
+#!/usr/bin/env perl
+
+my @fred = (  'yabba',  'dabba');
+my @fredd= qw /yabba     dabba /;
+
+$fred[2]='doo';
+
+print "@fred\n";
+
+print $fred[-1], "\n";
+
+######## p44
+#!/usr/bin/env perl
+
+my @a=(15..23);
+
+print "@a\n";
+print @a;
+
+######## p44-b
+#!/usr/bin/env perl
+
+my @arr = qw !fred barney betty wilma dino!;
+
+print "@arr\n";
+
+######## p47 push
+#!/usr/bin/env perl
+
+my @array=5..9;
+push @array, 10..15;
+
+print "@array\n";
+
+my $t = pop @array;
+print $t, "\n";
+print "@array\n";
+
+my $c=@array;
+print "c=$c\n";
+
+###### p48
+#!/usr/bin/env perl
+
+my @array = qw /pebbles dino fred barney betty/;
+my @removed = splice @array, 3; #remove from index 3 to the end
+print "@array\n";
+print "@removed\n";
+
+@array=0..10;
+@removed = splice @array, 3, 2; #remove from index 3 and size 2
+print "@array\n";
+
+@array=0..10;
+@removed = splice @array, 3, 2, a..d; # remove then add into array
+print @array
+
+####### find left example
+#!/usr/bin/env perl
+
+my $foo = 'zxyabzdef';
+my $pos = index($foo, 'd');
+
+if ($pos > 0) {  # Ensure there is a character before 'd'
+    my $char_before_d = substr($foo, $pos - 1, 1);
+    print "Character before 'd' is: $char_before_d\n";  # Output: c
+} else {
+    print "char d is at the beginning or not found.\n";
+}
+
+
+##### rock
+#!/usr/bin/env perl
+
+foreach my $rock (qw /bedrock slate lava/) {
+ print "$rock ";
+}
+
+print "\n";
+
+foreach (qw /bedrock2- slate2- lava2-/) {
+ print;
+}
+
+foreach ( 1 .. 5) {
+ print "$_";
+}
+print "\n";
+
+######
+#!/usr/bin/env perl
+
+my @f = qw /banana apple peach/;
+
+push @f, 'cherry';
+print "@f\n";
+
+push @f, 'pine_apple';
+print "@f\n";
+
+my $t = pop @f;
+print $t, "\n";
+print "@f\n";
+
+####
+#!/usr/bin/env perl
+
+my @people = qw /barney betty fred/;
+
+my $number = 42 + @people; print "number = $number\n";

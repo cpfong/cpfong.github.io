@@ -1,0 +1,4 @@
+server: www.ifong.cc
+account: your stuent ID (small case)
+password: 
+

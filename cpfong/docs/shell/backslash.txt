@@ -1,0 +1,10 @@
+the backslash is equivalent to placing single quotes around a single character
+
+$ echo >	#syntax error: 'newline or ;' unexpected $ echo \>
+$ echo \>	#>
+
+$ twoline='a	#using single quote
+> b'
+$ twoline=a\	#no need ' note: no space after a, since i want to only one argument
+> b
+
