@@ -4,16 +4,30 @@ what is virtualization?
 download FreeBSD ISO
 install QEMU
 
-add user
-sudo
-NAT goto internet
+#vi /etc/rc.conf
+#ifconfig_em0="DHCP" #note: nic of VM is vtnet0, not em0
+#ifconfig_vtnet0="DCHP" #this is right one
 
-sysrc -x ifconfig_em0
-sysrc ifconfig_vtnet0=DHCP
+sed -i.bak 's/ifconfig_em0/ifconfig_vtnet0/g' /etc/rc.conf
+reboot
 
-service netif restart vtnet0
-service routing restart
+login
+ping 8.8.8.8 
+Ctrl+c
+
+pkg install -y sudo
+pkg install -y zsh
+
+pw useradd XXXXX -g wheel -s /usr/local/bin/zsh -m
+passwd XXXXX
 
 host (windows) connect to VM
---
-ssh -p 2222 root@127.0.0.1
+ssh -p 2222 XXXXX@127.0.0.1
+
+touch ~/.zshrc
+exit
+login again
+
+vi
+
+sync;sync; shutdown -h now
