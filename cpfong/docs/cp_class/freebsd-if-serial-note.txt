@@ -1,0 +1,8 @@
+#append these 3 lines into /boot/loader.conf
+boot_serial="YES"
+comconsole_speed="115200"
+console="comconsole"
+
+# vi /etc/ttys: comment out old, use new
+ttyu0	"/usr/libexec/getty std.115200"	vt220	on secure
+#ttyu0	"/usr/libexec/getty 3wire"	vt100	onifconsole secure
