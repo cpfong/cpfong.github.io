@@ -2,11 +2,9 @@ Solutions:
 1 stust cloud desktop
 https://net.cc.stust.edu.tw/cloud/view
 
-2 https://www.ifong.cc/cpfong/docs/cp_class/20250917-9-run-FreeBSD.txt
-
 #vi /etc/rc.conf
 #ifconfig_em0="DHCP" #note: nic of VM is vtnet0, not em0
-#ifconfig_vtnet0="DCHP" #this is right one
+ifconfig_vtnet0="DCHP" #this is right one
 
 sed -i.bak 's/ifconfig_em0/ifconfig_vtnet0/g' /etc/rc.conf
 reboot
