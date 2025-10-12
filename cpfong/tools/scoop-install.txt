@@ -1,0 +1,5 @@
+powershell>
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+Invoke-Expression "& {$(Invoke-RestMethod get.scoop.sh)} -RunAsAdmin"
+scoop install vim

@@ -1,0 +1,136 @@
+#!/usr/bin/env perl
+
+my %tree = (
+  1 => { val => 'root' , left => 2, right => 3 },               #node1, value=root left_link to node2 and right_link to node3
+  2 => { val => '2L'   , left => 4, right => 5 },               #2nd level left
+  3 => { val => '2R'   , left => 6, right => 7 },               #2nd level right
+  4 => { val => '3LL'},                                         #3rd level left left
+  5 => { val => '3LR'},
+  6 => { val => '3RL'},
+  7 => { val => '3RR'}
+);
+
+# Define a subroutine to traverse the tree in order
+sub traverse_in_order {
+  my $node = shift;
+  return if !defined $tree{$node};
+
+  # in order is LDR
+  traverse_in_order($tree{$node}{left});        # Traverse L
+  print "$tree{$node}{val} ";                   # Traverse D
+  traverse_in_order($tree{$node}{right});       # Traverse R
+}
+
+# from node 1 (root), traverse the tree in order and print the values
+traverse_in_order(1);                           #traverse start from node1
+
+print "\n";
+
+#####
+#!/usr/bin/env perl
+
+# obj: take 00form-a-binary-tree-then-traverse.pl as an example
+#      make a binary tree, then traverse it using post order
+#      one may compare result of this with ./w4-00-infix2postfix.pl which is week4 perl script
+#
+
+#x+(y-z)*w              # in order
+#x y z - w * +          # post order
+
+my %tree = (
+  1 => { val => '+' , left => 2, right => 3 },
+  2 => { val => 'x'},
+  3 => { val => '*' , left => 4, right => 5 },
+  4 => { val => '-' , left => 6, right => 7 },
+  5 => { val => 'w'},
+  6 => { val => 'y'},
+  7 => { val => 'z'}
+);
+
+#    root
+# 2L      2R
+#3LL 3LR 3RL 3RR
+
+
+#        +
+#     x     *
+#         -   w
+#        y z
+#
+
+# Define a subroutine to traverse the tree in order
+sub traverse_in_order {
+  my $node = shift;
+  return if !defined $tree{$node};
+
+  # in order is LDR
+  traverse_in_order($tree{$node}{left});        # Traverse L
+  print "$tree{$node}{val} ";                   # Traverse D
+  traverse_in_order($tree{$node}{right});       # Traverse R
+}
+
+sub traverse_post_order {
+  my $node = shift;
+  return if !defined $tree{$node};
+
+  # in order is LRD
+  traverse_post_order($tree{$node}{left});      # Traverse L
+  traverse_post_order($tree{$node}{right});     # Traverse R
+  print "$tree{$node}{val} ";                   # Traverse D
+}
+
+# from node 1 (root), traverse the tree in order and print the values
+traverse_in_order(1);
+print "\n";
+
+traverse_post_order(1);
+print "\n";
+
+print " from w4 class, there is w4-00-infix2postfix.pl result\n";
+print ' in-order x+(y-z)*w ', "\n";
+print ' post-order x y z - w * + ', "\n";
+
+####
+#!/usr/bin/env perl
+
+# obj: create a binary tree
+# note:
+# since i am going to creat a binary tree, sort it 1st can make an easy search
+# no duplicate are allowed
+
+use strict;
+my($root, $n);
+
+#
+# insert op at binary search tree (bst)
+# if bst is null, then return a new node contain key k as root
+# otherwise if k < root->key insert k into left tree recursively
+#
+sub insert {
+ my($tree, $value) = @_;                # @_ is the default array of values pass in
+ unless ($tree) {                       # $tree is not defined yet
+        $tree = {};                     # allocate new node, which is a hash
+        $tree->{VALUE}  = $value;
+        $tree->{LEFT}   = undef;        # left and right are link
+        $tree->{RIGHT}  = undef;
+        $_[0] = $tree;                  # $_[0] is reference param!
+        return;
+ }
+
+ if    ($tree->{VALUE} > $value) { insert($tree->{LEFT} , $value) }
+ elsif ($tree->{VALUE} < $value) { insert($tree->{RIGHT}, $value) }
+ else                            { warn "dup insert of $value\n"  } #note: no dups allowed
+}
+
+sub traverse_pre_order {
+  my ($tree) = @_;
+  return unless $tree;
+
+  print $tree->{VALUE}, " ";
+  traverse_pre_order($tree->{LEFT} );
+  traverse_pre_order($tree->{RIGHT});
+}
+
+while ($n++ < 5) { insert($root, int(rand(1000)))}
+
+traverse_pre_order($root);

@@ -1,0 +1,15 @@
+windows+R 
+
+powershell
+set-winuser<TAB> -La<TAB> en-US -force
+
+w:\qemu<TAB>
+
+sysd<TAB> --> sysdm.cpl ENTER
+add path
+exit
+
+cp w:freebsd.img .
+cp w:sim<TAB> .
+
+sim<TAB>

@@ -1,0 +1,3 @@
+curl -H "User-Agent: fooBot" https://httpbin.org/headers # Header of mime
+curl -X POST -d "name=John&age=20" https://httpbin.org/post # method POST and data parameters are ...
+curl -X POST -H "Content-Type: application/json" -d '{"name":"John","age":20}' https://httpbin.org/post # via header tell i am sending json

@@ -1,0 +1,13 @@
+The POSIX standard shell provides a mechanism for performing integer arithmetic on shell variables called arithmetic expansion. 
+
+The format for arithmetic expansion is
+$((expression))
+
+Notice that the variable var doesn't have to be preceded by a dollar sign. 
+That's because the shell knows that the only valid items that can appear in arithmetic expansions are operators, numbers, and variables. 
+
+If the variable is not defined or contains a NULL string, its value is assumed to be zero. 
+$ echo $((not_assign + 3))	#3
+
+Parentheses may be used freely inside expressions to force grouping
+$ echo $(( (zz-1)*3 ))		#-3

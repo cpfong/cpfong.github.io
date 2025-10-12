@@ -1,0 +1,5 @@
+@echo off
+
+cd "c:\program files\qemu\"
+qemu-img.exe create -f raw "c:\users\STUST\Desktop\freebsd.img" 8G
+qemu-system-x86_64.exe -m 1024 -cdrom "c:\users\STUST\Desktop\FreeBSD-14.3-RELEASE-amd64-bootonly.iso" -boot d -drive file="c:\users\STUST\Desktop\freebsd.img",format=raw -net nic -net user

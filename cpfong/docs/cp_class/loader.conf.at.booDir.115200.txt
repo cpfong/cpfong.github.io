@@ -1,0 +1,4 @@
+#add these 3
+boot_serial="YES"
+comconsole_speed="115200"
+console="comconsole"

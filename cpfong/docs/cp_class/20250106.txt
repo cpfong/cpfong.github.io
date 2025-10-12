@@ -1,0 +1,3 @@
+login https://console.aws.amazon.com using your email
+after login / top right / your name / Account
+top right / Orange Button / Close Account /

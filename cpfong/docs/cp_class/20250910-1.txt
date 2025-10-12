@@ -1,0 +1,12 @@
+save two big file in stust_cloud_Desktop 
+week1 https://www.ifong.cc/cpfong/docs/cp_class/stust_25sep_linux_concept.html 
+
+1 qemu-w64-setup-20250814.exe    2025-08-14 11:30  172M  QEMU Installer for Windows (64 bit)
+2 FreeBSD-14.3-RELEASE-amd64-disc1.iso	1302714368	2025-Jun-06 10:46
+
+Q: how to scp to www.ifong.cc ?
+A: 
+ Win+R cmd
+ cd Desktop
+ scp -P 8080 file.jpg YourName@www.ifong.cc:~
+

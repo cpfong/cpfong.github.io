@@ -1,0 +1,2 @@
+@echo off
+copy d:\qemu\freebsdRunning.img c:\Users\STUST\Desktop\

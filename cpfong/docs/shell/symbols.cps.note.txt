@@ -1,0 +1,49 @@
+Wildcards (Globbing Patterns)
+--
+*	Matches any string of characters (including an empty string). #ls *.txt
+?	Matches any single character. #ls file?.txt
+[ ]	Matches any one of the enclosed characters. Can also specify a range. #ls file[1-3].txt
+[^ ]	Matches any character not enclosed.
+[! ]	Matches any character not enclosed. # ls file[!0-9].txt
+
+
+Redirection Symbols
+--
+>	Redirects standard output to a file, overwriting the file. #echo "Hello" > file.txt  # Writes "Hello" to file.txt
+>>	Redirects standard output to a file, appending to the file.
+<	Redirects standard input from a file.
+2>	Redirects standard error to a file. # ls non_existing_file 2> error.log
+2>>	Appends standard error to a file.
+&>	Redirects both standard output and standard error to a file (not POSIX standard, but commonly supported).
+>&	Redirects standard output to standard error.
+|	Sends the output of one command as input to another command.
+
+
+Quoting
+--
+"	Double quotes, preserves the literal value of all characters within the quotes, except for $, \, and `# echo "Hello $USER"  # Expands $USER
+'	Single quotes, preserves the literal value of all characters within the quotes.#echo 'Hello $USER'  # Does not expand $USER
+`	Backticks, command substitution, captures the output of a command.
+$()	Command substitution, alternative to backticks.
+
+Logical Operators
+--
+&&	Logical AND, executes the second command only if the first one succeeds.# mkdir new_dir && cd new_dir  # Creates and then enters new_dir if successful
+||	Logical OR, executes the second command only if the first one fails.# cd non_existing_dir || echo "Directory does not exist"  # Outputs a message if cd fails
+!	Logical NOT, negates the exit status of a command. if ! grep -q "search_term" file.txt; then
+
+Grouping
+--
+( )	Groups commands to be executed in a subshell.# (cd /tmp && ls)  # Changes to /tmp and lists files there, without affecting the current shell
+{ }	Groups commands to be executed in the current shell.# { echo "Hello"; echo "World"; } > file.txt  # Writes both strings to file.txt
+
+Escape Characters
+--
+\	Escape character, used to escape the following character.# echo "A quote: \"Hello\""  # Outputs: A quote: "Hello"
+
+Miscellaneous
+--
+#	Comment, everything after # on the same line is ignored.
+;	Command separator, allows multiple commands on one line.# echo "Hello"; echo "World"  # Outputs: Hello World
+&	Background operator, runs the command in the background. #sleep 10 &  # Runs sleep command in the background
+$	Variable prefix, used to reference the value of a variable.

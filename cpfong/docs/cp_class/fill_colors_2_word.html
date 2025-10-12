@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+ <pre>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    padding: 12px;
+    border: 1px solid #ccc;
+  }
+</style>
+
+製作文字內填滿圖案（如豹紋）的正統方法：
+✅ 步驟一：準備好圖層
+    文字圖層：「Hello!」（黑色文字即可）
+    豹紋圖案圖層：放在文字圖層下方，位置對齊文字
+
+✅ 步驟二：把文字當成遮罩選取
+    在「Hello!」圖層上右鍵 → Alpha to Selection
+    👉 這會建立出文字的輪廓選取框
+
+✅ 步驟三：剪裁圖案到文字範圍
+    選中豹紋圖層（一定要選對！）
+    選單：Select → Invert（Ctrl + I）
+    按 Delete 鍵 → 刪掉文字外多餘圖案
+    Select → None
+
+✅ 步驟四（可選）：刪除/隱藏文字圖層
+    因為豹紋已經「鑲」進文字形狀，黑字已無用
+
+ </pre>
+</body>
+
+</html>

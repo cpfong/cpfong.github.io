@@ -1,0 +1,10 @@
+powershell
+--
+Get-SmbServerConfiguration | Select EnableSMB2Protocol
+True #which is Good
+
+Exploerer 
+--
+share dir
+
+\\c2-23\foo	#could first check at localhost

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+ <pre>
+開門見山說：沒錯，你不用擔心 https://foo.myzone.com 的 HTTPS 問題。
+
+原因如下：
+    GitHub Pages 預設支援 HTTPS：
+    https://acc.github.io 用的是 GitHub 預設提供的 TLS 憑證（Let's Encrypt），GitHub 會自動處理 HTTPS 配置。
+
+    自訂網域也包含 HTTPS：
+    只要你的 foo.myzone.com 正確 CNAME 指向 acc.github.io，GitHub 會自動為 
+    foo.myzone.com 簽發免費的 Let's Encrypt 憑證，讓 HTTPS 有效（可能需要等候幾分鐘到幾小時讓證書生效）。
+
+    你需要檢查的事項（就這麼一點）：
+        在 GitHub Pages 設定裡，確認已勾選「Enforce HTTPS」。
+        確保 DNS 設定沒錯（foo.myzone.com → acc.github.io）。
+        等待 GitHub 配置 TLS 憑證。
+
+    什麼時候會出問題？
+        如果 A 記錄（不是 CNAME）指向 GitHub Pages 伺服器 IP，可能就沒辦法自動簽憑證。
+        或者，如果你用 Cloudflare 代理（橘色雲）模式，有時 HTTPS 會受到 Cloudflare 影響，需要另外確認。
+
+👉 總結一句話：
+只要用標準 CNAME 指向 acc.github.io 並在 GitHub 開啟「Enforce HTTPS」，你完全不用自己處理 TLS 憑證，一切自動搞定。
+ </pre>
+</body>
+
+</html>

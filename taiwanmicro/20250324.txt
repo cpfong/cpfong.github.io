@@ -1,0 +1,12 @@
+1 mobile phone app: iphone and android
+  android not online yet, need 15 accounts
+
+2 IOT for sensing device that use serial port to communicate with computer
+
+3 official web site maintain #at Godaddy
+
+4 monitor several devices using blue tooth at the same time
+
+5 maintain company mail server on google (12 accounts)
+
+6 Sir Kao. will be in office every Thursday

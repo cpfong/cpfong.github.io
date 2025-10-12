@@ -1,0 +1,8 @@
+due: w6 10/16 Thu, w7 -5, w8 -10, w9 -15 ...
+
+requiement: 
+ A 2 files: mp4 and txt
+ B 3 minutes films mp4 file
+ C sid1-sid2-sid3.proposal.txt
+ D everyone should turn in even though you are in the same group
+ E sid1-sid2-sid3.yourFilmName.mp4

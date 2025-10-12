@@ -1,0 +1,15 @@
+Double quotes work similarly to single quotes, except that they're not as restrictive. 
+Whereas the single quotes tell the shell to ignore all enclosed characters, double quotes say to ignore most
+
+$ x=*
+$ echo $x # addresses intro lotsaspaces names nu numbers phonebook stat 
+$ echo '$x' #$x
+$ echo "$x" #*
+
+Q: with or without "
+A:
+$ twoline="1		# var with 2 line which include a newLine ie "\n"
+> 2"
+$ echo $twoline		#shell simply removes the embedded newline character, treating it as it would a space or tab: as an argument delimiter. 
+			#Then it passes the two arguments to echo to be displayed. echo never gets a chance to see that newline; the shell gets to it first
+$ echo "$twoline"	#double quotes tell it to leave any embedded whitespace characters alone. So in this case, the shell passes a single argument to echo

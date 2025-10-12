@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+target=$1 #read in from stdin
+
+case $target in
+        *1*)
+        echo "One" ;;
+        *2*)
+        echo "Two" ;;
+        *)
+        echo "not 1 nor 2" ;;
+esac

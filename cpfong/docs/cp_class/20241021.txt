@@ -1,0 +1,47 @@
+at AWS> pkg info 
+at AWS> pkg info | grep apache
+
+at AWS> service apache24 status
+AWS> service apache24 start
+
+AWS> sudo vi /etc/rc.conf
+apache24_enable="YES"
+
+AWS> sudo service apache24 start
+
+apache24 data
+cd /usr/local/www/apache24/
+chown -R www:www data
+
+sudo -u www -s 		==> change to www
+whoami
+
+html5up
+https://html5up.net/
+
+pc
+--
+get zip file
+cd downloads
+cmd scp -P 8080 xxx.zip account@www.ifong.org:~
+
+mkdir foo
+cd foo
+mv ../xxx.zip .
+7z x xxx.zip
+rm xxx.zip
+cd ..
+tar cfvz foo.tgz foo/
+
+scp foo.tgz testfoo:	#check out your ~/.ssh/config
+
+goto AWS
+tar xfvz foo.tgz
+sudo chown -R www:www foo/*
+sudo -u www -s
+mv foo /usr/local/apache/data
+cd /usr/local/apache/data
+mv foo/* .
+rmdir foo
+
+visit your web site now 

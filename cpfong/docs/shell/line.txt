@@ -1,0 +1,26 @@
+In a POSIX-compliant shell, each line is interpreted according to a specific sequence of steps that define how commands and their arguments are parsed and executed.
+
+1 Tokenization: shell splits input line into tokens. Tokens are sequences of characters separated by metacharacters (such as spaces, tabs, newlines, semicolons, or other special characters).
+
+2 Command Identification: The shell identifies the command (the first token) and its arguments (subsequent tokens). It also recognizes special built-in commands and keywords.
+
+3 Quoting Removal: The shell processes any quotes (single,double,backtick) and escape characters to determine the actual values of the tokens.
+
+4 Variable Expansion: The shell replaces any variable references ($VARIABLE or ${VARIABLE}) with their corresponding values.
+
+5 Command Substitution: The shell processes command substitutions, where a command enclosed in backticks or $(command) is executed, and its output replaces the command substitution.
+
+6 Filename Expansion (Globbing): The shell expands wildcard characters (e.g., *, ?, [...]) into matching filenames.
+
+7 Word Splitting: The shell splits expanded variables and command substitutions into separate words based on Internal Field Separator (IFS) characters
+
+8 Path Search: If the command is not a built-in shell command, the shell searches for it in the directories listed in the PATH environment variable.
+
+9 Redirections and Pipes: The shell sets up input and output redirections 
+
+10 Execution: shell executes command. If it's built-in , the shell handles it internally. If external command, the shell forks a new process and uses exec to run the command.
+
+11 Command Grouping and Control Operators:  {}, () and control operators (such as ;, &&, ||, &, etc.), which determine the sequence and conditions under which commands are executed.
+
+12 Exit Status: After executing a command, the shell retrieves its exit status. This status can be used in conditional statements and to control the execution flow of subsequent commands
+

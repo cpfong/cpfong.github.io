@@ -1,0 +1,8 @@
+vi /etc/ssh/sshd_config
+ Port 8080
+
+service sshd restart
+
+Firewall in AWS tcp open 8080 (besides 22)
+
+elastic ip

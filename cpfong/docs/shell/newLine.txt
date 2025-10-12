@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+q='
+'
+case "$q" in
+    *'
+'*) echo nl;;
+    *) echo NO nl;;
+esac

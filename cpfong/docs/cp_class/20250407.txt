@@ -1,0 +1,50 @@
+#!/usr/bin/env perl
+
+my %h=('a' => 1, 'b' => 2, 'c' => 3);
+
+print "using foreach \n";
+foreach (keys %h){
+ print "$_ $h{$_} \n";
+}
+
+print "using while each \n";
+while (my ($k,$v) = each %h){
+ print "$k $v \n";
+}
+
+
+##### p111 a
+#!/usr/bin/env perl
+
+my %h=('a' => 1, 'b' => 2, 'c' => 3);
+
+while (my ($k, $v) = each %h){
+ print "$k $v\n";
+}
+
+if (exists $h{'d'}){
+ print "there is d\n";
+}
+else {
+ print "no d\n";
+}
+
+print "$h{'a'} \n";
+delete $h{'a'};
+print "$h{'a'} \n";
+
+#### count words
+#!/usr/bin/env perl
+
+print "pls input word, one word in each line \n";
+
+my %h;
+
+while (<>){
+ chomp;
+ $h{$_}++;
+}
+
+foreach (keys %h){
+ print "$_ $h{$_}\n";
+}

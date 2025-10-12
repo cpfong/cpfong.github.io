@@ -1,0 +1,55 @@
+Here’s the basic pattern for getting an OAuth 2.0 token with curl.
+--
+The exact command will depend on whether you’re using 
+ 1:Client Credentials 2:Authorization Code 3:another grant type
+but let’s start with the most common: Client Credentials Grant.
+
+1. Client Credentials Flow #note: google does NOT support this way
+This is used for server-to-server communication  # my app <-> google api, 
+no browser ,no input. automaticlly communicate
+where you have a client_id and client_secret.
+
+Example:
+curl -X POST https://authorization-server.com/oauth2/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=client_credentials" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET" \
+  -d "scope=read write"
+Explanation:
+grant_type=client_credentials → tells the server we’re doing a Client Credentials flow.
+scope=... → optional, depends on API.
+Response will be JSON like:
+{
+  "access_token": "eyJhbGciOiJSUzI1...",
+  "token_type": "Bearer",
+  "expires_in": 3600 #always short period
+}
+
+2. Authorization Code Flow
+For user login scenarios, you’ll first get an authorization code from the browser redirect, then exchange it for a token:
+curl -X POST https://authorization-server.com/oauth2/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=authorization_code" \
+  -d "code=AUTHORIZATION_CODE" \
+  -d "redirect_uri=https://yourapp.com/callback" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET"
+
+3. Refresh Token Flow
+To refresh an expired token:
+curl -X POST https://authorization-server.com/oauth2/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=refresh_token" \
+  -d "refresh_token=YOUR_REFRESH_TOKEN" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET"
+
+4. Common Tips
+Always use application/x-www-form-urlencoded for the token endpoint unless the provider specifies otherwise.
+Keep client_secret out of logs and scripts you share.
+Some APIs require sending credentials in the Authorization header instead:
+curl -X POST https://authorization-server.com/oauth2/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -u "YOUR_CLIENT_ID:YOUR_CLIENT_SECRET" \
+  -d "grant_type=client_credentials"

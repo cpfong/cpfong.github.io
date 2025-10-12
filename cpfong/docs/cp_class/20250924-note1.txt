@@ -1,0 +1,6 @@
+W2 QEMU/FreeBSD
+students can login as root and shutdown the system
+
+there are these problems:
+1 qemu focus does not release
+2 tcp cannot forward port 2222

@@ -1,0 +1,63 @@
+base on http://www.etalabs.net/sh_tricks.html
+
+#Printing the value of a variable
+1. use printf not echo
+ printf %s\\n "$var" | cut -d' ' -f1
+
+#Reading input line-by-line
+2. Reading input line-by-line
+ IFS= read -r var	# note: IFS=read does NOT work!! after = there MUST be a space
+ 			# This command reads a line of input, terminated by a newline or end of file or error condition, 
+			# from stdin and stores the result in var. Exit status will be 0 (success) if a newline is reached, and nonzero (failure) 
+			# if a read error or end of file terminates the line.
+			# -r Do not treat a <backslash> character in any special way.
+
+3. Reading input from pipe: use HERE doc, old way(#2) does not work
+ $(echo '1 2 3' | IFS= read var1)	#FAIL!
+
+ IFS= read var2 << EOF			#ok
+ $(echo '1 2 3')
+ EOF
+
+also check
+./shell/cp.xargs.notes.txt
+
+#Using find with +
+4. find with +
+ Of course the much smarter way to use find to efficiently apply commands to files is with -exec and a + replacing the ;
+ $find path -exec command '{}' +
+
+#Getting non-clobbered output from command substitution
+
+f='/usr/local/bin/perl'
+var=$(dirname "$f"; echo x)  #note: there is a \n before x
+var=${var%??}	#get rid of x and \n
+var=${f%/*}	#suffix substitude 
+
+Q: why eval?
+A:
+eval : concatenate command parameter and then execute in shell
+ 1 eval just like $()
+ 2 eval command par1 par2 ...	# the string right after eval must be a command
+ 3 eval will interpreate $var as its value
+
+cmd='echo'
+eval $cmd i love my country	#just like $(echo i love my country)
+
+
+for i in `seq 0 100` # assign an array value
+do
+ eval arr$i=$i
+done
+
+sum=0
+for i in `seq 0 100`
+do
+ sum=$(expr $sum + $arr$i) #expr to add two nums
+done
+
+#Returning strings from a shell function
+a='string'
+b=a
+eval y=\$$b #var y now 'string'
+eval y=$$b #var y now an address

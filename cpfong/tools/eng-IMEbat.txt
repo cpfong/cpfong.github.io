@@ -1,0 +1,8 @@
+@echo off
+
+echo Adding US English Input Method while keeping the existing Chinese IME... <br>
+
+PowerShell -Command "$LangList = Get-WinUserLanguageList; $LangList.Add('en-US'); Set-WinUserLanguageList $LangList -Force" <br>
+PowerShell -Command "Set-WinDefaultInputMethodOverride -InputTip '0409:00000409'" <br>
+
+echo US English Input Method has been added. Chinese IME is still present.     

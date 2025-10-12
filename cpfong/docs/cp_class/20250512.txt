@@ -1,0 +1,84 @@
+#!/usr/bin/env perl
+
+#my @tree = (0,['+',2,3],['A'],['B']); # A+B
+my @tree = (0,['+',2,3],['*',4,5],['B'], ['C'], ['D']);
+
+sub post_order {
+ my $nodeN = shift;
+ return unless $tree[$nodeN][0];
+
+ post_order($nodeN*2  );
+ post_order($nodeN*2+1);
+ print $tree[$nodeN][0];
+}
+
+sub in_order {
+ my $nodeN = shift;
+ return unless $tree[$nodeN][0];
+
+ in_order($nodeN*2  );
+ print $tree[$nodeN][0];
+ in_order($nodeN*2+1);
+}
+
+post_order(1); print "\n";
+in_order(1); print "\n";
+
+#####
+#!/usr/bin/env perl
+
+my @tree = (    0,              #useless
+                ['+',2,3],      #1 node1 data='+' left is node2, right is node3
+                ['x'],          #2 node2 data='x' no left, no right
+                ['*',6,7],      #3 node3 data='*' left is node4 right is node5
+                [],             #4 nothing, no data, no left, no right, but occupy a space just do nothing
+                [],             #5
+                ['-',12,13],    #6
+                ['w'],          #7
+                [],             #8
+                [],             #9
+                [],             #10
+                [],             #11
+                ['y'],          #12
+                ['z'],          #13
+);
+
+
+#### array ref
+#!/usr/bin/env perl
+
+#        +
+#     X     Y
+#
+
+my $tree = [
+            '+',[
+                  'X',
+                ],
+                [ #2R
+                  'Y',
+                ],
+          ];#tree
+
+sub in_order {
+ my $t = shift;
+ return unless $t;
+
+ in_order($$t[1]);
+ print $$t[0];
+ in_order($$t[2]);
+}
+
+sub post_order {
+ my $t = shift;
+ return unless $t;
+
+ post_order($$t[1]);
+ post_order($$t[2]);
+ print $$t[0];
+}
+
+in_order($tree); print "\n";
+post_order($tree); print "\n";
+
+

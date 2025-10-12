@@ -1,0 +1,44 @@
+AWS> npm list
+AWS> npm install bcrypt 
+AWS> npm install body-parser
+
+
+T> cp /tmp/94s-auth-MongoDB.js .
+T> cp /tmp/94c-auth-MongoDB.sh .
+T> scp 94s-auth-MongoDB.js YourAcct:~
+T> scp 94s-auth-MongoDB.sh YourAcct:~
+
+AWS> npm install mongoose
+AWS> pkg info | grep mongo  	#empty
+AWS> pkg search mongo		#find mongo 
+AWS> pkg search mongo | grep -E '^mongo'
+AWS> sudo pkg install -y mongodb60
+
+AWS> foo@afats:~/project % ls /usr/local/etc/rc.d/mon*
+/usr/local/etc/rc.d/mongod
+
+foo@afats:~/project % sudo service mongod start
+vi /etc/rc.conf
+mongod_enable="YES"
+
+@afats:~/project % sudo service mongod start
+Starting mongod.
+
+AWS> npm install mongoose
+AWS> npm list
+
+AWS> sudo npm install mogosh
+
+AWS> foo@afats:~ % cd ~/node_modules/.bin/
+AWS> foo@afats:~/node_modules/.bin % ./mongosh --port 27017
+test> show dbs
+test> use authDemo
+authDemo> db.users.find()
+[
+  {
+    _id: ObjectId('6741975704c31ed356253e80'),
+    username: 'testuser',
+    passwordHash: '$2b$10$nWtdnTEaijZKMbjUIjFtCul3VLCO9QiD0QfPpMS2jjzzJam5Gvpwu',
+    __v: 0
+  }
+]

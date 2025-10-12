@@ -1,0 +1,26 @@
+@ssh_STUST-> cp /tmp/91client-passVar.sh /tmp/91server-passVar.js /tmp/92c-add-minus-mul-div.sh /tmp/92s-add-minus-mul-div.js .
+@ssh_STUST-> ls 9*
+91client-passVar.sh             91server-passVar.js             92c-add-minus-mul-div.sh        92s-add-minus-mul-div.js
+
+@ssh_STUST-> echo $PATH
+/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/home/cpfong/bin
+
+@ssh_STUST-> cd ~/bin/
+
+cp /tmp/myscp.sh .
+vi myscp.sh
+
+source ~/.cshrc
+@ssh_STUST-> chmod +x ~/bin/myscp.sh
+
+ls 9* | myscp.sh | sh
+
+goto AWS
+--
+mv 10 project
+
+foo@afats:~ % sudo pkg install -y jq
+
+foo@afats:~ % echo '{"name":"john", "height":174, "weight":67}' | jq .
+
+echo '["apple", "grape"]' | jq .

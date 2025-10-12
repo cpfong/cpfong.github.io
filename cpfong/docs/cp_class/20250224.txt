@@ -1,0 +1,23 @@
+pwd
+mkdir 0224
+cd 0224
+
+perl -d -e 1		# debug one line at a time, q to quit debug mode
+
+DB<1> print 1.25	# print a floating point 1.25
+DB<2> print 255.000	# 255
+
+math operator    + - * / %
+1+1
+10%2             #module
+
+string operator  x .
+x               #mean multiple
+.               #mean append
+
+this . is       #append is after this
+a x 3           #aaa
+
+0377            #oct 377 ie 255
+0xff            #hex ff  ie 255
+0b11111111      #binary ie 255

@@ -1,0 +1,104 @@
+#!/usr/bin/env perl
+
+print "pls input a number #only one: ";
+chomp (my $a = <>);
+print "you have input $a\n";
+
+print "instead of one, now multiple numbers, Ctrl+d to stop input: " ;
+chomp (my @a= <>); # i am using same variable name a, however array
+
+print "you have input @a\n";
+~
+######
+#!/usr/bin/env perl
+
+my @array = 0..9;
+my @removed = splice @array, 3, 2, a..c; #splice(@array, offset, length, @replacement);
+
+print "removed\n @removed\n";
+print "left\n @array\n";
+
+######
+#!/usr/bin/env perl
+
+use Affix::Infix2Postfix;
+
+#$str="-23.e10*sin(x+y)+cos(x)";
+#$str="x**y<<2+z";
+$str="x+(y-z)*w"; #no spaces are allowed
+
+#operators in precedence order!
+$inst=Affix::Infix2Postfix->new(
+        'ops'=>[
+                {op=>'<<'},
+                {op=>'>>'},
+                {op=>'+'},
+                {op=>'-'},
+                {op=>'*'},
+                {op=>'/'},
+                {op=>'-',type=>'unary',trans=>'u-'},
+                {op=>'**'},
+                {op=>'func',type=>'unary'},
+                ],
+        'grouping'=>[qw( \( \) )],
+        'func'=>[qw( sin cos exp log )],
+        'vars'=>[qw( w x y z )]
+                                );
+@res=$inst->translate($str);
+@res || die "Error in '$str': ".$inst->{ERRSTR}."\n";
+
+print "$str\n";
+print join(" ",@res),"\n";
+~
+#####
+#!/usr/bin/env perl
+
+#obj: postfix
+#note:
+# A standard expression like (3+4*5)*7 uses infix notation.
+# The equivalent postfix form is 345*+7*.
+# Since post means after, an operator appears after its operands in postfix notation.
+# Postfix expressions are evaluated left to right and operations are performed in the order they are encountered,
+# so parentheses are unnecessary. Evaluation of postfix expressions is relatively simple and uses a stack to store intermediate results.
+
+#algorithm:
+#Assuming the input string contains a valid postfix expression, loop over the string and process each character as follows:
+#If the character is an operand (a number), then push it on the stack.
+#If the character is an operator, then pop two numbers off the stack, perform the appropriate operation, and push the result on the stack.
+# Intermediate results are kept on the stack as the loop repeats. When the loop ends the final result will be the only number left on the stack.
+
+use Switch;
+
+# x + (y-z)*w           inOrder
+# x y z - w * +         postOrder
+
+my @postOrder=qw /2 3 1 - 5 * +/; # in-order: 2+(3-1)*5, and you can get postOrder from ./30-infix2postfix.pl
+my @stack=();
+
+foreach (@postOrder){
+ chomp;
+ my $res=0;
+
+ if (/\d/){
+  push(@stack, $_);
+ }
+ else {
+  my $op = $_;
+
+  my $op1 = pop @stack;
+  my $op2 = pop @stack;
+
+  switch($op) {
+   case "+"             { $res = $op2 + $op1 }
+   case "-"             { $res = $op2 - $op1 }
+   case "*"             { $res = $op2 * $op1 }
+   case "/"             { $res = $op2 / $op1 }
+   else                 { die "wrong operation; only + - * / allowed \n" }
+  }
+
+  push(@stack, $res);
+ }#end else
+}#end foreach
+
+print "2 + (3-1)*5 \n";
+print "the result is $stack[0]\n";

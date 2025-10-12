@@ -1,0 +1,55 @@
+add="ipfw -q add"
+
+/sbin/ipfw -q -f flush
+ipfw disable one_pass
+
+ipfw -q nat 1 config ip $pub_ip same_ports unreg_only reset \
+ redirect_port udp $j_dnsIP:$dns_port $dns_port
+
+# common stuff
+$add 01000 allow ip from $j_net to $j_net
+$add 01001 nat 1 ip from $j_net to any via $pub_nic
+$add 01002 nat 1 ip from any to $pub_ip
+# 65535 is system deny, but without logging. I put 65534 here for logging
+$add 65534 deny log all from any to any via $pub_nic
+
+# pub_ip common for all jail
+$add 1200 allow tcp from $pub_ip to any $http_n_s_ports out
+$add 1201 allow tcp from any $http_n_s_ports to $pub_ip in
+$add 1202 allow tcp from any to $pub_ip 80 in
+
+# ssh is important way to come in unless you have CONSOLE
+$add 1226 allow tcp from $pub_ip to any $ssh_port out
+$add 1227 allow tcp from any $ssh_port to $pub_ip in
+$add 1228 allow tcp from any to $pub_ip $ssh_port in
+$add 1229 allow tcp from $pub_ip $ssh_port to any out
+
+# time sync openntpd
+$add 1230 allow udp from $pub_ip to any $ntp_port out
+$add 1231 allow udp from any $ntp_port to $pub_ip in
+
+# jail ns
+$add 2000 allow udp from any $dns_port to $j_dnsIP in
+$add 2002 allow tcp from any $dns_port to $j_dnsIP in
+$add 2004 allow udp from $pub_ip to any $dns_port out
+$add 2006 allow tcp from $pub_ip to any $dns_port out
+$add 2008 allow udp from any to $j_dnsIP $dns_port in
+$add 2010 allow udp from $pub_ip $dns_port to any out
+
+## old way as reference
+#!/bin/sh
+pif="vtnet0"
+pip="1.2.3.4"
+jnet="10.0.0.1/24"
+
+add="ipfw -q add"
+
+/sbin/ipfw -q -f flush
+ipfw disable one_pass
+ipfw -q nat 1 config ip $pip same_ports unreg_only reset
+
+$add 2000 allow ip from $jnet to $jnet
+$add 2001 nat 1 ip from $jnet to any via $pif
+$add 2002 nat 1 ip from any to $pip
+##$add 4999 deny log all from any to any via $pif # real world use (after 1st succeed, then i can try this out)
+$add 5000 allow all from any to any via $pif # just pass all for the begging

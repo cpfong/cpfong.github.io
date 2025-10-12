@@ -1,0 +1,11 @@
+-- setup environment
+npm init -y
+@nyx_HOST-> npm install googleapis
+
+edit source
+--
+vi foo.gs
+
+to run
+--
+node foo.gs     #or cat foo.gs | node

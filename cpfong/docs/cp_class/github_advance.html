@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+ <pre>
+客製化網站（HTML/CSS）教學方向
+目標：讓學生從「改一點文字」→ 到「改版面、改配色」→ 到「放上自己的風格」。
+
+
+✅ 1️⃣ 認識檔案結構
+範例說明：
+dist/
+├── assets/
+│   ├── css/
+│   │   └── styles.css   👈 主要 CSS
+│   ├── img/
+│   │   └── profile.jpg
+├── index.html          👈 網站主頁
+重點：
+index.html：主要頁面內容
+assets/css/styles.css：版面 & 顏色的控制
+
+
+✅ 2️⃣ 修改 HTML（index.html）
+範例教學：
+換名字 / 簡介：
+<!--
+<h1 class="mb-0">John Doe</h1>
+<div class="subheading mb-5">Software Developer</div>
+增加一段自我介紹區塊：
+<section class="resume-section" id="aboutme">
+  <div class="resume-section-content">
+    <h2 class="mb-5">關於我</h2>
+    <p>我是一名專注於 Web 前端開發的學生...</p>
+  </div>
+</section>
+-->
+
+<pre><code>
+&lt;h1 class="mb-0"&gt;John Doe&lt;/h1&gt;
+&lt;div class="subheading mb-5"&gt;Software Developer&lt;/div&gt;
+增加一段自我介紹區塊：
+&lt;section class="resume-section" id="aboutme"&gt;
+  &lt;div class="resume-section-content"&gt;
+    &lt;h2 class="mb-5"&gt;關於我&lt;/h2&gt;
+    &lt;p&gt;我是一名專注於 Web 前端開發的學生...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+
+
+✅ 3️⃣ 修改圖片
+把 assets/img/profile.jpg 換成學生自己的照片
+讓學生練習如何用 git add 更新圖片
+
+
+✅ 4️⃣ 改 CSS（assets/css/styles.css）
+簡單教幾招：
+改背景色：
+body {
+    background-color: #f5f5f5;
+}
+改主色系：
+a {
+    color: #007bff; /* 改成藍色 */
+}
+改字型：
+body {
+    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+}
+改版面寬度：
+.resume-section-content {
+    max-width: 800px;
+}
+
+
+✅ 5️⃣ 挑戰題
+增加新區塊（例如作品集）
+改動主配色（讓整個網站看起來完全不一樣）
+嘗試加 Google Fonts
+
+ </pre>
+</body>
+
+</html>

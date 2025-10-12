@@ -1,0 +1,62 @@
+#ref https://www.baeldung.com/linux/xargs
+
+Q: why me
+A: convert STDIN into parmeters, since rm canNOT take stdin
+
+ls | rm --> FAIL
+ls | xargs rm --> ok since xargs get stdin and convert it to rm parameters
+
+#3.1. Limit Output per Line
+ls | xargs
+ls | xargs -n 1
+
+#3.3. Insert Arguments at a Particular Position
+-- use I can insert argument into any position
+ls | xargs -I {} echo rclone copy {} koofr:foo/ 	# -I {} --> then you can use parameter with command at any location 
+
+#4. Handling Files with Special Characters in the Names
+$ ls -l
+total 1789
+-rw-r--r--  1 cpfong  wheel  910679 May 20 10:41 mini-screenshots 2024-05-20 上午10.38.07.png
+-rw-r--r--  1 cpfong  wheel  894860 May 20 10:41 mini-screenshots 2024-05-20 上午10.38.09.png
+
+ls *.png | xargs -I % echo rclone copy % koofr:foo/		#FAIL!
+ls *.png | xargs -I % echo rclone copy \"%\" koofr:foo/		#ok
+
+#To deal with this problem, both xargs and the command passing the output to xargs must use a null character as the record separator.
+# fileName contain ' or "
+find . -name 'file*' | rm #FAIL
+find . -name 'file*' -print0 | rm -0 rm 			# change xargs use null char as separator
+
+
+$ xargs
+a b
+c
+^D (done with input)
+
+now xargs have 3 parameters: a b and c
+default cmd (if not input) is /bin/echo
+
+echo a b c
+
+it can take the 1st arg as cmd
+$ xargs cat file1
+file2
+^D
+it will cat file1 and cat file2
+
+
+
+find . -name "*.bak" -type f -print | xargs echo /bin/rm -f
+$ find . -name "*.c" -type f | sh ~/tmp/trash/test.sh | head -n1
+rm './foo.c'
+
+$ cat test.sh
+#!/bin/sh
+
+cat "$@" |
+while IFS= read -r line
+do
+ printf "rm \'$line\'\n"	# file name can have space (ex 'file nmae.c'
+done
+$

@@ -1,0 +1,8 @@
+@echo off
+
+c:
+mkdir qemu
+cd qemu
+copy w:\qemu\iso\FreeBSD14.3R-amd64-disc1.1302714368.iso c:
+copy w:\qemu\iso\qemu-w64-setup-20250814.exe c:
+c:qemu-w64-setup-20250814.exe

@@ -1,0 +1,13 @@
+@echo off
+
+qemu-system-x86_64.exe -cpu max -m 2G -smp 2 -drive file=freebsd.img,if=virtio,format=raw -device virtio-net-pci,netdev=n0 -netdev user,id=n0,hostfwd=tcp:127.0.0.1:2222-:22 -display gtk
+
+rem serial port buad rate 115200 ok
+qemu-system-x86_64.exe -cpu max -m 2G -smp 2 -accel tcg,thread=multi -drive file=freebsd.img,if=virtio,format=raw,cache=writeback,aio=threads -netdev user,id=n0,hostfwd=tcp:127.0.0.1:2222-:22 -device virtio-net-pci,netdev=n0 -object rng-builtin,id=rng0 -device virtio-rng-pci,rng=rng0 -display none -serial stdio -monitor none
+  
+rem #gtk better on keyboard
+rem qemu-system-x86_64.exe -cpu max -m 2G -smp 2 -drive file=freebsd.img,if=virtio,format=raw -device virtio-net-pci,netdev=n0 -netdev user,id=n0,hostfwd=tcp::2222-:22 -display gtk
+
+rem #127.0.0.1
+rem qemu-system-x86_64.exe -cpu max -m 2G -smp 2 -drive file=freebsd.img,if=virtio,format=raw -device virtio-net-pci,netdev=n0 -netdev user,id=n0,hostfwd=tcp:127.0.0.1:2222-:22 -display gtk
+

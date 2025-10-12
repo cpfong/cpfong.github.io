@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cps 學習之旅</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header, footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Frequently Used Websites
+    </header>
+   <div class="container">
+
+   <a href=./pingtung-class.html><img src=../img/plogov5.webp loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+   <a href= cp_class/afats.html><img src=../img/afitLogoV2.webp loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+   <a href= cp_class/stust.html><img src=../img/stustLogov1.webp loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+
+   </div>
+
+<script>
+(function(){
+  function swapToFallback(el){
+    var src = el.getAttribute('src');
+    if(!src) return;
+    if(!/\.webp(\?.*)?$/i.test(src)) return;
+    var base = src.replace(/\.webp(\?.*)?$/i,'');
+    var tryJpg = base + ".jpg";
+    var tryPng = base + ".png";
+    var probe = new Image();
+    probe.onload = function(){ el.src = tryJpg; };
+    probe.onerror = function(){ el.src = tryPng; };
+    probe.src = tryJpg;
+  }
+  function convertImageTags(){
+    var list = Array.prototype.slice.call(document.getElementsByTagName('image'));
+    list.forEach(function(node){
+      var img = document.createElement('img');
+      for (var i=0;i<node.attributes.length;i++){
+        var a = node.attributes[i];
+        img.setAttribute(a.name, a.value);
+      }
+      img.addEventListener('error', function(){ swapToFallback(img); }, { once: true });
+      node.parentNode.replaceChild(img, node);
+    });
+  }
+  function augmentImgs(){
+    var imgs = document.getElementsByTagName('img');
+    for (var i=0;i<imgs.length;i++){
+      imgs[i].addEventListener('error', function(ev){ swapToFallback(ev.currentTarget); }, { once: true });
+    }
+  }
+  // Run after DOM is ready so we don't race initial image requests.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function(){ convertImageTags(); augmentImgs(); });
+  } else {
+    convertImageTags(); augmentImgs();
+  }
+})();
+</script>
+</body>
+</html>

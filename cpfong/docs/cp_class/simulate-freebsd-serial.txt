@@ -1,0 +1,1 @@
+qemu-system-x86_64.exe -cpu max -m 2G -smp 2 -accel tcg,thread=multi -drive file=freebsd.img,if=virtio,format=raw,cache=writeback,aio=threads -netdev user,id=n0,hostfwd=tcp:127.0.0.1:2222-:22 -device virtio-net-pci,netdev=n0 -object rng-builtin,id=rng0 -device virtio-rng-pci,rng=rng0 -display none -serial stdio -monitor none

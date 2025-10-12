@@ -1,0 +1,23 @@
+console.aws.amazon.com
+security group --> allow certain port
+
+find out which port is opened
+A telnet 127.0.0.1 6403
+B sockstat | grep 6403
+C install lynx
+
+sudo pkg install -y lynx
+lynx http://127.0.0.1:6403
+Q to quit (q is ok too)
+
+node.js
+127.0.0.1 --> 0.0.0.0 to allow ALL 
+
+^AQAZ2wsx@US-> cd
+
+^AQAZ2wsx@US-> npm ls
+foo@ /home/foo
+|
+ --- express@4.21.1
+
+^AQAZ2wsx@US-> npm install express

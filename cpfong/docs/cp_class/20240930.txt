@@ -1,0 +1,33 @@
+console.aws.amazon.com
+package 
+
+vi ~/.cshrc
+alias cls       clear
+source ~/.cshrc
+alias
+pkg install -y apache24
+
+# pkg install -y sudo
+# vi /usr/local/etc/sudoers
+
+vi /etc/rc.conf
+vi /usr/local/etc/
+:set num
+113G    #goto line # 113
+foo ALL=(ALL:ALL) ALL
+
+cat /etc/passwd | tail
+
+passwd foo
+
+sudo pkg install -y apache24
+telnet 127.0.0.1 80
+
+vi /etc/rc.conf
+
+
+011147001 at www.ifong.org --> AMY@afats.us.to
+
+cat /tmp/foo >> ~/.cshrc
+setenv  PATH    "${PATH}:${HOME}/bin"
+

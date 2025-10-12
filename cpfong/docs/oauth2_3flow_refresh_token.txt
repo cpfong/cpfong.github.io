@@ -1,0 +1,27 @@
+like previous #f2 using Regular Web App but add more in
+callback set as #f2
+Refresh Token Expiration: set idle refre lifetime,  set max ref token lifetime
+open browser and paste this
+https://dev-wsg2tdh0ht87qq5f.us.auth0.com/authorize?response_type=code&client_id=P9dm4aIAJLyfafoAsosnC7W6OSxXUl4M&redirect_uri=https%3A%2F%2Foidcdebugger.com%2Fdebug&scope=openid%20profile%20email%20offline_access&state=abcx123xyz&nonce=xyz123abcx
+
+curl -sS -X POST "https://dev-wsg2tdh0ht87qq5f.us.auth0.com/oauth/token" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=authorization_code" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET" \
+  -d "code=AUTH_CODE_FROM_CALLBACK" \
+  -d "redirect_uri=https%3A%2F%2Foidcdebugger.com%2Fdebug"
+
+ret
+--
+{"access_token":"eyJhbGciOiJkaXIiLCJl
+
+further
+use this refresh token to get another ref token
+--
+curl -sS -X POST "https://YOUR_DOMAIN/oauth/token" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=refresh_token" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET" \
+  -d "refresh_token=GQFM..."

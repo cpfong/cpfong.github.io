@@ -1,0 +1,11 @@
+boot logo --> 2
+single user mode
+ENTER
+
+mount -u /
+mount -a
+passwd
+new_pwd
+new_pwd
+
+NO_ERROR

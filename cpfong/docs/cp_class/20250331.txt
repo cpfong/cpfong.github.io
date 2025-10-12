@@ -1,0 +1,121 @@
+#!/usr/bin/env perl
+
+my @arr=(); # ref to node, 0: head, 1: node1 addr, 2:node2 addr ...
+
+# initialize 7 independent nodes
+my $index=1;
+foreach ('a' .. 'g') {
+ $arr[$index]=[$_, undef]; # save anonymous array reference into @arr
+ $index++;
+}
+
+my $head=['head', undef]; $arr[0]=$head;
+
+# link these node together from head ->node1 ->node2 ->node3 .. node7->///
+foreach (0 .. @arr){
+ $arr[$_]->[1]= $arr[$_+1]; #form the link list
+}
+
+my $cur = $head; #current
+
+#traverse
+while ($cur->[1]){
+ my $data = $cur->[0];
+ print "$data ";
+ $cur = $cur->[1];
+}
+print "$cur->[0]\n"; #last one
+
+
+###### reverse
+#!/usr/bin/env perl
+
+my @arr=(); # ref to node, 0: head, 1: node1 addr, 2:node2 addr ...
+
+# initialize 7 independent nodes
+my $index=1;
+foreach ('a' .. 'g') {
+ $arr[$index]=[$_, undef]; # save anonymous array reference into @arr
+ $index++;
+}
+
+my $head=['head', undef]; $arr[@arr]=$head;
+
+# link these node together from head ->node7 ->node6 ->node5 .. node1->///
+foreach (0 .. @arr){
+ my $index = @arr - $_;
+ $arr[$index]->[1]= $arr[$index-1]; #form the link list
+}
+
+my $cur = $head; #current
+
+#traverse
+while ($cur->[1]){
+ my $data = $cur->[0];
+ print "$data ";
+ $cur = $cur->[1];
+}
+print "$cur->[0]\n"; #last one
+
+
+############333333333333333333
+#!/usr/bin/env perl
+
+my @arr=(); # ref to node, 0: head, 1: node1 addr, 2:node2 addr ...
+
+# initialize 7 independent nodes
+my $head=['head', undef]; $arr[0]=$head;
+
+my $index=1;
+foreach ('a' .. 'z') {
+ $arr[$index]=[$_, undef]; # save anonymous array reference into @arr
+ $index++;
+}
+
+# link these node together from head ->node1 ->node2 ->node3 .. node7->///
+foreach (0 .. @arr){
+ $arr[$_]->[1]= $arr[$_+1]; #form the link list
+}
+
+my $found=0;
+
+print "input target: ";
+chomp(my $target=<>);
+
+my $cur=$head;
+my $node_num=0;
+
+#traverse
+while ($cur->[1]){
+ if ($cur->[0] eq $target) {
+  $found=1;
+  last;
+ }
+ $cur = $cur->[1];
+ $node_num++;
+}
+
+if ($found){
+ print "found and it is node$node_num\n";
+}
+
+
+###### page 107
+#!/usr/bin/env perl
+
+my %hash1 =('Jack', 'Chue', 'Danel', 'Eng');
+
+my %hash2 = (
+ 'foo'  => 35,
+ 'bar'  => 12.4,
+ 2.5    => 'hello');
+
+
+my %hash3 = (
+ foo    => 35,
+ bar    => 12.4,
+ 2.5    => 'hello');
+
+foreach (keys %hash3){
+ print "$_ $hash3{$_}\n";
+}

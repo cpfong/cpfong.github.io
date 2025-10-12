@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+<title>FAQ</title>
+</head>
+
+<body>
+ <pre>
+如果你已經有 GitHub 網頁（比如用 GitHub Pages 部署的網站），理論上不一定需要 Netlify，
+但 Netlify 提供了很多 附加功能，是 GitHub Pages 做不到或做得不夠好的。
+為什麼很多人會選 Netlify？原因如下：
+
+    更強的建置能力：
+    Netlify 原生支援多種靜態網站生成器（像 Jekyll、Hugo、Next.js、React 等），自動幫你跑建置流程。GitHub Pages 大多只支援靜態檔案和 Jekyll，想跑別的會比較麻煩。
+
+    持續部署更靈活：
+    兩者都能連 GitHub，但 Netlify 可以從 任何分支、任何 repo 自動建置，還會提供 預覽部署（每個 pull request 都能產生一個臨時的預覽網址）。
+
+    自訂網域 + HTTPS 很方便：
+    GitHub Pages 也支援，但 Netlify 在 SSL 憑證管理 這塊做得更好，幾乎不用你動手，更新很快。
+
+    Serverless 函數：
+    Netlify 支援 Serverless（無伺服器函數），你可以直接在網站裡加 API 等後端邏輯；GitHub Pages 完全是靜態的，沒這功能。
+
+    進階路由和轉址：
+    只要一個 _redirects 檔案就能做複雜的 URL 轉址、重寫、反向代理，還可以做 A/B 測試。
+
+    表單收集和其他內建功能：
+    不用自己寫後端，Netlify 可以直接收集表單資料，這是 GitHub Pages 沒有的。
+
+    全球 CDN、效能強：
+    Netlify 的全球 CDN 效能很不錯，會自動幫你快取，速度通常比 GitHub Pages 更快一些。
+
+總結：
+如果你網站只是簡單的靜態頁面，用 GitHub Pages 就很好了。但如果你希望有 更靈活的部署流程、進階的建置設定、後端函數、表單、或複雜的轉址，Netlify 提供的功能就很實用。
+ </pre>
+</body>
+
+</html>

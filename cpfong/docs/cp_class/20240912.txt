@@ -1,0 +1,23 @@
+p5 
+Basic Commands
+ $date
+ $who
+ $echo one
+
+p6
+Working with Files
+ $ls
+ $vi names
+ $cat names 
+ $wc names
+   -l lines
+   -c characters
+   -w workds
+ $cp names saved_names
+ $mv saved_names hold_it
+ $rm hold_it
+
+p10
+ working with directory
+ TAB completion
+

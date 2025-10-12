@@ -1,0 +1,38 @@
+0 
+ $n1='foo' a=1; echo n$a# n1
+ $n1='foo' a=1; eval echo \$n$a #foo
+
+1 Basic Evaluation:
+--
+command="ls -l"
+eval $command
+
+2 Variable Expansion:
+v="HOME"
+eval value=\$$v
+
+3 Command Construction:
+cmd="echo"
+arg="hello world"
+eval $cmd $arg
+
+4 Combining with Loops:
+ for i in 1 2 3
+ do
+  eval echo \$i
+ done
+
+safer way
+--
+var="ls -l"
+$var
+
+cases with command example
+--
+cmd1="echo 'Command 1'"
+cmd2="echo 'Command 2'"
+cmd3="echo 'Command 3'"
+
+for cmd in "$cmd1" "$cmd2" "$cmd3"; do
+    eval $cmd
+done

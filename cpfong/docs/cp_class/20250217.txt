@@ -1,0 +1,7 @@
+~			HOME dir
+mv  src dst		move file or dir from src to dst
+.			current dirctory
+
+mv ./hello.pl ~		move current_dir/hello.pl to HOME
+cd ~/0217		change dir to 0217 dir
+mv ~/hello.pl .		move HOME/hello.pl to current directory

@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+function helloWorld() {
+        var s = 'hello world';
+        console.log(s);
+}
+
+helloWorld();

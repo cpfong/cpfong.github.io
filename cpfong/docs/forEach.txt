@@ -1,0 +1,26 @@
+The forEach method takes a callback function as an argument. This callback function is executed once for each array element. 
+
+The callback function can take up to three arguments:
+ The current element being processed in the array.
+ The index of the current element.
+ The array that forEach was called upon.
+
+syntax
+--
+array.forEach(function(element, index, array) {
+  // Your code here
+});
+
+
+const fruits = ['apple', 'banana', 'cherry']; // fruits is an array with 3 items
+fruits.forEach(	// it is sort of oo (object oriented language), array.forEach ( anonymous function (passIN_parameter){} )
+ function(fruit) {
+  console.log(fruit);
+ }
+);
+
+const fruits = ['apple', 'banana', 'cherry'];
+fruits.forEach(function(fruit, index) {
+  console.log(index + ': ' + fruit);
+});
+
