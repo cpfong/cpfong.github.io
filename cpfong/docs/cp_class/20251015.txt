@@ -1,0 +1,10 @@
+install apache
+
+sudo pkg install -y apache24
+sudo service apache24 start
+sudo sysrc apache24_enable=YES
+sudo service apache24 stop
+sudo service apache24 restart
+sudo service apache24 status
+
+telnet 127.0.0.1 80
