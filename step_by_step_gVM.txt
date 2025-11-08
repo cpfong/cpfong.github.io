@@ -1,0 +1,12 @@
+pre:
+ gmail account
+ mobile phone number to verify
+ credit card
+ gcloud CLI
+
+1. create google project (on console) #gcloud proj<TAB> li<TAB>
+2. create a billing account and add credit card in #gcloude billing accounts list
+3. link project to billing acc #browser goto proj 1st, then left menu check billing
+4. Set a budget & alerts (strongly recommended, but do it after you are used to how much it cost daily)
+5. Enable Compute Engine API #left Menu API/Library/search 'compute engine api'/click/Enable #take some time
+6. ./newFreeBSD.sh

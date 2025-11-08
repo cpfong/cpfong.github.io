@@ -1,0 +1,26 @@
+Day 3 — Mastery & Customization (7 hrs)
+Goal: Develop confident, responsible, and efficient AI practices.
+
+Morning (3.5 hrs)
+Building Custom GPTs & Gemini Extensions
+How to make your own “Custom GPT” or Gemini model
+Uploading instructions, knowledge bases, and constraints
+Demo: making a domain-specific assistant
+Responsible & Ethical AI
+Data privacy and copyright
+Classroom and workplace policies
+
+
+Afternoon (3.5 hrs)
+3. Capstone Project Workshop
+Teams design an AI-enhanced workflow or product
+Live testing, debugging, and optimization
+Showcase & Feedback
+Each participant presents their AI use case
+Discussion: lessons learned and next steps
+Deliverable: Final project + Personal AI Integration Plan (how they’ll apply ChatGPT/Gemini post-training).
+Optional Add-Ons
+Evening lab sessions (guided Q&A and prompt clinics)
+Certificate of completion (with portfolio submission)
+Would you like me to adapt this outline for a specific audience—for example, teachers, business professionals, or students? I can tailor
+ examples, exercises, and deliverables accordingly.

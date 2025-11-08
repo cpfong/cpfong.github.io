@@ -1,0 +1,21 @@
+day 2 — Applied AI Skills (7 hrs)
+Goal: Learn advanced prompting, customization, and real-world workflows.
+
+Morning (3.5 hrs)
+Advanced Prompt Design
+Multi-step prompting, role prompting, and system prompts
+Prompt chaining and reflection techniques
+Contextual Intelligence
+Feeding documents, spreadsheets, or data into ChatGPT/Gemini
+Hands-on: summarize PDFs, analyze data, draft reports
+
+
+Afternoon (3.5 hrs)
+3. Using AI Tools for Creative Work
+Storytelling, image generation, and presentation building
+Gemini integrations with Google Workspace (Docs, Slides, Gmail)
+ChatGPT integrations with Microsoft Office, Canva, and other apps
+Workshop: Task Automation
+Building an “AI assistant” for repetitive work
+Practice session with prompt refinement and peer review
+Deliverable: A mini-project — AI-assisted task workflow (e.g., “grading assistant,” “lesson planner,” “email optimizer”).

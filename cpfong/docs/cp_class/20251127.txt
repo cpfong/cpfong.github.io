@@ -1,0 +1,24 @@
+Day 1 - Foundations of Generative AI (7 hrs)
+Goal: Build understanding of how ChatGPT and Gemini work and develop basic prompt literacy.
+
+Morning (3.5 hrs)
+Introduction to Generative AI
+What are LLMs (Large Language Models)?
+The evolution: from GPT --> ChatGPT  --> Gemini
+Differences between OpenAI & Google AI ecosystems
+Capabilities and Limitations
+What AI can and can't do
+Bias, hallucinations, and ethics in AI use
+Prompt Engineering 101
+Anatomy of a prompt: context, instruction, constraints, tone
+Hands-on: crafting basic prompts in ChatGPT and Gemini
+
+
+Afternoon (3.5 hrs)
+4. Comparing Interfaces & Features
+ChatGPT vs Gemini UI, tools, and integrations
+Using chat history, memory, and document upload features
+Workshop: Practical Prompts
+Education, research, and productivity examples
+Live demos: rewriting, summarizing, explaining, brainstorming
+Deliverable: Learners create a "Prompt Portfolio" (5 well-structured prompts for their domain).

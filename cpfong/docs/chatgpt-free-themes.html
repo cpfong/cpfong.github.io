@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HTML Heredoc Viewer</title>
+<style>
+:root { --pad: 16px; }
+html, body { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "PingFang TC", "Noto Sans", "Microsoft JhengHei", system-ui, sans-serif; }
+/* 只顯示輸出區 */
+#out {
+white-space: pre-wrap; /* 保留換行與縮排 */
+word-break: break-word; /* 長字詞可換行 */
+padding: var(--pad);
+min-height: 100vh; /* 讓背景填滿視窗 */
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<br>
+<a href=https://wordpress.com/themes/all/free?s=attar> attar </a> --
+<a href=https://wordpress.com/themes/all/free?s=ReadyMade> readyMade</a> --
+<a href=https://wordpress.com/themes/all/free?s=Fewer> fewer </a> --
+<a href=https://wordpress.com/themes/all/free?s=Pomme> pomme </a> --
+<a href=https://wordpress.com/themes/all/free?s=Twenty Twenty-Five> twenty twenty-five</a>
+
+<!--
+用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
+你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
+我們會以原樣(textContent)取出並顯示在 #out。
+-->
+
+<pre id="out"></pre>
+<script type="text/plain" id="heredoc">
+
+主題名稱		適用情境
+--
+Attar (Free)		適合線上販售產品（手作品）作為「商店／Store」展示。
+Readymade (Free) 	適合服務型（如居家清潔、照護）學生使用。
+Fewer (Free) 		介於展示與服務型之中，版面較簡潔，適合作品＋服務混合。
+Pomme (Free) 		藝術／設計型主題，適合皮革手作、創意商品展示。
+Twenty Twenty‑Five	官方預設主題之一，穩定可靠，適合初期架站、功能簡單的販售或服務展示。
+</script>
+
+--heredoc
+
+<script>
+(function () {
+const src = document.getElementById('heredoc');
+if (!src) return;
+let txt = src.textContent || '';
+// 若第一個字元是換行（常見於縮排時），去掉一個，其他全部保留
+if (txt.startsWith('\n')) txt = txt.slice(1);
+document.getElementById('out').textContent = txt;
+// 保持乾淨：渲染後移除原始節點（可選）
+src.remove();
+})();
+</script>
+</body>
+</html>
