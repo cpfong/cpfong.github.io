@@ -1,0 +1,23 @@
+gcloud projects list
+gcloud billing accounts list
+
+gcloud config list project
+gcloud config set project gcp-free-tier-vm-project
+gcloud compute firewall-rules list --project=gcp-free-tier-vm-project
+gcloud compute firewall-rules list --project=gcp-free-tier-vm-project --format=json|jq .
+gcloud compute instances list
+
+gcloud compute instances start freebsd-vm --zone=us-west1-b
+gcloud compute instances stop freebsd-vm --zone=us-west1-b
+gcloud compute instances delete freebsd-vm --zone=us-west1-b
+
+#connect to my VM via gcloud
+gcloud compute ssh freebsd-vm --zone=us-west1-b
+
+#only ONCE
+gcloud compute instances add-metadata freebsd-vm --zone=us-west1-b --metadata=serial-port-enable=1
+gcloud compute connect-to-serial-port freebsd-vm --zone=us-west1-b
+
+#create instance called freebsd-vm
+#as reference, better use create
+gcloud compute instances create freebsd-vm --zone=us-west1-b --machine-type=f1-micro --image=freebsd-14-3-release-amd64-ufs-gce --image-project=freebsd-org-cloud-dev --boot-disk-size=30GB --boot-disk-type=pd-standard --tags=http-server,https-server --verbosity=debug

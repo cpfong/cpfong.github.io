@@ -1,0 +1,1 @@
+gcloud compute ssh freebsd-vm --zone=us-west1-b

@@ -1,0 +1,183 @@
+#!/usr/bin/env sh
+# create-freebsd-vm.sh
+# Modes: --dry-run (default), --apply, --destroy [--purge-firewall], --status
+# Cloud-Shell safe (return if sourced, exit if executed)
+
+set -eu
+
+die() { printf >&2 "ERROR: %s\n" "$*"; return 1 2>/dev/null || exit 1; }
+info(){ printf "%s\n" "$*"; }
+usage(){
+  cat <<'EOF'
+Usage:
+  create-freebsd-vm.sh [--dry-run | --apply | --destroy | --status] [--purge-firewall] [--help]
+
+Modes:
+  --dry-run        Show configuration and planned actions; do nothing. (default)
+  --apply          Create/ensure VM and firewall rule exist (idempotent).
+  --destroy        Delete the VM. With --purge-firewall, also delete SSH firewall rule.
+  --status         Show VM status (RUNNING/TERMINATED/not found), external IP, firewall presence.
+
+Env overrides:
+  GCP_PROJECT, GCP_REGION, GCP_ZONE, GCP_INSTANCE_NAME, GCP_MACHINE_TYPE,
+  GCP_IMAGE_PROJECT, GCP_FREEBSD_MAJOR, GCP_IMAGE_NAME,
+  GCP_BOOT_DISK_SIZE, GCP_BOOT_DISK_TYPE, GCP_NETWORK_TIER,
+  GCP_NETWORK_TAGS, GCP_FWRULE_NAME
+EOF
+}
+
+MODE="dry-run"   # dry-run | apply | destroy | status
+PURGE_FW=0
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --dry-run) MODE="dry-run" ;;
+    --apply|--no-dry-run) MODE="apply" ;;
+    --destroy) MODE="destroy" ;;
+    --status)  MODE="status" ;;
+    --purge-firewall) PURGE_FW=1 ;;
+    --help|-h) usage; return 0 2>/dev/null || exit 0 ;;
+    *) die "Unknown option: $1 (use --help)";;
+  esac; shift
+done
+
+PROJECT="${GCP_PROJECT:-$(gcloud config get-value core/project 2>/dev/null || true)}"
+REGION="${GCP_REGION:-us-west1}"
+ZONE="${GCP_ZONE:-us-west1-b}"
+INSTANCE_NAME="${GCP_INSTANCE_NAME:-freebsd-vm}"
+MACHINE_TYPE="${GCP_MACHINE_TYPE:-e2-micro}"
+IMAGE_PROJECT="${GCP_IMAGE_PROJECT:-freebsd-org-cloud-dev}"
+PREFERRED_MAJOR="${GCP_FREEBSD_MAJOR:-14}"   # try 14 first, fallback to 13
+IMAGE_NAME="${GCP_IMAGE_NAME:-}"             # if set, we will use this exact image
+BOOT_DISK_SIZE="${GCP_BOOT_DISK_SIZE:-25GB}"
+BOOT_DISK_TYPE="${GCP_BOOT_DISK_TYPE:-pd-balanced}"
+NETWORK_TIER="${GCP_NETWORK_TIER:-STANDARD}"
+TAGS="${GCP_NETWORK_TAGS:-freebsd,ssh}"
+FWRULE_NAME="${GCP_FWRULE_NAME:-allow-ssh-freebsd}"
+
+command -v gcloud >/dev/null 2>&1 || die "gcloud CLI not found"
+[ -n "$PROJECT" ] || die "No GCP project set. Run: gcloud config set project <PROJECT_ID>"
+
+# --- resolve latest FreeBSD image name (read-only) ----------------------------
+resolve_latest_image() {
+  major="$1"
+  gcloud compute images list \
+    --project="$IMAGE_PROJECT" \
+    --no-standard-images \
+    --filter="name ~ ^freebsd-${major}.*" \
+    --sort-by="~creationTimestamp" \
+    --limit=1 \
+    --format="value(name)"
+}
+if [ -z "$IMAGE_NAME" ]; then
+  IMAGE_NAME="$(resolve_latest_image "$PREFERRED_MAJOR")"
+  if [ -z "$IMAGE_NAME" ] && [ "$PREFERRED_MAJOR" -ne 13 ]; then
+    IMAGE_NAME="$(resolve_latest_image 13)"
+  fi
+  [ -n "$IMAGE_NAME" ] || die "No FreeBSD ${PREFERRED_MAJOR}/13 image found in $IMAGE_PROJECT"
+fi
+
+# --- plan ---------------------------------------------------------------------
+printf '\n%s\n' '--- CONFIG (effective) ---'
+printf "Project ID   : %s\n" "$PROJECT"
+printf "Region       : %s\n" "$REGION"
+printf "Zone         : %s\n" "$ZONE"
+printf "Instance     : %s\n" "$INSTANCE_NAME"
+printf "Machine type : %s\n" "$MACHINE_TYPE"
+printf "Image project: %s\n" "$IMAGE_PROJECT"
+printf "Image name   : %s\n" "$IMAGE_NAME"
+printf "Boot disk    : %s (%s)\n" "$BOOT_DISK_SIZE" "$BOOT_DISK_TYPE"
+printf "Network tier : %s\n" "$NETWORK_TIER"
+printf "Tags         : %s\n" "$TAGS"
+printf "FW rule name : %s\n" "$FWRULE_NAME"
+printf "Mode         : %s\n" "$MODE"
+[ "$MODE" = "destroy" ] && [ "$PURGE_FW" -eq 1 ] && printf "Purge FW     : yes\n"
+printf '%s\n\n' '--------------------------'
+
+# --- dry-run short-circuit ----------------------------------------------------
+if [ "$MODE" = "dry-run" ]; then
+  info "DRY-RUN: No changes will be made. Re-run with --apply or --destroy."
+  return 0 2>/dev/null || exit 0
+fi
+
+gcloud config set project "$PROJECT" >/dev/null
+gcloud config set compute/region "$REGION" >/dev/null
+gcloud config set compute/zone "$ZONE" >/dev/null
+
+# --- status -------------------------------------------------------------------
+if [ "$MODE" = "status" ]; then
+  info "Checking status for instance '$INSTANCE_NAME' in $ZONE…"
+  if gcloud compute instances describe "$INSTANCE_NAME" --zone="$ZONE" >/dev/null 2>&1; then
+    STATUS=$(gcloud compute instances describe "$INSTANCE_NAME" --zone="$ZONE" --format='get(status)')
+    IP=$(gcloud compute instances describe "$INSTANCE_NAME" --zone="$ZONE" --format='get(networkInterfaces[0].accessConfigs[0].natIP)')
+    printf "Instance : %s\nStatus   : %s\nExternal IP: %s\n" "$INSTANCE_NAME" "$STATUS" "${IP:-none}"
+  else
+    info "Instance '$INSTANCE_NAME' not found."
+  fi
+  if gcloud compute firewall-rules describe "$FWRULE_NAME" >/dev/null 2>&1; then
+    info "Firewall rule '$FWRULE_NAME' exists."
+  else
+    info "Firewall rule '$FWRULE_NAME' not found."
+  fi
+  return 0 2>/dev/null || exit 0
+fi
+
+# --- apply --------------------------------------------------------------------
+if [ "$MODE" = "apply" ]; then
+  info "Ensuring Compute Engine API is enabled…"
+  gcloud services enable compute.googleapis.com >/dev/null
+
+  # firewall
+  if gcloud compute firewall-rules describe "$FWRULE_NAME" >/dev/null 2>&1; then
+    info "Firewall rule '$FWRULE_NAME' already exists. Skipping."
+  else
+    FIRST_TAG=$(printf "%s" "$TAGS" | awk -F',' '{print $1}')
+    info "Creating firewall rule '$FWRULE_NAME' (tcp:22) for tag '$FIRST_TAG'…"
+    gcloud compute firewall-rules create "$FWRULE_NAME" \
+      --allow=tcp:22 \
+      --target-tags="$FIRST_TAG" \
+      --description="Allow SSH to FreeBSD VMs"
+  fi
+
+  # instance
+  if gcloud compute instances describe "$INSTANCE_NAME" --zone="$ZONE" >/dev/null 2>&1; then
+    info "Instance '$INSTANCE_NAME' already exists in $ZONE. Skipping creation."
+  else
+    info "Creating instance '$INSTANCE_NAME' in $ZONE with image $IMAGE_NAME…"
+    gcloud compute instances create "$INSTANCE_NAME" \
+      --zone="$ZONE" \
+      --machine-type="$MACHINE_TYPE" \
+      --image="$IMAGE_NAME" \
+      --image-project="$IMAGE_PROJECT" \
+      --boot-disk-size="$BOOT_DISK_SIZE" \
+      --boot-disk-type="$BOOT_DISK_TYPE" \
+      --tags="$TAGS" \
+      --metadata=enable-oslogin=true \
+      --network-tier="$NETWORK_TIER"
+    info "Instance '$INSTANCE_NAME' created."
+  fi
+
+  printf '\n%s\n  %s\n' 'Connect with:' "gcloud compute ssh $INSTANCE_NAME --zone=$ZONE"
+  return 0 2>/dev/null || exit 0
+fi
+
+# --- destroy ------------------------------------------------------------------
+if [ "$MODE" = "destroy" ]; then
+  if gcloud compute instances describe "$INSTANCE_NAME" --zone="$ZONE" >/dev/null 2>&1; then
+    info "Deleting instance '$INSTANCE_NAME' in $ZONE…"
+    gcloud compute instances delete "$INSTANCE_NAME" --zone="$ZONE" --quiet
+    info "Instance deleted."
+  else
+    info "Instance '$INSTANCE_NAME' not found. Nothing to delete."
+  fi
+  if [ "$PURGE_FW" -eq 1 ]; then
+    if gcloud compute firewall-rules describe "$FWRULE_NAME" >/dev/null 2>&1; then
+      info "Purging firewall rule '$FWRULE_NAME'…"
+      gcloud compute firewall-rules delete "$FWRULE_NAME" --quiet
+      info "Firewall rule deleted."
+    else
+      info "Firewall rule '$FWRULE_NAME' not found. Skipping."
+    fi
+  fi
+  info "Cleanup complete."
+  return 0 2>/dev/null || exit 0
+fi
