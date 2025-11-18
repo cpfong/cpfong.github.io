@@ -1,8 +1,8 @@
 forward mail to two people using two Gmail filters:
 --
-In Gmail settings → Forwarding and POP/IMAP, click Add a forwarding address.
-Add Person A’s address then confirm.
-Repeat for Person B’s address then confirm.
+In Gmail settings -> Forwarding and POP/IMAP, click Add a forwarding address.
+Add Person A's address then confirm.
+Repeat for Person B's address then confirm.
 
 Create two filters (same rule, different forwarding target):
 Filter 1:

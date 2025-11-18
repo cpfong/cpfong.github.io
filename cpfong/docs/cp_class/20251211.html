@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Day2 of prompt: Adv Prompting</title>
+<style>
+:root { --pad: 16px; }
+html, body { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "PingFang TC", "Noto Sans", "Microsoft JhengHei", system-ui, sans-serif; }
+/* 只顯示輸出區 */
+#out {
+white-space: pre-wrap; /* 保留換行與縮排 */
+word-break: break-word; /* 長字詞可換行 */
+padding: var(--pad);
+min-height: 100vh; /* 讓背景填滿視窗 */
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<a href=./20251211.txt> outline text format</a><br><br>
+
+m1. Multi-Step Prompting 「先給大綱」: 避免一次回答太亂。 <a href=./multi_prompt.html> case </a><br><br>
+m2. Role Prompting & System Prompts 「角色扮演」: 讓模型採用固定視角與行為，輸出一致。 <a href=./role_prompt.html> case </a><br><br>
+m3. Prompt Chaining + Reflection Techniques 「AI 自助」: 自己檢查、自己修、自己改善 <a href=./ai_help_diy.html> case </a> <br><br>
+m4. Contextual Intelligence (based on week 1 students prompt proj) <br><br>
+--- 下午課程 <br>
+a1. Storytelling with AI: 文案，故事
+<br><br>
+a2. AI Image Generation: 生成影像
+<br><br>
+a3. Presentation: 投影片 
+<br><br>
+<!--
+用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
+你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
+我們會以原樣(textContent)取出並顯示在 #out。
+-->
+
+<pre id="out"></pre>
+
+<script type="text/plain" id="heredoc">
+
+
+</script>
+--heredoc
+
+<script>
+(function () {
+const src = document.getElementById('heredoc');
+if (!src) return;
+let txt = src.textContent || '';
+// 若第一個字元是換行（常見於縮排時），去掉一個，其他全部保留
+if (txt.startsWith('\n')) txt = txt.slice(1);
+document.getElementById('out').textContent = txt;
+// 保持乾淨：渲染後移除原始節點（可選）
+src.remove();
+})();
+</script>
+</body>
+</html>
+

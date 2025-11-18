@@ -1,0 +1,14 @@
+vi ~/.bashrc 
+ change system prompt
+ export PATH
+
+ssh-keygen
+
+vi ~/.ssh/config
+ Host freebsd-vm
+    HostName 1.2.3.4
+    User 011100111
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    
+touch ~/.ssh/authorized_keys

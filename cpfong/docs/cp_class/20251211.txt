@@ -16,6 +16,6 @@ Storytelling, image generation, and presentation building
 Gemini integrations with Google Workspace (Docs, Slides, Gmail)
 ChatGPT integrations with Microsoft Office, Canva, and other apps
 Workshop: Task Automation
-Building an “AI assistant” for repetitive work
+Building an "AI assistant" for repetitive work
 Practice session with prompt refinement and peer review
-Deliverable: A mini-project — AI-assisted task workflow (e.g., “grading assistant,” “lesson planner,” “email optimizer”).
+Deliverable: A mini-project — AI-assisted task workflow (e.g., "grading assistant," "lesson planner," "email optimizer").

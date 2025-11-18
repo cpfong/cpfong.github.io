@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chat History and Sessions</title>
+<style>
+:root { --pad: 16px; }
+html, body { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "PingFang TC", "Noto Sans", "Microsoft JhengHei", system-ui, sans-serif; }
+/* 只顯示輸出區 */
+#out {
+white-space: pre-wrap; /* 保留換行與縮排 */
+word-break: break-word; /* 長字詞可換行 */
+padding: var(--pad);
+min-height: 100vh; /* 讓背景填滿視窗 */
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<!--
+用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
+你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
+我們會以原樣(textContent)取出並顯示在 #out。
+-->
+
+<pre id="out"></pre>
+
+<script type="text/plain" id="heredoc">
+1. 三層脈絡：ChatGPT 的「上下文」原理
+
+A 本次訊息（你現在打的 Prompt + 上傳的檔案）
+B 此對話的聊天紀錄（同一個 Chat 內的前後文）
+C 跨對話的「記憶」（系統永久記住你允許它記住的內容）
+
+核心觀念一句話就夠：給得越清楚，AI 越能少廢話、多辦事。
+
+
+2. 善用聊天紀錄（Chat History）
+
+左側欄可看到過去所有聊天。
+立即重新命名習慣要培養：
+
+差：「New Chat 31」
+好：「FreeBSD VM 防火牆規則」、「7 月德國行程草稿」、「民事狀修訂（第 3 版）」
+
+
+2.2 何時「繼續同一聊天」、何時「開新聊天」？
+
+繼續同一聊天
+正在修改同一份文件（法律函、課綱、行程表）延續同一個專案（網站、Shell script、GIMP 教材）需要之前的上下文
+
+開新聊天
+完全不同主題 舊聊天的脈絡反而會干擾 想清乾淨地開始（例如法務 vs. 旅遊）
+
+管理記憶 / bottom left userID / settings / personalize / memory
+不該放進記憶的東
+個資：地址、電話、法律案件當事人全名、證號、密碼
+敏感內容（政治立場、健康狀態、財務細節等）
+
+文件上傳
+
+引用
+
+</script>
+
+--heredoc
+
+<script>
+(function () {
+const src = document.getElementById('heredoc');
+if (!src) return;
+let txt = src.textContent || '';
+// 若第一個字元是換行（常見於縮排時），去掉一個，其他全部保留
+if (txt.startsWith('\n')) txt = txt.slice(1);
+document.getElementById('out').textContent = txt;
+// 保持乾淨：渲染後移除原始節點（可選）
+src.remove();
+})();
+</script>
+</body>
+</html>
+
+
