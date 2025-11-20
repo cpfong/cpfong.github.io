@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HTML Heredoc Viewer</title>
+<style>
+:root { --pad: 16px; }
+html, body { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "PingFang TC", "Noto Sans", "Microsoft JhengHei", system-ui, sans-serif; }
+/* 只顯示輸出區 */
+#out {
+white-space: pre-wrap; /* 保留換行與縮排 */
+word-break: break-word; /* 長字詞可換行 */
+padding: var(--pad);
+min-height: 100vh; /* 讓背景填滿視窗 */
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<!--
+用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
+你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
+我們會以原樣(textContent)取出並顯示在 #out。
+-->
+
+<pre id="out"></pre>
+
+<script type="text/plain" id="heredoc">
+Gmail：依「主旨關鍵字」自動轉寄到另一個 Email （@gmail.com → 任何 email）
+
+Part A — 必須先做：新增並驗證「轉寄地址」 #Gmail 不會讓你直接把信轉出去，除非你先證明你擁有那個信箱。
+步驟 A-1：新增轉寄地址 打開 Gmail（電腦版）/ 右上角齒輪 / See all settings（查看所有設定）
+進入 Forwarding and POP_IMAP / 在最上面點：Add a forwarding address / 
+輸入你要轉寄到的那個 email，例如：myothermail@example.com / Gmail 會寄一封驗證信到該信箱。
+
+步驟 A-2：到另一個 email 中按「確認」 / 會看到 Gmail 寄來的確認信。/ 按裡面的 Verify（確認）。
+完成後，Gmail 才能把特定信件轉到那個信箱。
+
+
+Part B — 建立「主旨關鍵字」過濾器並啟動自動轉寄
+步驟 B-1：建立條件（以主旨為準）
+回到 Gmail（電腦版）/ 右上角搜尋框右邊，有個 「調整篩選器」圖示（看起來像三條線加小漏斗）點它/ 在 Subject（主旨） 欄位輸入關鍵字，例如：
+付款通知 / 點 Create filter（建立篩選器）。
+
+步驟 B-2：設定動作（轉寄）
+在動作清單中勾選：Forward it to（轉寄到）。
+下拉選單會出現你剛剛驗證過的 email。選它。
+按 Create filter（建立篩選器） 完成。
+從現在開始，所有 主旨包含「付款通知」 的新郵件，會自動轉寄到你指定的信箱。
+
+Part C — 測試是否成功
+用另一個信箱寄一封信到你的 Gmail / 信件主旨包含你設定的關鍵字/ 應該會自動出現在你的「轉寄信箱」。
+
+</script>
+
+--heredoc
+
+<script>
+(function () {
+const src = document.getElementById('heredoc');
+if (!src) return;
+let txt = src.textContent || '';
+// 若第一個字元是換行（常見於縮排時），去掉一個，其他全部保留
+if (txt.startsWith('\n')) txt = txt.slice(1);
+document.getElementById('out').textContent = txt;
+// 保持乾淨：渲染後移除原始節點（可選）
+src.remove();
+})();
+</script>
+</body>
+</html>
+
+
