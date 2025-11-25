@@ -1,0 +1,6 @@
+ssh -p 8080 -vvv user@somewhere.com 2>&1 | tee foo.log
+2> mean output std err into 
+&1 mean file descriptor 1 which is std out
+2>&1 append stderr to stdout
+
+tee foo.log mean besides output to STDOUT, also save into foo.log file
