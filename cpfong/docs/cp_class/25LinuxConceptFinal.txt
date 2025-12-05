@@ -1,0 +1,33 @@
+pc:
+ exam image: download from internet or usb
+ boot with exam image
+
+console:
+ root login password: rootroot
+ enable internet
+ add user called mary and group is wheel
+ add package sudo
+
+pc:
+ ssh to freebsd-vm as user mary without password
+ can mary sudo?
+ dns config /etc/resolv.conf updated
+ mary can ssh to netcup without password
+ swapinfo to add swap
+ UserDNS no 
+ apache24
+  ServerName localhost:80
+  prove port 80 is listen
+ install php module (version 82)
+ DirectoryIndex + index.php
+ 
+test php module
+ touch /usr/local/etc/apache24/modules.d/080_mod_php.conf
+ <IfModule php_module>
+    AddType application/x-httpd-php .php
+    AddType application/x-httpd-php-source .phps
+ </IfModule>
+
+restart apache24
+
+curl http://localhost/index.php

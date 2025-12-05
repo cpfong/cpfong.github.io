@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang='zh-Hant'>
+<html>
 <head>
-<meta charset='UTF-8'>
-<title>Table1</title>
+<meta charset="utf-8">
+<title>Table 1</title>
+<style>
+table {border-collapse: collapse; margin: 20px 0;}
+th, td {border: 1px solid #000; padding: 4px 8px;}
+</style>
 </head>
 <body>
-<h2>工作表1</h2>
-<table border="1" class="dataframe">
+<h1>Table 1 (工作表1)</h1>
+<table class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>sid學號</th>
-      <th>name姓名 (一個字即可)</th>
+      <th>姓名</th>
       <th>q1_問題一</th>
       <th>q2_問題二</th>
       <th>q3_問題三</th>
-      <th>Unnamed: 5</th>
-      <th>Unnamed: 6</th>
+      <th>q4</th>
+      <th>q5</th>
       <th>Unnamed: 7</th>
-      <th>Unnamed: 8</th>
-      <th>Unnamed: 9</th>
     </tr>
   </thead>
   <tbody>
@@ -29,8 +31,6 @@
       <td>如何有效率學AI</td>
       <td>AI課程結束後,就業方向有那些</td>
       <td>我應該如何規劃學習路線，才能有效率地學習 AI？</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>請問完成 AI 課程後，職涯規劃可延伸至哪些產業與職位？</td>
       <td>針對 AI 技能養成，我應如何規劃系統化且高效的學習路徑</td>
     </tr>
@@ -40,8 +40,6 @@
       <td>預測股市高點跟低點</td>
       <td>根據近6個月加權指數走勢，結合分析近10年每年12月股市走勢，預估12月股市高點跟低點</td>
       <td>你是一個股票分析師，根據近6個月加權指數走勢，結合分析近10年每年12月股市走勢，預估12月股市高點跟低點，篩選出5個具有投資潛力的股票</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -55,17 +53,13 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>小朱</td>
+      <td>朱</td>
       <td>如如何學習AI</td>
       <td>如何使用AI</td>
       <td>AI如何辨別</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -79,15 +73,11 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>6</td>
       <td>鄉</td>
-      <td>我是一般的家庭使用者，想利用TV BOX看電視劇，針對片源較多的APP有那些?從那裡下載比較安全?請提供3項較多人使用的APP名稱及來源。</td>
-      <td>我是專業的英文翻譯員，用什麼方法最精確又快可以將PDF檔案外文文件翻譯成中文並存入WORD?PDF檔案要注意那些事項?</td>
-      <td>我是一般的使用者，要用AI幫忙處理雜事，目前較多人(台灣地區)使用的AI有那些?功能強項有那些?</td>
+      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -97,8 +87,6 @@
     <tr>
       <td>7</td>
       <td>邱</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -115,16 +103,12 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>9</td>
       <td>L</td>
       <td>請用簡單的方式解釋ai如何生成文字</td>
       <td>請用小學生也能懂的方式解釋ai如何生成文字</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -139,8 +123,6 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>11</td>
@@ -148,8 +130,6 @@
       <td>如何用AI分析股票</td>
       <td>如何用AI自動收集和分析股票的歷史數據，並用哪些AI模型來預測股價？</td>
       <td>我是高中生，請你用淺白的方式告訴我如何用AI自動收集和分析股票的歷史數據，並用哪些AI模型來預測股價？需要準備哪些數據？</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -163,17 +143,13 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>13</td>
       <td>何</td>
       <td>請問要如何做養生餐生意</td>
       <td>我現在準備做熟齡養生餐試賣,請問要如何準備</td>
-      <td>NaN</td>
       <td>我準備從114年11月在屏東建國市場推出熟齡養生餐試賣,一份餐點預算在100元以內,餐點內容有正餐,點心,湯品</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -182,8 +158,6 @@
       <td>14</td>
       <td>如</td>
       <td>今天天氣如何</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -199,13 +173,9 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>16</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -223,15 +193,11 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>18</td>
       <td>貞</td>
       <td>如何使用A賺取金錢</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -247,15 +213,11 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>20</td>
-      <td>.霖富</td>
+      <td>富</td>
       <td>勞退制度</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -264,8 +226,6 @@
     </tr>
     <tr>
       <td>21</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -283,13 +243,9 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>23</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -307,13 +263,9 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>25</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -331,16 +283,12 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>27</td>
       <td>信</td>
       <td>對政府普發一萬元分析</td>
       <td>用AI分析和繪圖</td>
-      <td>NaN</td>
-      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -355,33 +303,8 @@
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>29</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>30</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-</body></html>
+</body>
+</html>
