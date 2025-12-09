@@ -19,17 +19,6 @@ box-sizing: border-box;
 </style>
 </head>
 <body>
-<a href=./20260108.txt> outline text format</a><br><br>
-驗証 -- <a href=./chat_verity.html> 它山之石 </a>
-<br><br>
---- 下午課程 <br>
-a1. Storytelling with AI: 文案，故事
-<br><br>
-a2. AI Image Generation: 生成影像
-<br><br>
-a3. Presentation: 投影片
-<br><br>
-
 <!--
 用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
 你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
@@ -39,6 +28,18 @@ a3. Presentation: 投影片
 <pre id="out"></pre>
 
 <script type="text/plain" id="heredoc">
+透過鏈式分段，你能把 ChatGPT 的能力「層層放大」。模糊問題 → 釐清 → 分析 → 具體解法
+因為每一個 Prompt 的輸出，都變成下一個 Prompt 的上下文（Input）：
+
+step 1
+請協助我釐清手機訊號異常的可能原因。請列出你需要我提供的資訊清單。
+
+step 2
+iPhone 13，台灣中華電信，最近一週常掉訊號，只有在家附近會發生。重開機沒用，更新到 iOS 18 請分析最可能的 3 個原因，並說明推論理由。
+
+step 3
+請針對上述三個可能原因，提供最有效的排查步驟，要求：步驟可執行、不需專業工具、每步不超過 2 分鐘。
+
 </script>
 
 --heredoc
@@ -57,3 +58,5 @@ src.remove();
 </script>
 </body>
 </html>
+
+

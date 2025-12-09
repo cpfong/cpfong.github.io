@@ -19,17 +19,6 @@ box-sizing: border-box;
 </style>
 </head>
 <body>
-<a href=./20260108.txt> outline text format</a><br><br>
-驗証 -- <a href=./chat_verity.html> 它山之石 </a>
-<br><br>
---- 下午課程 <br>
-a1. Storytelling with AI: 文案，故事
-<br><br>
-a2. AI Image Generation: 生成影像
-<br><br>
-a3. Presentation: 投影片
-<br><br>
-
 <!--
 用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
 你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
@@ -39,6 +28,23 @@ a3. Presentation: 投影片
 <pre id="out"></pre>
 
 <script type="text/plain" id="heredoc">
+Google Calendar 有 兩種「生日相關」來源，很多人會搞混。你問的 personal_cal（個人日曆） vs birthday_cal（生日行事曆），其實是兩套完全不同的機制。
+
+1. 了解 Google 的生日來源
+A. Birthday Calendar（生日行事曆）
+這個是 Google 自動產生的行事曆，來源是：你的 Google 通訊錄（Contacts）裡的生日你加入的聯絡人（含 Google 帳號的朋友）你不能在生日行事曆裡直接新增事件。要新增生日 → 一律從 Google Contacts 做。
+
+B. Personal Calendar（你的主要行事曆）
+這是你自己的標準日曆，可以手動新增事件。如果你硬要把生日放在 personal_cal，也可以，但：這些生日不會同步到通訊錄不會出現在「生日行事曆」不會自動變成每年循環（unless you manually set repeat）通常 不建議用 personal_cal 來放生日。
+
+2. 正確設定生日（正宗方法）
+方法 1：從 Google Contacts（聯絡人） 設定（官方推薦）
+開啟 https://contacts.google.com
+找到該聯絡人（或新增一個聯絡人）點 編輯（鉛筆 icon）下方找到 生日 欄位填入生日（可不填年份）儲存後 → 自動出現在「生日行事曆」
+
+優點：
+會自動每年重複在 Google 日曆會出現在 Birthday Calendar 手機 Google Calendar 也會顯示
+
 </script>
 
 --heredoc
@@ -57,3 +63,5 @@ src.remove();
 </script>
 </body>
 </html>
+
+

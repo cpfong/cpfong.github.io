@@ -1,3 +1,8 @@
+00:
+ english input
+ ssh to server, do NOT use console (cursor will disappear)
+ ssh-keygen on powershell copy to freebsd-vm
+
 pc:
  exam image: download from internet or usb
  boot with exam image
