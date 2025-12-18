@@ -23,16 +23,26 @@ pc:
  apache24
   ServerName localhost:80
   prove port 80 is listen
+
  install php module (version 82)
+   sudo pkg search mod_php
  DirectoryIndex + index.php
  
 test php module
+ also cat /usr/local/etc/apache24/modules.d/README_modules.d
  touch /usr/local/etc/apache24/modules.d/080_mod_php.conf
- <IfModule php_module>
-    AddType application/x-httpd-php .php
-    AddType application/x-httpd-php-source .phps
- </IfModule>
+
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "\.phps$">
+    SetHandler application/x-httpd-php-source
+</FilesMatch>
+
+sudo vi /usr/local/www/apache24/data/index.php
+<?php
+phpinfo();
 
 restart apache24
 
-curl http://localhost/index.php
+browser http://127.0.0.1:8080/index.php

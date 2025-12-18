@@ -9,4 +9,4 @@ A:
 a new file name index.html (must upload first)
 commit new file
 
-goto page/github page/ (note: show nothing if you do NOT upload index.html first)
+goto settings/page/github page/ (note: show nothing if you do NOT upload index.html first)

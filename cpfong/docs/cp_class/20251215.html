@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>HTML Heredoc Viewer</title>
+<title>import CSV to g Cal</title>
 <style>
 :root { --pad: 16px; }
 html, body { height: 100%; margin: 0; }
@@ -28,16 +28,20 @@ box-sizing: border-box;
 <pre id="out"></pre>
 
 <script type="text/plain" id="heredoc">
-~/final-proj
-~/final-proj/00-final.sh
-calendar: testDB
-6000 records in testDB
+Q: 6000 records import to goo Cal FAIL
+A: 
+6000 筆事件通常是可行的（至少不會因為「只有 6000」就觸頂）
+匯入更常卡在：
+1. 檔案大小/匯入處理限制（尤其是用 UI 匯入時），
+2. CSV 格式不被接受（日期/時間欄位格式、分隔符、編碼、引號、換行），
+3. 按了兩次 Import / 等太久以為沒成功（會出現 processed 0 或看似沒動）。
 
-functions:
-list calendars
-add one record to testDB
-delete record from testDB
-find something in testDB
+教學上較穩的做法
+--
+每檔 500–1000 筆，逐檔匯入（可控、可除錯）
+每筆 description 短一點（別塞一整篇作文）
+若要「大量且穩」，乾脆 CSV → ICS 再匯入（相容性通常更好；而且比較像「真正的日曆交換格式」）。
+
 </script>
 
 --heredoc
