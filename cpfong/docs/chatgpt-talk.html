@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HTML Heredoc Viewer</title>
+<style>
+:root { --pad: 16px; }
+html, body { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "PingFang TC", "Noto Sans", "Microsoft JhengHei", system-ui, sans-serif; }
+/* 只顯示輸出區 */
+#out {
+white-space: pre-wrap; /* 保留換行與縮排 */
+word-break: break-word; /* 長字詞可換行 */
+padding: var(--pad);
+min-height: 100vh; /* 讓背景填滿視窗 */
+box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<!--
+用法：把你的「heredoc 內容」放到下面這個 <script type="text/plain" id="heredoc"> 區塊。
+你不需要做任何跳脫（<、>、& 也不用改寫）。瀏覽器不會執行此區塊；
+我們會以原樣(textContent)取出並顯示在 #out。
+-->
+
+<pre id="out"></pre>
+
+<script type="text/plain" id="heredoc">
+可以，而且非常適合拿來教學。重點不是「抄網站」，而是教學生用 WordPress.com 的抽象概念，
+重建一個「功能與結構相同」的網站。下面是精華版教學心法（不教細節操作，只教「一定要會的東西」）。
+
+一、先把話說清楚：這不是複製，是「結構模仿」
+
+學生要理解一件事：
+在 WordPress.com，你不是在複製程式碼，而是在重建網站的結構模型。
+
+他們真正要學的是四件事：
+資訊架構（Information Architecture）
+佈景主題的能力邊界
+內容類型的正確使用
+選單與導覽的邏輯
+這四個沒搞懂，後面全部都是亂點。
+
+二、資訊架構是第一優先（比技術重要）
+以你提供的網站為例，結構非常清楚：
+
+Pages（頁面）
+--
+Home Gallery Shop Blog Contact
+
+
+層級關係
+Gallery → 子分類
+Shop → 商品分類
+
+用途區分
+Home ≠ Blog ≠ Shop
+
+👉 教學時定要學生先用紙畫出樹狀結構。
+畫不出來，就不准開編輯器。
+
+三、佈景主題不是「好不好看」，是「能不能做」
+
+在 WordPress.com：
+佈景主題＝一組你必須遵守的限制條件
+
+學生要學會看的是,是否支援：
+全寬大圖（Hero Image）
+上方主選單＋下拉選單
+不同頁面範本（首頁 / 一般頁面 / 聯絡頁）
+圖庫 / Gallery 區塊
+
+一句重點話送給學生：
+「不是我想不想做，而是這個主題允不允許我這樣做。」
+
+四、Pages / Posts / Products 一定要分清楚（新手最大地雷）
+這個網站的內容類型分得很乾淨：
+Pages（頁面）
+固定、不按時間排序：Home、Contact
+
+Posts（文章）
+有時間順序：Blog
+
+Products（商品）
+有價格、分類、購買行為：Shop
+
+教學鐵則（請他們背起來）：
+跟「時間」有關 → 文章
+跟「意義 / 功能」有關 → 頁面
+跟「賣東西」有關 → 商品
+背不會，就一定會做錯。
+
+五、選 ≠ 頁面（一定要點破）
+學生常犯的錯誤：「為什麼我有頁面，選單卻不對？」
+
+你要直接告訴他們：
+選單是手動設定
+選單項目可以是：頁面 分類 自訂連結
+
+下拉選單來自選單層級，不是頁面層級, 這一點講清楚，可以少回答一半的問題。
+
+六、版面不是魔法，是區塊堆疊（Gutenberg 思維）
+畫面看起來很複雜，但實際上只有：
+Cover（大圖＋標題）
+Group / Columns
+Image Gallery
+Heading + Paragraph
+Contact Form 區塊
+
+關鍵觀念：
+一個頁面＝由上往下堆的區塊 排版靠區塊，不靠 CSS
+學生一旦懂這個，編輯器就不再「亂跳」。
+
+七、明確說：哪些東西「不用教」
+在 WordPress.com 教學裡，這些請直接略過：
+PHP FTP 資料庫 安裝 WordPress 上傳佈景 ZIP
+那些是 自架站（WordPress.org） 的世界，現在教只會混淆。
+
+八、給學生的一句總結（可當投影片結尾）
+「我要先設計網站結構，再選一個做得到的佈景主題，用正確的內容類型建立內容，最後用選單與區塊把它組起來。」
+如果學生真正理解這一句話， 他們就做得出你給的這個網站「同等水準的版本」。
+
+如果你願意，下一步我可以幫你：
+直接整理成 2–3 小時的教學大綱
+設計一個 「結構複製作業」評分規準
+或把這個案例包成 課堂示範流程（不碰 VM）
+
+你只要說要哪一個。
+</script>
+
+--heredoc
+
+<script>
+(function () {
+const src = document.getElementById('heredoc');
+if (!src) return;
+let txt = src.textContent || '';
+// 若第一個字元是換行（常見於縮排時），去掉一個，其他全部保留
+if (txt.startsWith('\n')) txt = txt.slice(1);
+document.getElementById('out').textContent = txt;
+// 保持乾淨：渲染後移除原始節點（可選）
+src.remove();
+})();
+</script>
+</body>
+</html>
+
+

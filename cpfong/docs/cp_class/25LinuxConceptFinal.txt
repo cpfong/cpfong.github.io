@@ -46,3 +46,6 @@ phpinfo();
 restart apache24
 
 browser http://127.0.0.1:8080/index.php
+
+john> mkdir ~/public_html
+john> vi ~/public_html/index.html

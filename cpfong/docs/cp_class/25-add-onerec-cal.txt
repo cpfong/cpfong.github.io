@@ -1,0 +1,33 @@
+add_one() {
+ ACCESS_TOKEN="$(./3_gCal_access_token.sh)"
+ CAL_ID="$(get_calID_byName "$ACCESS_TOKEN" 'testDB')"
+ EVENT_INSERT_ENDPOINT="https://www.googleapis.com/calendar/v3/calendars/${CAL_ID}/events"
+
+ SUMMARY="$1"
+ START_TIME="$2"
+ END_TIME="$3"
+
+ TIMEZONE="Asia/Taipei"     # required
+
+ JSON_BODY="$(
+    jq -n \
+       --arg summary "$SUMMARY" \
+       --arg st "$START_TIME" \
+       --arg et "$END_TIME" \
+       --arg tz "$TIMEZONE" \
+       '{
+           summary: $summary,
+           start: { dateTime: $st, timeZone: $tz },
+           end:   { dateTime: $et, timeZone: $tz }
+        }'
+ )"
+
+ RESULT="$(
+    curl -sS -X POST "$EVENT_INSERT_ENDPOINT" \
+        -H "Authorization: Bearer $ACCESS_TOKEN" \
+        -H "Content-Type: application/json" \
+        -d "$JSON_BODY"
+ )"
+
+ echo $RESULT
+}

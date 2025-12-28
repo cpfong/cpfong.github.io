@@ -1,0 +1,25 @@
+get_CalID_byName() {
+ A="$1" #access_token
+ N="$2" #calendar_name
+
+ if [ "$N" = "primary" ]; then
+   printf 'primary\n'
+   return 0
+ fi
+
+ CAL_ID=$(
+  curl -sS \
+    -H "Authorization: Bearer $A" \
+    "https://www.googleapis.com/calendar/v3/users/me/calendarList" |
+  jq -re --arg NAME "$N" '
+    .items[]
+    | select(.summary == $NAME)
+    | .id
+  '
+ ) || {
+  echo "calendar not found: $A" >&2
+  exit 1
+ }
+
+ printf '%s' $CAL_ID
+} #end get_CalID_byName
