@@ -1,0 +1,18 @@
+netcup no browser but need google authenticate
+however google authentication need borwser
+
+command from netcup
+mini with browser create a ssh tunnel forward response back for netcup
+netcup use nc get CODE
+
+server (without browser)
+--
+ print out https://xxxxx to 
+ receive CODE
+ process and goto next stage
+-- 
+
+goto somewhere with browser and ssh
+--
+ssh -N -L 4321:127.0.0.1:4321 -p 8080 account@netcup.ifong.cc #create ssh TUNNEL
+--
