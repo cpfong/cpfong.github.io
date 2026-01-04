@@ -1,0 +1,25 @@
+1) Local port forward to a service on the SSH server itself
+Goal: localhost:15432 → remote:5432 (PostgreSQL on the SSH server).
+ssh -L 15432:127.0.0.1:5432 user@db.example
+
+2) Remote port forward (publish your local service to the remote side)
+Goal: Remote server listens on 127.0.0.1:4321 → forwards to your laptop 127.0.0.1:4321.
+ssh -R 4321:127.0.0.1:4321 user@server.example.com
+
+3) Remote port forward exposed to the world (dangerous if you don’t firewall)
+Goal: Remote 0.0.0.0:9000 → your laptop 127.0.0.1:3000.
+ssh -R 0.0.0.0:9000:127.0.0.1:3000 user@server.example.com
+
+4) Dynamic SOCKS proxy (browser / tools use SOCKS5; “poor man’s VPN”)
+Goal: Create SOCKS at localhost:1080.
+ssh -D 1080 user@jump.example.com
+
+5) Two-hop (jump host → deeper internal host) in one command
+Goal: localhost:2222 → target:22 via jump.
+ssh -J user@jump.example.com -L 2222:target.lan:22 user@target.lan
+
+6) Tunnel for IMAP/SMTP without exposing ports publicly
+IMAP:
+ssh -L 1993:mail.example.com:993 user@jump.example.com
+SMTP submission:
+ssh -L 1587:mail.example.com:587 user@jump.example.com

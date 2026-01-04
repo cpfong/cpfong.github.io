@@ -1,18 +1,18 @@
 netcup no browser but need google authenticate
 however google authentication need borwser
 
-command from netcup
-mini with browser create a ssh tunnel forward response back for netcup
-netcup use nc get CODE
+steps:
+ VPS (mini mac) with browser create a ssh tunnetl wait for google auth and send CODE back
+ headless netcup send 127.0.0.1:port to VPS and get CODE
 
-server (without browser)
+VPS goto somewhere with browser and ssh to create TUNNEL
 --
- print out https://xxxxx to 
+ssh -N -L 4321:127.0.0.1:4321 -p 8080 account@netcup.ifong.cc
+--
+
+headless server (without browser)
+--
+ https://accounts.google.com/o/oauth2/auth?client_id=xxxxx
  receive CODE
  process and goto next stage
 -- 
-
-goto somewhere with browser and ssh
---
-ssh -N -L 4321:127.0.0.1:4321 -p 8080 account@netcup.ifong.cc #create ssh TUNNEL
---
