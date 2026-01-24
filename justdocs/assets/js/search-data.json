@@ -1,634 +1,704 @@
 {"0": {
+    "doc": "Data Structures Class",
+    "title": "資料結構",
+    "content": ". | 班級: 二技 116 管理系資訊管理組(B118) | 上課: Mon 一(5,6,7) 時間 13:40-16:40 教室:電腦教室 201 | 期間: 2026/02/02 - 2026/06/06 | . back 2 DS . ",
+    "url": "/justdocs/courses/data-structures/26-class-breif.html#%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B",
+    
+    "relUrl": "/courses/data-structures/26-class-breif.html#資料結構"
+  },"1": {
+    "doc": "Data Structures Class",
+    "title": "Data Structures Class",
+    "content": " ",
+    "url": "/justdocs/courses/data-structures/26-class-breif.html",
+    
+    "relUrl": "/courses/data-structures/26-class-breif.html"
+  },"2": {
+    "doc": "Data Structures Misc",
+    "title": "資料結構雜七雜八",
+    "content": ". | 校行事曆 | 班級課表 | 每週行事 | 成績 | . back 2 DS . ",
+    "url": "/justdocs/courses/data-structures/26-class-misc.html#%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E9%9B%9C%E4%B8%83%E9%9B%9C%E5%85%AB",
+    
+    "relUrl": "/courses/data-structures/26-class-misc.html#資料結構雜七雜八"
+  },"3": {
+    "doc": "Data Structures Misc",
+    "title": "Data Structures Misc",
+    "content": " ",
+    "url": "/justdocs/courses/data-structures/26-class-misc.html",
+    
+    "relUrl": "/courses/data-structures/26-class-misc.html"
+  },"4": {
     "doc": "AFATS",
     "title": "Teaching systems",
     "content": ". | 空軍航空技術學院 | 成績輸入 | . ",
     "url": "/justdocs/shared/afats.html#teaching-systems",
     
     "relUrl": "/shared/afats.html#teaching-systems"
-  },"1": {
+  },"5": {
     "doc": "AFATS",
     "title": "AFATS",
     "content": " ",
     "url": "/justdocs/shared/afats.html",
     
     "relUrl": "/shared/afats.html"
-  },"2": {
+  },"6": {
     "doc": "Live Broadcast",
     "title": "Google Meet (Primary)",
     "content": "Join live class . ",
     "url": "/justdocs/shared/broadcast.html#google-meet-primary",
     
     "relUrl": "/shared/broadcast.html#google-meet-primary"
-  },"3": {
+  },"7": {
     "doc": "Live Broadcast",
     "title": "Notes",
     "content": ". | Use Chrome or Edge | Sign in with your school account | Do not share the link outside the class | . ",
     "url": "/justdocs/shared/broadcast.html#notes",
     
     "relUrl": "/shared/broadcast.html#notes"
-  },"4": {
+  },"8": {
     "doc": "Live Broadcast",
     "title": "Live Broadcast",
     "content": " ",
     "url": "/justdocs/shared/broadcast.html",
     
     "relUrl": "/shared/broadcast.html"
-  },"5": {
+  },"9": {
     "doc": "Fast Startup with Just the Docs",
     "title": "目標",
     "content": "不 fork、不用範本；用最少檔案建立 Just the Docs + GitHub Pages。 . ",
     "url": "/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html#%E7%9B%AE%E6%A8%99",
     
     "relUrl": "/courses/website-building/github/fast-startup-with-just-the-docs.html#目標"
-  },"6": {
+  },"10": {
     "doc": "Fast Startup with Just the Docs",
     "title": "最小檔案清單（只要 2 個）",
     "content": "在 repo 根目錄建立： . 1) _config.yml 2) index.md . 就能跑起來。 . ",
     "url": "/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html#%E6%9C%80%E5%B0%8F%E6%AA%94%E6%A1%88%E6%B8%85%E5%96%AE%E5%8F%AA%E8%A6%81-2-%E5%80%8B",
     
     "relUrl": "/courses/website-building/github/fast-startup-with-just-the-docs.html#最小檔案清單只要-2-個"
-  },"7": {
+  },"11": {
     "doc": "Fast Startup with Just the Docs",
     "title": "Step 1 — 建立空白 Repo",
     "content": "GitHub 新建 repository（Public），不要 fork。 . ",
     "url": "/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html#step-1--%E5%BB%BA%E7%AB%8B%E7%A9%BA%E7%99%BD-repo",
     
     "relUrl": "/courses/website-building/github/fast-startup-with-just-the-docs.html#step-1--建立空白-repo"
-  },"8": {
+  },"12": {
     "doc": "Fast Startup with Just the Docs",
     "title": "Step 2 — 建立 _config.yml",
     "content": "在 repo 根目錄新增 _config.yml： . title: \"cp's class\" description: \"Course portal\" remote_theme: just-the-docs/just-the-docs . ",
     "url": "/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html#step-2--%E5%BB%BA%E7%AB%8B-_configyml",
     
     "relUrl": "/courses/website-building/github/fast-startup-with-just-the-docs.html#step-2--建立-_configyml"
-  },"9": {
+  },"13": {
     "doc": "Fast Startup with Just the Docs",
     "title": "Step 3 — 建立 index.md",
     "content": "--- title: Home layout: default nav_order: 1 --- # cp's class - [Broadcast](./broadcast/) - [Courses](./courses/) . ",
     "url": "/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html#step-3--%E5%BB%BA%E7%AB%8B-indexmd",
     
     "relUrl": "/courses/website-building/github/fast-startup-with-just-the-docs.html#step-3--建立-indexmd"
-  },"10": {
+  },"14": {
     "doc": "Fast Startup with Just the Docs",
     "title": "Fast Startup with Just the Docs",
     "content": "Go Back to GitHub Resources . ",
     "url": "/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html",
     
     "relUrl": "/courses/website-building/github/fast-startup-with-just-the-docs.html"
-  },"11": {
+  },"15": {
     "doc": "Gimp Basic Editing",
     "title": "GIMP 基礎影像編輯指南",
     "content": ". ",
     "url": "/justdocs/courses/website-building/gimp/gimp-basic-edit.html#gimp-%E5%9F%BA%E7%A4%8E%E5%BD%B1%E5%83%8F%E7%B7%A8%E8%BC%AF%E6%8C%87%E5%8D%97",
     
     "relUrl": "/courses/website-building/gimp/gimp-basic-edit.html#gimp-基礎影像編輯指南"
-  },"12": {
+  },"16": {
     "doc": "Gimp Basic Editing",
     "title": "1. 介面與基本操作",
     "content": ". | 開啟檔案：檔案 &gt; 開啟 (Ctrl + O)。 | 調整畫布大小：圖片 &gt; 畫布大小，可用於增加工作區域而不縮放圖片。 | 復原操作：編輯 &gt; 復原 (Ctrl + Z)，這在調整細節時非常重要。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-basic-edit.html#1-%E4%BB%8B%E9%9D%A2%E8%88%87%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C",
     
     "relUrl": "/courses/website-building/gimp/gimp-basic-edit.html#1-介面與基本操作"
-  },"13": {
+  },"17": {
     "doc": "Gimp Basic Editing",
     "title": "2. 常用編輯功能",
     "content": "A. 縮放及旋轉圖片 (Scale and Rotate Image) . 網頁圖片通常不需要太大的解析度。 . | 點選 圖片 &gt; 縮放圖片。 | 確保「鏈條」圖示是連結狀態，以維持等比例縮放。 | 輸入寬度（例如 800px），按下 縮放。 | . B. 裁切圖片 (Crop) . | 從工具箱選擇 裁切工具 (圖示像一把小刀)。 | 在圖片上拖曳出想要保留的區域。 | 按下 Enter 完成裁切。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-basic-edit.html#2-%E5%B8%B8%E7%94%A8%E7%B7%A8%E8%BC%AF%E5%8A%9F%E8%83%BD",
     
     "relUrl": "/courses/website-building/gimp/gimp-basic-edit.html#2-常用編輯功能"
-  },"14": {
+  },"18": {
     "doc": "Gimp Basic Editing",
     "title": "3. 匯出網頁專用格式",
     "content": "GIMP 預設儲存格式為 .xcf (保留圖層)。若要用於網頁，必須執行「匯出」： . | 檔案 &gt; 匯出為... (Ctrl + Shift + E)。 | 選擇 .jpg (照片) 或 .png (透明圖或標誌)。 | 設定品質（建議 JPG 設定在 80% 左右以平衡品質與檔案大小）。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-basic-edit.html#3-%E5%8C%AF%E5%87%BA%E7%B6%B2%E9%A0%81%E5%B0%88%E7%94%A8%E6%A0%BC%E5%BC%8F",
     
     "relUrl": "/courses/website-building/gimp/gimp-basic-edit.html#3-匯出網頁專用格式"
-  },"15": {
+  },"19": {
     "doc": "Gimp Basic Editing",
     "title": "Gimp Basic Editing",
     "content": "Go Back to Gimp Resources . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-basic-edit.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-basic-edit.html"
-  },"16": {
+  },"20": {
     "doc": "Gimp Boundary Color",
     "title": "1. 黑色與白色虛線 (行軍蟻)",
     "content": "這代表目前的選取範圍 (Selection Area)。只有在這個範圍內的區域才能被上色、刪除或移動。 . | 外觀：像是在不斷移動的螞蟻線。 | 網頁應用：用於確認你要去背的 Logo 範圍。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-boundary-color.html#1-%E9%BB%91%E8%89%B2%E8%88%87%E7%99%BD%E8%89%B2%E8%99%9B%E7%B7%9A-%E8%A1%8C%E8%BB%8D%E8%9F%BB",
     
     "relUrl": "/courses/website-building/gimp/gimp-boundary-color.html#1-黑色與白色虛線-行軍蟻"
-  },"17": {
+  },"21": {
     "doc": "Gimp Boundary Color",
     "title": "2. 黃色與黑色虛線 (圖層邊界)",
     "content": "這代表目前選定的圖層 (Active Layer) 的實際邊界。 . | 意義：告訴你該圖層的大小。如果你畫出的內容超出這個黃線，內容會被隱藏。 | 提示：如果黃線比你的畫布（黑色實線）小，代表該圖層被裁切了。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-boundary-color.html#2-%E9%BB%83%E8%89%B2%E8%88%87%E9%BB%91%E8%89%B2%E8%99%9B%E7%B7%9A-%E5%9C%96%E5%B1%A4%E9%82%8A%E7%95%8C",
     
     "relUrl": "/courses/website-building/gimp/gimp-boundary-color.html#2-黃色與黑色虛線-圖層邊界"
-  },"18": {
+  },"22": {
     "doc": "Gimp Boundary Color",
     "title": "3. 綠色與黑色虛線 (參考線/其他圖層)",
     "content": "通常代表正在對齊的參考線或在某些模式下顯示的非使用中圖層邊界。 . | 意義：幫助你進行精準的網頁元件對齊。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-boundary-color.html#3-%E7%B6%A0%E8%89%B2%E8%88%87%E9%BB%91%E8%89%B2%E8%99%9B%E7%B7%9A-%E5%8F%83%E8%80%83%E7%B7%9A%E5%85%B6%E4%BB%96%E5%9C%96%E5%B1%A4",
     
     "relUrl": "/courses/website-building/gimp/gimp-boundary-color.html#3-綠色與黑色虛線-參考線其他圖層"
-  },"19": {
+  },"23": {
     "doc": "Gimp Boundary Color",
     "title": "常用邊框顯示與隱藏切換",
     "content": "如果邊框太過干擾你的視覺，可以使用以下快捷鍵切換： . | 功能 | 快捷鍵 | 說明 | . | 顯示/隱藏選取 | Ctrl + T | 隱藏「行軍蟻」，讓你清楚觀察修圖後的邊緣。 | . | 顯示/隱藏圖層邊界 | 檢視 &gt; 顯示圖層邊界 | 切換黃黑色虛線的顯示。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-boundary-color.html#%E5%B8%B8%E7%94%A8%E9%82%8A%E6%A1%86%E9%A1%AF%E7%A4%BA%E8%88%87%E9%9A%B1%E8%97%8F%E5%88%87%E6%8F%9B",
     
     "relUrl": "/courses/website-building/gimp/gimp-boundary-color.html#常用邊框顯示與隱藏切換"
-  },"20": {
+  },"24": {
     "doc": "Gimp Boundary Color",
     "title": "Gimp Boundary Color",
     "content": "Go Back to Gimp Resources . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-boundary-color.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-boundary-color.html"
-  },"21": {
+  },"25": {
     "doc": "Gimp Interface",
     "title": "一、GIMP 主介面概覽",
     "content": "啟動 GIMP 後，主要由三個區塊組成：工具箱、影像視窗、對話框停駐區。 . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-interface.html#%E4%B8%80gimp-%E4%B8%BB%E4%BB%8B%E9%9D%A2%E6%A6%82%E8%A6%BD",
     
     "relUrl": "/courses/website-building/gimp/gimp-interface.html#一gimp-主介面概覽"
-  },"22": {
+  },"26": {
     "doc": "Gimp Interface",
     "title": "二、工具箱（左側）",
     "content": "包含選取、移動、裁切、畫筆、橡皮擦、文字等基本工具，是所有操作的起點。 . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-interface.html#%E4%BA%8C%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%B7%A6%E5%81%B4",
     
     "relUrl": "/courses/website-building/gimp/gimp-interface.html#二工具箱左側"
-  },"23": {
+  },"27": {
     "doc": "Gimp Interface",
     "title": "三、影像視窗（中央）",
     "content": "顯示並編輯圖片本身，可同時開啟多張影像進行切換與比較。 . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-interface.html#%E4%B8%89%E5%BD%B1%E5%83%8F%E8%A6%96%E7%AA%97%E4%B8%AD%E5%A4%AE",
     
     "relUrl": "/courses/website-building/gimp/gimp-interface.html#三影像視窗中央"
-  },"24": {
+  },"28": {
     "doc": "Gimp Interface",
     "title": "四、對話框停駐區（右側）",
     "content": "常見包含「圖層」、「通道」、「路徑」、「歷史紀錄」，用來管理與控制編輯流程。 . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-interface.html#%E5%9B%9B%E5%B0%8D%E8%A9%B1%E6%A1%86%E5%81%9C%E9%A7%90%E5%8D%80%E5%8F%B3%E5%81%B4",
     
     "relUrl": "/courses/website-building/gimp/gimp-interface.html#四對話框停駐區右側"
-  },"25": {
+  },"29": {
     "doc": "Gimp Interface",
     "title": "Gimp Interface",
     "content": "Go Back to Gimp Resources . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-interface.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-interface.html"
-  },"26": {
+  },"30": {
     "doc": "Gimp Layer",
     "title": "1. 圖層面板基本操作",
     "content": "在 GIMP 右下角的「圖層面板」中，你可以進行以下操作： . | 新增圖層：點擊面板下方的 + 圖示。建議養成命名圖層的習慣（例如：背景、文字、Logo）。 | 調整順序：點擊並拖曳圖層上下移動。位於最上方的圖層會遮住下方的內容。 | 顯示/隱藏：點擊圖層左側的「眼睛」圖示 👁️。 | 調整透明度 (Opacity)：拖拉面板上方的滑桿，可讓圖層變半透明，常用於浮水印或背景淡化。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-layer.html#1-%E5%9C%96%E5%B1%A4%E9%9D%A2%E6%9D%BF%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C",
     
     "relUrl": "/courses/website-building/gimp/gimp-layer.html#1-圖層面板基本操作"
-  },"27": {
+  },"31": {
     "doc": "Gimp Layer",
     "title": "2. 圖層邊界 (Layer Boundary)",
     "content": "當你選中一個圖層時，畫面上會出現 黃黑相間的虛線。 . | 意義：這代表該圖層的可編輯範圍。 | 注意：如果你在黃框以外的地方畫圖，內容是不會顯示的。 | 調整方法：若要讓圖層與畫布一樣大，請對圖層按右鍵，選擇 圖層調整為影像大小。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-layer.html#2-%E5%9C%96%E5%B1%A4%E9%82%8A%E7%95%8C-layer-boundary",
     
     "relUrl": "/courses/website-building/gimp/gimp-layer.html#2-圖層邊界-layer-boundary"
-  },"28": {
+  },"32": {
     "doc": "Gimp Layer",
     "title": "3. 圖層模式 (Layer Modes)",
     "content": "圖層面板有一個「模式」下拉選單決定了當前圖層如何與下方圖層混合： . | 正常 (Normal)：直接覆蓋。 | 色彩增值 (Multiply)：常用於將白色背景變透明，保留深色內容。 | 濾色 (Screen)：常用於提亮影像，將黑色背景變透明。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-layer.html#3-%E5%9C%96%E5%B1%A4%E6%A8%A1%E5%BC%8F-layer-modes",
     
     "relUrl": "/courses/website-building/gimp/gimp-layer.html#3-圖層模式-layer-modes"
-  },"29": {
+  },"33": {
     "doc": "Gimp Layer",
     "title": "4. 鎖定功能",
     "content": "為了防止誤觸，圖層面板提供三種鎖定： . | 鎖定像素：禁止在該層繪圖。 | 鎖定位置：禁止移動該圖層。 | 鎖定 Alpha 頻道：只允許在已有顏色的地方繪圖，保持透明區域不變。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-layer.html#4-%E9%8E%96%E5%AE%9A%E5%8A%9F%E8%83%BD",
     
     "relUrl": "/courses/website-building/gimp/gimp-layer.html#4-鎖定功能"
-  },"30": {
+  },"34": {
     "doc": "Gimp Layer",
     "title": "Gimp Layer",
     "content": "Go Back to Gimp Resources . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-layer.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-layer.html"
-  },"31": {
+  },"35": {
     "doc": "Gimp Mask",
     "title": "圖層遮罩 (Layer Mask) 完全指南",
     "content": " ",
     "url": "/justdocs/courses/website-building/gimp/gimp-mask.html#%E5%9C%96%E5%B1%A4%E9%81%AE%E7%BD%A9-layer-mask-%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97",
     
     "relUrl": "/courses/website-building/gimp/gimp-mask.html#圖層遮罩-layer-mask-完全指南"
-  },"32": {
+  },"36": {
     "doc": "Gimp Mask",
     "title": "快速操作步驟",
     "content": "第一步：新增遮罩 . | 在右側的圖層面板，對目標圖層點擊滑鼠右鍵。 | 選擇 「新增圖層遮罩…」(Add Layer Mask…)。 | 在彈出視窗中選擇： . | 白色 (全不透明)： 這是最常用的選項，表示光線充足，所以下方圖的光線無法上透 | 黑色 (全透明)： 圖層會立即消失，黑色表示無光，因為沒有光線所以下圖會直接上行 | . | . 第二步：開始塗抹 . | 確保你點選的是圖層旁邊的遮罩縮圖（框框會亮起），而不是圖片縮圖。 | 選擇工具箱中的 「筆刷工具」(Paintbrush Tool)。 | 將前景色設為 黑色。 | 在畫布上塗抹，你會發現被塗抹的地方變透明了。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-mask.html#%E5%BF%AB%E9%80%9F%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%A9%9F",
     
     "relUrl": "/courses/website-building/gimp/gimp-mask.html#快速操作步驟"
-  },"33": {
+  },"37": {
     "doc": "Gimp Mask",
     "title": "常用進階技巧",
     "content": "1. 完美的漸層融合 . 如果你想讓兩張照片自然融合： . | 在上方圖層建立「白色遮罩」。 | 使用 「漸層工具」(Gradient Tool)。 | 將顏色設定為「黑到白」。 | 在遮罩上拉出一條直線，兩張照片就會產生柔和的過度。 | . DaviesMedia - Mardi Gras 2013 - Eric R. Jeschke . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-mask.html#%E5%B8%B8%E7%94%A8%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7",
     
     "relUrl": "/courses/website-building/gimp/gimp-mask.html#常用進階技巧"
-  },"34": {
+  },"38": {
     "doc": "Gimp Mask",
     "title": "Gimp Mask",
     "content": "Go Back to Gimp Resources . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-mask.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-mask.html"
-  },"35": {
+  },"39": {
     "doc": "Gimp Select Tools",
     "title": "GIMP 選取工具快捷指南",
     "content": ". ",
     "url": "/justdocs/courses/website-building/gimp/gimp-select-tools.html#gimp-%E9%81%B8%E5%8F%96%E5%B7%A5%E5%85%B7%E5%BF%AB%E6%8D%B7%E6%8C%87%E5%8D%97",
     
     "relUrl": "/courses/website-building/gimp/gimp-select-tools.html#gimp-選取工具快捷指南"
-  },"36": {
+  },"40": {
     "doc": "Gimp Select Tools",
     "title": "常用選取工具介紹",
     "content": "| 工具名稱 | 功能說明 | 快捷鍵 | . | 矩形選取 | 選取方形或矩形區域。按住 Shift 可選取正方形。 | R | . | 橢圓選取 | 選取圓形或橢圓區域。按住 Shift 可選取正圓。 | E | . | 自由選取 | 手繪不規則形狀（套索工具），適合快速勾勒輪廓。 | F | . | 魔術棒 | (Fuzzy Select) 根據顏色相近度選取連續區域。 | U | . | 顏色選取 | 選取全圖中所有顏色相近的區域（不需連續）。 | Shift + O | . | 智慧剪刀 | 自動偵測邊緣進行選取，適合邊界明顯的物體。 | I | . | Alpha 選取 | 在圖層面板對圖層按右鍵，選取「從 Alpha 管道取得選取範圍」。 | - | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-select-tools.html#%E5%B8%B8%E7%94%A8%E9%81%B8%E5%8F%96%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%B4%B9",
     
     "relUrl": "/courses/website-building/gimp/gimp-select-tools.html#常用選取工具介紹"
-  },"37": {
+  },"41": {
     "doc": "Gimp Select Tools",
     "title": "GIMP 進階選取技巧",
     "content": " ",
     "url": "/justdocs/courses/website-building/gimp/gimp-select-tools.html#gimp-%E9%80%B2%E9%9A%8E%E9%81%B8%E5%8F%96%E6%8A%80%E5%B7%A7",
     
     "relUrl": "/courses/website-building/gimp/gimp-select-tools.html#gimp-進階選取技巧"
-  },"38": {
+  },"42": {
     "doc": "Gimp Select Tools",
     "title": "1. 前景選取工具 (Foreground Select Tool)",
     "content": "前景選取工具使用特定的演算法來區分主體與環境, 因為用演算法所以速度慢 . | 大致選取： 在主體周圍粗略地畫一圈（類似套索工具），然後按 Enter。此時內部會呈現藍色覆蓋。 | 塗抹主體： 使用筆刷在主體上塗抹，選取主體內部的代表性顏色。您不需要塗滿整個主體，只要讓 GIMP 辨識出哪些顏色屬於前景即可。 | 預覽結果： 再次按 Enter 查看遮罩預覽，GIMP 會自動計算細微的邊緣（如髮絲）。 | 完成選取： 確認無誤後，最後按一次 Enter，即可將遮罩轉換為動態虛線選取區。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-select-tools.html#1-%E5%89%8D%E6%99%AF%E9%81%B8%E5%8F%96%E5%B7%A5%E5%85%B7-foreground-select-tool",
     
     "relUrl": "/courses/website-building/gimp/gimp-select-tools.html#1-前景選取工具-foreground-select-tool"
-  },"39": {
+  },"43": {
     "doc": "Gimp Select Tools",
     "title": "2. 快速遮罩 (Quick Mask)",
     "content": "快速遮罩讓您能以「繪圖」的方式來修改選取範圍。 . | 啟用： 按下 Shift + Q（或點擊影像視窗左下角的小虛線方框圖示）。影像會覆蓋上一層紅色的半透明層。 | 操作邏輯： . | 使用白色筆刷： 增加選取範圍（擦除紅色部分）。 | 使用黑色筆刷： 減少選取範圍（塗上紅色部分）。 | 使用灰色或低不透明度： 建立羽化（柔化）的選取邊緣。 | . | 關閉： 再次按下 Shift + Q，即可將剛才繪製的範圍轉回標準選取區。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-select-tools.html#2-%E5%BF%AB%E9%80%9F%E9%81%AE%E7%BD%A9-quick-mask",
     
     "relUrl": "/courses/website-building/gimp/gimp-select-tools.html#2-快速遮罩-quick-mask"
-  },"40": {
+  },"44": {
     "doc": "Gimp Select Tools",
     "title": "3. 路徑選取 (Paths Tool)",
     "content": "路徑是數學向量，這意味著它們可以無限調整且邊緣絕對平滑。 . | 建立路徑： 使用 路徑工具 (B) 在物體邊緣點擊建立節點。點並拖曳可產生貝茲曲線（Bezier curves）。 | 封閉路徑： 按住 Ctrl 鍵並點擊起點，即可完成閉合路徑。 | 調整細節： 路徑閉合後，您仍可以隨時拖動節點或控制桿來完美貼合輪廓。 | 轉換為選取區： 在左側的 工具選項 面板中，點擊 「從路徑建立選取區域」 按鈕，或者使用快捷鍵 Shift + V。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-select-tools.html#3-%E8%B7%AF%E5%BE%91%E9%81%B8%E5%8F%96-paths-tool",
     
     "relUrl": "/courses/website-building/gimp/gimp-select-tools.html#3-路徑選取-paths-tool"
-  },"41": {
+  },"45": {
     "doc": "Gimp Select Tools",
     "title": "Gimp Select Tools",
     "content": "Go Back to Gimp Resources . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-select-tools.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-select-tools.html"
-  },"42": {
+  },"46": {
     "doc": "Gimp Text Advance A",
     "title": "GIMP 進階文字特效指南",
     "content": "學會基礎文字後，我們可以利用圖層、濾鏡與選取工具製作視覺衝擊力更強的文字效果。 . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-adv-a.html#gimp-%E9%80%B2%E9%9A%8E%E6%96%87%E5%AD%97%E7%89%B9%E6%95%88%E6%8C%87%E5%8D%97",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-adv-a.html#gimp-進階文字特效指南"
-  },"43": {
+  },"47": {
     "doc": "Gimp Text Advance A",
     "title": "1. 漸層字 (Gradient Text)",
     "content": "讓文字顏色由淺入深或呈現彩虹色。 . | 使用文字工具輸入文字。 | 在圖層面板對文字層按 右鍵 &gt; 從文字取得選取範圍。 | 選擇 漸層工具 (G)。 | 在選取範圍內由上往下拉動，即可填入漸層色。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-adv-a.html#1-%E6%BC%B8%E5%B1%A4%E5%AD%97-gradient-text",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-adv-a.html#1-漸層字-gradient-text"
-  },"44": {
+  },"48": {
     "doc": "Gimp Text Advance A",
     "title": "2. 豹紋字/紋理字 (Pattern Text)",
     "content": "將文字填入特定的圖樣（如豹紋、木紋或金屬）。 . | 取得文字選取範圍（同上）。 | 使用 油漆桶工具 (Shift + B)。 | 在工具選項中將「填滿類型」更改為 「圖樣填滿」。 | 選擇豹紋或其他圖樣，點擊選取範圍進行填滿。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-adv-a.html#2-%E8%B1%B9%E7%B4%8B%E5%AD%97%E7%B4%8B%E7%90%86%E5%AD%97-pattern-text",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-adv-a.html#2-豹紋字紋理字-pattern-text"
-  },"45": {
+  },"49": {
     "doc": "Gimp Text Advance A",
     "title": "3. 立體字與凹凸貼圖 (Bump Map)",
     "content": "利用濾鏡製作出像浮雕一樣的 3D 質感。 . | 準備：建立一個文字層（黑色字）和一個背景層（填滿灰色）。 | 模糊處理：對文層執行 濾鏡 &gt; 模糊 &gt; 高斯模糊（設定約 5-10 px）。 | 執行：選取背景層，點選 濾鏡 &gt; 對應 &gt; 凹凸貼圖 (Bump Map)。 | 設定：在「凹凸圖源」選擇剛才模糊過的文字層，調整「深度」即可看到立體效果。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-adv-a.html#3-%E7%AB%8B%E9%AB%94%E5%AD%97%E8%88%87%E5%87%B9%E5%87%B8%E8%B2%BC%E5%9C%96-bump-map",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-adv-a.html#3-立體字與凹凸貼圖-bump-map"
-  },"46": {
+  },"50": {
     "doc": "Gimp Text Advance A",
     "title": "4. 火燄字 (Fire Text)",
     "content": ". | 底色：背景填滿黑色，文字填滿白色。 | 扭曲：對文字執行 濾鏡 &gt; 扭曲 &gt; 波紋（製作火燄抖動感）。 | 旋轉：將影像旋轉 90 度，執行 濾鏡 &gt; 扭曲 &gt; 風（製作向上竄的火燄）。 | 上色：使用 顏色 &gt; 色彩平衡，將陰影調為紅色，高亮度調為黃色。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-adv-a.html#4-%E7%81%AB%E7%87%84%E5%AD%97-fire-text",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-adv-a.html#4-火燄字-fire-text"
-  },"47": {
+  },"51": {
     "doc": "Gimp Text Advance A",
     "title": "5. 額外推薦特效 (Bonus)",
     "content": "A. 霓虹燈字 (Neon Glow) . | 作法：將文字選取範圍「擴張」後填充亮色，再執行強力的「高斯模糊」作為底層光暈，最上層保留細細的白色文字。 | . B. 玻璃透視字 (Glass/Water Effect) . | 作法：將文字層的「不透明度」調低，並利用 濾鏡 &gt; 對應 &gt; 位移，根據文字形狀對背景圖案產生折射效果，適合科技感網頁。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-adv-a.html#5-%E9%A1%8D%E5%A4%96%E6%8E%A8%E8%96%A6%E7%89%B9%E6%95%88-bonus",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-adv-a.html#5-額外推薦特效-bonus"
-  },"48": {
+  },"52": {
     "doc": "Gimp Text Advance A",
     "title": "Gimp Text Advance A",
     "content": "Go Back to Gimp Resources . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-adv-a.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-adv-a.html"
-  },"49": {
+  },"53": {
     "doc": "Gimp Text",
     "title": "1. 基本操作",
     "content": ". | 建立文字：點擊工具箱的 文字工具 (圖示為 A)，然後在畫布上點擊或拖曳出文字框。 | 即時編輯器：輸入文字時，上方會出現浮動工具列，可調整字體、大小、顏色及字距。 | 重新編輯：只要該圖層旁邊顯示 [A] 圖示，隨時切換回文字工具點擊文字即可修改內容。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-layer.html#1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-layer.html#1-基本操作"
-  },"50": {
+  },"54": {
     "doc": "Gimp Text",
     "title": "2. 網頁設計實務範例",
     "content": "範例 A：製作具有「外框線」的標題 (Outline Text) . 這能讓文字在複雜的背景圖上更清晰。 . | 輸入文字後，在圖層面板對文字圖層按 右鍵 &gt; 從文字取得選取範圍。 | 新增一個透明圖層。 | 點選選單 選取 &gt; 擴張 (設定 2~5 像素)。 | 使用油漆桶將此範圍填滿顏色，並將此圖層移至文字層下方。 | . 範例 B：文字陰影效果 (Drop Shadow) . 增加層次感，使文字從背景「浮起來」。 . | 選取文字圖層。 | 點選選單 濾鏡 &gt; 光影 &gt; 投射陰影 (Drop Shadow)。 | 調整 X/Y 偏移 (方向) 與 模糊半徑 (柔和度)。 | . 範例 C：透明浮水印文字 . | 輸入你的網址或 Logo 文字（例如：docs.ifong.cc）。 | 在圖層面板調整該層的 透明度 (Opacity) 至 20%~40%。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-layer.html#2-%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88%E5%AF%A6%E5%8B%99%E7%AF%84%E4%BE%8B",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-layer.html#2-網頁設計實務範例"
-  },"51": {
+  },"55": {
     "doc": "Gimp Text",
     "title": "3. 注意事項：文字圖層的「像素化」",
     "content": "如果你對文字圖層進行旋轉、縮放或使用繪圖工具，GIMP 會詢問是否要「捨棄文字資訊」。 . | 一旦確定：文字將變成一般的「像素圖層」，你將無法再更改文字內容（例如把 “Home” 改成 “About”）。 | 建議：在進行特效處理前，先複製一份文字圖層備份並隱藏。 | . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-layer.html#3-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%E6%96%87%E5%AD%97%E5%9C%96%E5%B1%A4%E7%9A%84%E5%83%8F%E7%B4%A0%E5%8C%96",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-layer.html#3-注意事項文字圖層的像素化"
-  },"52": {
+  },"56": {
     "doc": "Gimp Text",
     "title": "Gimp Text",
     "content": "Go Back to Gimp Resources . ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-layer.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-layer.html"
-  },"53": {
+  },"57": {
     "doc": "Hugo in GitHub",
     "title": "Hugo in GitHub",
     "content": "Go Back to GitHub Resources . | Hugo 是基於 Go 語言的靜態網站產生器，以極速建構與簡單部署聞名。 | 它將 Markdown 文件轉為 HTML，搭配 GitHub Actions 可實現自動化發佈。 | 非常適合建立個人部落格、教學網站或中小企業官網，既安全又節省主機費用。 | . airspace-hugo 使用了更活潑的配色，並且有更多的動畫切換效果。例如攝影、行銷或設計工作室 . ",
     "url": "/justdocs/courses/website-building/github/github-hugo.html",
     
     "relUrl": "/courses/website-building/github/github-hugo.html"
-  },"54": {
+  },"58": {
     "doc": "Home",
     "title": "Welcome to My Documentation",
     "content": "This site contains my notes for various school projects and courses. Quick Links . | Courses | Shared Resources | . ",
     "url": "/justdocs/#welcome-to-my-documentation",
     
     "relUrl": "/#welcome-to-my-documentation"
-  },"55": {
+  },"59": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/justdocs/",
     
     "relUrl": "/"
-  },"56": {
+  },"60": {
     "doc": "WordPress",
     "title": "Overview",
     "content": "… . ",
     "url": "/justdocs/courses/website-building/wordpress/#overview",
     
     "relUrl": "/courses/website-building/wordpress/#overview"
-  },"57": {
+  },"61": {
     "doc": "WordPress",
     "title": "Resources",
     "content": "… . ",
     "url": "/justdocs/courses/website-building/wordpress/#resources",
     
     "relUrl": "/courses/website-building/wordpress/#resources"
-  },"58": {
+  },"62": {
     "doc": "WordPress",
     "title": "WordPress",
     "content": " ",
     "url": "/justdocs/courses/website-building/wordpress/",
     
     "relUrl": "/courses/website-building/wordpress/"
-  },"59": {
+  },"63": {
     "doc": "Gimp",
     "title": "Live Broadcast",
     "content": "Go to Live Broadcast . ",
     "url": "/justdocs/courses/website-building/gimp/#live-broadcast",
     
     "relUrl": "/courses/website-building/gimp/#live-broadcast"
-  },"60": {
+  },"64": {
     "doc": "Gimp",
     "title": "Overview",
     "content": "@GIMP 是免費、開源的影像編輯軟體，可用於圖片修圖、合成與視覺設計。 在網站製作中常用來製作網頁圖片、Banner、圖示與素材優化。而以下圖庫有多樣的圖型可供選取 pexels、cleanPNG、unsplash . ",
     "url": "/justdocs/courses/website-building/gimp/#overview",
     
     "relUrl": "/courses/website-building/gimp/#overview"
-  },"61": {
+  },"65": {
     "doc": "Gimp",
     "title": "Interface",
     "content": "界面 為 gimp 的第一顯現畫面, 要切換中英文可由 設定/界面/語言 進入設定 . ",
     "url": "/justdocs/courses/website-building/gimp/#interface",
     
     "relUrl": "/courses/website-building/gimp/#interface"
-  },"62": {
+  },"66": {
     "doc": "Gimp",
     "title": "Basic editing",
     "content": "基本編輯 介紹如何使用 GIMP 進行網頁開發中常見的圖片處理作業 . ",
     "url": "/justdocs/courses/website-building/gimp/#basic-editing",
     
     "relUrl": "/courses/website-building/gimp/#basic-editing"
-  },"63": {
+  },"67": {
     "doc": "Gimp",
     "title": "Select tools",
     "content": "選取工具 是影像處理的基礎，用於界定編輯範圍 . ",
     "url": "/justdocs/courses/website-building/gimp/#select-tools",
     
     "relUrl": "/courses/website-building/gimp/#select-tools"
-  },"64": {
+  },"68": {
     "doc": "Gimp",
     "title": "Boundary Color",
     "content": "邊框顯示 行軍蟻與圖層界限 . ",
     "url": "/justdocs/courses/website-building/gimp/#boundary-color",
     
     "relUrl": "/courses/website-building/gimp/#boundary-color"
-  },"65": {
+  },"69": {
     "doc": "Gimp",
     "title": "Layer",
     "content": "圖層 你可以獨立編輯每一層，而不會影響到其他層的內容 . ",
     "url": "/justdocs/courses/website-building/gimp/#layer",
     
     "relUrl": "/courses/website-building/gimp/#layer"
-  },"66": {
+  },"70": {
     "doc": "Gimp",
     "title": "Mask",
     "content": "遮罩 圖層遮罩是數位影像處理中最重要的技術之一 它允許你非破壞性地隱藏圖層的部分內容，而不是直接將其刪除。 . ",
     "url": "/justdocs/courses/website-building/gimp/#mask",
     
     "relUrl": "/courses/website-building/gimp/#mask"
-  },"67": {
+  },"71": {
     "doc": "Gimp",
     "title": "Text",
     "content": "文字 在網頁設計中不僅是訊息，也是視覺設計的一部分 熟悉了基本操作後可以朝向進階文字邁進 . ",
     "url": "/justdocs/courses/website-building/gimp/#text",
     
     "relUrl": "/courses/website-building/gimp/#text"
-  },"68": {
+  },"72": {
     "doc": "Gimp",
     "title": "Gimp",
     "content": " ",
     "url": "/justdocs/courses/website-building/gimp/",
     
     "relUrl": "/courses/website-building/gimp/"
-  },"69": {
+  },"73": {
     "doc": "Web Development",
     "title": "Web Development",
     "content": " ",
     "url": "/justdocs/courses/website-building/",
     
     "relUrl": "/courses/website-building/"
-  },"70": {
-    "doc": "Data Structures",
-    "title": "Data Structures (DS)",
-    "content": "This section contains my study notes and implementation details for the Data Structures course. ",
-    "url": "/justdocs/courses/data-structures/#data-structures-ds",
+  },"74": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": " ",
+    "url": "/justdocs/courses/data-structures/calendar/#calendar",
     
-    "relUrl": "/courses/data-structures/#data-structures-ds"
-  },"71": {
+    "relUrl": "/courses/data-structures/calendar/#calendar"
+  },"75": {
+    "doc": "Calendar",
+    "title": "Week 1",
+    "content": "Feb 2 LECTURE 課程簡介及登入主機: goo Console -- unix 指令 -- vi ",
+    "url": "/justdocs/courses/data-structures/calendar/#week-1",
+    
+    "relUrl": "/courses/data-structures/calendar/#week-1"
+  },"76": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": " ",
+    "url": "/justdocs/courses/data-structures/calendar/",
+    
+    "relUrl": "/courses/data-structures/calendar/"
+  },"77": {
+    "doc": "Syllabus",
+    "title": "Data Structures Topics/Syllybus",
+    "content": " ",
+    "url": "/justdocs/courses/data-structures/syllabus/#data-structures-topicssyllybus",
+    
+    "relUrl": "/courses/data-structures/syllabus/#data-structures-topicssyllybus"
+  },"78": {
+    "doc": "Syllabus",
+    "title": "Syllabus",
+    "content": " ",
+    "url": "/justdocs/courses/data-structures/syllabus/",
+    
+    "relUrl": "/courses/data-structures/syllabus/"
+  },"79": {
+    "doc": "Data Structures",
+    "title": "Live Broadcast",
+    "content": "Go to Live Broadcast . ",
+    "url": "/justdocs/courses/data-structures/#live-broadcast",
+    
+    "relUrl": "/courses/data-structures/#live-broadcast"
+  },"80": {
+    "doc": "Data Structures",
+    "title": "Overview",
+    "content": "This section contains my study notes and implementation details for the Data Structures course. 課程 – 成績及其它 . ",
+    "url": "/justdocs/courses/data-structures/#overview",
+    
+    "relUrl": "/courses/data-structures/#overview"
+  },"81": {
     "doc": "Data Structures",
     "title": "Topics Covered",
     "content": ". | Fundamentals: Time complexity (Big O), Arrays, and Strings. | Linear Data Structures: Linked Lists, Stacks, and Queues. | Non-Linear Data Structures: Trees, Graphs, and Hash Tables. | . ",
     "url": "/justdocs/courses/data-structures/#topics-covered",
     
     "relUrl": "/courses/data-structures/#topics-covered"
-  },"72": {
+  },"82": {
     "doc": "Data Structures",
     "title": "Data Structures",
     "content": " ",
     "url": "/justdocs/courses/data-structures/",
     
     "relUrl": "/courses/data-structures/"
-  },"73": {
+  },"83": {
     "doc": "Professional English",
     "title": "Data Structures (DS)",
     "content": "This section contains my study notes and implementation details for the Data Structures course. ",
     "url": "/justdocs/courses/professional-english/#data-structures-ds",
     
     "relUrl": "/courses/professional-english/#data-structures-ds"
-  },"74": {
+  },"84": {
     "doc": "Professional English",
     "title": "Topics Covered",
     "content": ". | Fundamentals: Time complexity (Big O), Arrays, and Strings. | Linear Data Structures: Linked Lists, Stacks, and Queues. | Non-Linear Data Structures: Trees, Graphs, and Hash Tables. | . ",
     "url": "/justdocs/courses/professional-english/#topics-covered",
     
     "relUrl": "/courses/professional-english/#topics-covered"
-  },"75": {
+  },"85": {
     "doc": "Professional English",
     "title": "Professional English",
     "content": " ",
     "url": "/justdocs/courses/professional-english/",
     
     "relUrl": "/courses/professional-english/"
-  },"76": {
+  },"86": {
     "doc": "Courses",
     "title": "Welcome to Courses",
     "content": "My various school projects and courses. ",
     "url": "/justdocs/courses/#welcome-to-courses",
     
     "relUrl": "/courses/#welcome-to-courses"
-  },"77": {
+  },"87": {
     "doc": "Courses",
     "title": "Courses",
     "content": " ",
     "url": "/justdocs/courses/",
     
     "relUrl": "/courses/"
-  },"78": {
+  },"88": {
     "doc": "Shared",
     "title": "Shared",
     "content": "Common links and tools used across courses. ",
     "url": "/justdocs/shared/",
     
     "relUrl": "/shared/"
-  },"79": {
+  },"89": {
     "doc": "Instructor",
     "title": "Instructor",
     "content": " ",
     "url": "/justdocs/instructor/",
     
     "relUrl": "/instructor/"
-  },"80": {
+  },"90": {
     "doc": "Instructor",
     "title": "Contact",
     "content": ". | Email: cp.ifong4@gmail.com | Response time: within 24–48 hours on weekdays | . ",
     "url": "/justdocs/instructor/#contact",
     
     "relUrl": "/instructor/#contact"
-  },"81": {
+  },"91": {
     "doc": "Instructor",
     "title": "Teaching",
     "content": ". | Data Structures | Professional English (CE) | Website Building | . ",
     "url": "/justdocs/instructor/#teaching",
     
     "relUrl": "/instructor/#teaching"
-  },"82": {
+  },"92": {
     "doc": "Instructor",
     "title": "Background",
     "content": ". | Currently(jan2026) a part-time instructor at @STUST and @AFATS | 3 years at Fujian Junior Technical College (China) | Over 25 years of teaching experience at Fortune College | Former software engineer at Everex (Fremont, CA) with 3 years of industry experience. | . ",
     "url": "/justdocs/instructor/#background",
     
     "relUrl": "/instructor/#background"
-  },"83": {
+  },"93": {
     "doc": "GitHub",
     "title": "Live Broadcast",
     "content": "Go to Live Broadcast . ",
     "url": "/justdocs/courses/website-building/github/#live-broadcast",
     
     "relUrl": "/courses/website-building/github/#live-broadcast"
-  },"84": {
+  },"94": {
     "doc": "GitHub",
     "title": "Overview",
     "content": "使用 @GITHUB Pages 搭配 Jekyll ／Just the Docs 建立網站，強調版本控制、結構清楚與可重現部署。相較 WordPress，無需資料庫、維護成本低、安全性高，適合重視技術基礎與長期穩定的使用情境。 . ",
     "url": "/justdocs/courses/website-building/github/#overview",
     
     "relUrl": "/courses/website-building/github/#overview"
-  },"85": {
+  },"95": {
     "doc": "GitHub",
     "title": "Examples",
     "content": "Fast Startup with Just the Docs 使用 Just the Docs 快速建立 GitHub Pages 專案 . 史丹福 CS324 是一個 just the docs 很好的範例 Kevin Lin 也可參考 . Using Existing Github Themes 套用與切換 GitHub Pages 主題 . Hugo Go 語言的靜態網站產生器 . ",
     "url": "/justdocs/courses/website-building/github/#examples",
     
     "relUrl": "/courses/website-building/github/#examples"
-  },"86": {
+  },"96": {
     "doc": "GitHub",
     "title": "GitHub",
     "content": " ",
     "url": "/justdocs/courses/website-building/github/",
     
     "relUrl": "/courses/website-building/github/"
-  },"87": {
+  },"97": {
     "doc": "STUST",
     "title": "Teaching systems",
     "content": ". | 課程管理/教學計劃/上傳佐証 | 成績輸入 | FlipClass | 考試圖庫 | 電算中心 | 圖資網路服務 | 教務處 | 人事室 | . ",
     "url": "/justdocs/shared/stust.html#teaching-systems",
     
     "relUrl": "/shared/stust.html#teaching-systems"
-  },"88": {
+  },"98": {
     "doc": "STUST",
     "title": "Policies / references",
     "content": ". | Late policy | . ",
     "url": "/justdocs/shared/stust.html#policies--references",
     
     "relUrl": "/shared/stust.html#policies--references"
-  },"89": {
+  },"99": {
     "doc": "STUST",
     "title": "STUST",
     "content": " ",
     "url": "/justdocs/shared/stust.html",
     
     "relUrl": "/shared/stust.html"
-  },"90": {
+  },"100": {
     "doc": "Use Existing Theme",
     "title": "Use Existing Theme",
     "content": "Go Back to GitHub Resources . 使用既有 GitHub Pages 主題的優點 . | 零或極低設定成本：不用自己寫版型與 CSS | 相容 GitHub Pages：官方或主流主題，部署最穩 | . Theme 類型說明 . | Built-in themes（內建主題) &gt; ⚠️ Attention: github 幫你 deploy . 可在 _config.yml 加入 . theme: jekyll-theme-cayman . index.md 加入 . title: just a test description: nothing special . | . 非內建主題: 有／沒有「Use this template」的差別 . 有「Use this template :一鍵建立全新儲存庫 . | 直接套用他人提供的網站骨架／設定 | . 沒有「Use this template」: 只能用 Fork 或 Clone . Fork . | 與原作者 repo 有關聯 | 需要理解 upstream、同步更新 | . Clone . | 只下載到本機 | 還要自己建立 GitHub repo、設定 remote、push | . Use this template (UTT) . Engine（引擎，擇一): Ruby Go Node.js . Jekyll（Engine Ruby config _config.yml) . | just-the-docs-template | minimal-mistake starter | . Hugo（Engine Go config config.toml) . | CaiJimmy/hugo-theme-stack-starter | netlify-templates/hugo-quickstart | . Astro（Engine Node.js config astro.config.mjs ) . | netlify-templates/astro-quickstart | surjithctly/astroship | . 找以下 repo bakery-site-template 作者 cpfong . / README.md docs/ _config.yml index.md products.md order.md contact.md assets/img/ . _config.yml . theme: jekyll-theme-minimal title: 🍞 學生手工烘焙坊 description: 點擊下方連結查看我的作品 . index.md . --- layout: default --- # 歡迎來到我的網頁 🥐 ### 快速導覽 * [🍰 查看美味產品](products.html) * [📝 線上訂購](order.html) * [📞 聯絡我們](contact.html) . contact.md . --- layout: default title: 聯絡我們 --- # 聯絡我們的烘焙坊 📞 如果您有任何問題，歡迎透過以下方式聯絡： * **地址**: 麵包鎮甜點路 123 號 * **電話**: (02) 1234-5678 * **Email**: bakery@example.com [回首頁](index.html) . order.md . --- layout: default title: 線上訂購 --- # 線上訂購說明 📝 請填寫以下資訊（目前僅供練習）： 1. 產品名稱： 2. 數量： 3. 取貨時間： *注意：這只是一個練習網頁，目前無法處理實際訂單喔！* [回首頁](index.html) . products.md . --- layout: default title: 美味產品 --- # 我們的招牌產品 🥖 這裡有我們每天現做的手工甜點： ### 巧克力可頌 (Chocolate Croissant) ![巧克力可頌](assets/img/choco.jpg) 香脆的外皮包裹著濃郁的巧克力。 ### 草莓蛋糕 (Strawberry Cake) ![草莓蛋糕](assets/img/strawberry.jpg) 嚴選當季草莓，每一口都是幸福。 [回首頁](index.html) . ",
