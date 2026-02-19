@@ -1,0 +1,26 @@
+Here is your high-efficiency circuit for a 6-hour, 34-minute stay.
+
+The "Little Paris" Power Loop
+
+Time	Activity	Highlights
+10:42	Arrival	Take a moment to admire the station’s massive 298-meter facade. Exit South toward the city center.
+11:00	The City Heart	Walk 10 mins to Markt. See the Old Town Hall (Altes Rathaus). If it’s a market day, grab a quick local snack.
+11:30	The St. Thomas Church	Visit Thomaskirche. This is where J.S. Bach worked and is buried. There is a famous statue of him outside.
+12:15	Passage Stroll Walk through the Mädler-Passage. stunning historic shopping arcade. Look for the entrance to Auerbachs Keller, the tavern made famous by Goethe’s Faust.
+12:45	Lunch	Eat at Auerbachs Keller (book ahead) for the history, or head to Barfußgässchen (Drallewatsch) for a variety of trendy outdoor cafes.
+14:00	The St. Nicholas Church	Visit Nikolaikirche. This was the starting point of the 1989 "Peaceful Revolution" that led to the fall of the Berlin Wall.
+14:45	The Modern View	Walk to Augustusplatz. You’ll see the Opera, the Gewandhaus, and the City-Hochhaus (Panorama Tower).
+15:15	Skyline View	Take the elevator to the top of the Panorama Tower ($5-6 entry). It offers the best 360° view of the city and the surrounding forest.
+16:15	Coffee & "Leipziger Lerche"	Stop at a bakery for a Leipziger Lerche—a traditional shortcrust pastry with marzipan and jam. It's a local must-try.
+16:45	Back to Hbf	Use the last 30 minutes to explore the Promenaden Hauptbahnhof (three levels of shops inside the station) or grab travel snacks.
+17:16	Departure	Board your train.
+
+chagGPT
+--
+10:42	抵達 Hbf
+11:00–12:30	Marktplatz + 教堂
+12:30–13:30	午餐
+13:40–14:30	Mädler-Passage
+14:45–15:45	Clara-Zetkin-Park
+16:00	回 Hbf
+17:16	離開

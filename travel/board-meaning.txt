@@ -1,0 +1,30 @@
+Abfahrt = Departure
+Zeit = Time
+Scheduled departure time 10:17
+Über (Via) = Stops along the way
+Koblenz – Köln – Dortmund – Bremen
+
+Ziel = Final destination
+Gleis = Platform
+Platform changes are common — always check again before boarding.
+
+Status / Message Area
+Common messages you may see:
+Verspätung ca. 5 Min.
+→ Delay approx. 5 minutes
+
+Gleisänderung → Platform change
+Zug fährt von Gleis X → Train departs from platform X
+
++5
+→ 5 minutes late
+
+Practical Reading Example
+If you see:
+10:20 | ICE 772 | via Hannover | Hamburg-Altona | Gleis 8 | +10
+It means:
+Leaves 10:20
+ICE train number 772
+Final destination Hamburg-Altona
+Platform 8
+10 minutes late
