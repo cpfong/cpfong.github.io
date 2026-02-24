@@ -1,0 +1,21 @@
+perl -d -e 1		# debug one line at a time, q to quit debug mode
+
+DB<1> print 1.25	# print a floating point 1.25
+DB<2> print 255.000	# 255 perl get rid of tailing 0 ie print 255.123 store as 255.1230000 and it print out 255.123 (still remove tailing 0)
+DB<3> q			# exit
+$ >
+
+5 math operator	+ - * / %
+1+1
+10%2            #module
+
+2 string operator  x .
+x               #mean multiple
+.               #mean append
+
+this . is       #append is after this
+a x 3           #aaa
+
+0377            #oct 377 ie 255
+0xff            #hex ff  ie 255
+0b11111111      #binary ie 255
