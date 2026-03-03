@@ -175,6 +175,10 @@
                 <a href="/justdocs/courses/professional-english/calendar/" class="nav-list-link">Calendar</a>
               </li><li class="nav-list-item">
                 <a href="/justdocs/courses/professional-english/miscellaneous/" class="nav-list-link">Miscellaneous</a>
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in My Phone category" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+          </button><a href="/justdocs/courses/know-your-mobile-phone/" class="nav-list-link">My Phone</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/know-your-mobile-phone/syllabus/" class="nav-list-link">Syllabus</a>
               </li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Shared category" aria-pressed="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
     </button><a href="/justdocs/shared/" class="nav-list-link">Shared</a><ul class="nav-list"><li class="nav-list-item"><a href="/justdocs/shared/broadcast.html" class="nav-list-link">Live Broadcast</a></li><li class="nav-list-item"><a href="/justdocs/shared/stust.html" class="nav-list-link">STUST</a></li><li class="nav-list-item"><a href="/justdocs/shared/afats.html" class="nav-list-link">AFATS</a></li></ul></li></ul>
@@ -259,6 +263,12 @@
     <ul>
       <li><a href="#whatisperl">perl是什麼</a></li>
       <li><a href="#perlPrint">perl最常用的函數</a> : print</li>
+      <li><a href="#varScalarArray">變數 純量 陣列</a></li>
+    </ul>
+  </li>
+  <li><a href="#dataStructure">資料結構</a>
+    <ul>
+      <li><a href="#arraryLinklist">陣列，串列</a></li>
     </ul>
   </li>
 </ul><hr />
@@ -354,6 +364,39 @@
     
 <ul>
   <li>print [FH] LIST 其中 FH 可以省略則送標準輸出. <a href="./print_example.txt">範例</a>顯示使用perl單行偵錯及四則運算運算元</li>
+</ul>
+<h3 id="varScalarArray">
+  
+  
+    <a href="#varScalarArray" class="anchor-heading" aria-labelledby="varScalarArray"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 變數 純量 陣列
+  
+  
+</h3>
+    
+<ul>
+  <li>Perl 變數型別由符號（sigil）決定，而非資料內容決定。常見三種變數型別: $ @ % 分別為 純量 陣列 雜湊 (scalar array hash)</li>
+  <li>scalar: 單數變數: Perl 最基本的資料型別，可儲存：整數 浮點數 字串 參照（reference, ex my $x=10; my $s=’xxx’</li>
+  <li>array: 複數： my @nums=(10, 20, 30)</li>
+</ul>
+<h2 id="dataStructure">
+  
+  
+    <a href="#dataStructure" class="anchor-heading" aria-labelledby="dataStructure"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 資料結構
+  
+  
+</h2>
+    
+<h3 id="arraryLinklist">
+  
+  
+    <a href="#arraryLinklist" class="anchor-heading" aria-labelledby="arraryLinklist"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 陣列，串列
+  
+  
+</h3>
+    
+<ul>
+  <li>陣列 : 連續記憶體空間, 可用索引直接存取</li>
+  <li>串列 : 不連續記憶體, 每個節點包含 data 及 pointer</li>
 </ul>
 
           
