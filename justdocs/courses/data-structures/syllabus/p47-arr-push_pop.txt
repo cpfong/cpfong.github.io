@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+
+my @array=5..9;
+push @array, 10..15;
+
+print "@array\n";
+
+my $t = pop @array;
+print $t, "\n";
+print "@array\n";
+
+my $c=@array;
+print "c=$c\n";

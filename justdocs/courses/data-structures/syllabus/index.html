@@ -264,6 +264,7 @@
       <li><a href="#whatisperl">perl是什麼</a></li>
       <li><a href="#perlPrint">perl最常用的函數</a> : print</li>
       <li><a href="#varScalarArray">變數 純量 陣列</a></li>
+      <li><a href="#perlBasicIO">基本輸入輸出</a></li>
     </ul>
   </li>
   <li><a href="#dataStructure">資料結構</a>
@@ -379,6 +380,17 @@
   <li>scalar: 單數變數: Perl 最基本的資料型別，可儲存：整數 浮點數 字串 參照（reference, ex my $x=10; my $s=’xxx’</li>
   <li>array: 複數： my @nums=(10, 20, 30)</li>
 </ul>
+<h3 id="perlBasicIO">
+  
+  
+    <a href="#perlBasicIO" class="anchor-heading" aria-labelledby="perlBasicIO"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 基本輸入輸出
+  
+  
+</h3>
+    
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;STDIN&gt;</code> 由標準輸入讀取一行資料，但會包含 <code class="language-plaintext highlighter-rouge">\n</code> 所以要使用 <a href="https://perldoc.perl.org/functions/chomp">chomp</a> 去把它去掉</li>
+</ul>
 <h2 id="dataStructure">
   
   
@@ -408,7 +420,7 @@
 </h3>
     
 <ul>
-  <li>堆疊 : FILO</li>
+  <li>堆疊 : FILO, <a href="./p47-arr-push_pop.txt">使用perl實作stack</a></li>
   <li>佇列 : FIFO</li>
 </ul>
 

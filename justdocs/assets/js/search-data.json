@@ -13,300 +13,286 @@
     
     "relUrl": "/courses/professional-english/miscellaneous/26-class-brief.html"
   },"2": {
-    "doc": "Data Structures Misc",
-    "title": "Data Structures Misc",
-    "content": "## 資料結構雜七雜八 - [校行事曆](/justdocs/assets/images/data-structure/26-cal.webp) - [班級課表](/justdocs/assets/images/data-structure/26-class.webp) - [每週行事](/justdocs/assets/images/data-structure/26-cal.txt) - [成績](https://docs.google.com/spreadsheets/d/1FoyPQfIN2BQxsg06vjmHFkHTc3M3gMDt1RvbVNn81Bo/edit?usp=sharing) --- [back 2 DS](./index.html) ",
-    "url": "/justdocs/courses/data-structures/26-class-misc.html",
-    
-    "relUrl": "/courses/data-structures/26-class-misc.html"
-  },"3": {
     "doc": "Professional English Evaluation",
     "title": "Professional English Evaluation",
     "content": "# Course Evaluation Policy This document defines how the final course grade is calculated. ## Grade Distribution | Component | Weight |------------|--------| Final Project (BBC Conversation) | 40% | Midterm Exam (Closed Book) | 15% | Quizzes & Attendance (Show up) | 40% | Article Reading (Oral Presentation) | 5% | **Total** | **100%** | --- ## 1. Final Project – 40% **Format** - Students work in groups of **two**. - Each group delivers a **6-minute English conversation** in front of the entire class. - Content must be based on materials from **BBC Learning English** (https://www.bbc.co.uk/learningenglish/english). - The script must be **fully memorized**. - Students **may NOT bring notes, scripts, phones, cue cards, or any materials** to the front. **Evaluation Criteria** - Fluency and pronunciation - Accuracy of grammar and vocabulary - Natural interaction between partners - Logical structure and clarity - Confidence and delivery - Time control (approximately 6 minutes) Failure to follow the memorization rule will significantly reduce the score. --- ## 2. Midterm Exam (Closed Book) – 15% **Format** - Closed book. - Handwritten answers. - Questions are based on: - The course textbook - Assigned *The Economist* article(s) **Evaluation Criteria** - Accuracy of content understanding - Ability to explain concepts clearly - Proper use of English - Completeness of answers No reference materials are allowed during the exam. --- ## 3. Quizzes & Participation – 40% - Total of **n quizzes**. - Content covers textbook material and assigned readings. - May include vocabulary, comprehension, short answers, or brief writing. - Attendance & Engagement: Regular \"showing up\" is required. --- ## 4. Article Reading (Oral) – 5% - Students choose **one article** (the same article used for the final project). - Before the midterm exam, each student must: - Read the article aloud in front of the entire class. **Evaluation Criteria** - Pronunciation - Fluency - Accuracy - Preparation --- ## Important Notes - Attendance and preparation are expected throughout the semester. - Professional behavior during all presentations is required. - Academic honesty is mandatory. ",
     "url": "/justdocs/courses/professional-english/calendar/26-evaluation.html",
     
     "relUrl": "/courses/professional-english/calendar/26-evaluation.html"
-  },"4": {
+  },"3": {
     "doc": "AFATS",
     "title": "AFATS",
     "content": "## Teaching systems - [空軍航空技術學院](https://www.afats.khc.edu.tw/) - [成績輸入6:aNsStar1to8](https://edumis.afats.khc.edu.tw/afat/index.aspx) ",
     "url": "/justdocs/shared/afats.html",
     
     "relUrl": "/shared/afats.html"
-  },"5": {
+  },"4": {
     "doc": "Live Broadcast",
     "title": "Live Broadcast",
     "content": "## Google Meet (Primary) [Join live class](https://meet.google.com/pno-snag-qyy){: .btn .btn-primary } ## Notes - Use Chrome or Edge - Sign in with your school account - Do not share the link outside the class ",
     "url": "/justdocs/shared/broadcast.html",
     
     "relUrl": "/shared/broadcast.html"
-  },"6": {
+  },"5": {
     "doc": "Fast Startup with Just the Docs",
     "title": "Fast Startup with Just the Docs",
     "content": "[Go Back to GitHub Resources]({{ '/courses/website-building/github/' | relative_url }}){: .btn .btn-outline } ## 目標 不 fork、不用範本；用**最少檔案**建立 Just the Docs + GitHub Pages。 --- ## 最小檔案清單（只要 2 個） 在 repo 根目錄建立： 1) `_config.yml` 2) `index.md` 就能跑起來。 --- ## Step 1 — 建立空白 Repo GitHub 新建 repository（Public），不要 fork。 --- ## Step 2 — 建立 `_config.yml` 在 repo 根目錄新增 `_config.yml`： title: \"cp's class\" description: \"Course portal\" remote_theme: just-the-docs/just-the-docs . --- ## Step 3 — 建立 `index.md` --- title: Home layout: default nav_order: 1 --- # cp's class - [Broadcast](./broadcast/) - [Courses](./courses/) . ",
     "url": "/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html",
     
     "relUrl": "/courses/website-building/github/fast-startup-with-just-the-docs.html"
-  },"7": {
+  },"6": {
     "doc": "Gimp 3 ways to cut",
     "title": "Gimp 3 ways to cut",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } --- - 使用 2 layers, 上層多增一個 mask ，同時使用 brush 來圖黑前景讓下方圖層上現 - 同上一方式，但以選擇工具選出前景，再於 mask 上倒入黒色來讓下方前景顯現 - 只用一個 layer 在前景選出後直接去飽合 ",
     "url": "/justdocs/courses/website-building/gimp/gimp-3ways-cut-under.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-3ways-cut-under.html"
-  },"8": {
+  },"7": {
     "doc": "Gimp Basic Editing",
     "title": "Gimp Basic Editing",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } # GIMP 基礎影像編輯指南 --- ## 1. 介面與基本操作 * **開啟檔案**：`檔案` > `開啟` (Ctrl + O)。 * **調整畫布大小**：`圖片` > `畫布大小`，可用於增加工作區域而不縮放圖片。 * **復原操作**：`編輯` > `復原` (Ctrl + Z)，這在調整細節時非常重要。 ## 2. 常用編輯功能 ### A. 縮放及旋轉圖片 (AT Image) 網頁圖片通常不需要太大的解析度。 1. 點選 `圖片` > `縮放圖片`。 2. 確保「鏈條」圖示是連結狀態，以維持**等比例縮放**。 3. 輸入寬度（例如 800px），按下 `縮放`。 ### B. 裁切圖片 (Crop: AT Image) 1. 從工具箱選擇 **裁切工具** (圖示像一把小刀)。 2. 在圖片上拖曳出想要保留的區域。 3. 按下 `Enter` 完成裁切。 ## 3. 匯出網頁專用格式 (webp is small and fine for web) GIMP 預設儲存格式為 `.xcf` (保留圖層)。若要用於網頁，必須執行「匯出」： 1. `檔案` > `匯出為...` (Ctrl + Shift + E)。 2. 選擇 `.jpg` (照片) 或 `.png` (透明圖或標誌)。 3. 設定品質（建議 JPG 設定在 80% 左右以平衡品質與檔案大小）。 ",
     "url": "/justdocs/courses/website-building/gimp/gimp-basic-edit.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-basic-edit.html"
-  },"9": {
+  },"8": {
     "doc": "Gimp Boundary Color",
     "title": "Gimp Boundary Color",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } ## 1. 黑色與白色虛線 (行軍蟻) 這代表**目前的選取範圍 (Selection Area)**。只有在這個範圍內的區域才能被上色、刪除或移動。 * **外觀**：像是在不斷移動的螞蟻線。 * **網頁應用**：用於確認你要去背的 Logo 範圍。 ## 2. 黃色與黑色虛線 (圖層邊界) 這代表**目前選定的圖層 (Active Layer)** 的實際邊界。 * **意義**：告訴你該圖層的大小。如果你畫出的內容超出這個黃線，內容會被隱藏。 * **提示**：如果黃線比你的畫布（黑色實線）小，代表該圖層被裁切了。 ## 3. 綠色與黑色虛線 (參考線/其他圖層) 通常代表**正在對齊的參考線**或在某些模式下顯示的非使用中圖層邊界。 * **意義**：幫助你進行精準的網頁元件對齊。 --- ## 常用邊框顯示與隱藏切換 如果邊框太過干擾你的視覺，可以使用以下快捷鍵切換： | 功能 | 快捷鍵 | 說明 | :--- | :--- | :--- | **顯示/隱藏選取** | `Ctrl + T` | 隱藏「行軍蟻」，讓你清楚觀察修圖後的邊緣。 | **顯示/隱藏圖層邊界** | `檢視` > `顯示圖層邊界` | 切換黃黑色虛線的顯示。 | ",
     "url": "/justdocs/courses/website-building/gimp/gimp-boundary-color.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-boundary-color.html"
-  },"10": {
+  },"9": {
     "doc": "Gimp Interface",
     "title": "Gimp Interface",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } ## 一、GIMP 主介面概覽 啟動 GIMP 後，主要由三個區塊組成：**工具箱**、**影像視窗**、**對話框停駐區**。 ![GIMP 工具箱介面](../../../assets/images/gimp/gimp-interface.webp) ## 二、工具箱（左側） 包含選取、移動、裁切、畫筆、橡皮擦、文字等基本工具，是所有操作的起點。 ## 三、影像視窗（中央） 顯示並編輯圖片本身，可同時開啟多張影像進行切換與比較。 ## 四、對話框停駐區（右側） 常見包含「圖層」、「通道」、「路徑」、「歷史紀錄」，用來管理與控制編輯流程。 ",
     "url": "/justdocs/courses/website-building/gimp/gimp-interface.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-interface.html"
-  },"11": {
+  },"10": {
     "doc": "Gimp Layer",
     "title": "Gimp Layer",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } ## 1. 圖層面板基本操作 在 GIMP 右下角的「圖層面板」中，你可以進行以下操作： * **新增圖層**：點擊面板下方的 `+` 圖示。建議養成命名圖層的習慣（例如：背景、文字、Logo）。 * **調整順序**：點擊並拖曳圖層上下移動。位於最上方的圖層會遮住下方的內容。 * **顯示/隱藏**：點擊圖層左側的「眼睛」圖示 `👁️`。 * **調整透明度 (Opacity)**：拖拉面板上方的滑桿，可讓圖層變半透明，常用於浮水印或背景淡化。 --- ## 2. 圖層邊界 (Layer Boundary) 當你選中一個圖層時，畫面上會出現 **黃黑相間的虛線**。 * **意義**：這代表該圖層的可編輯範圍。 * **注意**：如果你在黃框以外的地方畫圖，內容是不會顯示的。 * **調整方法**：若要讓圖層與畫布一樣大，請對圖層按右鍵，選擇 `圖層調整為影像大小`。 --- ## 3. 圖層模式 (Layer Modes) 圖層面板有一個「模式」下拉選單決定了當前圖層如何與下方圖層混合： * **正常 (Normal)**：直接覆蓋。 * **色彩增值 (Multiply)**：常用於將白色背景變透明，保留深色內容。 * **濾色 (Screen)**：常用於提亮影像，將黑色背景變透明。 --- ## 4. 鎖定功能 為了防止誤觸，圖層面板提供三種鎖定： 1. **鎖定像素**：禁止在該層繪圖。 2. **鎖定位置**：禁止移動該圖層。 3. **鎖定 Alpha 頻道**：只允許在已有顏色的地方繪圖，保持透明區域不變。 ",
     "url": "/justdocs/courses/website-building/gimp/gimp-layer.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-layer.html"
-  },"12": {
+  },"11": {
     "doc": "Gimp Mask",
     "title": "Gimp Mask",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } # 圖層遮罩 (Layer Mask) 完全指南 ## 快速操作步驟 ### 第一步：新增遮罩 1. 在右側的**圖層面板**，對目標圖層點擊**滑鼠右鍵**。 2. 選擇 **「新增圖層遮罩...」(Add Layer Mask...)**。 3. 在彈出視窗中選擇： * **白色 (全不透明)：** 這是最常用的選項，表示光線充足，所以下方圖的光線無法上透 * **黑色 (全透明)：** 圖層會立即消失，黑色表示無光，因為沒有光線所以下圖會直接上行 ### 第二步：開始塗抹 1. 確保你點選的是圖層旁邊的**遮罩縮圖**（框框會亮起），而不是圖片縮圖。 2. 選擇工具箱中的 **「筆刷工具」(Paintbrush Tool)**。 3. 將前景色設為 **黑色**。 4. 在畫布上塗抹，你會發現被塗抹的地方變透明了。 --- ## 常用進階技巧 ### 1. 完美的漸層融合 如果你想讓兩張照片自然融合： * 在上方圖層建立「白色遮罩」。 * 使用 **「漸層工具」(Gradient Tool)**。 * 將顏色設定為「黑到白」。 * 在遮罩上拉出一條直線，兩張照片就會產生柔和的過度。 [DaviesMedia](https://daviesmediadesign.com/gimp-layer-masks-everything-you-need-to-know/) - [Mardi Gras 2013](https://www.gimp.org/tutorials/community/Layer_Masks/) - [Eric R. Jeschke](https://www.gimp.org/tutorials/legacy/Selective_Color/) ",
     "url": "/justdocs/courses/website-building/gimp/gimp-mask.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-mask.html"
-  },"13": {
+  },"12": {
     "doc": "Gimp Select Tools",
     "title": "Gimp Select Tools",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } # GIMP 選取工具快捷指南 --- ## 常用選取工具介紹 | 工具名稱 | 功能說明 | 快捷鍵 | :--- | :--- | :--- | **矩形選取** | 選取方形或矩形區域。按住 `Shift` 可選取正方形。 | `R` | **橢圓選取** | 選取圓形或橢圓區域。按住 `Shift` 可選取正圓。 | `E` | **自由選取** | 手繪不規則形狀（套索工具），適合快速勾勒輪廓。 | `F` | **魔術棒** | (Fuzzy Select) 根據顏色相近度選取連續區域。 | `U` | **顏色選取** | 選取全圖中所有顏色相近的區域（不需連續）。 | `Shift + O` | **智慧剪刀** | 自動偵測邊緣進行選取，clever free select | `I` | **Alpha 選取** | 在圖層面板對圖層按右鍵，「從 Alpha 管道取得選取範圍」Alpha channel is viewable color | - | --- ## GIMP 進階選取技巧 ## 1. 前景選取工具 (Foreground Select: knock door 3 times, so enter 3) 前景選取工具使用特定的演算法來區分主體與環境, 因為用演算法所以速度慢 (backgroud blue) 1. **大致選取：** 在主體周圍粗略地畫一圈（類似套索工具），然後按 **Enter**。此時內部會呈現藍色覆蓋。 2. **塗抹主體：** 使用筆刷在主體上塗抹，選取主體內部的代表性顏色。您不需要塗滿整個主體，只要讓 GIMP 辨識出哪些顏色屬於前景即可。 3. **預覽結果：** 再次按 **Enter** 查看遮罩預覽，GIMP 會自動計算細微的邊緣（如髮絲）。 4. **完成選取：** 確認無誤後，最後按一次 **Enter**，即可將遮罩轉換為動態虛線選取區。 --- ## 2. 快速遮罩 (Quick Mask: white light and dark to fine tune selected) 快速遮罩讓您能以「繪圖」的方式來修改選取範圍。 (background red) * **啟用：** 按下 `Shift + Q`（或點擊影像視窗左下角的小虛線方框圖示）。影像會覆蓋上一層紅色的半透明層。 * **操作邏輯：** * **使用白色筆刷：** 增加選取範圍（white light to light UP object) * **使用黑色筆刷：** 減少選取範圍（no light to remove object) * **使用灰色或低不透明度：** 建立羽化（柔化）的選取邊緣。 * **關閉：** 再次按下 `Shift + Q`，即可將剛才繪製的範圍轉回標準選取區。 --- ## 3. 路徑選取 (Paths Tool: this tool just like scissor but can bend) 路徑是數學向量，這意味著它們可以無限調整且邊緣絕對平滑。 1. **建立路徑：** 使用 **路徑工具 (`B`)** 在物體邊緣點擊建立節點。點並拖曳可產生貝茲曲線（Bezier curves）。 2. **封閉路徑：** 按住 `Ctrl` 鍵並點擊起點，即可完成閉合路徑。 3. **調整細節：** 路徑閉合後，您仍可以隨時拖動節點或控制桿來完美貼合輪廓。 4. **轉換為選取區：** 在左側的 **工具選項** 面板中，點擊 **「從路徑建立選取區域」** 按鈕，或者使用快捷鍵 `Shift + V`。 ",
     "url": "/justdocs/courses/website-building/gimp/gimp-select-tools.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-select-tools.html"
-  },"14": {
+  },"13": {
     "doc": "Gimp Text Advance A",
     "title": "Gimp Text Advance A",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } # GIMP 進階文字特效指南 學會基礎文字後，我們可以利用圖層、濾鏡與選取工具製作視覺衝擊力更強的文字效果。 --- ## 1. 漸層字 (Gradient Text) 讓文字顏色由淺入深或呈現彩虹色。 1. 使用文字工具輸入文字。 2. 在圖層面板對文字層按 **右鍵** > `從文字取得選取範圍`。 3. 選擇 **漸層工具 (G)**。 4. 在選取範圍內由上往下拉動，即可填入漸層色。 ## 2. 豹紋字/紋理字 (Pattern Text) 將文字填入特定的圖樣（如豹紋、木紋或金屬）。 1. 取得文字選取範圍（同上）。 2. 使用 **油漆桶工具 (Shift + B)**。 3. 在工具選項中將「填滿類型」更改為 **「圖樣填滿」**。 4. 選擇豹紋或其他圖樣，點擊選取範圍進行填滿。 ## 3. 立體字與凹凸貼圖 (Bump Map) 利用濾鏡製作出像浮雕一樣的 3D 質感。 1. **準備**：建立一個文字層（黑色字）和一個背景層（填滿灰色）。 2. **模糊處理**：對文層執行 `濾鏡` > `模糊` > `高斯模糊`（設定約 5-10 px）。 3. **執行**：選取背景層，點選 `濾鏡` > `對應` > `凹凸貼圖 (Bump Map)`。 4. **設定**：在「凹凸圖源」選擇剛才模糊過的文字層，調整「深度」即可看到立體效果。 ## 4. 火燄字 (Fire Text) 1. **底色**：背景填滿黑色，文字填滿白色。 2. **扭曲**：對文字執行 `濾鏡` > `扭曲` > `波紋`（製作火燄抖動感）。 3. **旋轉**：將影像旋轉 90 度，執行 `濾鏡` > `扭曲` > `風`（製作向上竄的火燄）。 4. **上色**：使用 `顏色` > `色彩平衡`，將陰影調為紅色，高亮度調為黃色。 --- ## 5. 額外推薦特效 (Bonus) ### A. 霓虹燈字 (Neon Glow) * **作法**：將文字選取範圍「擴張」後填充亮色，再執行強力的「高斯模糊」作為底層光暈，最上層保留細細的白色文字。 ### B. 玻璃透視字 (Glass/Water Effect) * **作法**：將文字層的「不透明度」調低，並利用 `濾鏡` > `對應` > `位移`，根據文字形狀對背景圖案產生折射效果，適合科技感網頁。 ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-adv-a.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-adv-a.html"
-  },"15": {
+  },"14": {
     "doc": "Gimp Text",
     "title": "Gimp Text",
     "content": "[Go Back to Gimp Resources]({{ '/courses/website-building/gimp/' | relative_url }}){: .btn .btn-outline } ## 1. 基本操作 * **建立文字**：點擊工具箱的 **文字工具 (圖示為 A)**，然後在畫布上點擊或拖曳出文字框。 * **即時編輯器**：輸入文字時，上方會出現浮動工具列，可調整字體、大小、顏色及字距。 * **重新編輯**：只要該圖層旁邊顯示 `[A]` 圖示，隨時切換回文字工具點擊文字即可修改內容。 ## 2. 網頁設計實務範例 ### 範例 A：製作具有「外框線」的標題 (Outline Text) 這能讓文字在複雜的背景圖上更清晰。 1. 輸入文字後，在圖層面板對文字圖層按 **右鍵** > `從文字取得選取範圍`。 2. 新增一個透明圖層。 3. 點選選單 `選取` > `擴張` (設定 2~5 像素)。 4. 使用油漆桶將此範圍填滿顏色，並將此圖層移至文字層下方。 ### 範例 B：文字陰影效果 (Drop Shadow) 增加層次感，使文字從背景「浮起來」。 1. 選取文字圖層。 2. 點選選單 `濾鏡` > `光影` > `投射陰影 (Drop Shadow)`。 3. 調整 **X/Y 偏移** (方向) 與 **模糊半徑** (柔和度)。 ### 範例 C：透明浮水印文字 1. 輸入你的網址或 Logo 文字（例如：`docs.ifong.cc`）。 2. 在圖層面板調整該層的 **透明度 (Opacity)** 至 20%~40%。 --- ## 3. 注意事項：文字圖層的「像素化」 如果你對文字圖層進行旋轉、縮放或使用繪圖工具，GIMP 會詢問是否要「捨棄文字資訊」。 * **一旦確定**：文字將變成一般的「像素圖層」，你將**無法再更改文字內容**（例如把 \"Home\" 改成 \"About\"）。 * **建議**：在進行特效處理前，先複製一份文字圖層備份並隱藏。 ",
     "url": "/justdocs/courses/website-building/gimp/gimp-text-layer.html",
     
     "relUrl": "/courses/website-building/gimp/gimp-text-layer.html"
-  },"16": {
+  },"15": {
     "doc": "Hugo in GitHub",
     "title": "Hugo in GitHub",
     "content": "[Go Back to GitHub Resources]({{ '/courses/website-building/github/' | relative_url }}){: .btn .btn-outline } - Hugo 是基於 [Go](https://en.wikipedia.org/wiki/Go_(programming_language)) 語言的靜態網站產生器，以極速建構與簡單部署聞名。 - 它將 Markdown 文件轉為 HTML，搭配 GitHub Actions 可實現自動化發佈。 - 非常適合建立個人部落格、教學網站或中小企業官網，既安全又節省主機費用。 --- ***[airspace-hugo](https://github.com/themefisher/airspace-hugo)*** 使用了更活潑的配色，並且有更多的動畫切換效果。例如攝影、行銷或設計工作室 ",
     "url": "/justdocs/courses/website-building/github/github-hugo.html",
     
     "relUrl": "/courses/website-building/github/github-hugo.html"
-  },"17": {
-    "doc": "GitHub",
-    "title": "GitHub",
-    "content": "## Live Broadcast [Go to Live Broadcast](/shared/broadcast.html) ## Overview 使用 [@GITHUB](https://www.github.com) Pages 搭配 [Jekyll](https://jekyllrb.com/) ／[Just the Docs](https://just-the-docs.com) 建立網站，強調版本控制、結構清楚與可重現部署。相較 WordPress，無需資料庫、維護成本低、安全性高，適合重視技術基礎與長期穩定的使用情境。 ## Examples [Fast Startup with Just the Docs](./fast-startup-with-just-the-docs.html) 使用 **Just the Docs** 快速建立 GitHub Pages 專案 [史丹福 CS324](https://stanford-cs324.github.io/winter2023/) 是一個 just the docs 很好的範例 [Kevin Lin](https://kevinl.info/just-the-class/) 也可參考 [Using Existing Github Themes](./using-existing-github-themes.html) 套用與切換 GitHub Pages 主題 [Hugo](./github-hugo.html) Go 語言的靜態網站產生器 ",
-    "url": "/justdocs/courses/website-building/github/",
-    
-    "relUrl": "/courses/website-building/github/"
-  },"18": {
-    "doc": "WordPress",
-    "title": "WordPress",
-    "content": "## Overview ... ## Resources ... ",
-    "url": "/justdocs/courses/website-building/wordpress/",
-    
-    "relUrl": "/courses/website-building/wordpress/"
-  },"19": {
-    "doc": "Gimp",
-    "title": "Gimp",
-    "content": "## Live Broadcast [Go to Live Broadcast](/justdocs/shared/broadcast.html) ## Overview [@GIMP](https://www.gimp.org) 是免費、開源的影像編輯軟體，可用於圖片修圖、合成與視覺設計。 在網站製作中常用來製作網頁圖片、Banner、圖示與素材優化。而以下圖庫有多樣的圖型可供選取 [pexels](https://www.pexels.com/)、[cleanPNG](https://www.cleanpng.com/)、[unsplash](https://unsplash.com/) ## Interface [界面](./gimp-interface.html) 為 gimp 的第一顯現畫面, 要切換中英文可由 設定/界面/語言 進入設定 ## Basic editing [基本編輯](./gimp-basic-edit.html) 介紹如何使用 GIMP 進行網頁開發中常見的圖片處理作業 ## Select tools [選取工具](./gimp-select-tools.html) 是影像處理的基礎，用於界定編輯範圍 ## Boundary Color [邊框顯示](./gimp-boundary-color.html) 行軍蟻與圖層界限 ## Layer [圖層](./gimp-layer.html) 你可以獨立編輯每一層，而不會影響到其他層的內容 ## Mask [遮罩](./gimp-mask.html) 圖層遮罩是數位影像處理中最重要的技術之一 它允許你**非破壞性地**隱藏圖層的部分內容，而不是直接將其刪除。 ## 三種混合彩色黑白的方式 [混合](./gimp-3ways-cut-under.html) 把前景以彩色但背景是黑白來突顯前景 ## Text [文字](./gimp-text-layer.html) 在網頁設計中不僅是訊息，也是視覺設計的一部分 熟悉了基本操作後可以朝向[進階文字](./gimp-text-adv-a.html)邁進 ",
-    "url": "/justdocs/courses/website-building/gimp/",
-    
-    "relUrl": "/courses/website-building/gimp/"
-  },"20": {
-    "doc": "Web Development",
-    "title": "Web Development",
-    "content": " ",
-    "url": "/justdocs/courses/website-building/",
-    
-    "relUrl": "/courses/website-building/"
-  },"21": {
-    "doc": "Calendar",
-    "title": "Calendar",
-    "content": " ",
-    "url": "/justdocs/courses/data-structures/calendar/#calendar",
-    
-    "relUrl": "/courses/data-structures/calendar/#calendar"
-  },"22": {
-    "doc": "Calendar",
-    "title": "Week 1",
-    "content": "Feb 2 LECTURE 課程簡介及登入主機: goo Console -- unix 指令 -- vi ",
-    "url": "/justdocs/courses/data-structures/calendar/#week-1",
-    
-    "relUrl": "/courses/data-structures/calendar/#week-1"
-  },"23": {
-    "doc": "Calendar",
-    "title": "Week 2",
-    "content": "Feb 23 LECTURE vi編寫第一個程式: vi hello.pl -- hello -- perl ./hello.pl ASSIGNMENT 印出學號的最後一個數字 ",
-    "url": "/justdocs/courses/data-structures/calendar/#week-2",
-    
-    "relUrl": "/courses/data-structures/calendar/#week-2"
-  },"24": {
-    "doc": "Calendar",
-    "title": "Week 3",
-    "content": "Mar 2 LECTURE 上週已介紹 perl -d -e 1 的單行偵錯，但通常我們是把所有碼寫入檔案再於去執行. 以下範例可以看出字串和數字在perl環境中可以自然的轉換, 本週課程介紹變數, scalar, array -- 把二個數相加 ASSIGNMENT 四則運算 ",
-    "url": "/justdocs/courses/data-structures/calendar/#week-3",
-    
-    "relUrl": "/courses/data-structures/calendar/#week-3"
-  },"25": {
-    "doc": "Calendar",
-    "title": "Week 4",
-    "content": "Mar 9 LECTURE 陣列及串列已於上週開始介紹，本週我們會對資料結構的最基本堆疊及佇列開始介紹, stack 最基本的動作有 push pop 動作為先進後出 而 queue 則是 enqueue dequene 動作為先進後出 ASSIGNMENT foo ",
-    "url": "/justdocs/courses/data-structures/calendar/#week-4",
-    
-    "relUrl": "/courses/data-structures/calendar/#week-4"
-  },"26": {
-    "doc": "Calendar",
-    "title": "Calendar",
-    "content": " ",
-    "url": "/justdocs/courses/data-structures/calendar/",
-    
-    "relUrl": "/courses/data-structures/calendar/"
-  },"27": {
-    "doc": "Syllabus",
-    "title": "Topics/Syllybus",
-    "content": ". | 基礎概念：抽象資料型別（ADT）、時間與空間複雜度 | 線性結構：陣列、串列、堆疊、佇列 | 非線性結構：樹、圖、雜湊表 | 演算法設計：排序、搜尋、遞迴 | 實務應用與案例分析 | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#topicssyllybus",
-    
-    "relUrl": "/courses/data-structures/syllabus/#topicssyllybus"
-  },"28": {
-    "doc": "Syllabus",
-    "title": "Table of Contents",
-    "content": ". | Fundamentals . | 連線到google主控 | 連線到教師主機 | ssh 避開密碼 | 跨主機拷貝 | vi: unix 內定文字編寫器 | . | perl . | perl是什麼 | perl最常用的函數 : print | 變數 純量 陣列 | . | 資料結構 . | 陣列，串列 | 堆疊，佇列 | . | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#table-of-contents",
-    
-    "relUrl": "/courses/data-structures/syllabus/#table-of-contents"
-  },"29": {
-    "doc": "Syllabus",
-    "title": "Fundamentals",
-    "content": "連線到google主控 . | 本門課以 perl 程式來實作資料結構, 此 perl 位於教師個人雲端伺服器上. 然校方基於安全因素禁止進入教師主機，所以我們必須借由goolge console 來到達教師主機 | . 連線到教師主機 . | ssh 安全連線通過在網路中建立安全隧道來實現客戶端與伺服器之間的連接, 它通常是經由埠號 22 來完成, 若主機 ssh daemon 不是位於 22 則可以借由 -p 參數指定埠號，緊接應輸入帳號AT主機以連線登入, 按我看範例 | . ssh 避開密碼 . | 由 goo console 進教師主機可以設定成不必密碼模式：它是在生成一對公私金鑰後把公鑰放於目的地而達到不必輸入密碼, dotSSH/config | . 跨主機拷貝 . | scp 用來複製文件由甲到乙地, 它內定使用埠號 22，若要指定埠號則要使用大寫的 P 例如: ssh -P 8080 ./foo.txt 011145001@server.com:~ | . vi: unix 內定文字編寫器 . | 使用 unix 主機絕對不能避開vi 因為它是 unix 所內定的編寫器，熟悉這個軟體是學習本課程的必需, 予其避開不如好好花些時間研究它的運作原則 | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#fundamentals",
-    
-    "relUrl": "/courses/data-structures/syllabus/#fundamentals"
-  },"30": {
-    "doc": "Syllabus",
-    "title": "perl",
-    "content": "perl是什麼 . | Perl 是一種功能強大、特性豐富的程式語言，擁有超過 37 年的發展歷史。 | . perl最常用的函數 . | print [FH] LIST 其中 FH 可以省略則送標準輸出. 範例顯示使用perl單行偵錯及四則運算運算元 | . 變數 純量 陣列 . | Perl 變數型別由符號（sigil）決定，而非資料內容決定。常見三種變數型別: $ @ % 分別為 純量 陣列 雜湊 (scalar array hash) | scalar: 單數變數: Perl 最基本的資料型別，可儲存：整數 浮點數 字串 參照（reference, ex my $x=10; my $s=’xxx’ | array: 複數： my @nums=(10, 20, 30) | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#progPerl",
-    
-    "relUrl": "/courses/data-structures/syllabus/#progPerl"
-  },"31": {
-    "doc": "Syllabus",
-    "title": "資料結構",
-    "content": "陣列，串列 . | 陣列 : 連續記憶體空間, 可用索引直接存取 | 串列 : 不連續記憶體, 每個節點包含 data 及 pointer | . 堆疊 佇列 . | 堆疊 : FILO | 佇列 : FIFO | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#dataStructure",
-    
-    "relUrl": "/courses/data-structures/syllabus/#dataStructure"
-  },"32": {
-    "doc": "Syllabus",
-    "title": "Syllabus",
-    "content": " ",
-    "url": "/justdocs/courses/data-structures/syllabus/",
-    
-    "relUrl": "/courses/data-structures/syllabus/"
-  },"33": {
-    "doc": "Data Structures",
-    "title": "Data Structures",
-    "content": "## Live Broadcast [Go to Live Broadcast](/justdocs/shared/broadcast.html) ## Overview This section contains my study notes and implementation details for the Data Structures course. [課程](./26-class-breif.html) -- [成績及其它](./26-class-misc.html) ## Topics Covered * **Fundamentals:** Time complexity (Big O), Arrays, and Strings. * **Linear Data Structures:** Linked Lists, Stacks, and Queues. * **Non-Linear Data Structures:** Trees, Graphs, and Hash Tables. ",
-    "url": "/justdocs/courses/data-structures/",
-    
-    "relUrl": "/courses/data-structures/"
-  },"34": {
-    "doc": "Calendar",
-    "title": "Calendar",
-    "content": "# Calendar ## Week 1 Feb 24 LECTURE 課程簡介 -- 評分方式 -- BBC 六分鐘說英文 -- 經濟學人 -- 小幫手 -- 回報文章及組別給小幫手 ## Week 2 Mar 3 LECTURE 資料請送郵小幫手 -- 課本我們會說明第二章：數字系統 , 而本期經濟學人的文章是探討AI和美國移民局: ICE's software 閱讀有問題? 我們看看本期bbc的六分鐘說英文的文章：失讀症 ## Week 3 Mar 10 LECTURE 課本第三章資料儲存 , 20260228 經濟學人探討AI溶入真實世界: Physical world 胡椒的厲害 BBC ",
-    "url": "/justdocs/courses/professional-english/calendar/",
-    
-    "relUrl": "/courses/professional-english/calendar/"
-  },"35": {
-    "doc": "Miscellaneous",
-    "title": "Miscellaneous",
-    "content": "# Miscellaneous 2026 Feb STUST computer engineerig department professional english class [課程](./26-class-brief.html) -- [用書](https://eshop.tsanghai.com.tw/products/cs0450pct) -- [買書參考業務](/justdocs/assets/images/profession-english/computer_foundation_agent.webp) -- [校行事曆](./stust_114_2_calendar.pdf) 資二甲:[成績](https://docs.google.com/spreadsheets/d/1CS0Gx7-KswLvRuCsNGo1xs737UnkOzxOMFCSSYecMuo/edit?usp=sharing) 資二乙:[成績](https://docs.google.com/spreadsheets/d/1jNhUgU7MuXKWpmo5hqnKD9zPKkQz95wbGOOecsEII4o/edit?usp=sharing) 資二丙:[成績](https://docs.google.com/spreadsheets/d/19r_nqiFdDNiY94m3NcW0Ol2uRrRKJvsBUiaXOnqHwsE/edit?usp=sharing) ",
-    "url": "/justdocs/courses/professional-english/miscellaneous/",
-    
-    "relUrl": "/courses/professional-english/miscellaneous/"
-  },"36": {
-    "doc": "Professional English",
-    "title": "Professional English",
-    "content": "# Professional English (PE) This course equips Computer Engineering students with the practical English skills required to communicate technical ideas clearly and professionally in academic and industry settings. ## Topics Covered * **Core Textbook:** Foundations of Computer Science 5 by Behrouz A Forouzan * **Listening & Discussion:** BBC Six Minute English * **Current Affairs in Technology:** Latest The Economist articles related to computer engineering ",
-    "url": "/justdocs/courses/professional-english/",
-    
-    "relUrl": "/courses/professional-english/"
-  },"37": {
-    "doc": "Syllabus",
-    "title": "Syllabus",
-    "content": "# Topics/Syllybus - 手機外觀 : --- ## Table of Contents - [Fundamentals](#fundam) - [手機的外觀](#phoneButtons) ### 手機的外觀 {: phoneButtons } ## 手機外部按鍵與功能總表 | 部位名稱 | 主要功能 |----------|----------| 電源鍵 | 開機、關機、鎖定螢幕、喚醒螢幕 | 音量鍵 | 調高或調低音量 | 靜音開關 | 切換響鈴模式與靜音模式（多見於 iPhone） | SIM 卡槽 | 放置行動電話 SIM 卡 | 充電孔 | 充電與資料傳輸 | 喇叭 / 麥克風 | 播放聲音與收錄聲音 | 前後鏡頭 | 拍照與錄影 | ",
-    "url": "/justdocs/courses/know-your-mobile-phone/syllabus/",
-    
-    "relUrl": "/courses/know-your-mobile-phone/syllabus/"
-  },"38": {
-    "doc": "My Phone",
-    "title": "My Phone",
-    "content": "# Mobile phone Using Your Own Mobile Phone with Confidence Course Description This course is designed for senior citizens who wish to use their own mobile phones more effectively and confidently. Participants will learn practical, hands-on skills using their personal devices. The focus is on everyday tasks that improve communication, safety, and convenience. ",
-    "url": "/justdocs/courses/know-your-mobile-phone/",
-    
-    "relUrl": "/courses/know-your-mobile-phone/"
-  },"39": {
-    "doc": "Courses",
-    "title": "Courses",
-    "content": "# Welcome to Courses My various school projects and courses. ",
-    "url": "/justdocs/courses/",
-    
-    "relUrl": "/courses/"
-  },"40": {
-    "doc": "Shared",
-    "title": "Shared",
-    "content": "Common links and tools used across courses. ",
-    "url": "/justdocs/shared/",
-    
-    "relUrl": "/shared/"
-  },"41": {
-    "doc": "Instructor",
-    "title": "Instructor",
-    "content": "# Instructor ## Contact - **Email:** [cp.ifong4@gmail.com](mailto:cp.ifong4@gmail.com) - **Response time:** within 24–48 hours on weekdays ## Teaching - Data Structures - Professional English (CE) - Website Building ## Background - Currently(jan2026) a part-time instructor at [@STUST](https://www.stust.edu.tw) and [@AFATS](https://www.afats.khc.edu.tw) - 3 years at Fujian Junior Technical College (China) - Over 25 years of teaching experience at Fortune College - Former software engineer at Everex (Fremont, CA) with 3 years of industry experience. ",
-    "url": "/justdocs/instructor/",
-    
-    "relUrl": "/instructor/"
-  },"42": {
+  },"16": {
     "doc": "Home",
     "title": "Home",
     "content": "# Welcome to My Documentation This site contains my notes for various school projects and courses. ### Quick Links * [Courses](./courses/) * [Shared Resources](./shared/) ",
     "url": "/justdocs/",
     
     "relUrl": "/"
-  },"43": {
+  },"17": {
+    "doc": "WordPress",
+    "title": "WordPress",
+    "content": "## Overview ... ## Resources ... ",
+    "url": "/justdocs/courses/website-building/wordpress/",
+    
+    "relUrl": "/courses/website-building/wordpress/"
+  },"18": {
+    "doc": "Gimp",
+    "title": "Gimp",
+    "content": "## Live Broadcast [Go to Live Broadcast](/justdocs/shared/broadcast.html) ## Overview [@GIMP](https://www.gimp.org) 是免費、開源的影像編輯軟體，可用於圖片修圖、合成與視覺設計。 在網站製作中常用來製作網頁圖片、Banner、圖示與素材優化。而以下圖庫有多樣的圖型可供選取 [pexels](https://www.pexels.com/)、[cleanPNG](https://www.cleanpng.com/)、[unsplash](https://unsplash.com/) ## Interface [界面](./gimp-interface.html) 為 gimp 的第一顯現畫面, 要切換中英文可由 設定/界面/語言 進入設定 ## Basic editing [基本編輯](./gimp-basic-edit.html) 介紹如何使用 GIMP 進行網頁開發中常見的圖片處理作業 ## Select tools [選取工具](./gimp-select-tools.html) 是影像處理的基礎，用於界定編輯範圍 ## Boundary Color [邊框顯示](./gimp-boundary-color.html) 行軍蟻與圖層界限 ## Layer [圖層](./gimp-layer.html) 你可以獨立編輯每一層，而不會影響到其他層的內容 ## Mask [遮罩](./gimp-mask.html) 圖層遮罩是數位影像處理中最重要的技術之一 它允許你**非破壞性地**隱藏圖層的部分內容，而不是直接將其刪除。 ## 三種混合彩色黑白的方式 [混合](./gimp-3ways-cut-under.html) 把前景以彩色但背景是黑白來突顯前景 ## Text [文字](./gimp-text-layer.html) 在網頁設計中不僅是訊息，也是視覺設計的一部分 熟悉了基本操作後可以朝向[進階文字](./gimp-text-adv-a.html)邁進 ",
+    "url": "/justdocs/courses/website-building/gimp/",
+    
+    "relUrl": "/courses/website-building/gimp/"
+  },"19": {
+    "doc": "Web Development",
+    "title": "Web Development",
+    "content": " ",
+    "url": "/justdocs/courses/website-building/",
+    
+    "relUrl": "/courses/website-building/"
+  },"20": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": "# Calendar ## Week 1 Feb 2 LECTURE 課程簡介及登入主機: goo Console -- unix 指令 -- vi ## Week 2 Feb 23 LECTURE vi編寫第一個程式: vi hello.pl -- hello -- perl ./hello.pl ASSIGNMENT 印出學號的最後一個數字 ## Week 3 Mar 2 LECTURE 上週已介紹 perl -d -e 1 的單行偵錯，但通常我們是把所有碼寫入檔案再於去執行. 以下範例可以看出字串和數字在perl環境中可以自然的轉換, 本週課程介紹變數, scalar, array -- 把二個數相加 ASSIGNMENT 四則運算 ## Week 4 Mar 9 LECTURE 陣列及串列已於上週開始介紹，本週我們會對資料結構的最基本堆疊及佇列開始介紹, stack 最基本的動作有 push pop 動作為先進後出 而 queue 則是 enqueue dequene 動作為先進後出 ASSIGNMENT foo ",
+    "url": "/justdocs/courses/data-structures/calendar/",
+    
+    "relUrl": "/courses/data-structures/calendar/"
+  },"21": {
+    "doc": "Syllabus",
+    "title": "Topics/Syllybus",
+    "content": ". | 基礎概念：抽象資料型別（ADT）、時間與空間複雜度 | 線性結構：陣列、串列、堆疊、佇列 | 非線性結構：樹、圖、雜湊表 | 演算法設計：排序、搜尋、遞迴 | 實務應用與案例分析 | . ",
+    "url": "/justdocs/courses/data-structures/syllabus/#topicssyllybus",
+    
+    "relUrl": "/courses/data-structures/syllabus/#topicssyllybus"
+  },"22": {
+    "doc": "Syllabus",
+    "title": "Table of Contents",
+    "content": ". | Fundamentals . | 連線到google主控 | 連線到教師主機 | ssh 避開密碼 | 跨主機拷貝 | vi: unix 內定文字編寫器 | . | perl . | perl是什麼 | perl最常用的函數 : print | 變數 純量 陣列 | 基本輸入輸出 | . | 資料結構 . | 陣列，串列 | 堆疊，佇列 | . | . ",
+    "url": "/justdocs/courses/data-structures/syllabus/#table-of-contents",
+    
+    "relUrl": "/courses/data-structures/syllabus/#table-of-contents"
+  },"23": {
+    "doc": "Syllabus",
+    "title": "Fundamentals",
+    "content": "連線到google主控 . | 本門課以 perl 程式來實作資料結構, 此 perl 位於教師個人雲端伺服器上. 然校方基於安全因素禁止進入教師主機，所以我們必須借由goolge console 來到達教師主機 | . 連線到教師主機 . | ssh 安全連線通過在網路中建立安全隧道來實現客戶端與伺服器之間的連接, 它通常是經由埠號 22 來完成, 若主機 ssh daemon 不是位於 22 則可以借由 -p 參數指定埠號，緊接應輸入帳號AT主機以連線登入, 按我看範例 | . ssh 避開密碼 . | 由 goo console 進教師主機可以設定成不必密碼模式：它是在生成一對公私金鑰後把公鑰放於目的地而達到不必輸入密碼, dotSSH/config | . 跨主機拷貝 . | scp 用來複製文件由甲到乙地, 它內定使用埠號 22，若要指定埠號則要使用大寫的 P 例如: ssh -P 8080 ./foo.txt 011145001@server.com:~ | . vi: unix 內定文字編寫器 . | 使用 unix 主機絕對不能避開vi 因為它是 unix 所內定的編寫器，熟悉這個軟體是學習本課程的必需, 予其避開不如好好花些時間研究它的運作原則 | . ",
+    "url": "/justdocs/courses/data-structures/syllabus/#fundamentals",
+    
+    "relUrl": "/courses/data-structures/syllabus/#fundamentals"
+  },"24": {
+    "doc": "Syllabus",
+    "title": "perl",
+    "content": "perl是什麼 . | Perl 是一種功能強大、特性豐富的程式語言，擁有超過 37 年的發展歷史。 | . perl最常用的函數 . | print [FH] LIST 其中 FH 可以省略則送標準輸出. 範例顯示使用perl單行偵錯及四則運算運算元 | . 變數 純量 陣列 . | Perl 變數型別由符號（sigil）決定，而非資料內容決定。常見三種變數型別: $ @ % 分別為 純量 陣列 雜湊 (scalar array hash) | scalar: 單數變數: Perl 最基本的資料型別，可儲存：整數 浮點數 字串 參照（reference, ex my $x=10; my $s=’xxx’ | array: 複數： my @nums=(10, 20, 30) | . 基本輸入輸出 . | &lt;STDIN&gt; 由標準輸入讀取一行資料，但會包含 \\n 所以要使用 chomp 去把它去掉 | . ",
+    "url": "/justdocs/courses/data-structures/syllabus/#progPerl",
+    
+    "relUrl": "/courses/data-structures/syllabus/#progPerl"
+  },"25": {
+    "doc": "Syllabus",
+    "title": "資料結構",
+    "content": "陣列，串列 . | 陣列 : 連續記憶體空間, 可用索引直接存取 | 串列 : 不連續記憶體, 每個節點包含 data 及 pointer | . 堆疊 佇列 . | 堆疊 : FILO, 使用perl實作stack | 佇列 : FIFO | . ",
+    "url": "/justdocs/courses/data-structures/syllabus/#dataStructure",
+    
+    "relUrl": "/courses/data-structures/syllabus/#dataStructure"
+  },"26": {
+    "doc": "Syllabus",
+    "title": "Syllabus",
+    "content": " ",
+    "url": "/justdocs/courses/data-structures/syllabus/",
+    
+    "relUrl": "/courses/data-structures/syllabus/"
+  },"27": {
+    "doc": "Data Structures",
+    "title": "Data Structures",
+    "content": "## Live Broadcast [Go to Live Broadcast](/justdocs/shared/broadcast.html) ## Overview This section contains my study notes and implementation details for the Data Structures course. - [課程](./26-class-breif.html) - [成績](https://docs.google.com/spreadsheets/d/1FoyPQfIN2BQxsg06vjmHFkHTc3M3gMDt1RvbVNn81Bo/edit?usp=sharing) - [校行事曆](/justdocs/assets/images/data-structure/26-cal.webp) -- [班級課表](/justdocs/assets/images/data-structure/26-class.webp) -- [每週行事](/justdocs/assets/images/data-structure/26-cal.txt) ## Topics Covered * **Fundamentals:** Time complexity (Big O), Arrays, and Strings. * **Linear Data Structures:** Linked Lists, Stacks, and Queues. * **Non-Linear Data Structures:** Trees, Graphs, and Hash Tables. ",
+    "url": "/justdocs/courses/data-structures/",
+    
+    "relUrl": "/courses/data-structures/"
+  },"28": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": " ",
+    "url": "/justdocs/courses/professional-english/calendar/#calendar",
+    
+    "relUrl": "/courses/professional-english/calendar/#calendar"
+  },"29": {
+    "doc": "Calendar",
+    "title": "Week 1",
+    "content": "Feb 24 LECTURE 課程簡介 -- 評分方式 -- BBC 六分鐘說英文 -- 經濟學人 -- 小幫手 -- 回報文章及組別給小幫手 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-1",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-1"
+  },"30": {
+    "doc": "Calendar",
+    "title": "Week 2",
+    "content": "Mar 3 LECTURE 資料請送郵小幫手 -- 課本我們會說明第二章：數字系統 , 而本期經濟學人的文章是探討AI和美國移民局: ICE's software 閱讀有問題? 我們看看本期bbc的六分鐘說英文的文章：失讀症 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-2",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-2"
+  },"31": {
+    "doc": "Calendar",
+    "title": "Week 3",
+    "content": "Mar 10 LECTURE 檢驗同學上傳BBC link -- 課本第三章資料儲存 , 20260228 經濟學人探討AI溶入真實世界: Physical world 胡椒的厲害 BBC ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-3",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-3"
+  },"32": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": " ",
+    "url": "/justdocs/courses/professional-english/calendar/",
+    
+    "relUrl": "/courses/professional-english/calendar/"
+  },"33": {
+    "doc": "Miscellaneous",
+    "title": "Miscellaneous",
+    "content": "# Miscellaneous 2026 Feb STUST computer engineerig department professional english class [課程](./26-class-brief.html) -- [用書](https://eshop.tsanghai.com.tw/products/cs0450pct) -- [買書參考業務](/justdocs/assets/images/profession-english/computer_foundation_agent.webp) -- [校行事曆](./stust_114_2_calendar.pdf) 資二甲:[成績](https://docs.google.com/spreadsheets/d/1CS0Gx7-KswLvRuCsNGo1xs737UnkOzxOMFCSSYecMuo/edit?usp=sharing) 資二乙:[成績](https://docs.google.com/spreadsheets/d/1jNhUgU7MuXKWpmo5hqnKD9zPKkQz95wbGOOecsEII4o/edit?usp=sharing) 資二丙:[成績](https://docs.google.com/spreadsheets/d/19r_nqiFdDNiY94m3NcW0Ol2uRrRKJvsBUiaXOnqHwsE/edit?usp=sharing) ",
+    "url": "/justdocs/courses/professional-english/miscellaneous/",
+    
+    "relUrl": "/courses/professional-english/miscellaneous/"
+  },"34": {
+    "doc": "Professional English",
+    "title": "Professional English",
+    "content": "# Professional English (PE) This course equips Computer Engineering students with the practical English skills required to communicate technical ideas clearly and professionally in academic and industry settings. ## Topics Covered * **Core Textbook:** Foundations of Computer Science 5 by Behrouz A Forouzan * **Listening & Discussion:** BBC Six Minute English * **Current Affairs in Technology:** Latest The Economist articles related to computer engineering ",
+    "url": "/justdocs/courses/professional-english/",
+    
+    "relUrl": "/courses/professional-english/"
+  },"35": {
+    "doc": "Syllabus",
+    "title": "Syllabus",
+    "content": "# Topics/Syllybus - 手機外觀 : --- ## Table of Contents - [Fundamentals](#fundam) - [手機的外觀](#phoneButtons) ### 手機的外觀 {: phoneButtons } ## 手機外部按鍵與功能總表 | 部位名稱 | 主要功能 |----------|----------| 電源鍵 | 開機、關機、鎖定螢幕、喚醒螢幕 | 音量鍵 | 調高或調低音量 | 靜音開關 | 切換響鈴模式與靜音模式（多見於 iPhone） | SIM 卡槽 | 放置行動電話 SIM 卡 | 充電孔 | 充電與資料傳輸 | 喇叭 / 麥克風 | 播放聲音與收錄聲音 | 前後鏡頭 | 拍照與錄影 | ",
+    "url": "/justdocs/courses/know-your-mobile-phone/syllabus/",
+    
+    "relUrl": "/courses/know-your-mobile-phone/syllabus/"
+  },"36": {
+    "doc": "My Phone",
+    "title": "My Phone",
+    "content": "# Mobile phone Using Your Own Mobile Phone with Confidence Course Description This course is designed for senior citizens who wish to use their own mobile phones more effectively and confidently. Participants will learn practical, hands-on skills using their personal devices. The focus is on everyday tasks that improve communication, safety, and convenience. ",
+    "url": "/justdocs/courses/know-your-mobile-phone/",
+    
+    "relUrl": "/courses/know-your-mobile-phone/"
+  },"37": {
+    "doc": "Courses",
+    "title": "Courses",
+    "content": "# Welcome to Courses My various school projects and courses. ",
+    "url": "/justdocs/courses/",
+    
+    "relUrl": "/courses/"
+  },"38": {
+    "doc": "Shared",
+    "title": "Shared",
+    "content": "Common links and tools used across courses. ",
+    "url": "/justdocs/shared/",
+    
+    "relUrl": "/shared/"
+  },"39": {
+    "doc": "Instructor",
+    "title": "Instructor",
+    "content": "# Instructor ## Contact - **Email:** [cp.ifong4@gmail.com](mailto:cp.ifong4@gmail.com) - **Response time:** within 24–48 hours on weekdays ## Teaching - Data Structures - Professional English (CE) - Website Building ## Background - Currently(jan2026) a part-time instructor at [@STUST](https://www.stust.edu.tw) and [@AFATS](https://www.afats.khc.edu.tw) - 3 years at Fujian Junior Technical College (China) - Over 25 years of teaching experience at Fortune College - Former software engineer at Everex (Fremont, CA) with 3 years of industry experience. ",
+    "url": "/justdocs/instructor/",
+    
+    "relUrl": "/instructor/"
+  },"40": {
+    "doc": "GitHub",
+    "title": "GitHub",
+    "content": "## Live Broadcast [Go to Live Broadcast](/shared/broadcast.html) ## Overview 使用 [@GITHUB](https://www.github.com) Pages 搭配 [Jekyll](https://jekyllrb.com/) ／[Just the Docs](https://just-the-docs.com) 建立網站，強調版本控制、結構清楚與可重現部署。相較 WordPress，無需資料庫、維護成本低、安全性高，適合重視技術基礎與長期穩定的使用情境。 ## Examples [Fast Startup with Just the Docs](./fast-startup-with-just-the-docs.html) 使用 **Just the Docs** 快速建立 GitHub Pages 專案 [史丹福 CS324](https://stanford-cs324.github.io/winter2023/) 是一個 just the docs 很好的範例 [Kevin Lin](https://kevinl.info/just-the-class/) 也可參考 [Using Existing Github Themes](./using-existing-github-themes.html) 套用與切換 GitHub Pages 主題 [Hugo](./github-hugo.html) Go 語言的靜態網站產生器 ",
+    "url": "/justdocs/courses/website-building/github/",
+    
+    "relUrl": "/courses/website-building/github/"
+  },"41": {
     "doc": "STUST",
     "title": "STUST",
     "content": "## Teaching systems - [課程管理/教學計劃/上傳佐証](https://portal.stust.edu.tw/CourseManage/) - [成績輸入](https://portal.stust.edu.tw/score/) - [FlipClass](https://flipclass.stust.edu.tw/) - [考試圖庫](https://flipclass.stust.edu.tw/itemPool) - [電算中心](https://cc.stust.edu.tw/) - [圖資網路服務](https://net.cc.stust.edu.tw/) - [教務處](https://academic.stust.edu.tw/) - [人事室](https://aura.stust.edu.tw/NewEmp/Default.aspx) ## Policies / references - [Late policy](...) ",
     "url": "/justdocs/shared/stust.html",
     
     "relUrl": "/shared/stust.html"
-  },"44": {
+  },"42": {
     "doc": "Use Existing Theme",
     "title": "Use Existing Theme",
     "content": "[Go Back to GitHub Resources]({{ '/courses/website-building/github/' | relative_url }}){: .btn .btn-outline } ### 使用既有 GitHub Pages 主題的優點 - **零或極低設定成本**：不用自己寫版型與 CSS - **相容 GitHub Pages**：官方或主流主題，部署最穩 --- ### Theme 類型說明 1. [Built-in themes](https://github.com/pages-themes)（內建主題) > **⚠️ Attention:** github 幫你 deploy 可在 `_config.yml` 加入 ```yaml theme: jekyll-theme-cayman ``` `index.md` 加入 ```md title: just a test description: nothing special ``` --- ### 非內建主題: 有／沒有「Use this template」的差別 有「Use this template :一鍵建立全新儲存庫 - 直接套用他人提供的網站骨架／設定 沒有「Use this template」: 只能用 Fork 或 Clone #### Fork - 與原作者 repo **有關聯** - 需要理解 upstream、同步更新 #### Clone - 只下載到本機 - 還要自己建立 GitHub repo、設定 remote、push --- ### Use this template (UTT) #### Engine（引擎，擇一): Ruby Go Node.js ### Jekyll（Engine Ruby config _config.yml) - [just-the-docs-template](https://github.com/just-the-docs/just-the-docs-template) - [minimal-mistake starter](https://github.com/mmistakes/mm-github-pages-starter) --- ### Hugo（Engine Go config config.toml) - [CaiJimmy/hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter) - [netlify-templates/hugo-quickstart](https://github.com/netlify-templates/hugo-quickstart) --- ### Astro（Engine Node.js config astro.config.mjs ) - [netlify-templates/astro-quickstart](https://github.com/netlify-templates/astro-quickstart) - [surjithctly/astroship](https://github.com/surjithctly/astroship) --- ### 找以下 repo bakery-site-template 作者 cpfong ``` / README.md docs/ _config.yml index.md products.md order.md contact.md assets/img/ ``` _config.yml ``` theme: jekyll-theme-minimal title: 🍞 學生手工烘焙坊 description: 點擊下方連結查看我的作品 ``` index.md ``` --- layout: default --- # 歡迎來到我的網頁 🥐 ### 快速導覽 * [🍰 查看美味產品](products.html) * [📝 線上訂購](order.html) * [📞 聯絡我們](contact.html) ``` contact.md ``` --- layout: default title: 聯絡我們 --- # 聯絡我們的烘焙坊 📞 如果您有任何問題，歡迎透過以下方式聯絡： * **地址**: 麵包鎮甜點路 123 號 * **電話**: (02) 1234-5678 * **Email**: bakery@example.com [回首頁](index.html) ``` order.md ``` --- layout: default title: 線上訂購 --- # 線上訂購說明 📝 請填寫以下資訊（目前僅供練習）： 1. 產品名稱： 2. 數量： 3. 取貨時間： *注意：這只是一個練習網頁，目前無法處理實際訂單喔！* [回首頁](index.html) ``` products.md ``` --- layout: default title: 美味產品 --- # 我們的招牌產品 🥖 這裡有我們每天現做的手工甜點： ### 巧克力可頌 (Chocolate Croissant) ![巧克力可頌](assets/img/choco.jpg) 香脆的外皮包裹著濃郁的巧克力。 ### 草莓蛋糕 (Strawberry Cake) ![草莓蛋糕](assets/img/strawberry.jpg) 嚴選當季草莓，每一口都是幸福。 [回首頁](index.html) ``` ",
