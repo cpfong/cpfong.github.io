@@ -147,152 +147,124 @@
     "relUrl": "/courses/data-structures/calendar/"
   },"21": {
     "doc": "Syllabus",
-    "title": "Topics/Syllybus",
-    "content": ". | 基礎概念：抽象資料型別（ADT）、時間與空間複雜度 | 線性結構：陣列、串列、堆疊、佇列 | 非線性結構：樹、圖、雜湊表 | 演算法設計：排序、搜尋、遞迴 | 實務應用與案例分析 | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#topicssyllybus",
-    
-    "relUrl": "/courses/data-structures/syllabus/#topicssyllybus"
-  },"22": {
-    "doc": "Syllabus",
-    "title": "Table of Contents",
-    "content": ". | Fundamentals . | 連線到google主控 | 連線到教師主機 | ssh 避開密碼 | 跨主機拷貝 | vi: unix 內定文字編寫器 | . | perl . | perl是什麼 | perl最常用的函數 : print | 變數 純量 陣列 | 基本輸入輸出 | . | 資料結構 . | 陣列，串列 | 堆疊，佇列 | . | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#table-of-contents",
-    
-    "relUrl": "/courses/data-structures/syllabus/#table-of-contents"
-  },"23": {
-    "doc": "Syllabus",
-    "title": "Fundamentals",
-    "content": "連線到google主控 . | 本門課以 perl 程式來實作資料結構, 此 perl 位於教師個人雲端伺服器上. 然校方基於安全因素禁止進入教師主機，所以我們必須借由goolge console 來到達教師主機 | . 連線到教師主機 . | ssh 安全連線通過在網路中建立安全隧道來實現客戶端與伺服器之間的連接, 它通常是經由埠號 22 來完成, 若主機 ssh daemon 不是位於 22 則可以借由 -p 參數指定埠號，緊接應輸入帳號AT主機以連線登入, 按我看範例 | . ssh 避開密碼 . | 由 goo console 進教師主機可以設定成不必密碼模式：它是在生成一對公私金鑰後把公鑰放於目的地而達到不必輸入密碼, dotSSH/config | . 跨主機拷貝 . | scp 用來複製文件由甲到乙地, 它內定使用埠號 22，若要指定埠號則要使用大寫的 P 例如: ssh -P 8080 ./foo.txt 011145001@server.com:~ | . vi: unix 內定文字編寫器 . | 使用 unix 主機絕對不能避開vi 因為它是 unix 所內定的編寫器，熟悉這個軟體是學習本課程的必需, 予其避開不如好好花些時間研究它的運作原則 | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#fundamentals",
-    
-    "relUrl": "/courses/data-structures/syllabus/#fundamentals"
-  },"24": {
-    "doc": "Syllabus",
-    "title": "perl",
-    "content": "perl是什麼 . | Perl 是一種功能強大、特性豐富的程式語言，擁有超過 37 年的發展歷史。 | . perl最常用的函數 . | print [FH] LIST 其中 FH 可以省略則送標準輸出. 範例顯示使用perl單行偵錯及四則運算運算元 | . 變數 純量 陣列 . | Perl 變數型別由符號（sigil）決定，而非資料內容決定。常見三種變數型別: $ @ % 分別為 純量 陣列 雜湊 (scalar array hash) | scalar: 單數變數: Perl 最基本的資料型別，可儲存：整數 浮點數 字串 參照（reference, ex my $x=10; my $s=’xxx’ | array: 複數： my @nums=(10, 20, 30) | . 基本輸入輸出 . | &lt;STDIN&gt; 由標準輸入讀取一行資料，但會包含 \\n 所以要使用 chomp 去把它去掉 | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#progPerl",
-    
-    "relUrl": "/courses/data-structures/syllabus/#progPerl"
-  },"25": {
-    "doc": "Syllabus",
-    "title": "資料結構",
-    "content": "陣列，串列 . | 陣列 : 連續記憶體空間, 可用索引直接存取 | 串列 : 不連續記憶體, 每個節點包含 data 及 pointer | . 堆疊 佇列 . | 堆疊 : FILO, 使用perl實作stack | 佇列 : FIFO | . ",
-    "url": "/justdocs/courses/data-structures/syllabus/#dataStructure",
-    
-    "relUrl": "/courses/data-structures/syllabus/#dataStructure"
-  },"26": {
-    "doc": "Syllabus",
     "title": "Syllabus",
-    "content": " ",
+    "content": "# Topics/Syllybus - 基礎概念：抽象資料型別（ADT）、時間與空間複雜度 - 線性結構：陣列、串列、堆疊、佇列 - 非線性結構：樹、圖、雜湊表 - 演算法設計：排序、搜尋、遞迴 - 實務應用與案例分析 --- ## Table of Contents - [Fundamentals](#fundam) - [連線到google主控](#googleConsole) - [連線到教師主機](#ssh2Server) - [ssh 避開密碼](#sshwithoutPassword) - [跨主機拷貝](#scpFromAtoB) - [vi: unix 內定文字編寫器](#viEditor) - [perl](#progPerl) - [perl是什麼](#whatisperl) - [perl最常用的函數](#perlPrint) : print - [變數 純量 陣列](#varScalarArray) - [基本輸入輸出](#perlBasicIO) - [資料結構](#dataStructure) - [陣列，串列](#arraryLinklist) - [堆疊，佇列](#stackQueue) --- ## Fundamentals {: fundam } ### 連線到google主控 {: googleConsole } - 本門課以 [perl](https://en.wikipedia.org/wiki/Perl) 程式來實作資料結構, 此 perl 位於教師個人雲端伺服器上. 然校方基於安全因素禁止進入教師主機，所以我們必須借由[goolge console](https://console.cloud.google.com) 來到達教師主機 ### 連線到教師主機 {: ssh2Server } - [ssh 安全連線](https://zh.wikipedia.org/zh-tw/Secure_Shell)通過在網路中建立安全隧道來實現客戶端與伺服器之間的連接, 它通常是經由埠號 22 來完成, 若主機 ssh daemon 不是位於 22 則可以借由 -p 參數指定埠號，緊接應輸入帳號AT主機以連線登入, [按我看範例](/justdocs/assets/images/data-structure/ds-ssh-connect.webp) ### ssh 避開密碼 {: #sshwithoutPassword } - 由 goo console 進教師主機可以設定成不必密碼模式：它是在[生成一對公私金鑰](https://zh.wikipedia.org/zh-tw/Ssh-keygen)後把公鑰放於目的地而達到不必輸入密碼, [dotSSH/config](https://docs.alliancecan.ca/wiki/SSH_configuration_file) ### 跨主機拷貝 {: #scpFromAtoB } - scp 用來複製文件由甲到乙地, 它內定使用埠號 22，若要指定埠號則要使用大寫的 P 例如: `ssh -P 8080 ./foo.txt 011145001@server.com:~` ### vi: unix 內定文字編寫器 {: #viEditor} - 使用 unix 主機絕對不能避開[vi](./myvi.html) 因為它是 unix 所內定的編寫器，熟悉這個軟體是學習本課程的必需, 予其避開不如好好花些時間研究它的運作原則 ## perl {: #progPerl } ### perl是什麼 {: #whatisperl } - Perl 是一種功能強大、特性豐富的程式語言，擁有超過 37 年的發展歷史。 ### perl最常用的函數 {: #perlPrint } - print [FH] LIST 其中 FH 可以省略則送標準輸出. [範例](./print_example.txt)顯示使用perl單行偵錯及四則運算運算元 ### 變數 純量 陣列 {: #varScalarArray } - Perl 變數型別由符號（sigil）決定，而非資料內容決定。常見三種變數型別: $ @ % 分別為 純量 陣列 雜湊 (scalar array hash) - scalar: 單數變數: Perl 最基本的資料型別，可儲存：整數 浮點數 字串 參照（reference, ex my $x=10; my $s='xxx' - array: 複數： my @nums=(10, 20, 30) ### 基本輸入輸出 {: #perlBasicIO } - `` 由標準輸入讀取一行資料，但會包含 `\\n` 所以要使用 [chomp](https://perldoc.perl.org/functions/chomp) 去把它去掉 ## 資料結構 {: #dataStructure } ### 陣列，串列 {: #arraryLinklist } - 陣列 : 連續記憶體空間, 可用索引直接存取 - 串列 : 不連續記憶體, 每個節點包含 data 及 pointer ### 堆疊 佇列 {: #stackQueue } - 堆疊 : FILO, [使用perl實作stack](./p47-arr-push_pop.txt) - 佇列 : FIFO ",
     "url": "/justdocs/courses/data-structures/syllabus/",
     
     "relUrl": "/courses/data-structures/syllabus/"
-  },"27": {
+  },"22": {
     "doc": "Data Structures",
     "title": "Data Structures",
     "content": "## Live Broadcast [Go to Live Broadcast](/justdocs/shared/broadcast.html) ## Overview This section contains my study notes and implementation details for the Data Structures course. - [課程](./26-class-breif.html) - [成績](https://docs.google.com/spreadsheets/d/1FoyPQfIN2BQxsg06vjmHFkHTc3M3gMDt1RvbVNn81Bo/edit?usp=sharing) - [校行事曆](/justdocs/assets/images/data-structure/26-cal.webp) -- [班級課表](/justdocs/assets/images/data-structure/26-class.webp) -- [每週行事](/justdocs/assets/images/data-structure/26-cal.txt) ## Topics Covered * **Fundamentals:** Time complexity (Big O), Arrays, and Strings. * **Linear Data Structures:** Linked Lists, Stacks, and Queues. * **Non-Linear Data Structures:** Trees, Graphs, and Hash Tables. ",
     "url": "/justdocs/courses/data-structures/",
     
     "relUrl": "/courses/data-structures/"
-  },"28": {
+  },"23": {
     "doc": "Calendar",
     "title": "Calendar",
     "content": " ",
     "url": "/justdocs/courses/professional-english/calendar/#calendar",
     
     "relUrl": "/courses/professional-english/calendar/#calendar"
-  },"29": {
+  },"24": {
     "doc": "Calendar",
     "title": "Week 1",
     "content": "Feb 24 LECTURE 課程簡介 -- 評分方式 -- BBC 六分鐘說英文 -- 經濟學人 -- 小幫手 -- 回報文章及組別給小幫手 ",
     "url": "/justdocs/courses/professional-english/calendar/#week-1",
     
     "relUrl": "/courses/professional-english/calendar/#week-1"
-  },"30": {
+  },"25": {
     "doc": "Calendar",
     "title": "Week 2",
     "content": "Mar 3 LECTURE 資料請送郵小幫手 -- 課本我們會說明第二章：數字系統 , 而本期經濟學人的文章是探討AI和美國移民局: ICE's software 閱讀有問題? 我們看看本期bbc的六分鐘說英文的文章：失讀症 ",
     "url": "/justdocs/courses/professional-english/calendar/#week-2",
     
     "relUrl": "/courses/professional-english/calendar/#week-2"
-  },"31": {
+  },"26": {
     "doc": "Calendar",
     "title": "Week 3",
     "content": "Mar 10 LECTURE 檢驗同學上傳BBC link -- 課本第三章資料儲存 , 20260228 經濟學人探討AI溶入真實世界: Physical world 胡椒的厲害 BBC ",
     "url": "/justdocs/courses/professional-english/calendar/#week-3",
     
     "relUrl": "/courses/professional-english/calendar/#week-3"
-  },"32": {
+  },"27": {
+    "doc": "Calendar",
+    "title": "Week 4",
+    "content": "Mar 17 LECTURE 期末報告分組公告 -- 課本第四章資料運算 經濟學人探討AI和陪伴: Partner 為何有些動物是黑白色的 BBC 本週的文章 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-4",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-4"
+  },"28": {
     "doc": "Calendar",
     "title": "Calendar",
     "content": " ",
     "url": "/justdocs/courses/professional-english/calendar/",
     
     "relUrl": "/courses/professional-english/calendar/"
-  },"33": {
+  },"29": {
     "doc": "Miscellaneous",
     "title": "Miscellaneous",
     "content": "# Miscellaneous 2026 Feb STUST computer engineerig department professional english class [課程](./26-class-brief.html) -- [用書](https://eshop.tsanghai.com.tw/products/cs0450pct) -- [買書參考業務](/justdocs/assets/images/profession-english/computer_foundation_agent.webp) -- [校行事曆](./stust_114_2_calendar.pdf) 資二甲:[成績](https://docs.google.com/spreadsheets/d/1CS0Gx7-KswLvRuCsNGo1xs737UnkOzxOMFCSSYecMuo/edit?usp=sharing) 資二乙:[成績](https://docs.google.com/spreadsheets/d/1jNhUgU7MuXKWpmo5hqnKD9zPKkQz95wbGOOecsEII4o/edit?usp=sharing) 資二丙:[成績](https://docs.google.com/spreadsheets/d/19r_nqiFdDNiY94m3NcW0Ol2uRrRKJvsBUiaXOnqHwsE/edit?usp=sharing) ",
     "url": "/justdocs/courses/professional-english/miscellaneous/",
     
     "relUrl": "/courses/professional-english/miscellaneous/"
-  },"34": {
+  },"30": {
     "doc": "Professional English",
     "title": "Professional English",
     "content": "# Professional English (PE) This course equips Computer Engineering students with the practical English skills required to communicate technical ideas clearly and professionally in academic and industry settings. ## Topics Covered * **Core Textbook:** Foundations of Computer Science 5 by Behrouz A Forouzan * **Listening & Discussion:** BBC Six Minute English * **Current Affairs in Technology:** Latest The Economist articles related to computer engineering ",
     "url": "/justdocs/courses/professional-english/",
     
     "relUrl": "/courses/professional-english/"
-  },"35": {
+  },"31": {
     "doc": "Syllabus",
     "title": "Syllabus",
     "content": "# Topics/Syllybus - 手機外觀 : --- ## Table of Contents - [Fundamentals](#fundam) - [手機的外觀](#phoneButtons) ### 手機的外觀 {: phoneButtons } ## 手機外部按鍵與功能總表 | 部位名稱 | 主要功能 |----------|----------| 電源鍵 | 開機、關機、鎖定螢幕、喚醒螢幕 | 音量鍵 | 調高或調低音量 | 靜音開關 | 切換響鈴模式與靜音模式（多見於 iPhone） | SIM 卡槽 | 放置行動電話 SIM 卡 | 充電孔 | 充電與資料傳輸 | 喇叭 / 麥克風 | 播放聲音與收錄聲音 | 前後鏡頭 | 拍照與錄影 | ",
     "url": "/justdocs/courses/know-your-mobile-phone/syllabus/",
     
     "relUrl": "/courses/know-your-mobile-phone/syllabus/"
-  },"36": {
+  },"32": {
     "doc": "My Phone",
     "title": "My Phone",
     "content": "# Mobile phone Using Your Own Mobile Phone with Confidence Course Description This course is designed for senior citizens who wish to use their own mobile phones more effectively and confidently. Participants will learn practical, hands-on skills using their personal devices. The focus is on everyday tasks that improve communication, safety, and convenience. ",
     "url": "/justdocs/courses/know-your-mobile-phone/",
     
     "relUrl": "/courses/know-your-mobile-phone/"
-  },"37": {
+  },"33": {
     "doc": "Courses",
     "title": "Courses",
     "content": "# Welcome to Courses My various school projects and courses. ",
     "url": "/justdocs/courses/",
     
     "relUrl": "/courses/"
-  },"38": {
+  },"34": {
     "doc": "Shared",
     "title": "Shared",
     "content": "Common links and tools used across courses. ",
     "url": "/justdocs/shared/",
     
     "relUrl": "/shared/"
-  },"39": {
+  },"35": {
     "doc": "Instructor",
     "title": "Instructor",
     "content": "# Instructor ## Contact - **Email:** [cp.ifong4@gmail.com](mailto:cp.ifong4@gmail.com) - **Response time:** within 24–48 hours on weekdays ## Teaching - Data Structures - Professional English (CE) - Website Building ## Background - Currently(jan2026) a part-time instructor at [@STUST](https://www.stust.edu.tw) and [@AFATS](https://www.afats.khc.edu.tw) - 3 years at Fujian Junior Technical College (China) - Over 25 years of teaching experience at Fortune College - Former software engineer at Everex (Fremont, CA) with 3 years of industry experience. ",
     "url": "/justdocs/instructor/",
     
     "relUrl": "/instructor/"
-  },"40": {
+  },"36": {
     "doc": "GitHub",
     "title": "GitHub",
     "content": "## Live Broadcast [Go to Live Broadcast](/shared/broadcast.html) ## Overview 使用 [@GITHUB](https://www.github.com) Pages 搭配 [Jekyll](https://jekyllrb.com/) ／[Just the Docs](https://just-the-docs.com) 建立網站，強調版本控制、結構清楚與可重現部署。相較 WordPress，無需資料庫、維護成本低、安全性高，適合重視技術基礎與長期穩定的使用情境。 ## Examples [Fast Startup with Just the Docs](./fast-startup-with-just-the-docs.html) 使用 **Just the Docs** 快速建立 GitHub Pages 專案 [史丹福 CS324](https://stanford-cs324.github.io/winter2023/) 是一個 just the docs 很好的範例 [Kevin Lin](https://kevinl.info/just-the-class/) 也可參考 [Using Existing Github Themes](./using-existing-github-themes.html) 套用與切換 GitHub Pages 主題 [Hugo](./github-hugo.html) Go 語言的靜態網站產生器 ",
     "url": "/justdocs/courses/website-building/github/",
     
     "relUrl": "/courses/website-building/github/"
-  },"41": {
+  },"37": {
     "doc": "STUST",
     "title": "STUST",
     "content": "## Teaching systems - [課程管理/教學計劃/上傳佐証](https://portal.stust.edu.tw/CourseManage/) - [成績輸入](https://portal.stust.edu.tw/score/) - [FlipClass](https://flipclass.stust.edu.tw/) - [考試圖庫](https://flipclass.stust.edu.tw/itemPool) - [電算中心](https://cc.stust.edu.tw/) - [圖資網路服務](https://net.cc.stust.edu.tw/) - [教務處](https://academic.stust.edu.tw/) - [人事室](https://aura.stust.edu.tw/NewEmp/Default.aspx) ## Policies / references - [Late policy](...) ",
     "url": "/justdocs/shared/stust.html",
     
     "relUrl": "/shared/stust.html"
-  },"42": {
+  },"38": {
     "doc": "Use Existing Theme",
     "title": "Use Existing Theme",
     "content": "[Go Back to GitHub Resources]({{ '/courses/website-building/github/' | relative_url }}){: .btn .btn-outline } ### 使用既有 GitHub Pages 主題的優點 - **零或極低設定成本**：不用自己寫版型與 CSS - **相容 GitHub Pages**：官方或主流主題，部署最穩 --- ### Theme 類型說明 1. [Built-in themes](https://github.com/pages-themes)（內建主題) > **⚠️ Attention:** github 幫你 deploy 可在 `_config.yml` 加入 ```yaml theme: jekyll-theme-cayman ``` `index.md` 加入 ```md title: just a test description: nothing special ``` --- ### 非內建主題: 有／沒有「Use this template」的差別 有「Use this template :一鍵建立全新儲存庫 - 直接套用他人提供的網站骨架／設定 沒有「Use this template」: 只能用 Fork 或 Clone #### Fork - 與原作者 repo **有關聯** - 需要理解 upstream、同步更新 #### Clone - 只下載到本機 - 還要自己建立 GitHub repo、設定 remote、push --- ### Use this template (UTT) #### Engine（引擎，擇一): Ruby Go Node.js ### Jekyll（Engine Ruby config _config.yml) - [just-the-docs-template](https://github.com/just-the-docs/just-the-docs-template) - [minimal-mistake starter](https://github.com/mmistakes/mm-github-pages-starter) --- ### Hugo（Engine Go config config.toml) - [CaiJimmy/hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter) - [netlify-templates/hugo-quickstart](https://github.com/netlify-templates/hugo-quickstart) --- ### Astro（Engine Node.js config astro.config.mjs ) - [netlify-templates/astro-quickstart](https://github.com/netlify-templates/astro-quickstart) - [surjithctly/astroship](https://github.com/surjithctly/astroship) --- ### 找以下 repo bakery-site-template 作者 cpfong ``` / README.md docs/ _config.yml index.md products.md order.md contact.md assets/img/ ``` _config.yml ``` theme: jekyll-theme-minimal title: 🍞 學生手工烘焙坊 description: 點擊下方連結查看我的作品 ``` index.md ``` --- layout: default --- # 歡迎來到我的網頁 🥐 ### 快速導覽 * [🍰 查看美味產品](products.html) * [📝 線上訂購](order.html) * [📞 聯絡我們](contact.html) ``` contact.md ``` --- layout: default title: 聯絡我們 --- # 聯絡我們的烘焙坊 📞 如果您有任何問題，歡迎透過以下方式聯絡： * **地址**: 麵包鎮甜點路 123 號 * **電話**: (02) 1234-5678 * **Email**: bakery@example.com [回首頁](index.html) ``` order.md ``` --- layout: default title: 線上訂購 --- # 線上訂購說明 📝 請填寫以下資訊（目前僅供練習）： 1. 產品名稱： 2. 數量： 3. 取貨時間： *注意：這只是一個練習網頁，目前無法處理實際訂單喔！* [回首頁](index.html) ``` products.md ``` --- layout: default title: 美味產品 --- # 我們的招牌產品 🥖 這裡有我們每天現做的手工甜點： ### 巧克力可頌 (Chocolate Croissant) ![巧克力可頌](assets/img/choco.jpg) 香脆的外皮包裹著濃郁的巧克力。 ### 草莓蛋糕 (Strawberry Cake) ![草莓蛋糕](assets/img/strawberry.jpg) 嚴選當季草莓，每一口都是幸福。 [回首頁](index.html) ``` ",
