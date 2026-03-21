@@ -1,0 +1,10 @@
+#!/usr/bin/env perl
+
+my @array = qw /a b c/;
+print "orig array is @array\n";
+
+push @array, 'd';
+print "array now @array\n";
+
+shift @array;
+print "array now @array\n";
