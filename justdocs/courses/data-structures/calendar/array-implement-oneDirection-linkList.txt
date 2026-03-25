@@ -1,0 +1,40 @@
+#!/usr/bin/env perl
+
+# value: referce to a node and node have two values: data, next link addr ie [DATA, pointer]
+my @node_ref; 
+
+foreach (0 .. 5){
+#foreach ('a' .. 'm'){
+ my $ref = [$_, undef]; #  assign value as an anonymous array reference
+ push @node_ref, $ref;
+}
+#0 node0 refeence
+#1 node1 refeence
+#2 node2 refeence
+#3 node3 refeence
+#4 node4 refeence
+#5 node5 refeence
+
+my $head=['iam_headValue_and_iam_NOT_important', undef];
+
+# link all data together
+foreach my $index (0 .. @node_ref-1){
+ if ($index == 0) {
+  $head->[1] = $node_ref[0];
+  next;
+ }
+ else {
+  $node_ref[$index-1]->[1] = $node_ref[$index];
+ }
+}
+# head -> firstNode -> secondNode -> 3rdNode ... ->NULL (end)
+
+my $cur=$head;
+
+# traverse
+while ($cur->[1]){
+ print "$cur->[0] ";
+ $cur = $cur->[1];
+}
+
+print $cur->[0], "\n"; #last one value since traverse ended when last ref hit
