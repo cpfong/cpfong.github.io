@@ -1,0 +1,46 @@
+#!/usr/bin/env perl
+
+my @arr=();
+my $head=['head', undef];
+push @arr, $head;
+
+foreach (a .. g){
+ push @arr, [$_, undef];
+}
+
+my $cur=$head;
+foreach (0 .. @arr){
+ $arr[$_]->[1] = $arr[$_+1];
+}
+
+$cur = $head;
+
+while ($cur->[1]){
+ print "$cur->[0] ";
+ $cur = $cur->[1];
+}
+print "$cur->[0] \n"; #last one
+
+my %hash=(); # ('nodeN', ref2ME)
+
+my $n=1;
+foreach (a .. g){
+ $hash{node.$n} = [$_, undef]; # (node1, nextNode)
+ n++;
+}
+
+my $N = scalar %hash;
+
+# link them
+foreach my $i (1 .. $N) {
+    $hash{"node$i"}->[1] =
+        ($i < $N) ? "node" . ($i + 1) : undef;
+}
+
+my $cur = "node1";
+
+while (defined $cur) {
+    my ($val, $next) = @{$hash{$cur}};
+    print "$cur => $val -> ", (defined $next ? $next : "NULL"), "\n";
+    $cur = $next;
+}
