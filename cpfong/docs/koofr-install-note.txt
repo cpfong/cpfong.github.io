@@ -1,6 +1,8 @@
-1. use own 4G instead of classroom wifi
-2. use phone instead of computer
-3. get koofr APP
-4. create account: use google email instead of new one
-5. NO password needed!!!
-6. after login ok, then back to computer
+with google email address 2 ways: authentication at koofr (using gmail login) and at google (auth via google)
+browser default should show google sigin to use gmail auth
+use own 4G instead of classroom wifi
+use phone instead of computer
+get koofr APP
+create account: use google email instead of new one
+NO password needed!!!
+after login ok, then back to computer

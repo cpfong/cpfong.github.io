@@ -13,10 +13,28 @@
 
   <style id="jtd-nav-activation">
   
-.site-nav ul li a {
+
+.site-nav > ul.nav-list:first-child > li > a,
+.site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(5)) > a,
+.site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a {
   background-image: none;
 }
 
+.site-nav > ul.nav-list:not(:first-child) a,
+.site-nav li.external a {
+  background-image: none;
+}
+
+.site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(5) > a {
+  font-weight: 600;
+  text-decoration: none;
+}.site-nav > ul.nav-list:first-child > li:nth-child(3) > button svg,
+.site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(5) > button svg {
+  transform: rotate(-90deg);
+}.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list,
+.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list > li.nav-list-item:nth-child(5) > ul.nav-list {
+  display: block;
+}
   </style>
 
   
@@ -34,18 +52,18 @@
 
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Fast Startup with Just the Docs | cp’s docs home</title>
+<title>Google | cp’s docs home</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Fast Startup with Just the Docs" />
+<meta property="og:title" content="Google" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html" />
-<meta property="og:url" content="/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html" />
+<link rel="canonical" href="/justdocs/courses/google-not-just-search/" />
+<meta property="og:url" content="/justdocs/courses/google-not-just-search/" />
 <meta property="og:site_name" content="cp’s docs home" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Fast Startup with Just the Docs" />
+<meta property="twitter:title" content="Google" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"Fast Startup with Just the Docs","url":"/justdocs/courses/website-building/github/fast-startup-with-just-the-docs.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Google","url":"/justdocs/courses/google-not-just-search/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -201,91 +219,176 @@
     <div class="main-content-wrap">
       <nav aria-label="Breadcrumb" class="breadcrumb-nav">
   <ol class="breadcrumb-nav-list">
-    <li class="breadcrumb-nav-list-item"><a href="/justdocs/courses/website-building/">Web Development</a></li>
-    <li class="breadcrumb-nav-list-item"><a href="">GitHub</a></li>
-    <li class="breadcrumb-nav-list-item"><span>Fast Startup with Just the Docs</span></li>
+    <li class="breadcrumb-nav-list-item"><a href="/justdocs/courses/">Courses</a></li>
+    <li class="breadcrumb-nav-list-item"><span>Google</span></li>
   </ol>
 </nav>
       <div id="main-content" class="main-content">
         <main>
           
-            <p><a href="/justdocs/courses/website-building/github/" class="btn btn-outline">Go Back to GitHub Resources</a></p>
-<h2 id="目標">
+            <h1 id="google-is-more-than-just-a-search-engine">
   
   
-    <a href="#目標" class="anchor-heading" aria-labelledby="目標"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 目標
+    <a href="#google-is-more-than-just-a-search-engine" class="anchor-heading" aria-labelledby="google-is-more-than-just-a-search-engine"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Google is More Than Just a Search Engine
+  
+  
+</h1>
+    
+<p>2026 的新新人類不只要必備一支手機，她(他）還必需認識 Google</p>
+<h2 id="overview">
+  
+  
+    <a href="#overview" class="anchor-heading" aria-labelledby="overview"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Overview
   
   
 </h2>
     
-
-<p>不 fork、不用範本；用<strong>最少檔案</strong>建立 Just the Docs + GitHub Pages。</p><hr />
-<h2 id="最小檔案清單只要-2-個">
+<p>This lecture introduces key Google tools organized by practical daily use. The focus is on hands-on familiarity rather than theory, helping learners quickly apply these tools in real-life scenarios.</p>
+<h2 id="table-of-contents">
   
   
-    <a href="#最小檔案清單只要-2-個" class="anchor-heading" aria-labelledby="最小檔案清單只要-2-個"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 最小檔案清單（只要 2 個）
-  
-  
-</h2>
-    
-
-<p>在 repo 根目錄建立：</p>
-
-<p>1) <code class="language-plaintext highlighter-rouge">_config.yml</code><br />
-2) <code class="language-plaintext highlighter-rouge">index.md</code></p>
-
-<p>就能跑起來。</p><hr />
-<h2 id="step-1--建立空白-repo">
-  
-  
-    <a href="#step-1--建立空白-repo" class="anchor-heading" aria-labelledby="step-1--建立空白-repo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Step 1 — 建立空白 Repo
+    <a href="#table-of-contents" class="anchor-heading" aria-labelledby="table-of-contents"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Table of Contents
   
   
 </h2>
     
-
-<p>GitHub 新建 repository（Public），不要 fork。</p><hr />
-<h2 id="step-2--建立-_configyml">
+<ul>
+  <li><a href="#gemini">Gemini AI 助手</a></li>
+  <li><a href="#goodPassword">如何設定一個好的密碼</a></li>
+  <li><a href="#authenticator">Google 驗証器</a></li>
+  <li><a href="#cpaccount">帳號的設定</a></li>
+  <li><a href="#communication">Communication: Gmail &amp; Google Meet</a>
+    <ul>
+      <li><a href="#gmail">電子郵件</a></li>
+      <li><a href="#googlemeet">線上對談</a></li>
+    </ul>
+  </li>
+  <li><a href="#organization">Organization: Calendar &amp; Google Drive</a>
+    <ul>
+      <li><a href="#calendar">行事曆</a></li>
+      <li><a href="#googledrive">我的資料</a></li>
+    </ul>
+  </li>
+  <li><a href="#exploration">Exploration: Maps, Lens, &amp; Translate</a>
+    <ul>
+      <li><a href="#maps">地圖</a></li>
+      <li><a href="#lens">智慧鏡頭</a></li>
+    </ul>
+  </li>
+  <li><a href="#entertainment">Entertainment: YouTube</a>
+    <ul>
+      <li><a href="#youtube">YouTube</a></li>
+    </ul>
+  </li>
+</ul>
+<h3 id="gemini">
   
   
-    <a href="#step-2--建立-_configyml" class="anchor-heading" aria-labelledby="step-2--建立-_configyml"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Step 2 — 建立 <code class="language-plaintext highlighter-rouge">_config.yml</code>
+    <a href="#gemini" class="anchor-heading" aria-labelledby="gemini"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://gemini.google.com">Gemini</a> AI 助手
   
   
-</h2>
+</h3>
+    
+<ul>
+  <li>
+    <p><strong>角色:</strong> 串聯所有 Google 工具的智慧助理. 沒有 gemini 的 apps 只是群龍無首; 就好像是空有 excel, words, ppt 但沒有 windows os. Google workspace (即 mail, calendar, drive, docs …) 是謂的 apps, 使用 gemini 去呼叫它們可以無縫接軌, 例如: 口語說：<code class="language-plaintext highlighter-rouge">明天早上九點在屏東麟洛上課加到我的行事曆</code></p>
+  </li>
+  <li>
+    <p><strong>設定:</strong> 連結的應用程式 搭起 gemini 和 apps 間的橋</p>
+  </li>
+  <li>
+    <p><strong>找對話記錄:</strong> 所有對話會被記錄且搜尋</p>
+  </li>
+</ul>
+<h3 id="goodPassword">
+  
+  
+    <a href="#goodPassword" class="anchor-heading" aria-labelledby="goodPassword"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 如何設定一個好的密碼
+  
+  
+</h3>
+    
+<ul>
+  <li>密碼一定要有一個規則而且是到老了都還記得的規則</li>
+  <li>常用的忘不了所以建議用提款機密碼及身份証的變型1+1=2</li>
+</ul>
+<h3 id="authenticator">
+  
+  
+    <a href="#authenticator" class="anchor-heading" aria-labelledby="authenticator"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Google 驗証器 Google Authenticator
+  
+  
+</h3>
+    
+<ul>
+  <li>驗証器會生成一個 qr Code 代表 <code class="language-plaintext highlighter-rouge">secret key</code>，app 經由 secret key 加上目前的時間可以生成一組 6 位數字即為驗証碼</li>
+  <li>時間是個重要因子</li>
+  <li>存 qr Code 的影像以後再使用是個好方式但也存在風險, 另一個方式是存加密的 secret key</li>
+</ul>
+<h3 id="cpaccount">
+  
+  
+    <a href="#cpaccount" class="anchor-heading" aria-labelledby="cpaccount"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://myaccount.google.com">帳號的設定</a>
+  
+  
+</h3>
+    
+<ul>
+  <li><a href="https://myaccount.google.com/security">安全性與登入</a> 是所有 google apps 帳號重要的一部份, 如果沒處理則災難來時可能鎖死</li>
+  <li><a href="https://myaccount.google.com/personal-info">個人資訊</a> 應設定妥當</li>
+</ul>
+<h3 id="communication">
+  
+  
+    <a href="#communication" class="anchor-heading" aria-labelledby="communication"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 溝通的工具
+  
+  
+</h3>
+    
+<ul id="gmail">
+  <li><a href="https://mail.google.com">電子郵件 GMail</a></li>
+</ul>
+<ul id="googlemeet">
+  <li>別名 alias + 使用 foo+koofr@gmail.com 配合 filter 可以達到控管及分流電子郵件</li>
+  <li>dot . is meaningless so cp.ifong4@gmail.com is <code class="language-plaintext highlighter-rouge">SAME</code> as cpifong4@gmail.com</li>
+  <li>
+    <p>改裝外觀 / 如何找到你的郵件 / 標籤 / 篩選器</p>
+  </li>
+  <li><a href="https://meet.google.com">線上對談 GMeet</a></li>
+</ul>
+<h3 id="organization">
+  
+  
+    <a href="#organization" class="anchor-heading" aria-labelledby="organization"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 行程,資料 人性化
+  
+  
+</h3>
     
 
-<p>在 repo 根目錄新增 <code class="language-plaintext highlighter-rouge">_config.yml</code>：</p>
-<pre style="border:1px solid #ccc; padding:1em;">
-<code class="language-yaml">
-title: "cp's class"
-description: "Course portal"
-remote_theme: just-the-docs/just-the-docs
-</code>
-</pre><hr />
-<h2 id="step-3--建立-indexmd">
-  
-  
-    <a href="#step-3--建立-indexmd" class="anchor-heading" aria-labelledby="step-3--建立-indexmd"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Step 3 — 建立 <code class="language-plaintext highlighter-rouge">index.md</code>
-  
-  
-</h2>
-    
-<pre style="border:1px solid #ccc; padding:1em;">
-<code class="language-yaml">
----
-title: Home
-layout: default
-nav_order: 1
----
-
-# cp's class
-
-- [Broadcast](./broadcast/)  
-- [Courses](./courses/)
-</code>
-</pre>
+<ul id="calendar">
+  <li><a href="https://calendar.google.com">行事曆</a></li>
+</ul>
+<ul id="googledrive">
+  <li>**增加 台灣的節慶假日 ** 位於 其它日曆 / + / 瀏覧感興趣的日曆 / 地區性假日 / 台灣</li>
+  <li>手機也建議安裝</li>
+  <li>設定「重複性」提醒 注意：生日會自動重複; 然要在 <a href="https://contacts.google.com/">連絡人</a> 中設定</li>
+  <li>多重檢視模式</li>
+  <li>語音輸入</li>
+  <li>
+    <p>整合導航</p>
+  </li>
+  <li><a href="https://drive.google.com">我的資料</a></li>
+</ul>
 
           
+
+          
+            <hr>
+<h2 class="text-delta">Table of contents</h2>
+
+<ul>
+
+</ul>
 
           
         </main>
