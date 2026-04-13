@@ -1,0 +1,11 @@
+iphone12 project to cp's air ok
+iphone12 project to mini mac FAIL (since hardware too old)
+
+how?
+AirPlay (Built-in, Wireless) — Recommended
+iphone same wi-fi with air
+air
+ System Settings → General → AirDrop
+ Enable AirPlay Receiver
+iphone
+ top down goto control center: click screen mirror icon
