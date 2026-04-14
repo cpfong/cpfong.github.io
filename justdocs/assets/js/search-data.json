@@ -162,102 +162,235 @@
   },"23": {
     "doc": "Calendar",
     "title": "Calendar",
-    "content": "# Calendar ## Week 1 Feb 24 LECTURE 課程簡介 -- 評分方式 -- BBC 六分鐘說英文 -- 經濟學人 -- 小幫手 -- 回報文章及組別給小幫手 ## Week 2 Mar 3 LECTURE 資料請送郵小幫手 -- 課本我們會說明第二章：數字系統 , 而本期經濟學人的文章是探討AI和美國移民局: ICE's software 閱讀有問題? 我們看看本期bbc的六分鐘說英文的文章：失讀症 ## Week 3 Mar 10 LECTURE 檢驗同學上傳BBC link -- 課本第三章資料儲存 , 20260228 經濟學人探討AI溶入真實世界: Physical world 胡椒的厲害 BBC ## Week 4 Mar 17 LECTURE 期末報告分組公告 -- 課本第四章資料運算 經濟學人探討AI和陪伴: Partner 為何有些動物是黑白色的 BBC 本週的文章 ## Week 5 Mar 24 LECTURE 課本第五章電腦架構組織 經濟學人探討AI 如何幫助理論物理 Theoretical Physics BBC 本週的文章: 如何調整因應冷 ## Week 6 Mar 31 LECTURE 下周放假 -- 上台朗讀注意事項 -- 課本第五章chap5 continued -- BBC 6 minutes english -- Economist China AI ## Week 7 Apr 7 OFF: Spring Break ## Week 8 Apr 14 LECTURE 上台朗讀英文, 下週期中考 -- 南台幣 ## Week 9 Apr 21 Mid Term ",
+    "content": " ",
+    "url": "/justdocs/courses/professional-english/calendar/#calendar",
+    
+    "relUrl": "/courses/professional-english/calendar/#calendar"
+  },"24": {
+    "doc": "Calendar",
+    "title": "Week 1",
+    "content": "Feb 24 LECTURE 課程簡介 -- 評分方式 -- BBC 六分鐘說英文 -- 經濟學人 -- 小幫手 -- 回報文章及組別給小幫手 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-1",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-1"
+  },"25": {
+    "doc": "Calendar",
+    "title": "Week 2",
+    "content": "Mar 3 LECTURE 資料請送郵小幫手 -- 課本我們會說明第二章：數字系統 , 而本期經濟學人的文章是探討AI和美國移民局: ICE's software 閱讀有問題? 我們看看本期bbc的六分鐘說英文的文章：失讀症 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-2",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-2"
+  },"26": {
+    "doc": "Calendar",
+    "title": "Week 3",
+    "content": "Mar 10 LECTURE 檢驗同學上傳BBC link -- 課本第三章資料儲存 , 20260228 經濟學人探討AI溶入真實世界: Physical world 胡椒的厲害 BBC ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-3",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-3"
+  },"27": {
+    "doc": "Calendar",
+    "title": "Week 4",
+    "content": "Mar 17 LECTURE 期末報告分組公告 -- 課本第四章資料運算 經濟學人探討AI和陪伴: Partner 為何有些動物是黑白色的 BBC 本週的文章 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-4",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-4"
+  },"28": {
+    "doc": "Calendar",
+    "title": "Week 5",
+    "content": "Mar 24 LECTURE 課本第五章電腦架構組織 經濟學人探討AI 如何幫助理論物理 Theoretical Physics BBC 本週的文章: 如何調整因應冷 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-5",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-5"
+  },"29": {
+    "doc": "Calendar",
+    "title": "Week 6",
+    "content": "Mar 31 LECTURE 下周放假 -- 上台朗讀注意事項 -- 課本第五章chap5 continued -- BBC 6 minutes english -- Economist China AI ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-6",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-6"
+  },"30": {
+    "doc": "Calendar",
+    "title": "Week 7",
+    "content": "Apr 7 OFF: Spring Break ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-7",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-7"
+  },"31": {
+    "doc": "Calendar",
+    "title": "Week 8",
+    "content": "Apr 14 LECTURE 上台朗讀英文, 下週期中考 -- 南台幣 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-8",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-8"
+  },"32": {
+    "doc": "Calendar",
+    "title": "Week 9",
+    "content": "Apr 21 Mid Term: Economist Week 4 AI和陪伴 + TextBook Chap2 3 4 5 ",
+    "url": "/justdocs/courses/professional-english/calendar/#week-9",
+    
+    "relUrl": "/courses/professional-english/calendar/#week-9"
+  },"33": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": " ",
     "url": "/justdocs/courses/professional-english/calendar/",
     
     "relUrl": "/courses/professional-english/calendar/"
-  },"24": {
+  },"34": {
     "doc": "Miscellaneous",
     "title": "Miscellaneous",
     "content": "# Miscellaneous 2026 Feb STUST computer engineerig department professional english class [課程](./26-class-brief.html) -- [用書](https://eshop.tsanghai.com.tw/products/cs0450pct) -- [買書參考業務](/justdocs/assets/images/profession-english/computer_foundation_agent.webp) -- [校行事曆](./stust_114_2_calendar.pdf) -- [課程行事曆](./mycal.txt) 資二甲:[成績](https://docs.google.com/spreadsheets/d/1CS0Gx7-KswLvRuCsNGo1xs737UnkOzxOMFCSSYecMuo/edit?usp=sharing) 資二乙:[成績](https://docs.google.com/spreadsheets/d/1jNhUgU7MuXKWpmo5hqnKD9zPKkQz95wbGOOecsEII4o/edit?usp=sharing) 資二丙:[成績](https://docs.google.com/spreadsheets/d/19r_nqiFdDNiY94m3NcW0Ol2uRrRKJvsBUiaXOnqHwsE/edit?usp=sharing) ",
     "url": "/justdocs/courses/professional-english/miscellaneous/",
     
     "relUrl": "/courses/professional-english/miscellaneous/"
-  },"25": {
+  },"35": {
     "doc": "Professional English",
     "title": "Professional English",
     "content": "# Professional English (PE) This course equips Computer Engineering students with the practical English skills required to communicate technical ideas clearly and professionally in academic and industry settings. ## Topics Covered * **Core Textbook:** Foundations of Computer Science 5 by Behrouz A Forouzan * **Listening & Discussion:** BBC Six Minute English * **Current Affairs in Technology:** Latest The Economist articles related to computer engineering [課程](./26-class-brief.html) -- [用書](https://eshop.tsanghai.com.tw/products/cs0450pct) -- [買書參考業務](/justdocs/assets/images/profession-english/computer_fou ndation_agent.webp) -- [校行事曆](./miscellaneous/stust_114_2_calendar.pdf) -- [課程行事曆](./miscellaneous/mycal.txt) 資二甲:[成績](https://docs.google.com/spreadsheets/d/1CS0Gx7-KswLvRuCsNGo1xs737UnkOzxOMFCSSYecMuo/edit?usp=sharing) 資二乙:[成績](https://docs.google.com/spreadsheets/d/1jNhUgU7MuXKWpmo5hqnKD9zPKkQz95wbGOOecsEII4o/edit?usp=sharing) 資二丙:[成績](https://docs.google.com/spreadsheets/d/19r_nqiFdDNiY94m3NcW0Ol2uRrRKJvsBUiaXOnqHwsE/edit?usp=sharing) ",
     "url": "/justdocs/courses/professional-english/",
     
     "relUrl": "/courses/professional-english/"
-  },"26": {
+  },"36": {
     "doc": "Google",
     "title": "Google",
     "content": "# Google is More Than Just a Search Engine 2026 的新新人類不只要必備一支手機，她(他）還必需認識 Google ## Overview This lecture introduces key Google tools organized by practical daily use. The focus is on hands-on familiarity rather than theory, helping learners quickly apply these tools in real-life scenarios. ## Table of Contents - [Gemini AI 助手](#gemini) - [如何設定一個好的密碼](#goodPassword) - [Google 驗証器](#authenticator) - [帳號的設定](#cpaccount) - [Communication: Gmail & Google Meet](#communication) - [電子郵件](#gmail) - [線上對談](#googlemeet) - [Organization: Calendar & Google Drive](#organization) - [行事曆](#calendar) - [我的資料](#googledrive) - [Exploration: Maps, Lens, & Translate](#exploration) - [地圖](#maps) - [智慧鏡頭](#lens) - [Entertainment: YouTube](#entertainment) - [YouTube](#youtube) ### [Gemini](https://gemini.google.com) AI 助手 {: #gemini } - **角色:** 串聯所有 Google 工具的智慧助理. 沒有 gemini 的 apps 只是群龍無首; 就好像是空有 excel, words, ppt 但沒有 windows os. Google workspace (即 mail, calendar, drive, docs ...) 是謂的 apps, 使用 gemini 去呼叫它們可以無縫接軌, 例如: 口語說：`明天早上九點在屏東麟洛上課加到我的行事曆` - **設定:** 連結的應用程式 搭起 gemini 和 apps 間的橋 - **找對話記錄:** 所有對話會被記錄且搜尋 ### 如何設定一個好的密碼 {: #goodPassword } - 密碼一定要有一個規則而且是到老了都還記得的規則 - 常用的忘不了所以建議用提款機密碼及身份証的變型1+1=2 ### Google 驗証器 Google Authenticator {: #authenticator } - 驗証器會生成一個 qr Code 代表 `secret key`，app 經由 secret key 加上目前的時間可以生成一組 6 位數字即為驗証碼 - 時間是個重要因子 - 存 qr Code 的影像以後再使用是個好方式但也存在風險, 另一個方式是存加密的 secret key ### [帳號的設定](https://myaccount.google.com) {: #cpaccount } - [安全性與登入](https://myaccount.google.com/security) 是所有 google apps 帳號重要的一部份, 如果沒處理則災難來時可能鎖死 - [個人資訊](https://myaccount.google.com/personal-info) 應設定妥當 ### 溝通的工具 {: #communication } - [電子郵件 GMail](https://mail.google.com) {: #gmail } - 別名 alias + 使用 foo+koofr@gmail.com 配合 filter 可以達到控管及分流電子郵件 - dot . is meaningless so cp.ifong4@gmail.com is `SAME` as cpifong4@gmail.com - [zapier 的篩選文章](https://zapier.com/blog/gmail-filters/) -- - 篩選器 filter : 建立一個規則, 合於規則的信則採取行動 - [運算元 operator](https://support.google.com/mail/answer/7190?authuser=1) of search: 比對利器，可以幫忙把規則百變 - 改裝外觀 / 如何找到你的郵件 / 標籤 / 篩選器 - [線上對談 GMeet](https://meet.google.com) {: #googlemeet } ### 行程,資料 人性化 {: #organization } - [行事曆](https://calendar.google.com) {: #calendar } - **增加 台灣的節慶假日 ** 位於 其它日曆 / + / 瀏覧感興趣的日曆 / 地區性假日 / 台灣 - 手機也建議安裝 - 設定「重複性」提醒 注意：生日會自動重複; 然要在 [連絡人](https://contacts.google.com/) 中設定 - 多重檢視模式 - 語音輸入 - 整合導航 - [我的資料](https://drive.google.com) {: #googledrive } - 檔案的分門別類是經年累月的工作 - 智慧鏡頭 {: #lens } - 有了 gemini 那我是否可以不再使用 lens? ",
     "url": "/justdocs/courses/google-not-just-search/",
     
     "relUrl": "/courses/google-not-just-search/"
-  },"27": {
+  },"37": {
     "doc": "Syllabus",
     "title": "Table of Contents",
     "content": ". | Fundamentals . | 手機的外觀 | 學員手機 2026 Apr | 密碼 | 客服 | 7-11客服 | 各種輸入方式 | 觸控手勢 | 電話溝通 | line溝通 | facetime | 智慧鏡頭 | 生活便利貼 goo keep | 行事曆 goo calendar | . | . 手機的外觀 . ",
     "url": "/justdocs/courses/know-your-mobile-phone/syllabus/#table-of-contents",
     
     "relUrl": "/courses/know-your-mobile-phone/syllabus/#table-of-contents"
-  },"28": {
+  },"38": {
     "doc": "Syllabus",
     "title": "手機外部按鍵與功能總表",
     "content": "| 部位名稱 | 主要功能 | . | 電源鍵 | 開機、關機、鎖定螢幕、喚醒螢幕 | . | 音量鍵 | 調高或調低音量 | . | 靜音開關 | 切換響鈴模式與靜音模式（多見於 iPhone） | . | SIM 卡槽 | 放置行動電話 SIM 卡 | . | 充電孔 | 充電與資料傳輸 | . | 喇叭 / 麥克風 | 播放聲音與收錄聲音 | . | 前後鏡頭 | 拍照與錄影 | . 密碼 . 建立密碼要領 : 常用的忘不了所以建議用提款機密碼及身份証的變型 6 位數字 : 640101 4 位數字 : 6401 密碼 : 數字＋英文大小寫 + 特殊字 Ae23456&amp;*( . 客服 . 中華 123 遠傳 888 台哥 188 手機直撥 . 巨人肩膀提供了 7-11 的客服 . 安裝 goolge gemini 如同有了一位永在身旁的良師, 練習經由口述方式和 gemini 提出問題的技巧 . 各種輸入方式: 輸入是和手機溝通的相當重要的一個方式 . | 使用 line / Keep 筆記 當成練習輸入的運作平台 且把 keep Memo (Note) 置頂 #左滑而非一般的右滑 | iphone 地球表不同輸入方式 A口讀 B中文 C英文 D手寫 | . 觸控手勢 . | Tap點一下#選擇開啟 / Long press長按#更多選項 / Swipe滑動#捲動畫面 / Drag拖曳#移動物件 / Zoom#兩指放大 | 基本手勢是全球共通語言，但進階手勢是各家品牌的方言 | 練習在不同的桌面上移動 / 如何回家 / 增加刪除移動 app / 整理出常用的 app 在主桌面 | iphone 水平滑動代表時間軸 / 垂直滑動代表全域功能的呼叫 bottom up show base, top down show notify | . 電話溝通 . | 利用手機來打電話是手機最基本的功能，只要有 sim 卡那應可以經由 phone APP 來打電話 CS / PS Circuit Switching / Packet Switching ; 即使沒有 sim 也可以打緊急電話因為手機內建 Baseband processor | sim 卡經由基地台來達成語音電話服務 | 新增連絡人, 設定常用連絡人及一鍵撥通 | . line溝通 . | 保護帳號, 依以下三張圖的次序把設定妥即可更進一步保護您的帳號 主頁 設定 保護 | 文字圖片溝通 | 聲音溝通 (line voice) | . facetime 語音或視訊 . | faceTime 以網路來打網路電話, 網路必須存在 | 也可以视訊 | . 智慧鏡頭 . 蘋果鏡頭有文字識別 OCR 功能, 而 Google App 注意不是 Google Chrome 但這二個很類似. 而 Google App 的文字識別則較蘋果更為先進 . 生活便利貼 goo keep . google keep 是一個雲端的 便利貼，可以存文字和圖片，配合 gemini 很適合放一些臨時想到或看到的東西 . 行事曆 goo calendar . google 行事曆是一個記錄個人事件的好地方而且在搜尋個人資料上也很棒 . ",
     "url": "/justdocs/courses/know-your-mobile-phone/syllabus/#%E6%89%8B%E6%A9%9F%E5%A4%96%E9%83%A8%E6%8C%89%E9%8D%B5%E8%88%87%E5%8A%9F%E8%83%BD%E7%B8%BD%E8%A1%A8",
     
     "relUrl": "/courses/know-your-mobile-phone/syllabus/#手機外部按鍵與功能總表"
-  },"29": {
+  },"39": {
     "doc": "Syllabus",
     "title": "Syllabus",
     "content": " ",
     "url": "/justdocs/courses/know-your-mobile-phone/syllabus/",
     
     "relUrl": "/courses/know-your-mobile-phone/syllabus/"
-  },"30": {
+  },"40": {
     "doc": "Calendar",
     "title": "Calendar",
-    "content": "# Calendar ## Week 1 Apr 13 LECTURE 課程簡介 / 認識外部按鍵 / 開關機 / 調整音量與螢幕亮度 / 站在巨人的肩上 ## Week 2 Apr 20 LECTURE 觸控手勢 / 各種輸入方式 / Wi-Fi 和 SIM / 統一密碼 ## Week 3 Apr 27 LECTURE 不同的溝通方式 電話#Phone / iphone#FaceTime / LINE#文字,圖片,語音,視訊 ## Week 4 May 04 LECTURE 手機鏡頭拍照 / 錄影 Google 智慧鏡頭 / 文字 / Google Keep ## Week 5 May 11 LECTURE 手機相簿整理 / 刪除多餘照片 / 垃圾清理 ## Week 6 May 18 LECTURE 語音輸入搜尋資訊 / Google 地圖查詢大眾運輸 ## Week 7 May 25 LECTURE 防詐 ## Week 8 Jun 01 LECTURE 生活應用進階實作 / 掛號 / 叫車 ",
+    "content": " ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#calendar",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#calendar"
+  },"41": {
+    "doc": "Calendar",
+    "title": "Week 1",
+    "content": "Apr 13 LECTURE 簡介 / 認識自己的手機 / 站在巨人的肩上 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-1",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-1"
+  },"42": {
+    "doc": "Calendar",
+    "title": "Week 2",
+    "content": "Apr 20 LECTURE 觸控手勢 / 各種輸入方式 / Wi-Fi 和 SIM / 統一密碼 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-2",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-2"
+  },"43": {
+    "doc": "Calendar",
+    "title": "Week 3",
+    "content": "Apr 27 LECTURE 不同的溝通方式 電話#Phone / iphone#FaceTime / LINE#文字,圖片,語音,視訊 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-3",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-3"
+  },"44": {
+    "doc": "Calendar",
+    "title": "Week 4",
+    "content": "May 04 LECTURE 手機鏡頭拍照 / 錄影 Google 智慧鏡頭 / 文字 / Google Keep ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-4",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-4"
+  },"45": {
+    "doc": "Calendar",
+    "title": "Week 5",
+    "content": "May 11 LECTURE 手機相簿整理 / 刪除多餘照片 / 垃圾清理 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-5",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-5"
+  },"46": {
+    "doc": "Calendar",
+    "title": "Week 6",
+    "content": "May 18 LECTURE 語音輸入搜尋資訊 / Google 地圖查詢大眾運輸 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-6",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-6"
+  },"47": {
+    "doc": "Calendar",
+    "title": "Week 7",
+    "content": "May 25 LECTURE 防詐 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-7",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-7"
+  },"48": {
+    "doc": "Calendar",
+    "title": "Week 8",
+    "content": "Jun 01 LECTURE 生活應用進階實作 / 掛號 / 叫車 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-8",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-8"
+  },"49": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": " ",
     "url": "/justdocs/courses/know-your-mobile-phone/calendar/",
     
     "relUrl": "/courses/know-your-mobile-phone/calendar/"
-  },"31": {
+  },"50": {
     "doc": "My Phone",
     "title": "My Phone",
     "content": "# Mobile phone Using Your Own Mobile Phone with Confidence Course Description This course is designed for senior citizens who wish to use their own mobile phones more effectively and confidently. Participants will learn practical, hands-on skills using their personal devices. The focus is on everyday tasks that improve communication, safety, and convenience. ",
     "url": "/justdocs/courses/know-your-mobile-phone/",
     
     "relUrl": "/courses/know-your-mobile-phone/"
-  },"32": {
+  },"51": {
     "doc": "Courses",
     "title": "Courses",
     "content": "# Welcome to Courses My various school projects and courses. ",
     "url": "/justdocs/courses/",
     
     "relUrl": "/courses/"
-  },"33": {
+  },"52": {
     "doc": "Shared",
     "title": "Shared",
     "content": "Common links and tools used across courses. ",
     "url": "/justdocs/shared/",
     
     "relUrl": "/shared/"
-  },"34": {
+  },"53": {
     "doc": "Instructor",
     "title": "Instructor",
     "content": "# Instructor ## Contact - **Email:** [cp.ifong4@gmail.com](mailto:cp.ifong4@gmail.com) - **Response time:** within 24–48 hours on weekdays ## Teaching - Data Structures - Professional English (CE) - Website Building ## Background - Currently(jan2026) a part-time instructor at [@STUST](https://www.stust.edu.tw) and [@AFATS](https://www.afats.khc.edu.tw) - 3 years at Fujian Junior Technical College (China) - Over 25 years of teaching experience at Fortune College - Former software engineer at Everex (Fremont, CA) with 3 years of industry experience. ",
     "url": "/justdocs/instructor/",
     
     "relUrl": "/instructor/"
-  },"35": {
+  },"54": {
     "doc": "Home",
     "title": "Home",
     "content": "# Welcome to My Documentation This site contains my notes for various school projects and courses. ### Quick Links * [Courses](./courses/) * [Shared Resources](./shared/) ",
     "url": "/justdocs/",
     
     "relUrl": "/"
-  },"36": {
+  },"55": {
     "doc": "STUST",
     "title": "STUST",
     "content": "## Teaching systems - [課程管理/教學計劃/上傳佐証](https://portal.stust.edu.tw/CourseManage/) - [成績輸入](https://portal.stust.edu.tw/score/) - [FlipClass](https://flipclass.stust.edu.tw/) - [考試圖庫](https://flipclass.stust.edu.tw/itemPool) - [電算中心](https://cc.stust.edu.tw/) - [圖資網路服務](https://net.cc.stust.edu.tw/) - [教務處](https://academic.stust.edu.tw/) - [人事室](https://aura.stust.edu.tw/NewEmp/Default.aspx) ## Policies / references - [Late policy](...) ",
     "url": "/justdocs/shared/stust.html",
     
     "relUrl": "/shared/stust.html"
-  },"37": {
+  },"56": {
     "doc": "Use Existing Theme",
     "title": "Use Existing Theme",
     "content": "[Go Back to GitHub Resources]({{ '/courses/website-building/github/' | relative_url }}){: .btn .btn-outline } ### 使用既有 GitHub Pages 主題的優點 - **零或極低設定成本**：不用自己寫版型與 CSS - **相容 GitHub Pages**：官方或主流主題，部署最穩 --- ### Theme 類型說明 1. [Built-in themes](https://github.com/pages-themes)（內建主題) > **⚠️ Attention:** github 幫你 deploy 可在 `_config.yml` 加入 ```yaml theme: jekyll-theme-cayman ``` `index.md` 加入 ```md title: just a test description: nothing special ``` --- ### 非內建主題: 有／沒有「Use this template」的差別 有「Use this template :一鍵建立全新儲存庫 - 直接套用他人提供的網站骨架／設定 沒有「Use this template」: 只能用 Fork 或 Clone #### Fork - 與原作者 repo **有關聯** - 需要理解 upstream、同步更新 #### Clone - 只下載到本機 - 還要自己建立 GitHub repo、設定 remote、push --- ### Use this template (UTT) #### Engine（引擎，擇一): Ruby Go Node.js ### Jekyll（Engine Ruby config _config.yml) - [just-the-docs-template](https://github.com/just-the-docs/just-the-docs-template) - [minimal-mistake starter](https://github.com/mmistakes/mm-github-pages-starter) --- ### Hugo（Engine Go config config.toml) - [CaiJimmy/hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter) - [netlify-templates/hugo-quickstart](https://github.com/netlify-templates/hugo-quickstart) --- ### Astro（Engine Node.js config astro.config.mjs ) - [netlify-templates/astro-quickstart](https://github.com/netlify-templates/astro-quickstart) - [surjithctly/astroship](https://github.com/surjithctly/astroship) --- ### 找以下 repo bakery-site-template 作者 cpfong ``` / README.md docs/ _config.yml index.md products.md order.md contact.md assets/img/ ``` _config.yml ``` theme: jekyll-theme-minimal title: 🍞 學生手工烘焙坊 description: 點擊下方連結查看我的作品 ``` index.md ``` --- layout: default --- # 歡迎來到我的網頁 🥐 ### 快速導覽 * [🍰 查看美味產品](products.html) * [📝 線上訂購](order.html) * [📞 聯絡我們](contact.html) ``` contact.md ``` --- layout: default title: 聯絡我們 --- # 聯絡我們的烘焙坊 📞 如果您有任何問題，歡迎透過以下方式聯絡： * **地址**: 麵包鎮甜點路 123 號 * **電話**: (02) 1234-5678 * **Email**: bakery@example.com [回首頁](index.html) ``` order.md ``` --- layout: default title: 線上訂購 --- # 線上訂購說明 📝 請填寫以下資訊（目前僅供練習）： 1. 產品名稱： 2. 數量： 3. 取貨時間： *注意：這只是一個練習網頁，目前無法處理實際訂單喔！* [回首頁](index.html) ``` products.md ``` --- layout: default title: 美味產品 --- # 我們的招牌產品 🥖 這裡有我們每天現做的手工甜點： ### 巧克力可頌 (Chocolate Croissant) ![巧克力可頌](assets/img/choco.jpg) 香脆的外皮包裹著濃郁的巧克力。 ### 草莓蛋糕 (Strawberry Cake) ![草莓蛋糕](assets/img/strawberry.jpg) 嚴選當季草莓，每一口都是幸福。 [回首頁](index.html) ``` ",
