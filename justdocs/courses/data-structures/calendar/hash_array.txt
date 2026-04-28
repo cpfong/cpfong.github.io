@@ -1,0 +1,14 @@
+#!/usr/bin/env perl
+
+my %students = (
+    "Alice" => [90, 85, 78], #note [] is reference to array, canNOT use () list
+    "Bob"   => [88, 92, 81],
+);
+
+foreach my $name (keys %students) {
+    my $scores = join(", ", @{$students{$name}});
+    print "$name: $scores\n";
+}
+
+print "  $students{'Alice'} \n";
+print "@{$students{'Alice'}}\n";
