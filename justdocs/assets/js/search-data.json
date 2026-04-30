@@ -281,53 +281,116 @@
   },"40": {
     "doc": "Calendar",
     "title": "Calendar",
-    "content": "# Calendar ## Week 1 Apr 13 LECTURE 簡介 / 認識自己的手機 / model iphone:settings_general_about samsung:settings_aboutPhone asus:settings_about ## Week 2 Apr 20 LECTURE 學員手機型號完整 / 回家 / 整理桌面 / 如何找到你的APP / line 新建一人群組且置頂 / 觸控手勢 ## Week 3 Apr 27 LECTURE only one TOP favoritate none / 不同的溝通方式 電話#Phone / iphone#FaceTime / LINE#文字,圖片,語音,視訊 ## Week 4 May 04 LECTURE 手機鏡頭拍照 / 錄影 Google 智慧鏡頭 / 文字 / Google Keep ## Week 5 May 11 LECTURE 手機相簿整理 / 刪除多餘照片 / 垃圾清理 ## Week 6 May 18 LECTURE 語音輸入搜尋資訊 / Google 地圖查詢大眾運輸 ## Week 7 May 25 LECTURE 防詐 ## Week 8 Jun 01 LECTURE 生活應用進階實作 / 掛號 / 叫車 ",
+    "content": " ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#calendar",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#calendar"
+  },"41": {
+    "doc": "Calendar",
+    "title": "Week 1",
+    "content": "Apr 13 LECTURE 簡介 / 認識自己的手機 / model iphone:settings_general_about samsung:settings_aboutPhone asus:settings_about ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-1",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-1"
+  },"42": {
+    "doc": "Calendar",
+    "title": "Week 2",
+    "content": "Apr 20 LECTURE 學員手機型號完整 / 回家 / 整理桌面 / 如何找到你的APP / line 新建一人群組且置頂 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-2",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-2"
+  },"43": {
+    "doc": "Calendar",
+    "title": "Week 3",
+    "content": "Apr 27 LECTURE only one TOP favoritate none / 送訊息給 AA (一人群組) ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-3",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-3"
+  },"44": {
+    "doc": "Calendar",
+    "title": "Week 4",
+    "content": "May 04 LECTURE 傳送個資 / koofr / file link with password / line 去除最愛 / 清理相片 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-4",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-4"
+  },"45": {
+    "doc": "Calendar",
+    "title": "Week 5",
+    "content": "May 11 LECTURE 手機相簿整理 / 刪除多餘照片 / 垃圾清理 / 上傳 koofr #10G only ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-5",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-5"
+  },"46": {
+    "doc": "Calendar",
+    "title": "Week 6",
+    "content": "May 18 LECTURE 語音輸入搜尋資訊 / Google 地圖查詢大眾運輸 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-6",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-6"
+  },"47": {
+    "doc": "Calendar",
+    "title": "Week 7",
+    "content": "May 25 LECTURE 防詐 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-7",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-7"
+  },"48": {
+    "doc": "Calendar",
+    "title": "Week 8",
+    "content": "Jun 01 LECTURE 生活應用進階實作 / 掛號 / 叫車 ",
+    "url": "/justdocs/courses/know-your-mobile-phone/calendar/#week-8",
+    
+    "relUrl": "/courses/know-your-mobile-phone/calendar/#week-8"
+  },"49": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": " ",
     "url": "/justdocs/courses/know-your-mobile-phone/calendar/",
     
     "relUrl": "/courses/know-your-mobile-phone/calendar/"
-  },"41": {
+  },"50": {
     "doc": "My Phone",
     "title": "My Phone",
     "content": "# Mobile phone Using Your Own Mobile Phone with Confidence Course Description This course is designed for senior citizens who wish to use their own mobile phones more effectively and confidently. Participants will learn practical, hands-on skills using their personal devices. The focus is on everyday tasks that improve communication, safety, and convenience. ",
     "url": "/justdocs/courses/know-your-mobile-phone/",
     
     "relUrl": "/courses/know-your-mobile-phone/"
-  },"42": {
+  },"51": {
     "doc": "Courses",
     "title": "Courses",
     "content": "# Welcome to Courses My various school projects and courses. ",
     "url": "/justdocs/courses/",
     
     "relUrl": "/courses/"
-  },"43": {
+  },"52": {
     "doc": "Shared",
     "title": "Shared",
     "content": "Common links and tools used across courses. ",
     "url": "/justdocs/shared/",
     
     "relUrl": "/shared/"
-  },"44": {
+  },"53": {
     "doc": "Instructor",
     "title": "Instructor",
     "content": "# Instructor ## Contact - **Email:** [cp.ifong4@gmail.com](mailto:cp.ifong4@gmail.com) - **Response time:** within 24–48 hours on weekdays ## Teaching - Data Structures - Professional English (CE) - Website Building ## Background - Currently(jan2026) a part-time instructor at [@STUST](https://www.stust.edu.tw) and [@AFATS](https://www.afats.khc.edu.tw) - 3 years at Fujian Junior Technical College (China) - Over 25 years of teaching experience at Fortune College - Former software engineer at Everex (Fremont, CA) with 3 years of industry experience. ",
     "url": "/justdocs/instructor/",
     
     "relUrl": "/instructor/"
-  },"45": {
+  },"54": {
     "doc": "Home",
     "title": "Home",
     "content": "# Welcome to My Documentation This site contains my notes for various school projects and courses. ### Quick Links * [Courses](./courses/) * [Shared Resources](./shared/) ",
     "url": "/justdocs/",
     
     "relUrl": "/"
-  },"46": {
+  },"55": {
     "doc": "STUST",
     "title": "STUST",
     "content": "## Teaching systems - [課程管理/教學計劃/上傳佐証](https://portal.stust.edu.tw/CourseManage/) - [成績輸入](https://portal.stust.edu.tw/score/) - [FlipClass](https://flipclass.stust.edu.tw/) - [考試圖庫](https://flipclass.stust.edu.tw/itemPool) - [電算中心](https://cc.stust.edu.tw/) - [圖資網路服務](https://net.cc.stust.edu.tw/) - [教務處](https://academic.stust.edu.tw/) - [人事室](https://aura.stust.edu.tw/NewEmp/Default.aspx) ## Policies / references - [Late policy](...) ",
     "url": "/justdocs/shared/stust.html",
     
     "relUrl": "/shared/stust.html"
-  },"47": {
+  },"56": {
     "doc": "Use Existing Theme",
     "title": "Use Existing Theme",
     "content": "[Go Back to GitHub Resources]({{ '/courses/website-building/github/' | relative_url }}){: .btn .btn-outline } ### 使用既有 GitHub Pages 主題的優點 - **零或極低設定成本**：不用自己寫版型與 CSS - **相容 GitHub Pages**：官方或主流主題，部署最穩 --- ### Theme 類型說明 1. [Built-in themes](https://github.com/pages-themes)（內建主題) > **⚠️ Attention:** github 幫你 deploy 可在 `_config.yml` 加入 ```yaml theme: jekyll-theme-cayman ``` `index.md` 加入 ```md title: just a test description: nothing special ``` --- ### 非內建主題: 有／沒有「Use this template」的差別 有「Use this template :一鍵建立全新儲存庫 - 直接套用他人提供的網站骨架／設定 沒有「Use this template」: 只能用 Fork 或 Clone #### Fork - 與原作者 repo **有關聯** - 需要理解 upstream、同步更新 #### Clone - 只下載到本機 - 還要自己建立 GitHub repo、設定 remote、push --- ### Use this template (UTT) #### Engine（引擎，擇一): Ruby Go Node.js ### Jekyll（Engine Ruby config _config.yml) - [just-the-docs-template](https://github.com/just-the-docs/just-the-docs-template) - [minimal-mistake starter](https://github.com/mmistakes/mm-github-pages-starter) --- ### Hugo（Engine Go config config.toml) - [CaiJimmy/hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter) - [netlify-templates/hugo-quickstart](https://github.com/netlify-templates/hugo-quickstart) --- ### Astro（Engine Node.js config astro.config.mjs ) - [netlify-templates/astro-quickstart](https://github.com/netlify-templates/astro-quickstart) - [surjithctly/astroship](https://github.com/surjithctly/astroship) --- ### 找以下 repo bakery-site-template 作者 cpfong ``` / README.md docs/ _config.yml index.md products.md order.md contact.md assets/img/ ``` _config.yml ``` theme: jekyll-theme-minimal title: 🍞 學生手工烘焙坊 description: 點擊下方連結查看我的作品 ``` index.md ``` --- layout: default --- # 歡迎來到我的網頁 🥐 ### 快速導覽 * [🍰 查看美味產品](products.html) * [📝 線上訂購](order.html) * [📞 聯絡我們](contact.html) ``` contact.md ``` --- layout: default title: 聯絡我們 --- # 聯絡我們的烘焙坊 📞 如果您有任何問題，歡迎透過以下方式聯絡： * **地址**: 麵包鎮甜點路 123 號 * **電話**: (02) 1234-5678 * **Email**: bakery@example.com [回首頁](index.html) ``` order.md ``` --- layout: default title: 線上訂購 --- # 線上訂購說明 📝 請填寫以下資訊（目前僅供練習）： 1. 產品名稱： 2. 數量： 3. 取貨時間： *注意：這只是一個練習網頁，目前無法處理實際訂單喔！* [回首頁](index.html) ``` products.md ``` --- layout: default title: 美味產品 --- # 我們的招牌產品 🥖 這裡有我們每天現做的手工甜點： ### 巧克力可頌 (Chocolate Croissant) ![巧克力可頌](assets/img/choco.jpg) 香脆的外皮包裹著濃郁的巧克力。 ### 草莓蛋糕 (Strawberry Cake) ![草莓蛋糕](assets/img/strawberry.jpg) 嚴選當季草莓，每一口都是幸福。 [回首頁](index.html) ``` ",
