@@ -1,0 +1,38 @@
+資料結構期末專題 (2026 May)
+
+使用 Perl 處理政府開放資料與樹狀結構
+
+一、專題目標
+本專題要求每位同學自行選擇一筆來自 data.gov.tw 政府開放資料平台的資料，
+使用 Perl 撰寫程式進行資料讀取、整理、儲存與分析。
+
+二、資料來源要求
+資料必須來自： https://data.gov.tw/
+
+停車場資料      依剩餘車位排序或查詢
+食品安全資      查詢廠商、產品或分類
+地震資料        依規模或時間排序
+水庫水情        比較蓄水率
+交通事故資料    依縣市或事故類型統計
+觀光景點資料    依縣市或類別查詢
+原則上，每位同學應選擇不同資料集。若多人使用相同資料集，必須有不同的處理目標或資料結構設計。
+
+三、資料結構要求
+主要資料結構必須是 Binary Tree 或 Binary Search Tree。
+
+四、程式最低要求
+至少使用一個 subroutine
+手動建立或操作一種資料結構
+輸出有意義的結果
+程式中應有必要註解
+
+老師給予 Minimum set:
+insert_node()
+inorder_print()
+find_max()
+
+Better students can add: #以下是你要自行撰寫
+find_min()
+range_search()
+tree_height()
+count_records()
