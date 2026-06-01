@@ -141,7 +141,7 @@
   },"20": {
     "doc": "Calendar",
     "title": "Calendar",
-    "content": "# Calendar ## Week 1 Feb 2 LECTURE 課程簡介及登入主機: goo Console -- unix 指令 -- vi ## Week 2 Feb 23 LECTURE vi編寫第一個程式: vi hello.pl -- hello -- perl ./hello.pl ASSIGNMENT 印出學號的最後一個數字 ## Week 3 Mar 2 LECTURE 上週已介紹 perl -d -e 1 的單行偵錯，但通常我們是把所有碼寫入檔案再於去執行. 以下範例可以看出字串和數字在perl環境中可以自然的轉換, 本週課程介紹變數, scalar, array -- 把二個數相加 ASSIGNMENT 四則運算 ## Week 4 Mar 9 LECTURE 陣列及串列已於上週開始介紹，本週我們會對資料結構的最基本堆疊及佇列開始介紹, stack 最基本的動作有 push pop 動作為先進後出 而 queue 則是 enqueue dequene 動作為先進後出 ASSIGNMENT 放入整數及取出 ## Week 5 Mar 16 LECTURE 上周已針對 堆疊介紹且使用 perl 來實作 array 的先進後出, 注意：程式用 push 及 pop, 本週要介紹 Queue 注意它是是使用 push 及 shift ASSIGNMENT 放入整數及取出 ## Week 6 Mar 23 LECTURE 本周要討論 鏈結 linkList linkList 可以用在 stack 及 queue 上 實作 -- ASSIGNMENT節點的增加及刪除 ## Week 7 Mar 30 LECTURE 期中考前複習 -- 介紹 linkList 及 foreach 及 hash array 如何實作 linkList ## Week 8 Apr 6 OFF ## Week 9 Apr 13 Mid Term Exam ## Week 10 Apr 20 介紹 hash 及 keys values exists 的三大 hash 常用 functions hasf ref 實例 ## Week 11 Apr 27 介紹 recursive 遞迴 ## Week 12 May 4 binary Tree -- binary Search Tree (bst) ## Week 13 May 11 使用 perl array [] 來處理二元樹 -- 比較 array 及 hash 處理二元樹的不同 ## Week 14 May 18 期末作業 -- BST youtube ",
+    "content": "# Calendar ## Week 1 Feb 2 LECTURE 課程簡介及登入主機: goo Console -- unix 指令 -- vi ## Week 2 Feb 23 LECTURE vi編寫第一個程式: vi hello.pl -- hello -- perl ./hello.pl ASSIGNMENT 印出學號的最後一個數字 ## Week 3 Mar 2 LECTURE 上週已介紹 perl -d -e 1 的單行偵錯，但通常我們是把所有碼寫入檔案再於去執行. 以下範例可以看出字串和數字在perl環境中可以自然的轉換, 本週課程介紹變數, scalar, array -- 把二個數相加 ASSIGNMENT 四則運算 ## Week 4 Mar 9 LECTURE 陣列及串列已於上週開始介紹，本週我們會對資料結構的最基本堆疊及佇列開始介紹, stack 最基本的動作有 push pop 動作為先進後出 而 queue 則是 enqueue dequene 動作為先進後出 ASSIGNMENT 放入整數及取出 ## Week 5 Mar 16 LECTURE 上周已針對 堆疊介紹且使用 perl 來實作 array 的先進後出, 注意：程式用 push 及 pop, 本週要介紹 Queue 注意它是是使用 push 及 shift ASSIGNMENT 放入整數及取出 ## Week 6 Mar 23 LECTURE 本周要討論 鏈結 linkList linkList 可以用在 stack 及 queue 上 實作 -- ASSIGNMENT節點的增加及刪除 ## Week 7 Mar 30 LECTURE 期中考前複習 -- 介紹 linkList 及 foreach 及 hash array 如何實作 linkList ## Week 8 Apr 6 OFF ## Week 9 Apr 13 Mid Term Exam ## Week 10 Apr 20 介紹 hash 及 keys values exists 的三大 hash 常用 functions hasf ref 實例 ## Week 11 Apr 27 介紹 recursive 遞迴 ## Week 12 May 4 binary Tree -- binary Search Tree (bst) ## Week 13 May 11 使用 perl array [] 來處理二元樹 -- 比較 array 及 hash 處理二元樹的不同 ## Week 14 May 18 期末作業 -- BST youtube ## Week 15 May 25 AVL Tree -- intro avl -- youtube ## Week 16 June 1 student project review ## Week 17 June 8 heap wiki 堆積樹 -- heapify youtube 如何成形 ## Week 18 June 15 final proj prestation ",
     "url": "/justdocs/courses/data-structures/calendar/",
     
     "relUrl": "/courses/data-structures/calendar/"
@@ -239,21 +239,21 @@
   },"34": {
     "doc": "Calendar",
     "title": "Week 11",
-    "content": "May 5 課本第七章chap7 -- BBC 6 minutes english -- ultra processed food -- Economist Crypto-miners ",
+    "content": "May 5 課本第七章chap7 -- BBC 6 minutes english -- ultra processed food (甲) -- Economist Crypto-miners ",
     "url": "/justdocs/courses/professional-english/calendar/#week-11",
     
     "relUrl": "/courses/professional-english/calendar/#week-11"
   },"35": {
     "doc": "Calendar",
     "title": "Week 12",
-    "content": "May 12 課本第八章chap8 -- BBC 6 minutes english - another planet -- Economist cyber security ",
+    "content": "May 12 課本第八章chap8 -- BBC 6 minutes english - another planet (乙) -- Economist cyber security ",
     "url": "/justdocs/courses/professional-english/calendar/#week-12",
     
     "relUrl": "/courses/professional-english/calendar/#week-12"
   },"36": {
     "doc": "Calendar",
     "title": "Week 13",
-    "content": "May 19 課本第十章chap10 -- 課本第十一章 chap11 -- BBC 6 minutes english : Stress -- Economist bioterrorism ",
+    "content": "May 19 課本第十章chap10 -- 課本第十一章 chap11 -- BBC 6 minutes english : Stress (丙) -- Economist bioterrorism ",
     "url": "/justdocs/courses/professional-english/calendar/#week-13",
     
     "relUrl": "/courses/professional-english/calendar/#week-13"
@@ -267,7 +267,7 @@
   },"38": {
     "doc": "Calendar",
     "title": "Week 15",
-    "content": "June 2 課本第十四章 chapter 14 -- 課本第十五章 chapter 15 -- BBC 6 minutes english : xx -- Economist yy ",
+    "content": "June 2 課本第十四章 chapter 14 -- 課本第十五章 chapter 15 -- BBC 6 minutes english : debt -- Economist yy ",
     "url": "/justdocs/courses/professional-english/calendar/#week-15",
     
     "relUrl": "/courses/professional-english/calendar/#week-15"
@@ -330,7 +330,7 @@
   },"47": {
     "doc": "Calendar",
     "title": "Calendar",
-    "content": "# Calendar ## Week 1 Apr 13 LECTURE 簡介 / 認識自己的手機 / model iphone:settings_general_about samsung:settings_aboutPhone asus:settings_about ## Week 2 Apr 20 LECTURE 學員手機型號完整 / 回家 / 整理桌面 / 如何找到你的APP / line 新建一人群組且置頂 ## Week 3 Apr 27 LECTURE only one TOP favoritate none / 送訊息給 AA (一人群組) ## Week 4 May 04 LECTURE 下週要備份相片利用一週去整理 / 傳送個資 / koofr / file link with password / line 去除最愛 / 清理相片 ## Week 5 May 11 LECTURE 協助同學把所有重要 app 放到首頁 / 設定 google_grp line phone camera photos google_play ## Week 6 May 18 LECTURE 語音輸入搜尋資訊 / Google 地圖查詢大眾運輸 ## Week 7 May 25 LECTURE 防詐 ## Week 8 Jun 01 LECTURE 生活應用進階實作 / 掛號 / 叫車 ",
+    "content": "# Calendar ## Week 1 Apr 13 LECTURE 簡介 / 認識自己的手機 / model iphone:settings_general_about samsung:settings_aboutPhone asus:settings_about ## Week 2 Apr 20 LECTURE 學員手機型號完整 / 回家 / 整理桌面 / 如何找到你的APP / line 新建一人群組且置頂 ## Week 3 Apr 27 LECTURE only one TOP favoritate none / 送訊息給 AA (一人群組) ## Week 4 May 04 LECTURE 下週要備份相片利用一週去整理 / 傳送個資 / koofr / file link with password / line 去除最愛 / 清理相片 ## Week 5 May 11 LECTURE 協助同學把所有重要 app 放到首頁 / 設定 google_grp line phone camera photos google_play ## Week 6 May 18 LECTURE apple store & google play 安裝軟體 koofr ## Week 7 May 25 LECTURE google mail (配合 koofr google button) ## Week 8 Jun 01 LECTURE koofr google login ",
     "url": "/justdocs/courses/know-your-mobile-phone/calendar/",
     
     "relUrl": "/courses/know-your-mobile-phone/calendar/"

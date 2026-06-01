@@ -1,8 +1,22 @@
-with google email address 2 ways: authentication at koofr (using gmail login) and at google (auth via google)
-browser default should show google sigin to use gmail auth
-use own 4G instead of classroom wifi
-use phone instead of computer
-get koofr APP
-create account: use google email instead of new one
-NO password needed!!!
-after login ok, then back to computer
+koofr 登入一律是以電子郵件, 但它可以把密碼寫在
+ A koofr DB 中, 也可以
+ B 交由 goolge 去處理密碼（即 koofr DB 不存) #註：這一定要有一個 google button 才可以
+ C 交由 goo 的同時可以再存一份在 koofr DB 中，如此若沒有 goo button 也可以登入
+
+koofr 可由二種方式登入 app 和 browser 如用 bowser 最好用 chrome (因為它和 gmail 相容性最高)
+app 登入不會有 google button #一定要先去把密碼存在 koofr
+chrome 則要由首頁進入 (koofr.eu) 但會有 goo ubtton  可以連動登入不必密碼
+
+browser default should show google signin (ie button) to use gmail auth
+
+use own 4G instead of classroom wifi with chrome browser
+
+第一次的建立帳號建議由 chrome 且使用連動式不必密碼即可登入 (goo-password)
+立即設定 koofr 上的密碼 (koo-password)
+下次可以由 app 登入(gmail-account with koo-password)
+
+app login adv: no site name needed koofr.eu , if still login, no need acc:pwd, GUI is koofr
+app lgoin bad: remember email addr, remember password
+
+chrome login adv: no acc and pwd,
+chrome login bad: key in site, interface is browser GUI
