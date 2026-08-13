@@ -1,0 +1,40 @@
+#save into run-IM-en.bat 
+@powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$L=Get-WinUserLanguageList;if($L.LanguageTag -notcontains 'en-US'){$L.Add('en-US');Set-WinUserLanguageList $L -Force}"
+
+####
+# copy FreeBSD.iso and qemu-setup to C drive
+@echo off
+copy w:\qemu\iso\FreeBSD14.3R-amd64-disc1.1302714368.iso c:
+copy w:\qemu\iso\qemu-w64-setup-20250814.exe c:
+
+####
+#install software
+qemu-w64-setup-20250814.exe
+
+####
+# rem create empty 8G image #20g too big, cannot save at google drive
+qemu-img.exe create -f raw FreeBSD.img 8g
+
+####
+# install into empty FreeBSD.img
+qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw -cdrom FreeBSD-bootOnly.iso -boot d
+  
+####
+# simulate FreeBSD minimize parameters #nor cdrom or boot 
+qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw
+
+####
+# at console add a new user
+adduser
+
+####
+# redirect port 22 to 2222
+qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw -nic user,hostfwd=tcp:127.0.0.1:2222-:22
+
+####
+# console to serial port 
+qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw -nic user,hostfwd=tcp:127.0.0.1:2222-:22 -nographic
+
+####
+#For maximum flexibility, console="comconsole,vidconsole" is the better setting.
+echo 'console="comconsole,vidconsole"' > /boot/loader.conf

@@ -1,0 +1,3 @@
+bitsadmin /transfer job /download /priority normal "http://example.com/file.exe" "C:\file.exe"
+
+ftp ftp://www.ifong.cc/ but at HOST turn inetd ON

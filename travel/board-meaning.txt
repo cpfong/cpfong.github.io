@@ -1,30 +1,37 @@
+-- must
 Abfahrt = Departure
 Zeit = Time
-Scheduled departure time 10:17
 Über (Via) = Stops along the way
-Koblenz – Köln – Dortmund – Bremen
-
 Ziel = Final destination
+ca. = approximitly
+Verspätung = Late
 Gleis = Platform
-Platform changes are common — always check again before boarding.
+Gleisänderung =  Platform change
 
-Status / Message Area
-Common messages you may see:
+-- may need
+fällt aus = cancel
+Abschnitt = section
+Reservierung = reservation
+Umstieg = change your train
+Anschluss = 接續班車
+Ersatzverkehr = 替代交通
+
+examples
+--
+Der Zug hat ca. 20 Minuten Verspätung. 這班車大約誤點 20 分鐘
+Der Zug fällt aus. 這班車取消
+Der Halt in Köln Hbf entfällt. Köln Hbf 這一站不停靠
+Gleisänderung: Der Zug fährt heute von Gleis 8. 月台變更：這班車今天從 8 號月台開。
+Bitte beachten Sie die geänderte Wagenreihung. 請注意車廂編組已改變。
+Die Wagenreihung ist heute umgekehrt. 今天車廂順序相反。
+Wagen 21 befindet sich in Abschnitt D. 21 車廂在 D 分區
+
 Verspätung ca. 5 Min.
 → Delay approx. 5 minutes
 
 Gleisänderung → Platform change
 Zug fährt von Gleis X → Train departs from platform X
 
-+5
-→ 5 minutes late
-
-Practical Reading Example
-If you see:
 10:20 | ICE 772 | via Hannover | Hamburg-Altona | Gleis 8 | +10
-It means:
-Leaves 10:20
-ICE train number 772
-Final destination Hamburg-Altona
-Platform 8
-10 minutes late
+--
+Leaves 10:20 / ICE train number 772 / Final destination Hamburg-Altona / Platform 8 / 10 minutes late

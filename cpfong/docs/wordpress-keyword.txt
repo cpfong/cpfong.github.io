@@ -1,0 +1,24 @@
+site 網站
+  abc.wordpress.com
+  foo.wordpress.com
+
+domain 網域
+  你暫時不需要
+
+wp-admin
+
+me	個人資料
+
+home	家
+
+settings	設定
+
+pages 	管理頁面: certain-site/pages
+
+themes	佈景主題
+
+post	寫文章
+
+log-in	登入
+
+log-out	登出
