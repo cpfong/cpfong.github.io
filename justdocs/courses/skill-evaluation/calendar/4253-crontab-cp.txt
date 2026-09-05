@@ -1,0 +1,13 @@
+Fedora> find / -type f -name hosts
+PS C:\Users\user> dir c:\ -R hosts
+--
+
+#overwrite the original crontab
+echo '1 14 15 8 * cp /etc/hosts /mnt/01/' | crontab -
+
+#windows
+taskschd.msc
+Task Scheduler #工作排程器, you can key in task then system will show you 工作排程器 to select
+
+PS C:\Users\user> schtasks /create /tn foo /tr c:\foo.bat /sc once /st 16:50 #成功: 排程工作 "foo" 已成功建立。
+PS C:\Users\user> schtasks.exe /query /tn foo

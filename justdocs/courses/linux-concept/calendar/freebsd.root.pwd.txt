@@ -1,0 +1,4 @@
+boot to single user mode (menu option 2)
+mount -uw /	#remount ROOT as write instead read only
+passwd
+

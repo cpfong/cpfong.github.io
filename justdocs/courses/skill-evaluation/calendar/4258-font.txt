@@ -1,0 +1,2 @@
+.ttf .otf
+double click is just fine

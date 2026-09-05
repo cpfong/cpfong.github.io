@@ -1,0 +1,6 @@
+adding a rinter on fedora
+Settings → Printers → Unlock → Add a Printer
+
+windows
+-
+control （控制台) / 硬體和音效 / 裝置和印表機

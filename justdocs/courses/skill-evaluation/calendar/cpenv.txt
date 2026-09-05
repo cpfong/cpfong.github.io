@@ -1,0 +1,13 @@
+mini mac # intel cpu
+UTM to replace virtualBox Fusion #mouse cursor problem on Fusion
+win10 on UTM
+ubuntu1804 on UTM
+fedora33 on UTM
+
+--
+stust view.stust.edu.tw (does NOT open virtualization)
+#powershell
+Get-CimInstance Win32_Processor | Select-Object Name,VMMonitorModeExtensions,VirtualizationFirmwareEnabled,SecondLevelAddressTranslationExtensions
+--
+Intel(R) Keon(R) CPU E5-2650 v4 @ 2.20GHz False False False
+Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz False False False

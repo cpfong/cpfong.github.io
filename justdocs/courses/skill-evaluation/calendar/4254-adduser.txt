@@ -1,0 +1,11 @@
+windows
+--
+control 控制台 / 使用者帳戶 / 管理帳戶
+
+fedora
+--
+sudo useradd tom
+sudo passwd tom
+id tom
+
+

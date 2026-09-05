@@ -15,8 +15,8 @@
   
 
 .site-nav > ul.nav-list:first-child > li > a,
-.site-nav > ul.nav-list:first-child > li > ul > li > a,
-.site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(1)) > a {
+.site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(1)) > a,
+.site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a {
   background-image: none;
 }
 
@@ -25,14 +25,14 @@
   background-image: none;
 }
 
-.site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(6) > ul > li:nth-child(1) > a {
+.site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(1) > a {
   font-weight: 600;
   text-decoration: none;
-}.site-nav > ul.nav-list:first-child > li:nth-child(3) > button svg,
-.site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(6) > button svg {
+}.site-nav > ul.nav-list:first-child > li:nth-child(2) > button svg,
+.site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(1) > button svg {
   transform: rotate(-90deg);
-}.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list,
-.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list > li.nav-list-item:nth-child(6) > ul.nav-list {
+}.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list,
+.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list {
   display: block;
 }
   </style>
@@ -155,34 +155,18 @@
   
     <ul class="nav-list"><li class="nav-list-item"><a href="/justdocs/" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/justdocs/instructor/" class="nav-list-link">Instructor</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Courses category" aria-pressed="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-    </button><a href="/justdocs/courses/" class="nav-list-link">Courses</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Web Development category" aria-pressed="false">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/website-building/" class="nav-list-link">Web Development</a><ul class="nav-list"><li class="nav-list-item">
-                <a href="/justdocs/courses/website-building/github/" class="nav-list-link">GitHub</a>
-              </li><li class="nav-list-item">
-                <a href="/justdocs/courses/website-building/gimp/" class="nav-list-link">Gimp</a>
-              </li><li class="nav-list-item">
-                <a href="/justdocs/courses/website-building/wordpress/" class="nav-list-link">WordPress</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Linux Concept category" aria-pressed="false">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/linux-concept/" class="nav-list-link">Linux Concept</a><ul class="nav-list"><li class="nav-list-item">
-                <a href="/justdocs/courses/linux-concept/calendar/" class="nav-list-link">Calendar</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Data Structures category" aria-pressed="false">
+    </button><a href="/justdocs/courses/" class="nav-list-link">Courses</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Data Structures category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
           </button><a href="/justdocs/courses/data-structures/" class="nav-list-link">Data Structures</a><ul class="nav-list"><li class="nav-list-item">
                 <a href="/justdocs/courses/data-structures/calendar/" class="nav-list-link">Calendar</a>
               </li><li class="nav-list-item">
                 <a href="/justdocs/courses/data-structures/syllabus/" class="nav-list-link">Syllabus</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Skill Evaluation category" aria-pressed="false">
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Google category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/skill-evaluation/" class="nav-list-link">Skill Evaluation</a><ul class="nav-list"><li class="nav-list-item">
-                <a href="/justdocs/courses/skill-evaluation/calendar/" class="nav-list-link">Calendar</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Professional English category" aria-pressed="false">
+          </button><a href="/justdocs/courses/google-not-just-search/" class="nav-list-link">Google</a><ul class="nav-list"></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Linux Concept category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/professional-english/" class="nav-list-link">Professional English</a><ul class="nav-list"><li class="nav-list-item">
-                <a href="/justdocs/courses/professional-english/calendar/" class="nav-list-link">Calendar</a>
-              </li><li class="nav-list-item">
-                <a href="/justdocs/courses/professional-english/miscellaneous/" class="nav-list-link">Miscellaneous</a>
+          </button><a href="/justdocs/courses/linux-concept/" class="nav-list-link">Linux Concept</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/linux-concept/calendar/" class="nav-list-link">Calendar</a>
               </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Linux Programming category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
           </button><a href="/justdocs/courses/linux-programming/" class="nav-list-link">Linux Programming</a><ul class="nav-list"><li class="nav-list-item">
@@ -193,11 +177,29 @@
                 <a href="/justdocs/courses/know-your-mobile-phone/calendar/" class="nav-list-link">Calendar</a>
               </li><li class="nav-list-item">
                 <a href="/justdocs/courses/know-your-mobile-phone/syllabus/" class="nav-list-link">Syllabus</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Google category" aria-pressed="false">
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Professional English category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/google-not-just-search/" class="nav-list-link">Google</a><ul class="nav-list"></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Programming Perl category" aria-pressed="false">
+          </button><a href="/justdocs/courses/professional-english/" class="nav-list-link">Professional English</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/professional-english/calendar/" class="nav-list-link">Calendar</a>
+              </li><li class="nav-list-item">
+                <a href="/justdocs/courses/professional-english/miscellaneous/" class="nav-list-link">Miscellaneous</a>
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Programming Perl category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/programming-perl/" class="nav-list-link">Programming Perl</a><ul class="nav-list"></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Shared category" aria-pressed="false">
+          </button><a href="/justdocs/courses/programming-perl/" class="nav-list-link">Programming Perl</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/programming-perl/calendar/" class="nav-list-link">Calendar</a>
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Skill Evaluation category" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+          </button><a href="/justdocs/courses/skill-evaluation/" class="nav-list-link">Skill Evaluation</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/skill-evaluation/calendar/" class="nav-list-link">Calendar</a>
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Web Development category" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+          </button><a href="/justdocs/courses/website-building/" class="nav-list-link">Web Development</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/website-building/github/" class="nav-list-link">GitHub</a>
+              </li><li class="nav-list-item">
+                <a href="/justdocs/courses/website-building/gimp/" class="nav-list-link">Gimp</a>
+              </li><li class="nav-list-item">
+                <a href="/justdocs/courses/website-building/wordpress/" class="nav-list-link">WordPress</a>
+              </li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Shared category" aria-pressed="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
     </button><a href="/justdocs/shared/" class="nav-list-link">Shared</a><ul class="nav-list"><li class="nav-list-item"><a href="/justdocs/shared/broadcast.html" class="nav-list-link">Live Broadcast</a></li><li class="nav-list-item"><a href="/justdocs/shared/stust.html" class="nav-list-link">STUST</a></li><li class="nav-list-item"><a href="/justdocs/shared/afats.html" class="nav-list-link">AFATS</a></li></ul></li></ul>
 
@@ -272,8 +274,40 @@
   <div class="row">
     <span class="date">Sep 7</span>
     <div class="content">
-      <span class="badge soft">Software</span>
-        <a href="https://console.cloud.google.com">goolge 命令機台</a> --
+      <span class="badge soft">software</span>
+        <a href="https://console.cloud.google.com">goolge 命令機台</a> -- <a href="/justdocs/assets/images/linux-concept/ssh_login.webp"> 由 goo console 連線 ifong 主機</a><br />
+      <span class="badge soft">textbook</span>
+        <a href="/justdocs/assets/images/linux-programming/text_book.webp"> 課本 </a> -- <a href="https://github.com/dapritchard/kochan-shell-programming-solutions/tree/master"> 課本習題解答 </a> -- <a href="https://scis.uohyd.ac.in/~apcs/itw/Unix_Shell_Programming_3rd_Ed.pdf"> text book pdf </a> <br />
+      <span class="badge soft">scp</span>
+        <a href="/justdocs/assets/images/linux-programming/scp_2_www.webp"> 作業如何上傳老師主機 </a><br />
+    </div>
+  </div>
+</div>
+<h2 id="week-1-簡介及連線">
+  
+  
+    <a href="#week-1-簡介及連線" class="anchor-heading" aria-labelledby="week-1-簡介及連線"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week 1 簡介及連線
+  
+  
+</h2>
+    
+
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Sep 9</span>
+    <div class="content">
+      <span class="badge soft">lecture</span>
+      <a href="./intro.txt"> 課程簡介 </a><br />
+      practice vi at goo --
+      <a href="https://mx.nthu.edu.tw/~jlin/doc/unix_edit.html">nthu jlin VI</a>
+      --
+      <a href="https://www.runoob.com/linux/linux-vim.html">vi</a>
+      --
+      <a href="https://www.youtube.com/watch?v=CeC_gyQHICE">ssh 自動化 @ youtube</a>
+      --
+      ssh --
+      ssh-keygen --
+      ~/.ssh/config
     </div>
   </div>
 </div>

@@ -15,8 +15,8 @@
   
 
 .site-nav > ul.nav-list:first-child > li > a,
-.site-nav > ul.nav-list:first-child > li > ul > li > a,
-.site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(1)) > a {
+.site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(1)) > a,
+.site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a {
   background-image: none;
 }
 
@@ -25,14 +25,14 @@
   background-image: none;
 }
 
-.site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(4) > ul > li:nth-child(1) > a {
+.site-nav > ul.nav-list:first-child > li:nth-child(1) > ul > li:nth-child(1) > a {
   font-weight: 600;
   text-decoration: none;
-}.site-nav > ul.nav-list:first-child > li:nth-child(3) > button svg,
-.site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(4) > button svg {
+}.site-nav > ul.nav-list:first-child > li:nth-child(1) > button svg,
+.site-nav > ul.nav-list:first-child > li:nth-child(1) > ul > li:nth-child(1) > button svg {
   transform: rotate(-90deg);
-}.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list,
-.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list > li.nav-list-item:nth-child(4) > ul.nav-list {
+}.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(1) > ul.nav-list,
+.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(1) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list {
   display: block;
 }
   </style>
@@ -155,34 +155,18 @@
   
     <ul class="nav-list"><li class="nav-list-item"><a href="/justdocs/" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/justdocs/instructor/" class="nav-list-link">Instructor</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Courses category" aria-pressed="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-    </button><a href="/justdocs/courses/" class="nav-list-link">Courses</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Web Development category" aria-pressed="false">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/website-building/" class="nav-list-link">Web Development</a><ul class="nav-list"><li class="nav-list-item">
-                <a href="/justdocs/courses/website-building/github/" class="nav-list-link">GitHub</a>
-              </li><li class="nav-list-item">
-                <a href="/justdocs/courses/website-building/gimp/" class="nav-list-link">Gimp</a>
-              </li><li class="nav-list-item">
-                <a href="/justdocs/courses/website-building/wordpress/" class="nav-list-link">WordPress</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Linux Concept category" aria-pressed="false">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/linux-concept/" class="nav-list-link">Linux Concept</a><ul class="nav-list"><li class="nav-list-item">
-                <a href="/justdocs/courses/linux-concept/calendar/" class="nav-list-link">Calendar</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Data Structures category" aria-pressed="false">
+    </button><a href="/justdocs/courses/" class="nav-list-link">Courses</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Data Structures category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
           </button><a href="/justdocs/courses/data-structures/" class="nav-list-link">Data Structures</a><ul class="nav-list"><li class="nav-list-item">
                 <a href="/justdocs/courses/data-structures/calendar/" class="nav-list-link">Calendar</a>
               </li><li class="nav-list-item">
                 <a href="/justdocs/courses/data-structures/syllabus/" class="nav-list-link">Syllabus</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Skill Evaluation category" aria-pressed="false">
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Google category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/skill-evaluation/" class="nav-list-link">Skill Evaluation</a><ul class="nav-list"><li class="nav-list-item">
-                <a href="/justdocs/courses/skill-evaluation/calendar/" class="nav-list-link">Calendar</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Professional English category" aria-pressed="false">
+          </button><a href="/justdocs/courses/google-not-just-search/" class="nav-list-link">Google</a><ul class="nav-list"></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Linux Concept category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/professional-english/" class="nav-list-link">Professional English</a><ul class="nav-list"><li class="nav-list-item">
-                <a href="/justdocs/courses/professional-english/calendar/" class="nav-list-link">Calendar</a>
-              </li><li class="nav-list-item">
-                <a href="/justdocs/courses/professional-english/miscellaneous/" class="nav-list-link">Miscellaneous</a>
+          </button><a href="/justdocs/courses/linux-concept/" class="nav-list-link">Linux Concept</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/linux-concept/calendar/" class="nav-list-link">Calendar</a>
               </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Linux Programming category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
           </button><a href="/justdocs/courses/linux-programming/" class="nav-list-link">Linux Programming</a><ul class="nav-list"><li class="nav-list-item">
@@ -193,11 +177,27 @@
                 <a href="/justdocs/courses/know-your-mobile-phone/calendar/" class="nav-list-link">Calendar</a>
               </li><li class="nav-list-item">
                 <a href="/justdocs/courses/know-your-mobile-phone/syllabus/" class="nav-list-link">Syllabus</a>
-              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Google category" aria-pressed="false">
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Professional English category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/google-not-just-search/" class="nav-list-link">Google</a><ul class="nav-list"></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Programming Perl category" aria-pressed="false">
+          </button><a href="/justdocs/courses/professional-english/" class="nav-list-link">Professional English</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/professional-english/calendar/" class="nav-list-link">Calendar</a>
+              </li><li class="nav-list-item">
+                <a href="/justdocs/courses/professional-english/miscellaneous/" class="nav-list-link">Miscellaneous</a>
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Programming Perl category" aria-pressed="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-          </button><a href="/justdocs/courses/programming-perl/" class="nav-list-link">Programming Perl</a><ul class="nav-list"></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Shared category" aria-pressed="false">
+          </button><a href="/justdocs/courses/programming-perl/" class="nav-list-link">Programming Perl</a><ul class="nav-list"></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Skill Evaluation category" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+          </button><a href="/justdocs/courses/skill-evaluation/" class="nav-list-link">Skill Evaluation</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/skill-evaluation/calendar/" class="nav-list-link">Calendar</a>
+              </li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Web Development category" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+          </button><a href="/justdocs/courses/website-building/" class="nav-list-link">Web Development</a><ul class="nav-list"><li class="nav-list-item">
+                <a href="/justdocs/courses/website-building/github/" class="nav-list-link">GitHub</a>
+              </li><li class="nav-list-item">
+                <a href="/justdocs/courses/website-building/gimp/" class="nav-list-link">Gimp</a>
+              </li><li class="nav-list-item">
+                <a href="/justdocs/courses/website-building/wordpress/" class="nav-list-link">WordPress</a>
+              </li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Shared category" aria-pressed="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
     </button><a href="/justdocs/shared/" class="nav-list-link">Shared</a><ul class="nav-list"><li class="nav-list-item"><a href="/justdocs/shared/broadcast.html" class="nav-list-link">Live Broadcast</a></li><li class="nav-list-item"><a href="/justdocs/shared/stust.html" class="nav-list-link">STUST</a></li><li class="nav-list-item"><a href="/justdocs/shared/afats.html" class="nav-list-link">AFATS</a></li></ul></li></ul>
 
@@ -259,21 +259,223 @@
   
 </h1>
     
-<h2 id="week-1">
+<h2 id="week0---pre">
   
   
-    <a href="#week-1" class="anchor-heading" aria-labelledby="week-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week 1
+    <a href="#week0---pre" class="anchor-heading" aria-labelledby="week0---pre"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week0 - pre
   
   
 </h2>
     
-
 <div class="calendar-card">
   <div class="row">
-    <span class="date">Oct 26</span>
+    <span class="date">na</span>
     <div class="content">
       <span class="badge lecture">LECTURE</span>
-        簡介 / 認識自己的手機 / 記錄學員手機型號 / 課程群組及個人江湖群組 / google 帳號申請
+      <a href="https://www.wdasec.gov.tw/">@勞動部</a> -- <a href="https://owinform.wdasec.gov.tw">測試資料12000</a> -- <a href="../120003B13.pdf">術科</a> -- <a href="../120003B13.comments.pdf">個人備註</a>  -- <a href="https://www.microsoft.com/zh-tw/software-download/windows10ISO"> win10 iso </a> -- <a href="https://www.virtualbox.org"> virtual box </a> -- <a href="https://download.virtualbox.org/virtualbox/6.0.24"> vb 6.0.24 </a> -- <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist">ms Virual C++ </a> -- <a href="https://releases.ubuntu.com/bionic"> utuntu 18.04 </a> -- <a href="https://fedoraproject.org/"> fedora 33 </a> -- <a href="./cpenv.txt"> cp's env 我的工作環境 </a> -- <a href="https://exam.nptu.edu.tw/var/file/35/1035/img/1825/125938066.pdf">國立屏東大學電腦硬體裝修丙級術科檢定場地機具設備現況表</a> -- <a href="./mycal.txt"> 課程日曆 </a>
+    </div>
+  </div>
+</div>
+<h2 id="week1">
+  
+  
+    <a href="#week1" class="anchor-heading" aria-labelledby="week1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week1
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Sep 17</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+        <a href="../26-class-breif.html"> 簡介及環境設定 windows.iso virtualBox </a> -- <a href="/justdocs/assets/images/skill-evaluation/422.123.四二2.123.規劃硬碟磁區.webp"> 422 磁區規劃及 win os 安裝 </a>
+    </div>
+  </div>
+</div>
+<h2 id="week2">
+  
+  
+    <a href="#week2" class="anchor-heading" aria-labelledby="week2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week2
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Sep 22</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+        <a href="/justdocs/assets/images/skill-evaluation/423.123.四二三.123.虛擬電腦軟體安裝.webp"> 423 虛擬軟體及 Linux 安裝 </a> -- <a href="/justdocs/assets/images/skill-evaluation/424.四二四.資料磁區建目錄.webp"> 424 資料磁區建目錄 </a>
+    </div>
+  </div>
+</div>
+<h2 id="week3">
+  
+  
+    <a href="#week3" class="anchor-heading" aria-labelledby="week3"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week3
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Sep 29</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+        <a href="/justdocs/assets/images/skill-evaluation/4251-四二五1.設定電腦名稱.webp"> 4251 設定電腦名稱 hostname / rename-computer -newname</a> -- <a href="/justdocs/assets/images/skill-evaluation/4252四二五二TcpIP位址.webp"> 4252 TCP/IP 設定</a> -- <a href="/justdocs/assets/images/skill-evaluation/4253四二五三crontab-排程.webp"> 4253 crontab 排程</a> -- <a href="./4253-crontab-cp.txt"> cps note </a>
+    </div>
+  </div>
+</div>
+<h2 id="week4">
+  
+  
+    <a href="#week4" class="anchor-heading" aria-labelledby="week4"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week4
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Oct 2</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+        <a href="/justdocs/assets/images/skill-evaluation/4254四二五四-adduser-新增帳號.webp"> 4254 adduser 新增帳號 </a> -- <a href="./4254-adduser.txt"> cps note </a> -- <a href="/justdocs/assets/images/skill-evaluation/4255四二五五-printer-印表機.webp"> 4255 新增印表機 </a> -- <a href="./4255-printer.txt"> cps note </a>
+    </div>
+  </div>
+</div>
+<h2 id="week5">
+  
+  
+    <a href="#week5" class="anchor-heading" aria-labelledby="week5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week5
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Oct 6</span>
+    <div class="content">
+         <a href="/justdocs/assets/images/skill-evaluation/4256.screenSaver.螢幕保䕶.webp"> 4256 螢幕保䕶 </a> -- <a href="./4256-screenSaver.txt"> cps note </a> -- <a href="/justdocs/assets/images/skill-evaluation/4257-ime-中文輸入法.webp"> 4257 中文輸入法 </a> -- <a href="/justdocs/assets/images/skill-evaluation/4258-font-中文字型.webp"> 4258 中文字型 </a> -- <a href="./4258-font.txt"> cps note </a>
+    </div>
+  </div>
+</div>
+<h2 id="week6">
+  
+  
+    <a href="#week6" class="anchor-heading" aria-labelledby="week6"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week6
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Oct 13</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+       <a href="/justdocs/assets/images/skill-evaluation/4259.installOffice.webp"> 4259 安裝 office </a> -- <a href="/justdocs/assets/images/skill-evaluation/425a-ftp.webp"> 425.10 ftp </a> -- <a href="./425a.cpsnote.txt"> cps note </a> -- <a href="/justdocs/assets/images/skill-evaluation/425b-ftp2Web.webp"> 425.11 ftp 2 Web </a>  -- <a href="./425b-ftp.txt"> cps note</a>
+    </div>
+  </div>
+</div>
+<h2 id="week7">
+  
+  
+    <a href="#week7" class="anchor-heading" aria-labelledby="week7"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week7
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Oct 20</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+       <a href="/justdocs/assets/images/skill-evaluation/425c-ziping.webp"> 425.12 zip 壓縮 </a> -- <a href="./425c-zip.txt"> cps note </a>  -- <a href="/justdocs/assets/images/skill-evaluation/425d-www.webp"> 425.13 www 個人首頁 </a> -- <a href="/justdocs/assets/images/skill-evaluation/425e-index.webp"> 425.14 index.html </a>
+    </div>
+  </div>
+</div>
+<h2 id="week8">
+  
+  
+    <a href="#week8" class="anchor-heading" aria-labelledby="week8"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week8
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Oct 27</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+       <a href="/justdocs/assets/images/skill-evaluation/425f-HTML.webp"> 425.15 YYYY/MM/DD 考試當天</a> 
+    </div>
+  </div>
+</div>
+<h2 id="week9">
+  
+  
+    <a href="#week9" class="anchor-heading" aria-labelledby="week9"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week9
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Nov 3</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+        簡介
+    </div>
+  </div>
+</div>
+<h2 id="week10">
+  
+  
+    <a href="#week10" class="anchor-heading" aria-labelledby="week10"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week10
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Nov 10</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+        簡介
+    </div>
+  </div>
+</div>
+<h2 id="week11">
+  
+  
+    <a href="#week11" class="anchor-heading" aria-labelledby="week11"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week11
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Nov 17</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+        簡介
+    </div>
+  </div>
+</div>
+<h2 id="week12">
+  
+  
+    <a href="#week12" class="anchor-heading" aria-labelledby="week12"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Week12
+  
+  
+</h2>
+    
+<div class="calendar-card">
+  <div class="row">
+    <span class="date">Nov 24</span>
+    <div class="content">
+      <span class="badge lecture">LECTURE</span>
+        簡介
     </div>
   </div>
 </div>

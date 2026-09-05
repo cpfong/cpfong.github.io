@@ -1,0 +1,1 @@
+mac air NB setup ip as 192.168.240.200 as ftp server

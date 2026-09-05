@@ -1,0 +1,4 @@
+1. hostname is studentID
+2. root password is iLxxxx
+3. add one user account as sid
+4. echo console=\"comconsole\" >> /boot/loader.conf

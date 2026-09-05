@@ -1,0 +1,20 @@
+課程簡介
+
+本課程旨在介紹 Unix/Linux 作業系統環境下的 Shell 程式設計，並以 POSIX Shell 為主要程式語言。課程將從 Unix/Linux 基本操作與 Shell 使用方式開始，逐步進入 Shell Script 的程式設計技巧，使學生能利用標準 Unix 工具組合完成系統管理、文字資料處理及工作自動化。
+
+課程內容包括 Shell 指令與執行環境、變數、參數傳遞、輸入輸出與重新導向、pipeline、條件判斷、迴圈、函數、字串及檔案處理，以及 grep、sed、awk、find 等常用 Unix 工具。課程特別強調 POSIX 標準及可攜性（portability），使所撰寫的 Shell Script 能在 Linux、FreeBSD 及其他 Unix-like 系統上執行，而非侷限於特定 Shell 的擴充語法。
+
+除程式語法外，本課程亦著重 Unix 的程式設計觀念，例如將複雜問題拆解為多個簡單工具，透過 pipeline 與 Shell Script 將工具組合起來完成工作。學生將透過實作練習，學習以 Shell Script 解決實際問題，包括批次檔案處理、系統資訊擷取、帳號與檔案管理、文字資料分析及例行工作的自動化。
+
+課程目標
+
+修習本課程後，學生應能：
+
+熟悉 Unix/Linux Shell 的基本操作及執行環境。
+撰寫符合 POSIX 規範的 Shell Script。
+正確使用變數、位置參數、條件判斷、迴圈及函數。
+熟悉 standard input、standard output、standard error、重新導向與 pipeline。
+使用 grep、sed、awk、find 等工具處理文字及檔案資料。
+將多個 Unix 指令組合成完整的程式與自動化工作流程。
+理解 Shell Script 在 Linux、FreeBSD 及其他 Unix-like 系統間的可攜性問題。
+能自行閱讀 Unix/Linux manual page，並據此解決程式設計問題。

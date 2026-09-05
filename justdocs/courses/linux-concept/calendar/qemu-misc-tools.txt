@@ -1,25 +1,30 @@
-#save into run-IM-en.bat 
+#save into run-IM-en.bat 把英文設定成內定輸入法
 @powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$L=Get-WinUserLanguageList;if($L.LanguageTag -notcontains 'en-US'){$L.Add('en-US');Set-WinUserLanguageList $L -Force}"
 
 ####
+# 把重要的檔案都統一放
 # copy FreeBSD.iso and qemu-setup to C drive
 @echo off
 copy w:\qemu\iso\FreeBSD14.3R-amd64-disc1.1302714368.iso c:
 copy w:\qemu\iso\qemu-w64-setup-20250814.exe c:
 
 ####
+#安裝模擬器
 #install software
 qemu-w64-setup-20250814.exe
 
 ####
+# 生成一個空白的 8g 檔案準備給 FreeBSD 作業系統使用
 # rem create empty 8G image #20g too big, cannot save at google drive
 qemu-img.exe create -f raw FreeBSD.img 8g
 
 ####
+# 安裝作業系統
 # install into empty FreeBSD.img
 qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw -cdrom FreeBSD-bootOnly.iso -boot d
   
 ####
+# 開機
 # simulate FreeBSD minimize parameters #nor cdrom or boot 
 qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw
 
@@ -28,13 +33,40 @@ qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw
 adduser
 
 ####
+# 安全登入改埠號
 # redirect port 22 to 2222
 qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw -nic user,hostfwd=tcp:127.0.0.1:2222-:22
 
 ####
+# 由串接埠登入
 # console to serial port 
 qemu-system-x86_64.exe -m 2g -smp 2 -drive file=FreeBSD.img,format=raw -nic user,hostfwd=tcp:127.0.0.1:2222-:22 -nographic
 
 ####
+#螢幕和串接埠二者皆可登入系統
 #For maximum flexibility, console="comconsole,vidconsole" is the better setting.
 echo 'console="comconsole,vidconsole"' > /boot/loader.conf
+
+####
+# vga serial 
+/usr/local/bin/qemu-system-x86_64 -m 2G -drive file="$f",if=virtio,format=raw -nic user,hostfwd=tcp:127.0.0.1:2222-:22
+/usr/local/bin/qemu-system-x86_64 -m 2G -drive file="$f",if=virtio,format=raw -nic user,hostfwd=tcp:127.0.0.1:2222-:22 -display none -serial stdio -monitor none
+
+####
+#create empty image
+#!/usr/bin/env sh
+[ $# -ne 1 ] && echo "./$0 imageSize(for example 4g)" && exit 1
+/usr/local/bin/qemu-img create -f raw freebsd.img $1
+
+####
+# install FreeBSD to empty image
+#!/usr/bin/env sh
+[ $# -ne 2 ] && echo "./$0 source.iso dest.img" && exit 1
+/usr/local/bin/qemu-system-x86_64 -m 1024 -cdrom $1 -boot d -drive file=$2,format=raw -net nic -net user
+
+####
+# run this image (FreeBSD os up)
+#!/usr/bin/env sh
+[ $# -ne 1 ] && echo "$0 which_img" && exit 1
+f=$1
+/usr/local/bin/qemu-system-x86_64 -cpu max -m 2G -smp 2 -drive file=$f,if=virtio,format=raw -device virtio-net-pci,netdev=n0 -netdev user,id=n0,hostfwd=tcp:127.0.0.1:2222-:22 -display cocoa 

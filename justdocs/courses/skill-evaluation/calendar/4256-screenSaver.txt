@@ -1,0 +1,7 @@
+windows
+--
+control / find 'screen saver' 
+
+fedora
+--
+settings / power (power saving)
